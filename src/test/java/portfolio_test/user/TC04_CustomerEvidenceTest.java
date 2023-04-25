@@ -101,7 +101,8 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 		driver.navigate().back();
 		driver.navigate().back();
 	}
-
+//--------------------------Industies Stories-------------------------------------
+	
 	@Test(priority = 5)
 	public void verifyAutomotiveMobilityandTransportationCustomerStoriesSearchButtonOnCustomerEvidence()
 			throws Throwable {
@@ -304,8 +305,7 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 		driver.navigate().back();
 	}
 
-	// -----------------------------------Solution Areas
-	// Stories--------------------------
+	// -----------------------------------Solution Areas Stories--------------------------
 
 	@Test(priority = 17)
 	public void verifyBusinessAppsCustomerStoriesSearchButtonOnCustomerEvidence() throws Throwable {
