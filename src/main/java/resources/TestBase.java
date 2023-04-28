@@ -39,9 +39,9 @@ public class TestBase {
 		else if (browserName.equalsIgnoreCase("edge"))
 		{
 			WebDriverManager.edgedriver().setup();
-			EdgeOptions options = new EdgeOptions();
-		      options.setCapability("headless", true);
-			driver = new EdgeDriver(options);
+			//EdgeOptions options = new EdgeOptions();
+		      //options.setCapability("headless", true);
+			driver = new EdgeDriver();
 			 
 			
 		}

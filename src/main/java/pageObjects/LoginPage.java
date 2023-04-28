@@ -21,6 +21,12 @@ public class LoginPage {
 	@FindBy(xpath = "//small[contains(text(),'v-spednekar@microsoft.com')]")
 	private WebElement ShriUSername;
 	
+	@FindBy(xpath = "//*[@id=\"i0116\"]")
+	private WebElement LoginID;
+	
+	
+	
+	
 	
 	public LoginPage(WebDriver driver){
 		this.driver=driver;
@@ -40,6 +46,8 @@ public class LoginPage {
 	{
 		util.clickOnElementUsingActions(driver, ShriUSername);
 	}
-	
+	public void enterLoginID(String StoryDetails) {
+		LoginID.sendKeys(StoryDetails);
+	}
 	
 }
