@@ -18,6 +18,10 @@ public class LoginPage {
 	@FindBy(xpath = "//*[@id='tilesHolder']/div //small[contains(.,'microsoft')]")
 	private WebElement loginAccount;
 	
+	@FindBy(xpath = "//small[contains(text(),'v-spednekar@microsoft.com')]")
+	private WebElement ShriUSername;
+	
+	
 	public LoginPage(WebDriver driver){
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
@@ -30,6 +34,11 @@ public class LoginPage {
 	public HomePage LoginToAccount() {
 		loginAccount.click();
 		return new HomePage(driver);
+	}
+	
+	public void clickOnProductInnovationDevelopmentServicesLink()
+	{
+		util.clickOnElementUsingActions(driver, ShriUSername);
 	}
 	
 	

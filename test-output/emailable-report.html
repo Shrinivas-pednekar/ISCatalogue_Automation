@@ -31,14 +31,129 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Validating IS Catalauge Login page test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">15.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">9.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Validating IS Catalauge Login page test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">portfolio_test.user.TC01_UserLoginTest</td><td><a href="#m1"><b>loginPageTitleTest</b>  </a></td><td class="numi">1</td><td>1682679426014</td><td class="numi">16</td></tr>
+<tr><th colspan="4">Default test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">portfolio_test.user.TC01_UserLoginTest</td><td><a href="#m1"><b>loginPageTitleTest</b>  </a></td><td class="numi">1</td><td>1682680634158</td><td class="numi">5045</td></tr>
 </table>
-<h1>Validating IS Catalauge Login page test</h1>
+<h1>Default test</h1>
 <h2 id="m1">portfolio_test.user.TC01_UserLoginTest:loginPageTitleTest</h2>
+<div style="padding-left:3em">
+<p>java.lang.reflect.InvocationTargetException
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: driver.version: RemoteWebDriver</p>
+org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:332)
+<br/>at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+<br/>at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+<br/>at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:168)
+<br/>at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:647)
+<br/>at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:168)
+<br/>at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+<br/>at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+<br/>at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+<br/>at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+<br/>at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+<br/>at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+<br/>at org.openqa.selenium.json.Json.toJson(Json.java:42)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+<br/>at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+<br/>at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
+<br/>at resources.Utilities.clickOnElementUsingActions(Utilities.java:111)
+<br/>at pageObjects.LoginPage.clickOnProductInnovationDevelopmentServicesLink(LoginPage.java:41)
+<br/>at portfolio_test.user.TC01_UserLoginTest.loginPageTitleTest(TC01_UserLoginTest.java:39)
+<br/>23 lines not shown
+<p>Caused by null</p>
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:119)
+<br/>at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+<br/>at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:328)
+<br/>at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+<br/>at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+<br/>at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:168)
+<br/>at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:647)
+<br/>at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:168)
+<br/>at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+<br/>at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+<br/>at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+<br/>at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+<br/>at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+<br/>at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+<br/>at org.openqa.selenium.json.Json.toJson(Json.java:42)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+<br/>at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+<br/>at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
+<br/>at resources.Utilities.clickOnElementUsingActions(Utilities.java:111)
+<br/>at pageObjects.LoginPage.clickOnProductInnovationDevelopmentServicesLink(LoginPage.java:41)
+<br/>at portfolio_test.user.TC01_UserLoginTest.loginPageTitleTest(TC01_UserLoginTest.java:39)
+<br/>23 lines not shown
+<p>Caused by no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//small[contains(text(),&apos;v-spednekar@microsoft.com&apos;)]&quot;}
+  (Session info: chrome=112.0.5615.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51281}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d409ff271f81ca4afab63dfc1f4dc665
+*** Element info: {Using=xpath, value=//small[contains(text(),&apos;v-spednekar@microsoft.com&apos;)]}</p>
+java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+<br/>at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at jdk.proxy2/jdk.proxy2.$Proxy27.getWrappedElement(Unknown Source)
+<br/>at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:204)
+<br/>at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:155)
+<br/>at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
+<br/>at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
+<br/>at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+<br/>at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+<br/>at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:328)
+<br/>at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+<br/>at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+<br/>at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:168)
+<br/>at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:647)
+<br/>at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:168)
+<br/>at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+<br/>at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+<br/>at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+<br/>at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+<br/>at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+<br/>at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+<br/>at org.openqa.selenium.json.Json.toJson(Json.java:42)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+<br/>at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+<br/>at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
+<br/>at resources.Utilities.clickOnElementUsingActions(Utilities.java:111)
+<br/>at pageObjects.LoginPage.clickOnProductInnovationDevelopmentServicesLink(LoginPage.java:41)
+<br/>at portfolio_test.user.TC01_UserLoginTest.loginPageTitleTest(TC01_UserLoginTest.java:39)
+<br/>23 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
