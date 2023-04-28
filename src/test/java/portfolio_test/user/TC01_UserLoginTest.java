@@ -36,7 +36,7 @@ public class TC01_UserLoginTest extends TestBase {
 	@Test(priority = 1)
 	public void loginPageTitleTest() throws MessagingException {
 		
-		;
+		
 		Assert.assertEquals(loginPage.getLoginPageTitle(), "IS Catalogue");
 		
 		log.info("Successfully logged into IS Catalogue");

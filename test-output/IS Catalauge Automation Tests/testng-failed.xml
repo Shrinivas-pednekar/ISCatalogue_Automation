@@ -4,46 +4,15 @@
   <listeners>
     <listener class-name="isCatalogue_test.Listeners"/>
   </listeners>
-  <test parallel="none" name="Validating all links and pages present under Resources menu test(failed)">
+  <test parallel="none" name="Validating IS Catalauge Login page test(failed)">
     <classes>
-      <class name="portfolio_test.user.TC03_CatalogueTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC03_CatalogueTest -->
-      <class name="portfolio_test.user.TC05_CampaignsPage">
-        <methods>
-          <include name="initialize"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC05_CampaignsPage -->
-      <class name="portfolio_test.user.TC02_HomePage">
-        <methods>
-          <include name="initialize"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC02_HomePage -->
-      <class name="portfolio_test.user.TC04_CustomerEvidenceTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC04_CustomerEvidenceTest -->
-      <class name="portfolio_test.user.TC06_ResourcesPage">
-        <methods>
-          <include name="teardown"/>
-          <include name="verifyCustomerHubPageFromResourcesMenu"/>
-          <include name="initialize"/>
-          <include name="verifyISCloudsOverviewPageFromResourcesMenu"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC06_ResourcesPage -->
       <class name="portfolio_test.user.TC01_UserLoginTest">
         <methods>
           <include name="teardown"/>
+          <include name="loginPageTitleTest"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
     </classes>
-  </test> <!-- Validating all links and pages present under Resources menu test(failed) -->
+  </test> <!-- Validating IS Catalauge Login page test(failed) -->
 </suite> <!-- Failed suite [IS Catalauge Automation Tests] -->

@@ -3,13 +3,13 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="portfolio_test.user.TC04_CustomerEvidenceTest">
+      <class name="portfolio_test.user.TC01_UserLoginTest">
         <methods>
-          <include name="verifyEnergyandResourcesCustomerStoriesSearchButtonOnCustomerEvidence"/>
           <include name="teardown"/>
+          <include name="loginPageTitleTest"/>
           <include name="initialize"/>
         </methods>
-      </class> <!-- portfolio_test.user.TC04_CustomerEvidenceTest -->
+      </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
