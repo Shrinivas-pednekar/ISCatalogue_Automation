@@ -1,10 +1,26 @@
 package resources;
 
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Properties;
+
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Multipart;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +29,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+
 
 public class Utilities {
 
@@ -159,5 +177,59 @@ public class Utilities {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 	}
+	
+	public void sendEmail(String emailTo) throws MessagingException {
+	        
+		final String username = "shrinivas_pednekar@persistent.com";
+	    final String password = "Password";
 
-}
+	    Properties props = new Properties();
+	    props.put("mail.smtp.auth", "true");
+	    props.put("mail.smtp.starttls.enable", "true");
+	    props.put("mail.smtp.host", "smtp-mail.outlook.com");
+	    props.put("mail.smtp.port", "587");
+	   // props.put("mail.smtp.starttls.method", "STARTTLS");
+	    
+
+	    Session session = Session.getInstance(props,
+	            new javax.mail.Authenticator() {
+	                protected PasswordAuthentication getPasswordAuthentication() {
+	                    return new PasswordAuthentication(username, password);
+	                }
+	            });
+
+	    try {
+	        Message message = new MimeMessage(session);
+	        message.setFrom(new InternetAddress(username));
+	        message.setRecipients(Message.RecipientType.TO,
+	                InternetAddress.parse(emailTo));
+	        message.setSubject("Extent Report for Test Execution");
+	        
+	        // Create a multipart message for the body and attachment
+	        Multipart multipart = new MimeMultipart();
+	        
+	        // Create HTML body part of email
+	        MimeBodyPart messageBodyPart = new MimeBodyPart();
+	        messageBodyPart.setContent("<p>Dear User,</p><p>Please find the attached extent report for the test execution.</p>", "text/html");
+	        multipart.addBodyPart(messageBodyPart);
+	        
+	        // Create extent report attachment
+	        MimeBodyPart extentReportPart = new MimeBodyPart();
+	        String reportFilePath = "C:\\Users\\v-spednekar\\eclipse-workspace\\ISCatalogue_Automation.html"; // Replace with actual report file path
+	        DataSource source = new FileDataSource(reportFilePath);
+	        extentReportPart.setDataHandler(new DataHandler(source));
+	        extentReportPart.setFileName(source.getName());
+	        multipart.addBodyPart(extentReportPart);
+	        
+	        // Add the multipart message parts to the message
+	        message.setContent(multipart);
+	        
+	        // Send the email
+	        Transport.send(message);
+
+	        System.out.println("Email with extent report sent successfully!");
+
+	    } catch (MessagingException e) {
+	        throw new RuntimeException(e);
+	    }
+}}

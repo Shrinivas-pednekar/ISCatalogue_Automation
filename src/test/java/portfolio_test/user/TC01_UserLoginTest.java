@@ -2,6 +2,8 @@ package portfolio_test.user;
 
 import java.io.IOException;
 
+import javax.mail.MessagingException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -32,8 +34,11 @@ public class TC01_UserLoginTest extends TestBase {
 	}
 
 	@Test(priority = 1)
-	public void loginPageTitleTest() {
+	public void loginPageTitleTest() throws MessagingException {
+		
+		;
 		Assert.assertEquals(loginPage.getLoginPageTitle(), "IS Catalogue");
+		
 		log.info("Successfully logged into IS Catalogue");
 	}
 

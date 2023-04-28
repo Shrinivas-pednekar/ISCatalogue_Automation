@@ -11,7 +11,6 @@
 			<class name="portfolio_test.user.TC01_UserLoginTest"/>
 		</classes>
 	</test>
-	
 	<test name="Validating all links and pages present under Home page test">
 		<classes>
 			<class name="portfolio_test.user.TC02_HomePage"/>
@@ -38,7 +37,7 @@
 			<class name="portfolio_test.user.TC06_ResourcesPage"/>
 		</classes>
 	</test>
-	
+
 	
 	
 </suite>

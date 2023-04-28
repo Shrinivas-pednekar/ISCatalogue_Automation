@@ -2,6 +2,8 @@ package isCatalogue_test;
 
 import java.io.IOException;
 
+import javax.mail.MessagingException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -13,6 +15,7 @@ import com.aventstack.extentreports.Status;
 
 import resources.ExtentReporterNG;
 import resources.TestBase;
+import resources.Utilities;
 
 
 public class Listeners extends TestBase implements ITestListener{
@@ -20,6 +23,7 @@ public class Listeners extends TestBase implements ITestListener{
 	ExtentTest test;
 	ExtentReports extent=ExtentReporterNG.getReportObject();
 	ThreadLocal<ExtentTest> extentTest =new ThreadLocal<ExtentTest>();
+	Utilities util = new Utilities();
 	
 	public void onTestStart(ITestResult result) {
 		test = extent.createTest(result.getMethod().getMethodName());
@@ -66,7 +70,16 @@ public class Listeners extends TestBase implements ITestListener{
 
 	public void onFinish(ITestContext context) {
 		extent.flush();
+		
+		
+		/*
+		 * try { util.sendEmail("shrinivas_pednekar@persistent.com"); } catch
+		 * (MessagingException e) { // TODO Auto-generated catch block
+		 * e.printStackTrace(); }
+		 */
+		 
 	}
 
+	
 	
 }

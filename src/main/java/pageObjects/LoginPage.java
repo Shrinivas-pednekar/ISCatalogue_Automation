@@ -1,14 +1,19 @@
 package pageObjects;
 
+import javax.mail.MessagingException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import resources.Utilities;
+
 
 public class LoginPage {
 
 	public WebDriver driver;
+	Utilities util = new Utilities();
 	
 	@FindBy(xpath = "//*[@id='tilesHolder']/div //small[contains(.,'microsoft')]")
 	private WebElement loginAccount;
@@ -26,5 +31,6 @@ public class LoginPage {
 		loginAccount.click();
 		return new HomePage(driver);
 	}
+	
 	
 }

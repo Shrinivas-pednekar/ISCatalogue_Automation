@@ -1,12 +1,22 @@
 
 package portfolio_test.user;
 
+
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.time.Duration;
+import java.util.List;
 import java.util.Set;
 import javax.swing.text.Utilities;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -31,6 +41,8 @@ public class TC02_HomePage extends TestBase {
 		util = new Utilities();
 		loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	}
 
 	@Test(priority = 1)
@@ -157,6 +169,70 @@ public class TC02_HomePage extends TestBase {
 		driver.close();
 		driver.switchTo().window(mainTab);
 
+	}
+	
+	@Test(priority = 10)
+	public void VerifyEurekaPageFromHomepage() throws Throwable {
+		homePage.clickOnEurekaButton();
+		Thread.sleep(5000);
+		Set<String> allTabs = homePage.getWindowHandles();
+		String mainTab = driver.getWindowHandle();
+		allTabs.remove(mainTab);
+		String newTab = allTabs.iterator().next();
+		driver.switchTo().window(newTab);
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Eureka - Home"));
+		/*
+		 * homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible(); boolean
+		 * actualResult =
+		 * homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		 * System.out.println("Actual Result - " + actualResult);
+		 * Assert.assertTrue(actualResult);
+		 */
+		driver.close();
+		driver.switchTo().window(mainTab);
+
+	}
+	
+	@Test(priority = 11)
+	public void testBrokenLinks() throws IOException, InterruptedException {
+		List<WebElement> links = driver.findElements(By.xpath("//a[contains(@href,'.')]"));
+		System.out.println("Total links on the page: " + links.size());
+		HttpURLConnection.setFollowRedirects(false); // disable automatic redirects
+		int maxRedirects = 5;
+		for (WebElement link : links) {
+			//Thread.sleep(3000);
+			String url = link.getAttribute("href");
+			//Thread.sleep(3000);
+
+			if (url == null || url.isEmpty()) {
+				continue;
+			}
+			HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+			//Thread.sleep(3000);
+			connection.setRequestMethod("GET");
+			//Thread.sleep(3000);
+			int responseCode = connection.getResponseCode();
+			
+			if (responseCode >= 400) {
+				/*connection.connect();
+				InputStream errorStream = connection.getErrorStream();
+				BufferedReader reader = new BufferedReader(new InputStreamReader(errorStream));
+				String line;
+				StringBuilder errorMessage = new StringBuilder();
+				while ((line = reader.readLine()) != null) {
+					errorMessage.append(line);
+				}
+				reader.close();
+				System.out.println("Error message: " + errorMessage.toString());*/
+
+				System.out.println("Broken Link: |" + url + " | Response Code: |" + responseCode);
+
+			} else {
+				System.out.println("Working Link: |" + url + " | Response Code: |" + responseCode);
+
+			}
+		}
 	}
 
 	@AfterTest

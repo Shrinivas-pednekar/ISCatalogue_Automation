@@ -1,6 +1,7 @@
 package pageObjects;
 
 
+import java.time.Duration;
 import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
@@ -54,6 +55,12 @@ public class HomePage {
 	
 	@FindBy(xpath="//h2[@id='lblCounter']")
 	private WebElement CustomerEvidenceSearchResult;
+	
+	@FindBy(xpath="//a[contains(@href,'.')]")
+	private WebElement Linkshref;
+	
+	@FindBy(xpath="//a[contains(text(),'Eureka')]")
+	private WebElement Eureka;
 	
 	public HomePage(WebDriver driver){
 		this.driver=driver;
@@ -133,4 +140,15 @@ public class HomePage {
 	{
 		util.waitForElementToBeVisible(driver, CustomerEvidenceSearchResult,50);
 	}
+	public WebElement getLinkshref() {
+		
+		
+		return Linkshref;
+	}
+	
+	public void clickOnEurekaButton()
+	{
+		util.clickOnElementUsingActions(driver, Eureka);
+	}
+	
 }

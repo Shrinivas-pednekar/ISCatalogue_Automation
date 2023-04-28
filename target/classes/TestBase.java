@@ -1,4 +1,4 @@
-package resources;
+	package resources;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,6 +12,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -38,7 +39,11 @@ public class TestBase {
 		else if (browserName.equalsIgnoreCase("edge"))
 		{
 			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
+			EdgeOptions options = new EdgeOptions();
+		      options.setCapability("headless", true);
+			driver = new EdgeDriver(options);
+			 
+			
 		}
 		else if (browserName.equalsIgnoreCase("ie"))
 		{

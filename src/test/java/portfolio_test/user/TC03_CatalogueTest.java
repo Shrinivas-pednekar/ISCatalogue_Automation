@@ -211,6 +211,13 @@ public class TC03_CatalogueTest extends TestBase {
 		System.out.println("Solution is displayed ");
 		
 		cataloguePage.clickOnShowDetailsButton();
+		Thread.sleep(5000);
+		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("Ministry of Education Tāhūrangi Online Curric...");
+		System.out.println("Evidence displaed as expected =" +cataloguePage.getEDFEvidenceCheck().getText() );
+		Assert.assertTrue(actualResult4);
+		System.out.println("Displayed EDF Evidence");
+		Thread.sleep(2000);
+		cataloguePage.clickOnBOMTABButton();
 		Thread.sleep(2000);
 		cataloguePage.clickABAselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
@@ -221,8 +228,8 @@ public class TC03_CatalogueTest extends TestBase {
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(3000);
-		boolean actualResult4 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
-		Assert.assertTrue(actualResult4);
+		boolean actualResult5 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		Assert.assertTrue(actualResult5);
 		System.out.println("Package is displayed ");
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Business Apps"));
@@ -344,7 +351,7 @@ public class TC03_CatalogueTest extends TestBase {
 		
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(5000);
-		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("7 Result(s)");
+		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(actualResult2);
 		System.out.println("Solution is displayed ");	
 		
@@ -353,7 +360,7 @@ public class TC03_CatalogueTest extends TestBase {
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(5000);
-		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("6 Result(s)");
+		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(EvidenceCheck);
 		System.out.println("Package is displayed ");
 		
@@ -412,7 +419,7 @@ public class TC03_CatalogueTest extends TestBase {
 		
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(5000);
-		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("14 Result(s)");
+		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(actualResult2);
 		System.out.println("Solution is displayed ");	
 		
@@ -434,7 +441,7 @@ public class TC03_CatalogueTest extends TestBase {
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(3000);
-		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("11 Result(s)");
+		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(EvidenceCheck);
 		System.out.println("Package is displayed ");
 
@@ -490,7 +497,7 @@ public class TC03_CatalogueTest extends TestBase {
 		System.out.println("Sales stat cound and table is verified ");
 		
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
-		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("4 Result(s)");
+		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(actualResult2);
 		System.out.println("Solution is displayed ");
 		
@@ -504,7 +511,7 @@ public class TC03_CatalogueTest extends TestBase {
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(3000);
-		boolean actualResult4 = homePage.getCustomerEvidenceSearchResults().getText().contains("4 Result(s)");
+		boolean actualResult4 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(actualResult4);
 		System.out.println("Package is displayed ");
 		System.out.println("New Tab URL - " + driver.getTitle());

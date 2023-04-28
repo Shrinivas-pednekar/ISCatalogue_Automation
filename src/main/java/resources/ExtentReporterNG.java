@@ -6,6 +6,8 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 public class ExtentReporterNG
 {
 	static ExtentReports extent;
+	Utilities util = new Utilities();
+	
 	
 	public static ExtentReports getReportObject()
 	{
@@ -19,6 +21,8 @@ public class ExtentReporterNG
 		extent.attachReporter(reporter);
 		extent.setSystemInfo("Tester", "Shrinivas");
 		return extent;
+
 		
 	}
+	
 }

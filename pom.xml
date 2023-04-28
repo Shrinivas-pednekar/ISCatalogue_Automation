@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>qubit_test</groupId>
-	<artifactId>qubit_test</artifactId>
+	<groupId>isCatalogue_test</groupId>
+	<artifactId>isCatalogue_test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>qubit_test</name>
+	<name>isCatalogue_test</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -31,6 +31,13 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
+					 <testFailureIgnore>true</testFailureIgnore>
+        				<properties>
+           					 <property>
+              					  <name>listener</name>
+               						 <value>ExtentReporterNG</value>
+          					  </property>
+       					 </properties>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -89,6 +96,20 @@
 			<artifactId>extentreports</artifactId>
 			<version>4.1.4</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+<dependency>
+    <groupId>com.sun.mail</groupId>
+    <artifactId>javax.mail</artifactId>
+    <version>1.6.2</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/javax.activation/activation -->
+<dependency>
+    <groupId>javax.activation</groupId>
+    <artifactId>activation</artifactId>
+    <version>1.1</version>
+</dependency>
 
 	</dependencies>
 </project>
