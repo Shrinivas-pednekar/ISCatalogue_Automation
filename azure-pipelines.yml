@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
