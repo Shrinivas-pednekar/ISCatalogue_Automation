@@ -82,10 +82,10 @@ public class CustomerEvidencePage {
 	@FindBy (xpath="//h1[contains(text(),'Healthcare Customer Stories')]") 
 	private WebElement HealthcareCustomerStoriesTitle;
 	
-	@FindBy (xpath="//span[contains(text(),'Industrial and Manufacturing')]") 
+	@FindBy (xpath="//span[contains(text(),'Industrials and Manufacturing')]") 
 	private WebElement IndustrialandManufacturingCustomerStoriesSearchButton;
 	
-	@FindBy (xpath="//h1[contains(text(),'Industrial and Manufacturing Customer Stories')]") 
+	@FindBy (xpath="//h1[contains(text(),'Industrials and Manufacturing Customer Stories')]") 
 	private WebElement IndustrialandManufacturingCustomerStoriesTitle;
 	
 	@FindBy (xpath="//span[contains(text(),'Retail and Consumer Goods')]") 

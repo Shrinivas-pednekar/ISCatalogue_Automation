@@ -1,7 +1,7 @@
 package pageObjects;
 
 import java.util.Set;
-
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -212,6 +212,7 @@ public class CataloguePage {
 
 	public void clickOnSecurityMenuButton() {
 		util.clickOnElementUsingActions(driver, SecurityMenu);
+		driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
 	}
 
 	public void clickOnAutomotiveMobilityandTransportationMenuButton() {
@@ -327,6 +328,7 @@ public class CataloguePage {
 	}
 
 	public void clickOnBOMTABButton() {
+		util.scrollDownForElementToBeVisible(driver, BOMButton, 2000);
 		util.clickOnElementUsingActions(driver, BOMButton);
 	}
 

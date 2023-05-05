@@ -15,6 +15,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
@@ -39,9 +40,11 @@ public class TestBase {
 		else if (browserName.equalsIgnoreCase("edge"))
 		{
 			WebDriverManager.edgedriver().setup();
-			//EdgeOptions options = new EdgeOptions();
-		      //options.setCapability("headless", true);
-			driver = new EdgeDriver();
+		//	EdgeOptions options = new EdgeOptions();
+			 
+			    //options.addArguments("--remote-debugging-port=9222");
+			    
+			    driver = new EdgeDriver();
 			 
 			
 		}

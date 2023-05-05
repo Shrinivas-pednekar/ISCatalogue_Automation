@@ -216,7 +216,7 @@ public class TC03_CatalogueTest extends TestBase {
 		System.out.println("Evidence displaed as expected =" +cataloguePage.getEDFEvidenceCheck().getText() );
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		cataloguePage.clickOnBOMTABButton();
 		Thread.sleep(2000);
 		cataloguePage.clickABAselectAllBomButton();

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Validating all links and pages present under Resources menu test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 27 19:42:05 IST 2023</td>
+<td>Started on:</td><td>Wed May 03 14:05:51 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>133 seconds (133292 ms)</td>
+<tr><td>Total time:</td><td>116 seconds (116144 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,79 +75,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='portfolio_test.user.TC06_ResourcesPage.verifyCustomerHubPageFromResourcesMenu()'><b>verifyCustomerHubPageFromResourcesMenu</b><br>Test class: portfolio_test.user.TC06_ResourcesPage</td>
-<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: https://servicesportfolio.net/CustomerHUB/ has no size and location
-  (Session info: MicrosoftEdge=112.0.1722.58)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 112.0.1722.58, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:63476}, msedge: {msedgedriverVersion: 112.0.1722.58 (4dc3f55bfaec..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5ecb798ca11f78ec9672093e3ddd67d0
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
-	at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
-	at resources.Utilities.clickOnElementUsingActions(Utilities.java:111)
-	at pageObjects.ResourcesPage.clickOnCustomerHubMenuButton(ResourcesPage.java:114)
-	at portfolio_test.user.TC06_ResourcesPage.verifyCustomerHubPageFromResourcesMenu(TC06_ResourcesPage.java:107)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace34994391", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace34994391'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: https://servicesportfolio.net/CustomerHUB/ has no size and location
-  (Session info: MicrosoftEdge=112.0.1722.58)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 112.0.1722.58, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:63476}, msedge: {msedgedriverVersion: 112.0.1722.58 (4dc3f55bfaec..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5ecb798ca11f78ec9672093e3ddd67d0
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
-	at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
-	at resources.Utilities.clickOnElementUsingActions(Utilities.java:111)
-	at pageObjects.ResourcesPage.clickOnCustomerHubMenuButton(ResourcesPage.java:114)
-	at portfolio_test.user.TC06_ResourcesPage.verifyCustomerHubPageFromResourcesMenu(TC06_ResourcesPage.java:107)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>portfolio_test.user.TC06_ResourcesPage@db44aa2</td></tr>
-<tr>
 <td title='portfolio_test.user.TC06_ResourcesPage.verifyISCloudsOverviewPageFromResourcesMenu()'><b>verifyISCloudsOverviewPageFromResourcesMenu</b><br>Test class: portfolio_test.user.TC06_ResourcesPage</td>
 <td><div><pre>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:332)
 	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
@@ -175,7 +106,7 @@ Driver info: driver.version: RemoteWebDriver
 	at portfolio_test.user.TC06_ResourcesPage.verifyISCloudsOverviewPageFromResourcesMenu(TC06_ResourcesPage.java:99)
 	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: driver.version: RemoteWebDriver
 		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:279)
 		at org.openqa.selenium.json.Json.toJson(Json.java:44)
@@ -183,13 +114,13 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:328)
 	... 45 more
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;IS Clouds Overview&apos;)]&quot;}
-  (Session info: MicrosoftEdge=112.0.1722.58)
+  (Session info: MicrosoftEdge=112.0.1722.68)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 112.0.1722.58, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:63476}, msedge: {msedgedriverVersion: 112.0.1722.58 (4dc3f55bfaec..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5ecb798ca11f78ec9672093e3ddd67d0
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 112.0.1722.68, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:57565}, msedge: {msedgedriverVersion: 112.0.1722.68 (82d34b2459d3..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e7748910dbe08e2fbd6f8a6fac271f13
 *** Element info: {Using=xpath, value=//a[contains(text(),&apos;IS Clouds Overview&apos;)]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -209,10 +140,10 @@ Session ID: 5ecb798ca11f78ec9672093e3ddd67d0
 	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
 	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
 	... 47 more
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace768047458", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace768047458'><pre>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1260069461", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1260069461'><pre>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:332)
 	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
@@ -262,7 +193,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: driver.version: RemoteWebDriver
 		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:279)
 		at org.openqa.selenium.json.Json.toJson(Json.java:44)
@@ -273,13 +204,13 @@ Caused by: java.lang.reflect.InvocationTargetException
 	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:328)
 	... 45 more
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;IS Clouds Overview&apos;)]&quot;}
-  (Session info: MicrosoftEdge=112.0.1722.58)
+  (Session info: MicrosoftEdge=112.0.1722.68)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.15&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.10&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 112.0.1722.58, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:63476}, msedge: {msedgedriverVersion: 112.0.1722.58 (4dc3f55bfaec..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5ecb798ca11f78ec9672093e3ddd67d0
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 112.0.1722.68, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:57565}, msedge: {msedgedriverVersion: 112.0.1722.68 (82d34b2459d3..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e7748910dbe08e2fbd6f8a6fac271f13
 *** Element info: {Using=xpath, value=//a[contains(text(),&apos;IS Clouds Overview&apos;)]}
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -305,7 +236,7 @@ Session ID: 5ecb798ca11f78ec9672093e3ddd67d0
 	... 47 more
 </pre></div></td>
 <td>8</td>
-<td>portfolio_test.user.TC06_ResourcesPage@db44aa2</td></tr>
+<td>portfolio_test.user.TC06_ResourcesPage@2de366bb</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -317,58 +248,48 @@ Session ID: 5ecb798ca11f78ec9672093e3ddd67d0
 <tr>
 <td title='portfolio_test.user.TC06_ResourcesPage.verifyAboutISCataloguePageFromResourcesMenu()'><b>verifyAboutISCataloguePageFromResourcesMenu</b><br>Test class: portfolio_test.user.TC06_ResourcesPage</td>
 <td></td>
-<td>3</td>
-<td>portfolio_test.user.TC06_ResourcesPage@db44aa2</td></tr>
+<td>2</td>
+<td>portfolio_test.user.TC06_ResourcesPage@2de366bb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC06_ResourcesPage.verifyCatalogueRoadmapPageFromResourcesMenu()'><b>verifyCatalogueRoadmapPageFromResourcesMenu</b><br>Test class: portfolio_test.user.TC06_ResourcesPage</td>
 <td></td>
-<td>8</td>
-<td>portfolio_test.user.TC06_ResourcesPage@db44aa2</td></tr>
+<td>7</td>
+<td>portfolio_test.user.TC06_ResourcesPage@2de366bb</td></tr>
+<tr>
+<td title='portfolio_test.user.TC06_ResourcesPage.verifyCustomerHubPageFromResourcesMenu()'><b>verifyCustomerHubPageFromResourcesMenu</b><br>Test class: portfolio_test.user.TC06_ResourcesPage</td>
+<td></td>
+<td>17</td>
+<td>portfolio_test.user.TC06_ResourcesPage@2de366bb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC06_ResourcesPage.verifyDatabookPageFromResourcesMenu()'><b>verifyDatabookPageFromResourcesMenu</b><br>Test class: portfolio_test.user.TC06_ResourcesPage</td>
 <td></td>
-<td>7</td>
-<td>portfolio_test.user.TC06_ResourcesPage@db44aa2</td></tr>
+<td>5</td>
+<td>portfolio_test.user.TC06_ResourcesPage@2de366bb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC06_ResourcesPage.verifyEmergingSolutionsPageFromResourcesMenu()'><b>verifyEmergingSolutionsPageFromResourcesMenu</b><br>Test class: portfolio_test.user.TC06_ResourcesPage</td>
 <td></td>
 <td>8</td>
-<td>portfolio_test.user.TC06_ResourcesPage@db44aa2</td></tr>
+<td>portfolio_test.user.TC06_ResourcesPage@2de366bb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC06_ResourcesPage.verifyFundingPageFromResourcesMenu()'><b>verifyFundingPageFromResourcesMenu</b><br>Test class: portfolio_test.user.TC06_ResourcesPage</td>
 <td></td>
 <td>3</td>
-<td>portfolio_test.user.TC06_ResourcesPage@db44aa2</td></tr>
+<td>portfolio_test.user.TC06_ResourcesPage@2de366bb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC06_ResourcesPage.verifyISSolutionsPlaybookPageFromResourcesMenu()'><b>verifyISSolutionsPlaybookPageFromResourcesMenu</b><br>Test class: portfolio_test.user.TC06_ResourcesPage</td>
 <td></td>
-<td>16</td>
-<td>portfolio_test.user.TC06_ResourcesPage@db44aa2</td></tr>
-<tr>
-<td title='portfolio_test.user.TC06_ResourcesPage.verifyIndustrySolutionsPageFromResourcesMenu()'><b>verifyIndustrySolutionsPageFromResourcesMenu</b><br>Test class: portfolio_test.user.TC06_ResourcesPage</td>
-<td></td>
-<td>8</td>
-<td>portfolio_test.user.TC06_ResourcesPage@db44aa2</td></tr>
-<tr>
-<td title='portfolio_test.user.TC06_ResourcesPage.verifyLEDPortalPageFromResourcesMenu()'><b>verifyLEDPortalPageFromResourcesMenu</b><br>Test class: portfolio_test.user.TC06_ResourcesPage</td>
-<td></td>
-<td>9</td>
-<td>portfolio_test.user.TC06_ResourcesPage@db44aa2</td></tr>
+<td>17</td>
+<td>portfolio_test.user.TC06_ResourcesPage@2de366bb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC06_ResourcesPage.verifyManageCatalogueSubscriptionsPageFromResourcesMenu()'><b>verifyManageCatalogueSubscriptionsPageFromResourcesMenu</b><br>Test class: portfolio_test.user.TC06_ResourcesPage</td>
 <td></td>
 <td>7</td>
-<td>portfolio_test.user.TC06_ResourcesPage@db44aa2</td></tr>
-<tr>
-<td title='portfolio_test.user.TC06_ResourcesPage.verifyRFPIOPageFromResourcesMenu()'><b>verifyRFPIOPageFromResourcesMenu</b><br>Test class: portfolio_test.user.TC06_ResourcesPage</td>
-<td></td>
-<td>5</td>
-<td>portfolio_test.user.TC06_ResourcesPage@db44aa2</td></tr>
+<td>portfolio_test.user.TC06_ResourcesPage@2de366bb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC06_ResourcesPage.verifySolutionTruthPageFromResourcesMenu()'><b>verifySolutionTruthPageFromResourcesMenu</b><br>Test class: portfolio_test.user.TC06_ResourcesPage</td>
 <td></td>
 <td>3</td>
-<td>portfolio_test.user.TC06_ResourcesPage@db44aa2</td></tr>
+<td>portfolio_test.user.TC06_ResourcesPage@2de366bb</td></tr>
 </table><p>
 </body>
 </html>

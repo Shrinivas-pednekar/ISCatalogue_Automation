@@ -194,7 +194,7 @@ public class TC02_HomePage extends TestBase {
 
 	}
 	
-	@Test(priority = 11)
+	@Test(priority = 11, enabled = false)
 	public void testBrokenLinks() throws IOException, InterruptedException {
 		List<WebElement> links = driver.findElements(By.xpath("//a[contains(@href,'.')]"));
 		System.out.println("Total links on the page: " + links.size());

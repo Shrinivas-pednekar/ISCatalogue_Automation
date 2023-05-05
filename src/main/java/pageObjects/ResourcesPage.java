@@ -160,5 +160,8 @@ public class ResourcesPage {
 	{
 		util.clickOnElementUsingActions(driver, SolutionTruthMenuButton);
 	}
-	
+	public void HRefresh()
+	{
+		driver.navigate().refresh();
+	}
 }

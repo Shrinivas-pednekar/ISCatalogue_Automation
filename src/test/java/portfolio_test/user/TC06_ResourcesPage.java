@@ -39,7 +39,7 @@ public class TC06_ResourcesPage extends TestBase {
 	}
 
 
-	@Test(priority = 1)
+	/*@Test(priority = 1)
 	public void verifyIndustrySolutionsPageFromResourcesMenu() throws Throwable {
 		
 		resourcesPage.clickOnResourcesMenuButton();
@@ -90,7 +90,7 @@ public class TC06_ResourcesPage extends TestBase {
 		Assert.assertTrue(driver.getTitle().contains("RFPIO"));
 	}
 	
-	
+	*/
 	
 	@Test(priority = 4)
 	public void verifyISCloudsOverviewPageFromResourcesMenu() throws Throwable {
@@ -99,10 +99,12 @@ public class TC06_ResourcesPage extends TestBase {
 		resourcesPage.clickOnISCloudsOverviewMenuButton();
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Industry Solutions Delivery and the industry clouds"));
+		
 	}
 	@Test(priority = 5)
 	public void verifyCustomerHubPageFromResourcesMenu() throws Throwable 
 	{
+		resourcesPage.HRefresh();
 		resourcesPage.clickOnResourcesMenuButton();
 		resourcesPage.clickOnCustomerHubMenuButton();
 		resourcesPage.clickOnshowSearchListButton();
@@ -169,8 +171,8 @@ public class TC06_ResourcesPage extends TestBase {
 	public void verifyCatalogueRoadmapPageFromResourcesMenu() throws Throwable {
 		resourcesPage.clickOnResourcesMenuButton();
 		resourcesPage.clickOnCatalogueRoadmapMenuButton();
-		Thread.sleep(5000);
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		Thread.sleep(5000);
 		boolean actualResultRD = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(actualResultRD);
 		

@@ -2,24 +2,24 @@
 <testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-28T11:49:12Z" name="Default suite" finished-at="2023-04-28T11:49:54Z" duration-ms="42559">
+  <suite started-at="2023-05-05T05:18:31Z" name="Default suite" finished-at="2023-05-05T05:19:55Z" duration-ms="84653">
     <groups>
     </groups>
-    <test started-at="2023-04-28T11:49:12Z" name="Default test" finished-at="2023-04-28T11:49:54Z" duration-ms="42559">
-      <class name="portfolio_test.user.TC01_UserLoginTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC01_UserLoginTest@388ba540]" started-at="2023-04-28T17:19:12Z" name="initialize" finished-at="2023-04-28T17:19:51Z" duration-ms="39247" status="PASS">
+    <test started-at="2023-05-05T05:18:31Z" name="Default test" finished-at="2023-05-05T05:19:55Z" duration-ms="84653">
+      <class name="portfolio_test.user.TC03_CatalogueTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@619bfe29]" started-at="2023-05-05T10:48:31Z" name="initialize" finished-at="2023-05-05T10:48:46Z" duration-ms="15705" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="loginPageTitleTest()[pri:0, instance:portfolio_test.user.TC01_UserLoginTest@388ba540]" started-at="2023-04-28T17:19:51Z" name="loginPageTitleTest" finished-at="2023-04-28T17:19:54Z" duration-ms="3032" status="PASS">
+        <test-method signature="verifyBusinessAppsPageButtonOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@619bfe29]" started-at="2023-05-05T10:48:46Z" name="verifyBusinessAppsPageButtonOnCataloguePage" finished-at="2023-05-05T10:49:55Z" duration-ms="68636" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginPageTitleTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC01_UserLoginTest@388ba540]" started-at="2023-04-28T17:19:54Z" name="teardown" finished-at="2023-04-28T17:19:54Z" duration-ms="266" status="PASS">
+        </test-method> <!-- verifyBusinessAppsPageButtonOnCataloguePage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@619bfe29]" started-at="2023-05-05T10:49:55Z" name="teardown" finished-at="2023-05-05T10:49:55Z" duration-ms="301" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
+      </class> <!-- portfolio_test.user.TC03_CatalogueTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
