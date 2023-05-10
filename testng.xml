@@ -17,7 +17,7 @@
 		</classes>
 	</test>
 	
-	<!-- <test name="Validating all links and pages present under Catalogue menu test">
+	<test name="Validating all links and pages present under Catalogue menu test">
 		<classes>
 			<class name="portfolio_test.user.TC03_CatalogueTest"/>
 		</classes>
@@ -36,6 +36,6 @@
 		<classes>
 			<class name="portfolio_test.user.TC06_ResourcesPage"/>
 		</classes>
-	</test> -->
+	</test>
 	
 </suite>

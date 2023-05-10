@@ -2,20 +2,20 @@
 <testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-05T05:18:31Z" name="Default suite" finished-at="2023-05-05T05:19:55Z" duration-ms="84653">
+  <suite started-at="2023-05-09T11:52:38Z" name="Default suite" finished-at="2023-05-09T11:54:07Z" duration-ms="89093">
     <groups>
     </groups>
-    <test started-at="2023-05-05T05:18:31Z" name="Default test" finished-at="2023-05-05T05:19:55Z" duration-ms="84653">
+    <test started-at="2023-05-09T11:52:38Z" name="Default test" finished-at="2023-05-09T11:54:07Z" duration-ms="89093">
       <class name="portfolio_test.user.TC03_CatalogueTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@619bfe29]" started-at="2023-05-05T10:48:31Z" name="initialize" finished-at="2023-05-05T10:48:46Z" duration-ms="15705" status="PASS">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@5b057c8c]" started-at="2023-05-09T17:22:38Z" name="initialize" finished-at="2023-05-09T17:23:17Z" duration-ms="38903" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="verifyBusinessAppsPageButtonOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@619bfe29]" started-at="2023-05-05T10:48:46Z" name="verifyBusinessAppsPageButtonOnCataloguePage" finished-at="2023-05-05T10:49:55Z" duration-ms="68636" status="PASS">
+        <test-method signature="verifyAutomotiveMobilityandTransportationOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@5b057c8c]" started-at="2023-05-09T17:23:17Z" name="verifyAutomotiveMobilityandTransportationOnCataloguePage" finished-at="2023-05-09T17:24:07Z" duration-ms="49875" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyBusinessAppsPageButtonOnCataloguePage -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@619bfe29]" started-at="2023-05-05T10:49:55Z" name="teardown" finished-at="2023-05-05T10:49:55Z" duration-ms="301" status="PASS">
+        </test-method> <!-- verifyAutomotiveMobilityandTransportationOnCataloguePage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@5b057c8c]" started-at="2023-05-09T17:24:07Z" name="teardown" finished-at="2023-05-09T17:24:07Z" duration-ms="301" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

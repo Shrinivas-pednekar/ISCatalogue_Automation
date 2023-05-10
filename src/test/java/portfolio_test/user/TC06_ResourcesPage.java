@@ -108,8 +108,9 @@ public class TC06_ResourcesPage extends TestBase {
 		resourcesPage.clickOnResourcesMenuButton();
 		resourcesPage.clickOnCustomerHubMenuButton();
 		resourcesPage.clickOnshowSearchListButton();
+		Thread.sleep(3000);
 		resourcesPage.clickOnselectAPMøller();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		boolean actualResult = resourcesPage.getcustomerNameValue().getText().contains("A.P. Møller - Maersk Group");
 		System.out.println("Actual Result - " + actualResult);
 		Assert.assertTrue(actualResult);

@@ -20,35 +20,53 @@ import org.testng.annotations.Test;
 
 import pageObjects.CampaignsPage;
 import pageObjects.HomePage;
-
+import pageObjects.LoginPage;
 import resources.TestBase;
 
 public class TC07_BrokenLinkChecker extends TestBase {
-	public WebDriver driver;
-	  public static void main(String[] args) throws IOException {
-	     //   System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver"); // Set the path to chromedriver
-	        WebDriver driver = new EdgeDriver();
-	        driver.get("https://servicesportfolio.net/Home/Index"); // Open the website to be tested
+	LoginPage loginPage;
+	Utilities util;
+	public static Logger log = LogManager.getLogger(TestBase.class.getName());
 
-	        List<WebElement> links = driver.findElements(By.tagName("a")); // Find all links on the page
-	        for (WebElement link : links) {
-	            String url = link.getAttribute("href");
-	            if (url == null || url.isEmpty()) { // Check if URL is empty or null
-	                System.out.println("URL is either not configured for anchor tag or it is empty");
-	                continue;
-	            }
+	@BeforeTest
+	public void initialize() throws IOException {
+		driver = initializeDriver();
+		log.info("Driver is initialized");
 
-	            HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection(); // Open the URL connection
-	            connection.setRequestMethod("HEAD"); // Set the request method as HEAD
-	            connection.connect(); // Connect to the URL
-	            int responseCode = connection.getResponseCode(); // Get the response code
+		driver.get(prop.getProperty("ManagedIP"));
+		util = new Utilities();
+		loginPage = new LoginPage(driver);
+	}
+	@Test(priority = 22, enabled = true)
+	public void testBrokenLinks() throws IOException, InterruptedException {
+		
+		List<WebElement> links = driver.findElements(By.xpath("//a[contains(@href,'.')]"));
+		System.out.println("Total links on the page: " + links.size());
+		HttpURLConnection.setFollowRedirects(false); // disable automatic redirects
+		int maxRedirects = 5;
+		for (WebElement link : links) {
+			//Thread.sleep(3000);
+			String url = link.getAttribute("href");
+			//Thread.sleep(3000);
 
-	            if (responseCode >= 400) { // Check if response code indicates a broken link
-	                System.out.println(url + " is a broken link.");
-	            } else {
-	                System.out.println(url + " is a valid link.");
-	            }
-	        }
-	        driver.quit(); // Close the WebDriver instance
-	    }
+			if (url == null || url.isEmpty()|| url.startsWith("mailto:")) {
+				continue;
+			}
+			HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+			//Thread.sleep(3000);
+			connection.setRequestMethod("GET");
+			//Thread.sleep(3000);
+			int responseCode = connection.getResponseCode();
+			
+			if (responseCode >= 400) {
+				
+				System.out.println("Broken Link: |" + url + " | Response Code: |" + responseCode);
+
+			} else {
+				System.out.println("Working Link: |" + url + " | Response Code: |" + responseCode);
+
+			}
+			Thread.sleep(2000);
+		}
+	}
 }
