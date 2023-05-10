@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="1,952.292" tests="72" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="185.285" tests="11" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="18"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -60,14 +60,14 @@
     <property name="library.jansi.path" value="C:\Program Files\apache-maven-3.9.1\lib\jansi-native"/>
     <property name="java.class.version" value="62.0"/>
   </properties>
-  <testcase name="loginPageTitleTest" classname="portfolio_test.user.TC01_UserLoginTest" time="3.036"/>
-  <testcase name="verifyHomepage" classname="portfolio_test.user.TC02_HomePage" time="0.028"/>
-  <testcase name="verifyCatalogueNavigatorOnHomepage" classname="portfolio_test.user.TC02_HomePage" time="10.642"/>
-  <testcase name="verifyCustomerEvidenceSectionOnHomepage" classname="portfolio_test.user.TC02_HomePage" time="5.417"/>
-  <testcase name="verifyViewCampaignPageOnHomepage" classname="portfolio_test.user.TC02_HomePage" time="14.318"/>
-  <testcase name="verifyCloudTransitionServicesPageOnHomepage" classname="portfolio_test.user.TC02_HomePage" time="11.211"/>
-  <testcase name="VerifyCloudManagementOperationsPageOnHomepage" classname="portfolio_test.user.TC02_HomePage" time="10.598"/>
-  <testcase name="VerifyProductInnovationDevelopmentServicesPageOnHomepage" classname="portfolio_test.user.TC02_HomePage" time="5.087">
+  <testcase name="loginPageTitleTest" classname="portfolio_test.user.TC01_UserLoginTest" time="3.02"/>
+  <testcase name="verifyHomepage" classname="portfolio_test.user.TC02_HomePage" time="0.007"/>
+  <testcase name="verifyCatalogueNavigatorOnHomepage" classname="portfolio_test.user.TC02_HomePage" time="10.478"/>
+  <testcase name="verifyCustomerEvidenceSectionOnHomepage" classname="portfolio_test.user.TC02_HomePage" time="5.217"/>
+  <testcase name="verifyViewCampaignPageOnHomepage" classname="portfolio_test.user.TC02_HomePage" time="13.594"/>
+  <testcase name="verifyCloudTransitionServicesPageOnHomepage" classname="portfolio_test.user.TC02_HomePage" time="10.347"/>
+  <testcase name="VerifyCloudManagementOperationsPageOnHomepage" classname="portfolio_test.user.TC02_HomePage" time="10.49"/>
+  <testcase name="VerifyProductInnovationDevelopmentServicesPageOnHomepage" classname="portfolio_test.user.TC02_HomePage" time="5.024">
     <failure message="java.lang.reflect.InvocationTargetException&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.11&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.json.JsonException">org.openqa.selenium.json.JsonException: 
 java.lang.reflect.InvocationTargetException
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
@@ -83,107 +83,13 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'HJNZL000593', ip: '192.168.1.11', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 112.0.1722.68, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:58442}, msedge: {msedgedriverVersion: 112.0.1722.71 (0dac4e4620b8..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d3d72c317fe76b85f543eeea217b313d
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 112.0.1722.68, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:49160}, msedge: {msedgedriverVersion: 112.0.1722.71 (0dac4e4620b8..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ba291c64992a945c3c357a76740d4c38
 *** Element info: {Using=xpath, value=//h4[contains(text(),'Product Innovation Development Services')]}
 	at portfolio_test.user.TC02_HomePage.VerifyProductInnovationDevelopmentServicesPageOnHomepage(TC02_HomePage.java:124)
 </failure>
   </testcase>
-  <testcase name="VerifyViewalltopoffersPageOnHomepage" classname="portfolio_test.user.TC02_HomePage" time="12.846"/>
-  <testcase name="VerifyCustomerEvidenceSearchPageFromHomepage" classname="portfolio_test.user.TC02_HomePage" time="25.424"/>
-  <testcase name="VerifyEurekaPageFromHomepage" classname="portfolio_test.user.TC02_HomePage" time="7.046"/>
-  <testcase name="verifyEmergingInnovationEngineeringPageOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="35.67"/>
-  <testcase name="verifyAdoptionChangeandServicesManagementPageOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="44.601"/>
-  <testcase name="verifyBusinessAppsPageButtonOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="64.728"/>
-  <testcase name="verifyCrossSolutionAreaandFunctionalSolutionOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="34.002"/>
-  <testcase name="verifyDigitalandApplicationInnovationOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="61.322"/>
-  <testcase name="verifyDataandAIOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="62.627"/>
-  <testcase name="verifyInfrastructureOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="51.47"/>
-  <testcase name="verifyModernWorkOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="63.892"/>
-  <testcase name="verifySecurityOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="131.462"/>
-  <testcase name="verifyAutomotiveMobilityandTransportationOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="49.357"/>
-  <testcase name="verifyCrossIndustryOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="15.664"/>
-  <testcase name="verifyDefenseandIntelligenceOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="15.379"/>
-  <testcase name="verifyEducationOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="18.421"/>
-  <testcase name="verifyEnergyandResourcesOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="15.949"/>
-  <testcase name="verifyFinancialServicesOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="19.117"/>
-  <testcase name="verifyGovernmentOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="15.828"/>
-  <testcase name="verifyHealthcareOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="19.539"/>
-  <testcase name="verifyIndustrialsandManufacturingOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="98.206"/>
-  <testcase name="verifyRetailandConsumerGoodsOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="16.753"/>
-  <testcase name="verifySustainabilityOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="24.358"/>
-  <testcase name="verifyTelecommunicationsandMediaOnCataloguePage" classname="portfolio_test.user.TC03_CatalogueTest" time="12.791"/>
-  <testcase name="verifyCustomerEvidanceHomePageOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="17.6"/>
-  <testcase name="verifyCarouselOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="0.08"/>
-  <testcase name="verifysubmitNewStoryPageOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="13.54"/>
-  <testcase name="verifyCustomerEvidanceSearchFunctionOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="12.807"/>
-  <testcase name="verifyAutomotiveMobilityandTransportationCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="18.915"/>
-  <testcase name="verifyCrossIndustryCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="7.584"/>
-  <testcase name="verifyDefenseandIntelligenceCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="43.397"/>
-  <testcase name="verifyEducationCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="29.191"/>
-  <testcase name="verifyEnergyandResourcesCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="49.507"/>
-  <testcase name="verifyFinancialServicesCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="20.919"/>
-  <testcase name="verifyGovernmentCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="24.592"/>
-  <testcase name="verifyHealthcareCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="12.734"/>
-  <testcase name="verifyIndustrialandManufacturingCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="18.866"/>
-  <testcase name="verifyRetailandConsumerGoodsCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="22.087"/>
-  <testcase name="verifySustainabilityCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="17.64"/>
-  <testcase name="verifyTelecommunicationsandMediaCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="34.623"/>
-  <testcase name="verifyBusinessAppsCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="34.225"/>
-  <testcase name="verifyDataAICustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="23.715"/>
-  <testcase name="verifyDigitalandApplicationInnovationCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="23.863"/>
-  <testcase name="verifyInfrastructureCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="16.154"/>
-  <testcase name="verifyModernWorkCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="21.838"/>
-  <testcase name="verifySecurityCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="33.718"/>
-  <testcase name="verifyWinWiresCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="26.753"/>
-  <testcase name="verifyDeliveryStoriesCustomerStoriesSearchButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="15.727"/>
-  <testcase name="verifyclickOncustomerEvidenceWinWiresMenuButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="27.211"/>
-  <testcase name="verifyCustomerEvidenceDeliveryStoriesMenuButtonOnCustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="16.826"/>
-  <testcase name="verifySubmitaStoryMenuButtonOncustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="15.39"/>
-  <testcase name="verifyclickOnAboutCustomerEvidenceMenuButtonOncustomerEvidence" classname="portfolio_test.user.TC04_CustomerEvidenceTest" time="8.391"/>
-  <testcase name="verifyTopACRandDVGeneratorsPageFromCampaignsMenu" classname="portfolio_test.user.TC05_CampaignsPage" time="39.823"/>
-  <testcase name="verifyDoMoreWithLessPageFromCampaignsMenu" classname="portfolio_test.user.TC05_CampaignsPage" time="4.167"/>
-  <testcase name="verifyISCloudsOverviewPageFromResourcesMenu" classname="portfolio_test.user.TC06_ResourcesPage" time="6.925">
-    <failure message="java.lang.reflect.InvocationTargetException&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.11&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;&#10;Driver info: driver.version: RemoteWebDriver" type="org.openqa.selenium.json.JsonException">org.openqa.selenium.json.JsonException: 
-java.lang.reflect.InvocationTargetException
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'HJNZL000593', ip: '192.168.1.11', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
-Driver info: driver.version: RemoteWebDriver
-	at portfolio_test.user.TC06_ResourcesPage.verifyISCloudsOverviewPageFromResourcesMenu(TC06_ResourcesPage.java:99)
-Caused by: java.lang.reflect.InvocationTargetException
-	at portfolio_test.user.TC06_ResourcesPage.verifyISCloudsOverviewPageFromResourcesMenu(TC06_ResourcesPage.java:99)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'IS Clouds Overview')]"}
-  (Session info: MicrosoftEdge=112.0.1722.68)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'HJNZL000593', ip: '192.168.1.11', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 112.0.1722.68, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:59544}, msedge: {msedgedriverVersion: 112.0.1722.71 (0dac4e4620b8..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5c72bb2fb651af307cc055d096d21e3c
-*** Element info: {Using=xpath, value=//a[contains(text(),'IS Clouds Overview')]}
-	at portfolio_test.user.TC06_ResourcesPage.verifyISCloudsOverviewPageFromResourcesMenu(TC06_ResourcesPage.java:99)
-</failure>
-    <system-out><![CDATA[edge
-]]></system-out>
-    <system-err><![CDATA[Starting Microsoft Edge WebDriver 112.0.1722.71 (0dac4e4620b8ce06154d15b1cb1db5936d178b02) on port 24790
-To submit feedback, report a bug, or suggest new features, please visit https://github.com/MicrosoftEdge/EdgeWebDriver
-
-Only local connections are allowed.
-Please see https://aka.ms/WebDriverSecurity for suggestions on keeping Microsoft Edge WebDriver safe.
-
-Microsoft Edge WebDriver was started successfully.
-May 09, 2023 7:19:32 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-]]></system-err>
-  </testcase>
-  <testcase name="verifyCustomerHubPageFromResourcesMenu" classname="portfolio_test.user.TC06_ResourcesPage" time="14.78"/>
-  <testcase name="verifyDatabookPageFromResourcesMenu" classname="portfolio_test.user.TC06_ResourcesPage" time="6.759"/>
-  <testcase name="verifyFundingPageFromResourcesMenu" classname="portfolio_test.user.TC06_ResourcesPage" time="2.553"/>
-  <testcase name="verifyAboutISCataloguePageFromResourcesMenu" classname="portfolio_test.user.TC06_ResourcesPage" time="3.257"/>
-  <testcase name="verifyEmergingSolutionsPageFromResourcesMenu" classname="portfolio_test.user.TC06_ResourcesPage" time="7.629"/>
-  <testcase name="verifyManageCatalogueSubscriptionsPageFromResourcesMenu" classname="portfolio_test.user.TC06_ResourcesPage" time="7.09"/>
-  <testcase name="verifyCatalogueRoadmapPageFromResourcesMenu" classname="portfolio_test.user.TC06_ResourcesPage" time="7.513"/>
-  <testcase name="verifySolutionTruthPageFromResourcesMenu" classname="portfolio_test.user.TC06_ResourcesPage" time="2.932"/>
-  <testcase name="verifyISSolutionsPlaybookPageFromResourcesMenu" classname="portfolio_test.user.TC06_ResourcesPage" time="14.527"/>
+  <testcase name="VerifyViewalltopoffersPageOnHomepage" classname="portfolio_test.user.TC02_HomePage" time="10.351"/>
+  <testcase name="VerifyCustomerEvidenceSearchPageFromHomepage" classname="portfolio_test.user.TC02_HomePage" time="27.699"/>
+  <testcase name="VerifyEurekaPageFromHomepage" classname="portfolio_test.user.TC02_HomePage" time="5.33"/>
 </testsuite>
