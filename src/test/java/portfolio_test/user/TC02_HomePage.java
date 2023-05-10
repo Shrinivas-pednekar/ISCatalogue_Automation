@@ -120,8 +120,8 @@ public class TC02_HomePage extends TestBase {
 	}
 
 	@Test(priority = 7)
-	public void VerifyProductInnovationDevelopmentServicesPageOnHomepage() throws Throwable {
-		homePage.clickOnProductInnovationDevelopmentServicesLink();
+	public void VerifyDataStrategyPageOnHomepage() throws Throwable {
+		homePage.clickOnDataStrategyLink();
 		Thread.sleep(5000);
 		Set<String> allTabs = homePage.getWindowHandles();
 		String mainTab = driver.getWindowHandle();
@@ -129,7 +129,7 @@ public class TC02_HomePage extends TestBase {
 		String newTab = allTabs.iterator().next();
 		driver.switchTo().window(newTab);
 		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Product Innovation Development Services"));
+		Assert.assertTrue(driver.getTitle().contains("Data Strategy"));
 		driver.close();
 		driver.switchTo().window(mainTab);
 		Thread.sleep(5000);
