@@ -6,36 +6,12 @@
   </listeners>
   <test parallel="none" name="Validating all links and pages present under Home page test(failed)">
     <classes>
-      <class name="portfolio_test.user.TC03_CatalogueTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC03_CatalogueTest -->
-      <class name="portfolio_test.user.TC06_ResourcesPage">
-        <methods>
-          <include name="teardown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC06_ResourcesPage -->
       <class name="portfolio_test.user.TC01_UserLoginTest">
         <methods>
           <include name="teardown"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
-      <class name="portfolio_test.user.TC05_CampaignsPage">
-        <methods>
-          <include name="initialize"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC05_CampaignsPage -->
-      <class name="portfolio_test.user.TC04_CustomerEvidenceTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC04_CustomerEvidenceTest -->
       <class name="portfolio_test.user.TC02_HomePage">
         <methods>
           <include name="initialize"/>
@@ -45,87 +21,4 @@
       </class> <!-- portfolio_test.user.TC02_HomePage -->
     </classes>
   </test> <!-- Validating all links and pages present under Home page test(failed) -->
-  <test parallel="none" name="Validating all links and pages present under Customer Evidence menu test(failed)">
-    <classes>
-      <class name="portfolio_test.user.TC03_CatalogueTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC03_CatalogueTest -->
-      <class name="portfolio_test.user.TC06_ResourcesPage">
-        <methods>
-          <include name="teardown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC06_ResourcesPage -->
-      <class name="portfolio_test.user.TC01_UserLoginTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
-      <class name="portfolio_test.user.TC05_CampaignsPage">
-        <methods>
-          <include name="initialize"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC05_CampaignsPage -->
-      <class name="portfolio_test.user.TC04_CustomerEvidenceTest">
-        <methods>
-          <include name="verifyEnergyandResourcesCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="teardown"/>
-          <include name="verifyGovernmentCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC04_CustomerEvidenceTest -->
-      <class name="portfolio_test.user.TC02_HomePage">
-        <methods>
-          <include name="initialize"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC02_HomePage -->
-    </classes>
-  </test> <!-- Validating all links and pages present under Customer Evidence menu test(failed) -->
-  <test parallel="none" name="Validating all links and pages present under Resources menu test(failed)">
-    <classes>
-      <class name="portfolio_test.user.TC03_CatalogueTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC03_CatalogueTest -->
-      <class name="portfolio_test.user.TC06_ResourcesPage">
-        <methods>
-          <include name="teardown"/>
-          <include name="initialize"/>
-          <include name="verifyISCloudsOverviewPageFromResourcesMenu"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC06_ResourcesPage -->
-      <class name="portfolio_test.user.TC01_UserLoginTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
-      <class name="portfolio_test.user.TC05_CampaignsPage">
-        <methods>
-          <include name="initialize"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC05_CampaignsPage -->
-      <class name="portfolio_test.user.TC04_CustomerEvidenceTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC04_CustomerEvidenceTest -->
-      <class name="portfolio_test.user.TC02_HomePage">
-        <methods>
-          <include name="initialize"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC02_HomePage -->
-    </classes>
-  </test> <!-- Validating all links and pages present under Resources menu test(failed) -->
 </suite> <!-- Failed suite [IS Catalauge Automation Tests] -->
