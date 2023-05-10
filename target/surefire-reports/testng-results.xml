@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="72" passed="70" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-09T13:18:55Z" name="IS Catalauge Automation Tests" finished-at="2023-05-09T13:51:25Z" duration-ms="1949615">
+    <groups>
+    </groups>
+    <test started-at="2023-05-09T13:18:55Z" name="Validating IS Catalauge Login page test" finished-at="2023-05-09T13:19:46Z" duration-ms="51145">
+      <class name="portfolio_test.user.TC01_UserLoginTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC01_UserLoginTest@6ffab045]" started-at="2023-05-09T18:48:55Z" name="initialize" finished-at="2023-05-09T18:49:43Z" duration-ms="47641" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="loginPageTitleTest()[pri:0, instance:portfolio_test.user.TC01_UserLoginTest@6ffab045]" started-at="2023-05-09T18:49:43Z" name="loginPageTitleTest" finished-at="2023-05-09T18:49:46Z" duration-ms="3036" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPageTitleTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC01_UserLoginTest@6ffab045]" started-at="2023-05-09T18:49:46Z" name="teardown" finished-at="2023-05-09T18:49:46Z" duration-ms="442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
+    </test> <!-- Validating IS Catalauge Login page test -->
+    <test started-at="2023-05-09T13:19:47Z" name="Validating all links and pages present under Home page test" finished-at="2023-05-09T13:22:17Z" duration-ms="150334">
+      <class name="portfolio_test.user.TC02_HomePage">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC02_HomePage@28a0fd6c]" started-at="2023-05-09T18:49:47Z" name="initialize" finished-at="2023-05-09T18:50:33Z" duration-ms="46245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="verifyHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@28a0fd6c]" started-at="2023-05-09T18:50:33Z" name="verifyHomepage" finished-at="2023-05-09T18:50:33Z" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomepage -->
+        <test-method signature="verifyCatalogueNavigatorOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@28a0fd6c]" started-at="2023-05-09T18:50:33Z" name="verifyCatalogueNavigatorOnHomepage" finished-at="2023-05-09T18:50:44Z" duration-ms="10638" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCatalogueNavigatorOnHomepage -->
+        <test-method signature="verifyCustomerEvidenceSectionOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@28a0fd6c]" started-at="2023-05-09T18:50:44Z" name="verifyCustomerEvidenceSectionOnHomepage" finished-at="2023-05-09T18:50:49Z" duration-ms="5417" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCustomerEvidenceSectionOnHomepage -->
+        <test-method signature="verifyViewCampaignPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@28a0fd6c]" started-at="2023-05-09T18:50:49Z" name="verifyViewCampaignPageOnHomepage" finished-at="2023-05-09T18:51:04Z" duration-ms="14318" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyViewCampaignPageOnHomepage -->
+        <test-method signature="verifyCloudTransitionServicesPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@28a0fd6c]" started-at="2023-05-09T18:51:04Z" name="verifyCloudTransitionServicesPageOnHomepage" finished-at="2023-05-09T18:51:15Z" duration-ms="11211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCloudTransitionServicesPageOnHomepage -->
+        <test-method signature="VerifyCloudManagementOperationsPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@28a0fd6c]" started-at="2023-05-09T18:51:15Z" name="VerifyCloudManagementOperationsPageOnHomepage" finished-at="2023-05-09T18:51:25Z" duration-ms="10598" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyCloudManagementOperationsPageOnHomepage -->
+        <test-method signature="VerifyProductInnovationDevelopmentServicesPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@28a0fd6c]" started-at="2023-05-09T18:51:25Z" name="VerifyProductInnovationDevelopmentServicesPageOnHomepage" finished-at="2023-05-09T18:51:30Z" duration-ms="5071" status="FAIL">
+          <exception class="org.openqa.selenium.json.JsonException">
+            <message>
+              <![CDATA[java.lang.reflect.InvocationTargetException
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'HJNZL000593', ip: '192.168.1.11', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'HJNZL000593', ip: '192.168.1.11', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:332)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:168)
+	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:647)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:168)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
+	at resources.Utilities.clickOnElementUsingActions(Utilities.java:111)
+	at pageObjects.HomePage.clickOnProductInnovationDevelopmentServicesLink(HomePage.java:129)
+	at portfolio_test.user.TC02_HomePage.VerifyProductInnovationDevelopmentServicesPageOnHomepage(TC02_HomePage.java:124)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'HJNZL000593', ip: '192.168.1.11', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: driver.version: RemoteWebDriver
+		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:279)
+		at org.openqa.selenium.json.Json.toJson(Json.java:44)
+		... 36 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:119)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:328)
+	... 48 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h4[contains(text(),'Product Innovation Development Services')]"}
+  (Session info: MicrosoftEdge=112.0.1722.68)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'HJNZL000593', ip: '192.168.1.11', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 112.0.1722.68, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:58442}, msedge: {msedgedriverVersion: 112.0.1722.71 (0dac4e4620b8..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d3d72c317fe76b85f543eeea217b313d
+*** Element info: {Using=xpath, value=//h4[contains(text(),'Product Innovation Development Services')]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:204)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:155)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	... 50 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.json.JsonException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyProductInnovationDevelopmentServicesPageOnHomepage -->
+        <test-method signature="VerifyViewalltopoffersPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@28a0fd6c]" started-at="2023-05-09T18:51:31Z" name="VerifyViewalltopoffersPageOnHomepage" finished-at="2023-05-09T18:51:44Z" duration-ms="12846" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyViewalltopoffersPageOnHomepage -->
+        <test-method signature="VerifyCustomerEvidenceSearchPageFromHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@28a0fd6c]" started-at="2023-05-09T18:51:44Z" name="VerifyCustomerEvidenceSearchPageFromHomepage" finished-at="2023-05-09T18:52:10Z" duration-ms="25423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyCustomerEvidenceSearchPageFromHomepage -->
+        <test-method signature="VerifyEurekaPageFromHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@28a0fd6c]" started-at="2023-05-09T18:52:10Z" name="VerifyEurekaPageFromHomepage" finished-at="2023-05-09T18:52:17Z" duration-ms="7030" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyEurekaPageFromHomepage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC02_HomePage@28a0fd6c]" started-at="2023-05-09T18:52:17Z" name="teardown" finished-at="2023-05-09T18:52:17Z" duration-ms="536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- portfolio_test.user.TC02_HomePage -->
+    </test> <!-- Validating all links and pages present under Home page test -->
+    <test started-at="2023-05-09T13:22:17Z" name="Validating all links and pages present under Catalogue menu test" finished-at="2023-05-09T13:37:33Z" duration-ms="915770">
+      <class name="portfolio_test.user.TC03_CatalogueTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T18:52:17Z" name="initialize" finished-at="2023-05-09T18:53:01Z" duration-ms="43856" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="verifyEmergingInnovationEngineeringPageOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T18:53:01Z" name="verifyEmergingInnovationEngineeringPageOnCataloguePage" finished-at="2023-05-09T18:53:37Z" duration-ms="35670" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmergingInnovationEngineeringPageOnCataloguePage -->
+        <test-method signature="verifyAdoptionChangeandServicesManagementPageOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T18:53:37Z" name="verifyAdoptionChangeandServicesManagementPageOnCataloguePage" finished-at="2023-05-09T18:54:22Z" duration-ms="44601" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAdoptionChangeandServicesManagementPageOnCataloguePage -->
+        <test-method signature="verifyBusinessAppsPageButtonOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T18:54:22Z" name="verifyBusinessAppsPageButtonOnCataloguePage" finished-at="2023-05-09T18:55:26Z" duration-ms="64728" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBusinessAppsPageButtonOnCataloguePage -->
+        <test-method signature="verifyCrossSolutionAreaandFunctionalSolutionOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T18:55:26Z" name="verifyCrossSolutionAreaandFunctionalSolutionOnCataloguePage" finished-at="2023-05-09T18:56:00Z" duration-ms="34002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCrossSolutionAreaandFunctionalSolutionOnCataloguePage -->
+        <test-method signature="verifyDigitalandApplicationInnovationOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T18:56:00Z" name="verifyDigitalandApplicationInnovationOnCataloguePage" finished-at="2023-05-09T18:57:02Z" duration-ms="61322" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDigitalandApplicationInnovationOnCataloguePage -->
+        <test-method signature="verifyDataandAIOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T18:57:02Z" name="verifyDataandAIOnCataloguePage" finished-at="2023-05-09T18:58:04Z" duration-ms="62627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDataandAIOnCataloguePage -->
+        <test-method signature="verifyInfrastructureOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T18:58:04Z" name="verifyInfrastructureOnCataloguePage" finished-at="2023-05-09T18:58:56Z" duration-ms="51470" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInfrastructureOnCataloguePage -->
+        <test-method signature="verifyModernWorkOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T18:58:56Z" name="verifyModernWorkOnCataloguePage" finished-at="2023-05-09T19:00:00Z" duration-ms="63892" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyModernWorkOnCataloguePage -->
+        <test-method signature="verifySecurityOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T19:00:00Z" name="verifySecurityOnCataloguePage" finished-at="2023-05-09T19:02:11Z" duration-ms="131462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySecurityOnCataloguePage -->
+        <test-method signature="verifyAutomotiveMobilityandTransportationOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T19:02:11Z" name="verifyAutomotiveMobilityandTransportationOnCataloguePage" finished-at="2023-05-09T19:03:00Z" duration-ms="49357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAutomotiveMobilityandTransportationOnCataloguePage -->
+        <test-method signature="verifyCrossIndustryOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T19:03:00Z" name="verifyCrossIndustryOnCataloguePage" finished-at="2023-05-09T19:03:16Z" duration-ms="15665" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCrossIndustryOnCataloguePage -->
+        <test-method signature="verifyDefenseandIntelligenceOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T19:03:16Z" name="verifyDefenseandIntelligenceOnCataloguePage" finished-at="2023-05-09T19:03:31Z" duration-ms="15379" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDefenseandIntelligenceOnCataloguePage -->
+        <test-method signature="verifyEducationOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T19:03:31Z" name="verifyEducationOnCataloguePage" finished-at="2023-05-09T19:03:50Z" duration-ms="18421" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEducationOnCataloguePage -->
+        <test-method signature="verifyEnergyandResourcesOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T19:03:50Z" name="verifyEnergyandResourcesOnCataloguePage" finished-at="2023-05-09T19:04:06Z" duration-ms="15949" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEnergyandResourcesOnCataloguePage -->
+        <test-method signature="verifyFinancialServicesOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T19:04:06Z" name="verifyFinancialServicesOnCataloguePage" finished-at="2023-05-09T19:04:25Z" duration-ms="19117" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFinancialServicesOnCataloguePage -->
+        <test-method signature="verifyGovernmentOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T19:04:25Z" name="verifyGovernmentOnCataloguePage" finished-at="2023-05-09T19:04:41Z" duration-ms="15828" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGovernmentOnCataloguePage -->
+        <test-method signature="verifyHealthcareOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T19:04:41Z" name="verifyHealthcareOnCataloguePage" finished-at="2023-05-09T19:05:00Z" duration-ms="19539" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHealthcareOnCataloguePage -->
+        <test-method signature="verifyIndustrialsandManufacturingOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T19:05:00Z" name="verifyIndustrialsandManufacturingOnCataloguePage" finished-at="2023-05-09T19:06:38Z" duration-ms="98208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIndustrialsandManufacturingOnCataloguePage -->
+        <test-method signature="verifyRetailandConsumerGoodsOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T19:06:38Z" name="verifyRetailandConsumerGoodsOnCataloguePage" finished-at="2023-05-09T19:06:55Z" duration-ms="16753" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRetailandConsumerGoodsOnCataloguePage -->
+        <test-method signature="verifySustainabilityOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T19:06:55Z" name="verifySustainabilityOnCataloguePage" finished-at="2023-05-09T19:07:20Z" duration-ms="24358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySustainabilityOnCataloguePage -->
+        <test-method signature="verifyTelecommunicationsandMediaOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T19:07:20Z" name="verifyTelecommunicationsandMediaOnCataloguePage" finished-at="2023-05-09T19:07:32Z" duration-ms="12791" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTelecommunicationsandMediaOnCataloguePage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC03_CatalogueTest@32cb636e]" started-at="2023-05-09T19:07:32Z" name="teardown" finished-at="2023-05-09T19:07:33Z" duration-ms="774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- portfolio_test.user.TC03_CatalogueTest -->
+    </test> <!-- Validating all links and pages present under Catalogue menu test -->
+    <test started-at="2023-05-09T13:37:33Z" name="Validating all links and pages present under Customer Evidence menu test" finished-at="2023-05-09T13:48:28Z" duration-ms="655207">
+      <class name="portfolio_test.user.TC04_CustomerEvidenceTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:07:33Z" name="initialize" finished-at="2023-05-09T19:08:20Z" duration-ms="46875" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="verifyCustomerEvidanceHomePageOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:08:20Z" name="verifyCustomerEvidanceHomePageOnCustomerEvidence" finished-at="2023-05-09T19:08:38Z" duration-ms="17600" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCustomerEvidanceHomePageOnCustomerEvidence -->
+        <test-method signature="verifyCarouselOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:08:38Z" name="verifyCarouselOnCustomerEvidence" finished-at="2023-05-09T19:08:38Z" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCarouselOnCustomerEvidence -->
+        <test-method signature="verifysubmitNewStoryPageOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:08:38Z" name="verifysubmitNewStoryPageOnCustomerEvidence" finished-at="2023-05-09T19:08:51Z" duration-ms="13540" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifysubmitNewStoryPageOnCustomerEvidence -->
+        <test-method signature="verifyCustomerEvidanceSearchFunctionOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:08:51Z" name="verifyCustomerEvidanceSearchFunctionOnCustomerEvidence" finished-at="2023-05-09T19:09:04Z" duration-ms="12807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCustomerEvidanceSearchFunctionOnCustomerEvidence -->
+        <test-method signature="verifyAutomotiveMobilityandTransportationCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:09:04Z" name="verifyAutomotiveMobilityandTransportationCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:09:23Z" duration-ms="18915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAutomotiveMobilityandTransportationCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyCrossIndustryCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:09:23Z" name="verifyCrossIndustryCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:09:31Z" duration-ms="7584" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCrossIndustryCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyDefenseandIntelligenceCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:09:31Z" name="verifyDefenseandIntelligenceCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:10:14Z" duration-ms="43397" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDefenseandIntelligenceCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyEducationCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:10:14Z" name="verifyEducationCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:10:43Z" duration-ms="29191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEducationCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyEnergyandResourcesCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:10:43Z" name="verifyEnergyandResourcesCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:11:33Z" duration-ms="49507" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEnergyandResourcesCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyFinancialServicesCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:11:33Z" name="verifyFinancialServicesCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:11:54Z" duration-ms="20918" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFinancialServicesCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyGovernmentCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:11:54Z" name="verifyGovernmentCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:12:18Z" duration-ms="24593" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGovernmentCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyHealthcareCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:12:18Z" name="verifyHealthcareCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:12:31Z" duration-ms="12734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHealthcareCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyIndustrialandManufacturingCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:12:31Z" name="verifyIndustrialandManufacturingCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:12:50Z" duration-ms="18866" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIndustrialandManufacturingCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyRetailandConsumerGoodsCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:12:50Z" name="verifyRetailandConsumerGoodsCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:13:12Z" duration-ms="22087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRetailandConsumerGoodsCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifySustainabilityCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:13:12Z" name="verifySustainabilityCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:13:30Z" duration-ms="17640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySustainabilityCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyTelecommunicationsandMediaCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:13:30Z" name="verifyTelecommunicationsandMediaCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:14:04Z" duration-ms="34623" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTelecommunicationsandMediaCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyBusinessAppsCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:14:04Z" name="verifyBusinessAppsCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:14:38Z" duration-ms="34225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBusinessAppsCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyDataAICustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:14:38Z" name="verifyDataAICustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:15:02Z" duration-ms="23726" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDataAICustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyDigitalandApplicationInnovationCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:15:02Z" name="verifyDigitalandApplicationInnovationCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:15:26Z" duration-ms="23863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDigitalandApplicationInnovationCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyInfrastructureCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:15:26Z" name="verifyInfrastructureCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:15:42Z" duration-ms="16154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInfrastructureCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyModernWorkCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:15:42Z" name="verifyModernWorkCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:16:04Z" duration-ms="21838" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyModernWorkCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifySecurityCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:16:04Z" name="verifySecurityCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:16:38Z" duration-ms="33718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySecurityCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyWinWiresCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:16:38Z" name="verifyWinWiresCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:17:04Z" duration-ms="26752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWinWiresCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyDeliveryStoriesCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:17:04Z" name="verifyDeliveryStoriesCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-09T19:17:20Z" duration-ms="15727" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeliveryStoriesCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyclickOncustomerEvidenceWinWiresMenuButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:17:20Z" name="verifyclickOncustomerEvidenceWinWiresMenuButtonOnCustomerEvidence" finished-at="2023-05-09T19:17:47Z" duration-ms="27211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOncustomerEvidenceWinWiresMenuButtonOnCustomerEvidence -->
+        <test-method signature="verifyCustomerEvidenceDeliveryStoriesMenuButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:17:47Z" name="verifyCustomerEvidenceDeliveryStoriesMenuButtonOnCustomerEvidence" finished-at="2023-05-09T19:18:04Z" duration-ms="16825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCustomerEvidenceDeliveryStoriesMenuButtonOnCustomerEvidence -->
+        <test-method signature="verifySubmitaStoryMenuButtonOncustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:18:04Z" name="verifySubmitaStoryMenuButtonOncustomerEvidence" finished-at="2023-05-09T19:18:20Z" duration-ms="15390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubmitaStoryMenuButtonOncustomerEvidence -->
+        <test-method signature="verifyclickOnAboutCustomerEvidenceMenuButtonOncustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:18:20Z" name="verifyclickOnAboutCustomerEvidenceMenuButtonOncustomerEvidence" finished-at="2023-05-09T19:18:28Z" duration-ms="8392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnAboutCustomerEvidenceMenuButtonOncustomerEvidence -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@285d851a]" started-at="2023-05-09T19:18:28Z" name="teardown" finished-at="2023-05-09T19:18:28Z" duration-ms="412" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- portfolio_test.user.TC04_CustomerEvidenceTest -->
+    </test> <!-- Validating all links and pages present under Customer Evidence menu test -->
+    <test started-at="2023-05-09T13:48:28Z" name="Validating all links and pages present under Campaigns menu test" finished-at="2023-05-09T13:49:30Z" duration-ms="61410">
+      <class name="portfolio_test.user.TC05_CampaignsPage">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC05_CampaignsPage@72f46e16]" started-at="2023-05-09T19:18:28Z" name="initialize" finished-at="2023-05-09T19:18:46Z" duration-ms="17151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="verifyTopACRandDVGeneratorsPageFromCampaignsMenu()[pri:0, instance:portfolio_test.user.TC05_CampaignsPage@72f46e16]" started-at="2023-05-09T19:18:46Z" name="verifyTopACRandDVGeneratorsPageFromCampaignsMenu" finished-at="2023-05-09T19:19:25Z" duration-ms="39821" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTopACRandDVGeneratorsPageFromCampaignsMenu -->
+        <test-method signature="verifyDoMoreWithLessPageFromCampaignsMenu()[pri:0, instance:portfolio_test.user.TC05_CampaignsPage@72f46e16]" started-at="2023-05-09T19:19:25Z" name="verifyDoMoreWithLessPageFromCampaignsMenu" finished-at="2023-05-09T19:19:30Z" duration-ms="4167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDoMoreWithLessPageFromCampaignsMenu -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC05_CampaignsPage@72f46e16]" started-at="2023-05-09T19:19:30Z" name="teardown" finished-at="2023-05-09T19:19:30Z" duration-ms="269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- portfolio_test.user.TC05_CampaignsPage -->
+    </test> <!-- Validating all links and pages present under Campaigns menu test -->
+    <test started-at="2023-05-09T13:49:30Z" name="Validating all links and pages present under Resources menu test" finished-at="2023-05-09T13:51:25Z" duration-ms="114675">
+      <class name="portfolio_test.user.TC06_ResourcesPage">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@290b1b2e]" started-at="2023-05-09T19:19:30Z" name="initialize" finished-at="2023-05-09T19:20:10Z" duration-ms="39720" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="verifyISCloudsOverviewPageFromResourcesMenu()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@290b1b2e]" started-at="2023-05-09T19:20:10Z" name="verifyISCloudsOverviewPageFromResourcesMenu" finished-at="2023-05-09T19:20:17Z" duration-ms="6925" status="FAIL">
+          <exception class="org.openqa.selenium.json.JsonException">
+            <message>
+              <![CDATA[java.lang.reflect.InvocationTargetException
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'HJNZL000593', ip: '192.168.1.11', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'HJNZL000593', ip: '192.168.1.11', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:332)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:168)
+	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:647)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:168)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
+	at resources.Utilities.clickOnElementUsingActions(Utilities.java:111)
+	at pageObjects.ResourcesPage.clickOnISCloudsOverviewMenuButton(ResourcesPage.java:110)
+	at portfolio_test.user.TC06_ResourcesPage.verifyISCloudsOverviewPageFromResourcesMenu(TC06_ResourcesPage.java:99)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'HJNZL000593', ip: '192.168.1.11', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: driver.version: RemoteWebDriver
+		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:279)
+		at org.openqa.selenium.json.Json.toJson(Json.java:44)
+		... 36 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:119)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:328)
+	... 48 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'IS Clouds Overview')]"}
+  (Session info: MicrosoftEdge=112.0.1722.68)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'HJNZL000593', ip: '192.168.1.11', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 112.0.1722.68, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:59544}, msedge: {msedgedriverVersion: 112.0.1722.71 (0dac4e4620b8..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5c72bb2fb651af307cc055d096d21e3c
+*** Element info: {Using=xpath, value=//a[contains(text(),'IS Clouds Overview')]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:204)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:155)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	... 50 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.json.JsonException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyISCloudsOverviewPageFromResourcesMenu -->
+        <test-method signature="verifyCustomerHubPageFromResourcesMenu()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@290b1b2e]" started-at="2023-05-09T19:20:17Z" name="verifyCustomerHubPageFromResourcesMenu" finished-at="2023-05-09T19:20:32Z" duration-ms="14780" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCustomerHubPageFromResourcesMenu -->
+        <test-method signature="verifyDatabookPageFromResourcesMenu()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@290b1b2e]" started-at="2023-05-09T19:20:32Z" name="verifyDatabookPageFromResourcesMenu" finished-at="2023-05-09T19:20:39Z" duration-ms="6759" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDatabookPageFromResourcesMenu -->
+        <test-method signature="verifyFundingPageFromResourcesMenu()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@290b1b2e]" started-at="2023-05-09T19:20:39Z" name="verifyFundingPageFromResourcesMenu" finished-at="2023-05-09T19:20:41Z" duration-ms="2553" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFundingPageFromResourcesMenu -->
+        <test-method signature="verifyAboutISCataloguePageFromResourcesMenu()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@290b1b2e]" started-at="2023-05-09T19:20:41Z" name="verifyAboutISCataloguePageFromResourcesMenu" finished-at="2023-05-09T19:20:45Z" duration-ms="3257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAboutISCataloguePageFromResourcesMenu -->
+        <test-method signature="verifyEmergingSolutionsPageFromResourcesMenu()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@290b1b2e]" started-at="2023-05-09T19:20:45Z" name="verifyEmergingSolutionsPageFromResourcesMenu" finished-at="2023-05-09T19:20:52Z" duration-ms="7629" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmergingSolutionsPageFromResourcesMenu -->
+        <test-method signature="verifyManageCatalogueSubscriptionsPageFromResourcesMenu()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@290b1b2e]" started-at="2023-05-09T19:20:52Z" name="verifyManageCatalogueSubscriptionsPageFromResourcesMenu" finished-at="2023-05-09T19:20:59Z" duration-ms="7090" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyManageCatalogueSubscriptionsPageFromResourcesMenu -->
+        <test-method signature="verifyCatalogueRoadmapPageFromResourcesMenu()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@290b1b2e]" started-at="2023-05-09T19:20:59Z" name="verifyCatalogueRoadmapPageFromResourcesMenu" finished-at="2023-05-09T19:21:07Z" duration-ms="7513" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCatalogueRoadmapPageFromResourcesMenu -->
+        <test-method signature="verifySolutionTruthPageFromResourcesMenu()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@290b1b2e]" started-at="2023-05-09T19:21:07Z" name="verifySolutionTruthPageFromResourcesMenu" finished-at="2023-05-09T19:21:10Z" duration-ms="2930" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySolutionTruthPageFromResourcesMenu -->
+        <test-method signature="verifyISSolutionsPlaybookPageFromResourcesMenu()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@290b1b2e]" started-at="2023-05-09T19:21:10Z" name="verifyISSolutionsPlaybookPageFromResourcesMenu" finished-at="2023-05-09T19:21:24Z" duration-ms="14527" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyISSolutionsPlaybookPageFromResourcesMenu -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@290b1b2e]" started-at="2023-05-09T19:21:24Z" name="teardown" finished-at="2023-05-09T19:21:25Z" duration-ms="335" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- portfolio_test.user.TC06_ResourcesPage -->
+    </test> <!-- Validating all links and pages present under Resources menu test -->
+  </suite> <!-- IS Catalauge Automation Tests -->
+</testng-results>
