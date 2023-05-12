@@ -31,14 +31,39 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">45.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">88.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">portfolio_test.user.TC02_HomePage</td><td><a href="#m1"><b>VerifyDataStrategyPageOnHomepage</b>  </a></td><td class="numi">1</td><td>1683705773959</td><td class="numi">11039</td></tr>
+<tr><th colspan="4">Default test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">portfolio_test.user.TC03_CatalogueTest</td><td><a href="#m1"><b>verifyAutomotiveMobilityandTransportationOnCataloguePage</b>  </a></td><td class="numi">1</td><td>1683874738222</td><td class="numi">39788</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">portfolio_test.user.TC02_HomePage:VerifyDataStrategyPageOnHomepage</h2>
+<h2 id="m1">portfolio_test.user.TC03_CatalogueTest:verifyAutomotiveMobilityandTransportationOnCataloguePage</h2>
+<div style="padding-left:3em">
+<p>element not interactable: [object HTMLButtonElement] has no size and location
+  (Session info: MicrosoftEdge=113.0.1774.42)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.1.11&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 113.0.1774.42, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:63364}, msedge: {msedgedriverVersion: 113.0.1774.35 (7069649d6056..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1a34951bdd4b6fe6f04cc9a08a55b000</p>
+java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+<br/>at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+<br/>at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+<br/>at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
+<br/>at resources.Utilities.clickOnElementUsingActions(Utilities.java:111)
+<br/>at pageObjects.CataloguePage.clickPackageButton(CataloguePage.java:375)
+<br/>at portfolio_test.user.TC03_CatalogueTest.verifyAutomotiveMobilityandTransportationOnCataloguePage(TC03_CatalogueTest.java:744)
+<br/>23 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

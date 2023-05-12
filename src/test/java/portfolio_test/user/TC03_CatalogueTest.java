@@ -724,7 +724,7 @@ public class TC03_CatalogueTest extends TestBase {
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
-		System.out.println("Sales stat cound and table is verified ");
+		System.out.println("Industry stat cound and table is verified ");
 		
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
@@ -740,13 +740,13 @@ public class TC03_CatalogueTest extends TestBase {
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
 		
-		cataloguePage.clickOnDownloadSectionCloseButton();
+		/*cataloguePage.clickOnDownloadSectionCloseButton();
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(3000);
 		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(EvidenceCheck);
-		System.out.println("Package is displayed ");
+		System.out.println("Package is displayed ");*/
 		
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Automotive, Mobility and Transportation"));
@@ -761,6 +761,52 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		cataloguePage.clickOnCrossIndustryMenuButton();
 		Thread.sleep(3000);
+		try {
+			if (cataloguePage.getSubscribeButton().isDisplayed()) {
+				Thread.sleep(1000);
+				cataloguePage.clickOnSubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("Subscribe button working as expected ");
+			} else {
+				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("UnSubscribe button working as expected ");
+			}
+		} catch (NoSuchElementException e) {
+			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(2000);
+			cataloguePage.clickOnSubscribeSliderButton();
+			Thread.sleep(3000);
+			cataloguePage.clickOnSubmitButton();
+			Thread.sleep(3000);
+			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+			System.out.println("UnSubscribe button working as expected ");
+		}
+		
+		cataloguePage.clickOnShowDetailsButton();
+		Thread.sleep(5000);
+		cataloguePage.clickOnCIselectAllBomButton();
+		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
+		System.out.println("BOB is displayed and able to download ");
+		
+		cataloguePage.clickOnDownloadSectionCloseButton();
+		cataloguePage.clickPackageButton();
+		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		Thread.sleep(3000);
+		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		Assert.assertTrue(EvidenceCheck);
+		System.out.println("Package is displayed ");
+		
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Cross-Industry"));
 		Thread.sleep(3000);
@@ -773,6 +819,51 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		cataloguePage.clickOnDefenseandIntelligenceMenuButton();
 		Thread.sleep(3000);
+		try {
+			if (cataloguePage.getSubscribeButton().isDisplayed()) {
+				Thread.sleep(1000);
+				cataloguePage.clickOnSubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("Subscribe button working as expected ");
+			} else {
+				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("UnSubscribe button working as expected ");
+			}
+		} catch (NoSuchElementException e) {
+			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(2000);
+			cataloguePage.clickOnSubscribeSliderButton();
+			Thread.sleep(3000);
+			cataloguePage.clickOnSubmitButton();
+			Thread.sleep(3000);
+			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+			System.out.println("UnSubscribe button working as expected ");
+		}
+		
+		cataloguePage.clickOnShowDetailsButton();
+		Thread.sleep(5000);
+		cataloguePage.clickOnDaIselectAllBomButton();
+		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
+		System.out.println("BOB is displayed and able to download ");
+		
+		cataloguePage.clickOnDownloadSectionCloseButton();
+		cataloguePage.clickPackageButton();
+		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		Thread.sleep(3000);
+		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		Assert.assertTrue(EvidenceCheck);
+		System.out.println("Package is displayed ");
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Defense and Intelligence"));
 		Thread.sleep(3000);
@@ -785,6 +876,50 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		cataloguePage.clickOnEducationMenuButton();
 		Thread.sleep(3000);
+		try {
+			if (cataloguePage.getSubscribeButton().isDisplayed()) {
+				Thread.sleep(1000);
+				cataloguePage.clickOnSubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("Subscribe button working as expected ");
+			} else {
+				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("UnSubscribe button working as expected ");
+			}
+		} catch (NoSuchElementException e) {
+			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(2000);
+			cataloguePage.clickOnSubscribeSliderButton();
+			Thread.sleep(3000);
+			cataloguePage.clickOnSubmitButton();
+			Thread.sleep(3000);
+			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+			System.out.println("UnSubscribe button working as expected ");
+		}
+		boolean actualResult3 = cataloguePage.getContractCount().getText().contains("39");
+		Assert.assertTrue(actualResult3);
+		cataloguePage.clickViewMoreSalseStatButton();
+		Thread.sleep(3000);
+		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
+		System.out.println("Sales stat cound and table is verified ");
+		
+		cataloguePage.clickOnShowDetailsButton();
+		Thread.sleep(5000);
+		cataloguePage.clickOnEduselectAllBomButton();
+		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
+		System.out.println("BOB is displayed and able to download ");
+		
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Education"));
 		Thread.sleep(3000);
@@ -797,6 +932,50 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		cataloguePage.clickOnEnergyandResourcesMenuButton();
 		Thread.sleep(3000);
+		try {
+			if (cataloguePage.getSubscribeButton().isDisplayed()) {
+				Thread.sleep(1000);
+				cataloguePage.clickOnSubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("Subscribe button working as expected ");
+			} else {
+				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("UnSubscribe button working as expected ");
+			}
+		} catch (NoSuchElementException e) {
+			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(2000);
+			cataloguePage.clickOnSubscribeSliderButton();
+			Thread.sleep(3000);
+			cataloguePage.clickOnSubmitButton();
+			Thread.sleep(3000);
+			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+			System.out.println("UnSubscribe button working as expected ");
+		}
+		boolean actualResult3 = cataloguePage.getContractCount().getText().contains("129");
+		Assert.assertTrue(actualResult3);
+		cataloguePage.clickViewMoreSalseStatButton();
+		Thread.sleep(3000);
+		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
+		System.out.println("Industry stat cound and table is verified ");
+		
+		cataloguePage.clickOnShowDetailsButton();
+		Thread.sleep(5000);
+		cataloguePage.clickOnEaRselectAllBomButton();
+		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
+		System.out.println("BOB is displayed and able to download ");
+		
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Energy and Resources"));
 		Thread.sleep(3000);
@@ -809,6 +988,58 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		cataloguePage.clickOnFinancialServicesMenuButton();
 		Thread.sleep(3000);
+		try {
+			if (cataloguePage.getSubscribeButton().isDisplayed()) {
+				Thread.sleep(1000);
+				cataloguePage.clickOnSubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("Subscribe button working as expected ");
+			} else {
+				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("UnSubscribe button working as expected ");
+			}
+		} catch (NoSuchElementException e) {
+			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(2000);
+			cataloguePage.clickOnSubscribeSliderButton();
+			Thread.sleep(3000);
+			cataloguePage.clickOnSubmitButton();
+			Thread.sleep(3000);
+			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+			System.out.println("UnSubscribe button working as expected ");
+		}
+		boolean actualResult3 = cataloguePage.getContractCount().getText().contains("367");
+		Assert.assertTrue(actualResult3);
+		cataloguePage.clickViewMoreSalseStatButton();
+		Thread.sleep(3000);
+		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
+		System.out.println("Industry stat cound and table is verified ");
+		
+		cataloguePage.clickOnShowDetailsButton();
+		Thread.sleep(5000);
+		cataloguePage.clickOnFinselectAllBomButton();
+		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
+		System.out.println("BOB is displayed and able to download ");
+		
+		cataloguePage.clickOnDownloadSectionCloseButton();
+		cataloguePage.clickPackageButton();
+		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		Thread.sleep(3000);
+		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		Assert.assertTrue(EvidenceCheck);
+		System.out.println("Package is displayed ");
+		
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Financial Services"));
 		Thread.sleep(3000);
@@ -821,6 +1052,50 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		cataloguePage.clickOnGovernmentMenuButton();
 		Thread.sleep(3000);
+		try {
+			if (cataloguePage.getSubscribeButton().isDisplayed()) {
+				Thread.sleep(1000);
+				cataloguePage.clickOnSubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("Subscribe button working as expected ");
+			} else {
+				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("UnSubscribe button working as expected ");
+			}
+		} catch (NoSuchElementException e) {
+			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(2000);
+			cataloguePage.clickOnSubscribeSliderButton();
+			Thread.sleep(3000);
+			cataloguePage.clickOnSubmitButton();
+			Thread.sleep(3000);
+			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+			System.out.println("UnSubscribe button working as expected ");
+		}
+		boolean actualResult3 = cataloguePage.getContractCount().getText().contains("309");
+		Assert.assertTrue(actualResult3);
+		cataloguePage.clickViewMoreSalseStatButton();
+		Thread.sleep(3000);
+		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
+		System.out.println("Industry stat cound and table is verified ");
+		
+		cataloguePage.clickOnShowDetailsButton();
+		Thread.sleep(5000);
+		cataloguePage.clickOnGovselectAllBomButton();
+		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
+		System.out.println("BOB is displayed and able to download ");
+		
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Government"));
 		Thread.sleep(3000);
@@ -833,6 +1108,58 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		cataloguePage.clickOnHealthcareMenuButton();
 		Thread.sleep(3000);
+		try {
+			if (cataloguePage.getSubscribeButton().isDisplayed()) {
+				Thread.sleep(1000);
+				cataloguePage.clickOnSubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("Subscribe button working as expected ");
+			} else {
+				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("UnSubscribe button working as expected ");
+			}
+		} catch (NoSuchElementException e) {
+			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(2000);
+			cataloguePage.clickOnSubscribeSliderButton();
+			Thread.sleep(3000);
+			cataloguePage.clickOnSubmitButton();
+			Thread.sleep(3000);
+			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+			System.out.println("UnSubscribe button working as expected ");
+		}
+		boolean actualResult3 = cataloguePage.getContractCount().getText().contains("102");
+		Assert.assertTrue(actualResult3);
+		cataloguePage.clickViewMoreSalseStatButton();
+		Thread.sleep(3000);
+		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
+		System.out.println("Industry stat cound and table is verified ");
+		
+		cataloguePage.clickOnShowDetailsButton();
+		Thread.sleep(5000);
+		cataloguePage.clickOnHealthselectAllBomButton();
+		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
+		System.out.println("BOB is displayed and able to download ");
+		
+		cataloguePage.clickOnDownloadSectionCloseButton();
+		cataloguePage.clickPackageButton();
+		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		Thread.sleep(3000);
+		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		Assert.assertTrue(EvidenceCheck);
+		System.out.println("Package is displayed ");
+		
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Healthcare"));
 		Thread.sleep(3000);
@@ -845,6 +1172,58 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		cataloguePage.clickOnIndustrialsandManufacturingMenuButton();
 		Thread.sleep(3000);
+		try {
+			if (cataloguePage.getSubscribeButton().isDisplayed()) {
+				Thread.sleep(1000);
+				cataloguePage.clickOnSubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("Subscribe button working as expected ");
+			} else {
+				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("UnSubscribe button working as expected ");
+			}
+		} catch (NoSuchElementException e) {
+			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(2000);
+			cataloguePage.clickOnSubscribeSliderButton();
+			Thread.sleep(3000);
+			cataloguePage.clickOnSubmitButton();
+			Thread.sleep(3000);
+			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+			System.out.println("UnSubscribe button working as expected ");
+		}
+		boolean actualResult3 = cataloguePage.getContractCount().getText().contains("249");
+		Assert.assertTrue(actualResult3);
+		cataloguePage.clickViewMoreSalseStatButton();
+		Thread.sleep(3000);
+		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
+		System.out.println("Industry stat cound and table is verified ");
+		
+		cataloguePage.clickOnShowDetailsButton();
+		Thread.sleep(5000);
+		cataloguePage.clickOnIaMselectAllBomButton();
+		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
+		System.out.println("BOB is displayed and able to download ");
+		
+		cataloguePage.clickOnDownloadSectionCloseButton();
+		cataloguePage.clickPackageButton();
+		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		Thread.sleep(3000);
+		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		Assert.assertTrue(EvidenceCheck);
+		System.out.println("Package is displayed ");
+		
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Industrials and Manufacturing"));
 		Thread.sleep(3000);
@@ -857,6 +1236,58 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		cataloguePage.clickOnRetailandConsumerGoodsMenuButton();
 		Thread.sleep(3000);
+		try {
+			if (cataloguePage.getSubscribeButton().isDisplayed()) {
+				Thread.sleep(1000);
+				cataloguePage.clickOnSubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("Subscribe button working as expected ");
+			} else {
+				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("UnSubscribe button working as expected ");
+			}
+		} catch (NoSuchElementException e) {
+			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(2000);
+			cataloguePage.clickOnSubscribeSliderButton();
+			Thread.sleep(3000);
+			cataloguePage.clickOnSubmitButton();
+			Thread.sleep(3000);
+			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+			System.out.println("UnSubscribe button working as expected ");
+		}
+		boolean actualResult3 = cataloguePage.getContractCount().getText().contains("152");
+		Assert.assertTrue(actualResult3);
+		cataloguePage.clickViewMoreSalseStatButton();
+		Thread.sleep(3000);
+		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
+		System.out.println("Industry stat cound and table is verified ");
+		
+		cataloguePage.clickOnShowDetailsButton();
+		Thread.sleep(5000);
+		cataloguePage.clickOnRaCGselectAllBomButton();
+		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
+		System.out.println("BOB is displayed and able to download ");
+		
+		cataloguePage.clickOnDownloadSectionCloseButton();
+		cataloguePage.clickPackageButton();
+		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		Thread.sleep(3000);
+		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		Assert.assertTrue(EvidenceCheck);
+		System.out.println("Package is displayed ");
+		
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Retail and Consumer Goods"));
 		Thread.sleep(3000);
@@ -869,6 +1300,59 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		cataloguePage.clickOnSustainabilityMenuButton();
 		Thread.sleep(3000);
+		try {
+			if (cataloguePage.getSubscribeButton().isDisplayed()) {
+				Thread.sleep(1000);
+				cataloguePage.clickOnSubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("Subscribe button working as expected ");
+			} else {
+				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("UnSubscribe button working as expected ");
+			}
+		} catch (NoSuchElementException e) {
+			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(2000);
+			cataloguePage.clickOnSubscribeSliderButton();
+			Thread.sleep(3000);
+			cataloguePage.clickOnSubmitButton();
+			Thread.sleep(3000);
+			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+			System.out.println("UnSubscribe button working as expected ");
+		}
+		
+		boolean actualResult3 = cataloguePage.getContractCount().getText().contains("102");
+		Assert.assertTrue(actualResult3);
+		cataloguePage.clickViewMoreSalseStatButton();
+		Thread.sleep(3000);
+		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
+		System.out.println("Industry stat cound and table is verified ");
+		
+		cataloguePage.clickOnShowDetailsButton();
+		Thread.sleep(5000);
+		cataloguePage.clickOnSuSselectAllBomButton();
+		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
+		System.out.println("BOB is displayed and able to download ");
+		
+		cataloguePage.clickOnDownloadSectionCloseButton();
+		cataloguePage.clickPackageButton();
+		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		Thread.sleep(3000);
+		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		Assert.assertTrue(EvidenceCheck);
+		System.out.println("Package is displayed ");
+		
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Sustainability"));
 		Thread.sleep(5000);
@@ -881,6 +1365,66 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		cataloguePage.clickOnTelecommunicationsandMediaMenuButton();
 		Thread.sleep(3000);
+		try {
+			if (cataloguePage.getSubscribeButton().isDisplayed()) {
+				Thread.sleep(1000);
+				cataloguePage.clickOnSubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("Subscribe button working as expected ");
+			} else {
+				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+				System.out.println("UnSubscribe button working as expected ");
+			}
+		} catch (NoSuchElementException e) {
+			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(2000);
+			cataloguePage.clickOnSubscribeSliderButton();
+			Thread.sleep(3000);
+			cataloguePage.clickOnSubmitButton();
+			Thread.sleep(3000);
+			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+			System.out.println("UnSubscribe button working as expected ");
+		}
+		boolean actualResult3 = cataloguePage.getContractCount().getText().contains("90");
+		Assert.assertTrue(actualResult3);
+		cataloguePage.clickViewMoreSalseStatButton();
+		Thread.sleep(3000);
+		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
+		System.out.println("Sales stat cound and table is verified ");
+		
+		cataloguePage.clickOnShowDetailsButton();
+		Thread.sleep(5000);
+		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("Robert Bosch GmbH: Azure Neutral Tenant as En...");
+		System.out.println("Evidence displaed as expected =" +cataloguePage.getEDFEvidenceCheck().getText() );
+		Assert.assertTrue(actualResult4);
+		System.out.println("Evidence displaed as expected");
+		
+		cataloguePage.clickOnBOMTABButton();
+	
+		Thread.sleep(2000);
+		cataloguePage.clickOnTelselectAllBomButton();
+		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
+		System.out.println("BOB is displayed and able to download ");
+		
+		cataloguePage.clickOnDownloadSectionCloseButton();
+		cataloguePage.clickPackageButton();
+		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		Thread.sleep(3000);
+		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		Assert.assertTrue(EvidenceCheck);
+		System.out.println("Package is displayed ");
+		
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Telecommunications and Media"));
 	}

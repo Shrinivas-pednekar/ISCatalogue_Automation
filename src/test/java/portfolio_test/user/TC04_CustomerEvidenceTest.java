@@ -118,7 +118,7 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 		Assert.assertTrue(actualResult2);
 		
 	}
-	
+
 	@Test(priority = 6)
 	public void verifyCrossIndustryCustomerStoriesSearchButtonOnCustomerEvidence() throws Throwable {
 		driver.navigate().back();
@@ -271,7 +271,7 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 		Assert.assertTrue(actualResult3);
 		
 	}
-	
+
 	@Test(priority = 15)
 	public void verifySustainabilityCustomerStoriesSearchButtonOnCustomerEvidence() throws Throwable {
 		driver.navigate().back();

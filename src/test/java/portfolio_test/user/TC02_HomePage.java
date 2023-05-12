@@ -170,9 +170,17 @@ public class TC02_HomePage extends TestBase {
 		driver.switchTo().window(mainTab);
 
 	}
-	
+
 	@Test(priority = 10)
+	public void VerifyPrivacyPageFromHomepage() throws Throwable {
+		homePage.clickOnPrivacyButton();
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Data Privacy Notice – Microsoft privacy"));
+	}
+	
+	@Test(priority = 11)
 	public void VerifyEurekaPageFromHomepage() throws Throwable {
+		driver.navigate().back();
 		homePage.clickOnEurekaButton();
 		Thread.sleep(5000);
 		Set<String> allTabs = homePage.getWindowHandles();
@@ -182,19 +190,12 @@ public class TC02_HomePage extends TestBase {
 		driver.switchTo().window(newTab);
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Eureka - Home"));
-		/*
-		 * homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible(); boolean
-		 * actualResult =
-		 * homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
-		 * System.out.println("Actual Result - " + actualResult);
-		 * Assert.assertTrue(actualResult);
-		 */
 		driver.close();
 		driver.switchTo().window(mainTab);
 
 	}
 	
-	@Test(priority = 11, enabled = false)
+	@Test(priority = 12, enabled = false)
 	public void testBrokenLinks() throws IOException, InterruptedException {
 		List<WebElement> links = driver.findElements(By.xpath("//a[contains(@href,'.')]"));
 		System.out.println("Total links on the page: " + links.size());

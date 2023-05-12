@@ -115,7 +115,39 @@ public class CataloguePage {
 	@FindBy(xpath = "//*[@id=\"bom-2418\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement SecurityselectAllBom;
 	
-
+	@FindBy(xpath = "//*[@id=\"bom-2459\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	private WebElement CIselectAllBom;
+	
+	@FindBy(xpath = "//*[@id=\"bom-2478\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	private WebElement DaIselectAllBom;
+	
+	@FindBy(xpath = "//*[@id=\"bom-2494\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	private WebElement EduselectAllBom;
+	
+	@FindBy(xpath = "//*[@id=\"bom-2478\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	private WebElement EaRselectAllBom;
+	
+	@FindBy(xpath = "//*[@id=\"bom-2566\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	private WebElement FinselectAllBom;
+	
+	@FindBy(xpath = "//*[@id=\"bom-2314\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	private WebElement GovselectAllBom;
+	
+	@FindBy(xpath = "//*[@id=\"bom-2478\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	private WebElement HealthselectAllBom;
+	
+	@FindBy(xpath = "//*[@id=\"bom-2478\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	private WebElement IaMselectAllBom;
+	
+	@FindBy(xpath = "//*[@id=\"bom-2478\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	private WebElement RaCGselectAllBom;
+	
+	@FindBy(xpath = "//*[@id=\"bom-2382\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	private WebElement SusselectAllBom;
+	
+	@FindBy(xpath = "//*[@id=\"bom-2400\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	private WebElement TelCselectAllBom;
+	
 	@FindBy(xpath = "//span[contains(text(),'Download Selected')]")
 	private WebElement DownloadSelected;
 
@@ -368,8 +400,12 @@ public class CataloguePage {
 		util.scrollDownForElementToBeVisible(driver, AMTselectAllBom, 2000);
 		util.clickOnElementUsingActions(driver, AMTselectAllBom);
 	}
+	public void clickOnCIselectAllBomButton() {
+		util.scrollDownForElementToBeVisible(driver, CIselectAllBom, 2000);
+		util.clickOnElementUsingActions(driver, CIselectAllBom);
+	}
 	public void clickonCSAselectAllBomButton() {
-		util.scrollDownForElementToBeVisible(driver, CSAselectAllBom, 2000);
+		util.scrollDownForElementToBeVisible(driver, DaIselectAllBom, 2000);
 		util.clickOnElementUsingActions(driver, CSAselectAllBom);
 	}
 	public void clickonDAIselectAllBomButton() {
@@ -394,5 +430,45 @@ public class CataloguePage {
 	public void clickonSecurityselectAllBomButton() {
 		util.scrollDownForElementToBeVisible(driver, SecurityselectAllBom, 2000);
 		util.clickOnElementUsingActions(driver, SecurityselectAllBom);
+	}
+	public void clickOnDaIselectAllBomButton() {
+		util.scrollDownForElementToBeVisible(driver, DaIselectAllBom, 2000);
+		util.clickOnElementUsingActions(driver, DaIselectAllBom);
+	}
+	public void clickOnEduselectAllBomButton() {
+		util.scrollDownForElementToBeVisible(driver, EduselectAllBom, 2000);
+		util.clickOnElementUsingActions(driver, EduselectAllBom);
+	}
+	public void clickOnEaRselectAllBomButton() {
+		util.scrollDownForElementToBeVisible(driver, EaRselectAllBom, 2000);
+		util.clickOnElementUsingActions(driver, EaRselectAllBom);
+	}
+	public void clickOnFinselectAllBomButton() {
+		util.scrollDownForElementToBeVisible(driver, FinselectAllBom, 2000);
+		util.clickOnElementUsingActions(driver, FinselectAllBom);
+	}
+	public void clickOnGovselectAllBomButton() {
+		util.scrollDownForElementToBeVisible(driver, GovselectAllBom, 2000);
+		util.clickOnElementUsingActions(driver, GovselectAllBom);
+	}
+	public void clickOnHealthselectAllBomButton() {
+		util.scrollDownForElementToBeVisible(driver, HealthselectAllBom, 2000);
+		util.clickOnElementUsingActions(driver, HealthselectAllBom);
+	}
+	public void clickOnIaMselectAllBomButton() {
+		util.scrollDownForElementToBeVisible(driver, IaMselectAllBom, 2000);
+		util.clickOnElementUsingActions(driver, IaMselectAllBom);
+	}
+	public void clickOnRaCGselectAllBomButton() {
+		util.scrollDownForElementToBeVisible(driver, RaCGselectAllBom, 2000);
+		util.clickOnElementUsingActions(driver, RaCGselectAllBom);
+	}
+	public void clickOnSuSselectAllBomButton() {
+		util.scrollDownForElementToBeVisible(driver, SusselectAllBom, 2000);
+		util.clickOnElementUsingActions(driver, SusselectAllBom);
+	}
+	public void clickOnTelselectAllBomButton() {
+		util.scrollDownForElementToBeVisible(driver, TelCselectAllBom, 2000);
+		util.clickOnElementUsingActions(driver, TelCselectAllBom);
 	}
 }

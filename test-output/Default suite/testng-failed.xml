@@ -5,8 +5,8 @@
     <classes>
       <class name="portfolio_test.user.TC03_CatalogueTest">
         <methods>
-          <include name="verifyDataandAIOnCataloguePage"/>
           <include name="teardown"/>
+          <include name="verifyAutomotiveMobilityandTransportationOnCataloguePage"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- portfolio_test.user.TC03_CatalogueTest -->

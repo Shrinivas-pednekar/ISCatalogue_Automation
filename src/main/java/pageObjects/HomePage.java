@@ -62,6 +62,9 @@ public class HomePage {
 	@FindBy(xpath="//a[contains(text(),'Eureka')]")
 	private WebElement Eureka;
 	
+	@FindBy(xpath="(//a[contains(text(),'Privacy')])[1]")
+	private WebElement Privacy;
+	
 	public HomePage(WebDriver driver){
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
@@ -150,5 +153,8 @@ public class HomePage {
 	{
 		util.clickOnElementUsingActions(driver, Eureka);
 	}
-	
+	public void clickOnPrivacyButton()
+	{
+		util.clickOnElementUsingActions(driver, Privacy);
+	}
 }
