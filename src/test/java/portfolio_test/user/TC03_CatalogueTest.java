@@ -141,7 +141,7 @@ public class TC03_CatalogueTest extends TestBase {
 		System.out.println("Solution is displayed ");
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
-		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("EDF - PowerPlatform Center of Excellence");
+		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("Michelin-Azure Cloud Foundation");
 		System.out.println("Evidence displaed as expected =" +cataloguePage.getEDFEvidenceCheck().getText() );
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
@@ -218,7 +218,7 @@ public class TC03_CatalogueTest extends TestBase {
 		
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
-		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("Ministry of Education Tāhūrangi Online Curric...");
+		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("AIA SODA Power Apps Phase 2 Go-Live");
 		System.out.println("Evidence displaed as expected =" +cataloguePage.getEDFEvidenceCheck().getText() );
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
@@ -508,6 +508,13 @@ public class TC03_CatalogueTest extends TestBase {
 		System.out.println("Solution is displayed ");
 		
 		cataloguePage.clickOnShowDetailsButton();
+		Thread.sleep(7000);
+		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("Michelin-Azure Cloud Foundation");
+		System.out.println("Evidence displaed as expected =" +cataloguePage.getEDFEvidenceCheck().getText() );
+		Assert.assertTrue(actualResult4);
+		System.out.println("Evidence displaed as expected");
+		
+		cataloguePage.clickOnBOMTABButton();
 		Thread.sleep(2000);
 		cataloguePage.clickonInfraselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
@@ -517,8 +524,8 @@ public class TC03_CatalogueTest extends TestBase {
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(3000);
-		boolean actualResult4 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
-		Assert.assertTrue(actualResult4);
+		boolean actualResult5 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		Assert.assertTrue(actualResult5);
 		System.out.println("Package is displayed ");
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Infrastructure"));

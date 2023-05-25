@@ -3,13 +3,22 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="portfolio_test.user.TC03_CatalogueTest">
+      <class name="portfolio_test.user.TC02_HomePage">
         <methods>
-          <include name="teardown"/>
-          <include name="verifyAutomotiveMobilityandTransportationOnCataloguePage"/>
+          <include name="VerifyViewalltopoffersPageOnHomepage"/>
+          <include name="VerifyPrivacyPageFromHomepage"/>
+          <include name="VerifyCloudManagementOperationsPageOnHomepage"/>
+          <include name="VerifyEurekaPageFromHomepage"/>
+          <include name="verifyCustomerEvidenceSectionOnHomepage"/>
+          <include name="verifyViewCampaignPageOnHomepage"/>
+          <include name="verifyCatalogueNavigatorOnHomepage"/>
+          <include name="VerifyCustomerEvidenceSearchPageFromHomepage"/>
+          <include name="verifyCloudTransitionServicesPageOnHomepage"/>
           <include name="initialize"/>
+          <include name="verifyHomepage"/>
+          <include name="VerifyDataStrategyPageOnHomepage"/>
         </methods>
-      </class> <!-- portfolio_test.user.TC03_CatalogueTest -->
+      </class> <!-- portfolio_test.user.TC02_HomePage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

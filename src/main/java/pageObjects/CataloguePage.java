@@ -88,7 +88,7 @@ public class CataloguePage {
 	@FindBy(xpath = "//*[@id=\"bom-2478\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement selectAllBom;
 
-	@FindBy(xpath = "//*[@id=\"bom-2033\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	@FindBy(xpath = "//*[@id=\"bom-2306\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement ACMselectAllBom;
 	
 	@FindBy(xpath = "//*[@id=\"bom-2099\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
@@ -106,7 +106,7 @@ public class CataloguePage {
 	@FindBy(xpath = "//*[@id=\"bom-2431\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement DandIselectAllBom;
 	
-	@FindBy(xpath = "//*[@id=\"bom-2479\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	@FindBy(xpath = "//*[@id=\"bom-2306\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement InfraselectAllBom;
 	
 	@FindBy(xpath = "//*[@id=\"bom-2463\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")

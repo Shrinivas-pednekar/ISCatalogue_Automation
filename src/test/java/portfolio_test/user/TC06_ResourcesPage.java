@@ -39,7 +39,7 @@ public class TC06_ResourcesPage extends TestBase {
 	}
 
 
-	/*@Test(priority = 1)
+	@Test(priority = 1)
 	public void verifyIndustrySolutionsPageFromResourcesMenu() throws Throwable {
 		
 		resourcesPage.clickOnResourcesMenuButton();
@@ -90,7 +90,7 @@ public class TC06_ResourcesPage extends TestBase {
 		Assert.assertTrue(driver.getTitle().contains("RFPIO"));
 	}
 	
-	*/
+	
 	
 	@Test(priority = 4)
 	public void verifyISCloudsOverviewPageFromResourcesMenu() throws Throwable {

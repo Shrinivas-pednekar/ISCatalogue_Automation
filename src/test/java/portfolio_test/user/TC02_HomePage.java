@@ -37,10 +37,13 @@ public class TC02_HomePage extends TestBase {
 	public void initialize() throws IOException {
 		driver = initializeDriver();
 		log.info("Driver is initialized");
-		driver.get(prop.getProperty("produrl"));
+		
+		
 		util = new Utilities();
 		loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
+		driver.get(prop.getProperty("produrl"));
+		loginPage.clickOnUserButton();
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	}
@@ -195,7 +198,7 @@ public class TC02_HomePage extends TestBase {
 
 	}
 	
-	@Test(priority = 12, enabled = false)
+	@Test(priority = 13, enabled = false)
 	public void testBrokenLinks() throws IOException, InterruptedException {
 		List<WebElement> links = driver.findElements(By.xpath("//a[contains(@href,'.')]"));
 		System.out.println("Total links on the page: " + links.size());

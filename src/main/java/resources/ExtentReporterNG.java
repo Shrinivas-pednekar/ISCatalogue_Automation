@@ -19,6 +19,9 @@ public class ExtentReporterNG
 		
 		extent = new ExtentReports();
 		extent.attachReporter(reporter);
+		extent.setSystemInfo("OS", "Windows 11");
+		extent.setSystemInfo("Browser", "Edge");
+		extent.setSystemInfo("Tool", "Selenium WebDriver");
 		extent.setSystemInfo("Tester", "Shrinivas");
 		return extent;
 

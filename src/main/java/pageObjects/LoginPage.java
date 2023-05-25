@@ -21,6 +21,9 @@ public class LoginPage {
 	@FindBy(xpath = "//small[contains(text(),'v-spednekar@microsoft.com')]")
 	private WebElement ShriUSername;
 	
+	@FindBy(xpath = "//div[contains(text(),'Sapna Kshirsagar (Persistent Systems Inc)')]")
+	private WebElement SapnaUSername;
+	
 	@FindBy(xpath = "//*[@id=\"i0116\"]")
 	private WebElement LoginID;
 	
@@ -42,9 +45,9 @@ public class LoginPage {
 		return new HomePage(driver);
 	}
 	
-	public void clickOnProductInnovationDevelopmentServicesLink()
+	public void clickOnUserButton()
 	{
-		util.clickOnElementUsingActions(driver, ShriUSername);
+		util.clickOnElementUsingActions(driver, SapnaUSername);
 	}
 	public void enterLoginID(String StoryDetails) {
 		LoginID.sendKeys(StoryDetails);
