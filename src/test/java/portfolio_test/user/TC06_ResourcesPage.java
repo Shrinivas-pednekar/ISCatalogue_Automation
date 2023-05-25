@@ -77,6 +77,7 @@ public class TC06_ResourcesPage extends TestBase {
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("LED Portal - Home"));
 		driver.navigate().back();	
+		driver.navigate().back();
 	}
 	
 	@Test(priority = 3)
@@ -200,7 +201,7 @@ public class TC06_ResourcesPage extends TestBase {
 	public void verifyISSolutionsPlaybookPageFromResourcesMenu() throws Throwable {
 		
 		driver.get(prop.getProperty("produrl"));
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 		Thread.sleep(2000);
 		resourcesPage.clickOnResourcesMenuButton();
 		resourcesPage.clickOnISSolutionsPlaybookMenuButton();

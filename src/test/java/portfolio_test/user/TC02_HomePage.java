@@ -189,6 +189,7 @@ public class TC02_HomePage extends TestBase {
 		allTabs.remove(mainTab);
 		String newTab = allTabs.iterator().next();
 		driver.switchTo().window(newTab);
+		loginPage.clickOnUserButton();
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Eureka - Home"));
 		driver.close();
