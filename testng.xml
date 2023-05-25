@@ -26,12 +26,12 @@
 		<classes>
 			<class name="portfolio_test.user.TC04_CustomerEvidenceTest"/>
 		</classes>
-	</test>-->
+	</test>
 	<test name="Validating all links and pages present under Campaigns menu test">
 		<classes>
 			<class name="portfolio_test.user.TC05_CampaignsPage"/>
 		</classes>
-	</test>
+	</test>-->
 	<test name="Validating all links and pages present under Resources menu test">
 		<classes>
 			<class name="portfolio_test.user.TC06_ResourcesPage"/>

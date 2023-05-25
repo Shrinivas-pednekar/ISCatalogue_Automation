@@ -72,7 +72,7 @@ public class TC06_ResourcesPage extends TestBase {
 		driver.switchTo().window(newTab);
 		driver.close();
 		driver.switchTo().window(mainTab);
-		//loginPage.clickOnUserButton();
+		loginPage.clickOnUserButton();
 		Thread.sleep(2000);
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("LED Portal - Home"));
@@ -92,7 +92,7 @@ public class TC06_ResourcesPage extends TestBase {
 		driver.switchTo().window(newTab);
 		driver.close();
 		driver.switchTo().window(mainTab);
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 		Thread.sleep(2000);
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("RFPIO"));
@@ -201,7 +201,7 @@ public class TC06_ResourcesPage extends TestBase {
 	public void verifyISSolutionsPlaybookPageFromResourcesMenu() throws Throwable {
 		
 		driver.get(prop.getProperty("produrl"));
-		//loginPage.clickOnUserButton();
+		loginPage.clickOnUserButton();
 		Thread.sleep(2000);
 		resourcesPage.clickOnResourcesMenuButton();
 		resourcesPage.clickOnISSolutionsPlaybookMenuButton();
@@ -213,7 +213,7 @@ public class TC06_ResourcesPage extends TestBase {
 		driver.close();
 		Thread.sleep(5000);
 		driver.switchTo().window(mainTab);
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 		Thread.sleep(2000);
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Overview - Microsoft Solutions Playbook"));
