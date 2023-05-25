@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="11" passed="0" failed="0" skipped="11">
+<testng-results total="28" passed="0" failed="0" skipped="28">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-25T06:45:55Z" name="Default suite" finished-at="2023-05-25T06:46:39Z" duration-ms="43919">
+  <suite started-at="2023-05-25T07:52:24Z" name="Default suite" finished-at="2023-05-25T07:53:09Z" duration-ms="45080">
     <groups>
     </groups>
-    <test started-at="2023-05-25T06:45:55Z" name="Default test" finished-at="2023-05-25T06:46:39Z" duration-ms="43919">
-      <class name="portfolio_test.user.TC02_HomePage">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC02_HomePage@2b43529a]" started-at="2023-05-25T12:15:55Z" name="initialize" finished-at="2023-05-25T12:15:55Z" duration-ms="0" status="FAIL">
+    <test started-at="2023-05-25T07:52:24Z" name="Default test" finished-at="2023-05-25T07:53:09Z" duration-ms="45080">
+      <class name="portfolio_test.user.TC04_CustomerEvidenceTest">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:22:24Z" name="initialize" finished-at="2023-05-25T13:22:24Z" duration-ms="0" status="FAIL">
           <exception class="org.openqa.selenium.json.JsonException">
             <message>
               <![CDATA[java.lang.reflect.InvocationTargetException
@@ -43,7 +43,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
 	at resources.Utilities.clickOnElementUsingActions(Utilities.java:111)
 	at pageObjects.LoginPage.clickOnUserButton(LoginPage.java:50)
-	at portfolio_test.user.TC02_HomePage.initialize(TC02_HomePage.java:46)
+	at portfolio_test.user.TC04_CustomerEvidenceTest.initialize(TC04_CustomerEvidenceTest.java:45)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
@@ -82,8 +82,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'HJNZL000593', ip: '192.168.1.13', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 113.0.1774.50, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:59780}, msedge: {msedgedriverVersion: 113.0.1774.50 (8c198093ceda..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ee52cb3cd606722591048740c752618a
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 113.0.1774.50, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:62819}, msedge: {msedgedriverVersion: 113.0.1774.50 (8c198093ceda..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b24644ed434bb1444abb0254166a3af8
 *** Element info: {Using=xpath, value=//div[contains(text(),'Sapna Kshirsagar (Persistent Systems Inc)')]}
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
@@ -113,55 +113,123 @@ Session ID: ee52cb3cd606722591048740c752618a
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="verifyHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@2b43529a]" started-at="2023-05-25T12:16:39Z" name="verifyHomepage" finished-at="2023-05-25T12:16:39Z" duration-ms="1" status="SKIP">
+        <test-method signature="verifyCustomerEvidanceHomePageOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyCustomerEvidanceHomePageOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="2" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHomepage -->
-        <test-method signature="verifyCatalogueNavigatorOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@2b43529a]" started-at="2023-05-25T12:16:39Z" name="verifyCatalogueNavigatorOnHomepage" finished-at="2023-05-25T12:16:39Z" duration-ms="2" status="SKIP">
+        </test-method> <!-- verifyCustomerEvidanceHomePageOnCustomerEvidence -->
+        <test-method signature="verifyCarouselOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyCarouselOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCatalogueNavigatorOnHomepage -->
-        <test-method signature="verifyCustomerEvidenceSectionOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@2b43529a]" started-at="2023-05-25T12:16:39Z" name="verifyCustomerEvidenceSectionOnHomepage" finished-at="2023-05-25T12:16:39Z" duration-ms="0" status="SKIP">
+        </test-method> <!-- verifyCarouselOnCustomerEvidence -->
+        <test-method signature="verifysubmitNewStoryPageOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifysubmitNewStoryPageOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCustomerEvidenceSectionOnHomepage -->
-        <test-method signature="VerifyCustomerEvidenceSearchPageFromHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@2b43529a]" started-at="2023-05-25T12:16:39Z" name="VerifyCustomerEvidenceSearchPageFromHomepage" finished-at="2023-05-25T12:16:39Z" duration-ms="0" status="SKIP">
+        </test-method> <!-- verifysubmitNewStoryPageOnCustomerEvidence -->
+        <test-method signature="verifyGovernmentCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyGovernmentCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyCustomerEvidenceSearchPageFromHomepage -->
-        <test-method signature="VerifyCloudManagementOperationsPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@2b43529a]" started-at="2023-05-25T12:16:39Z" name="VerifyCloudManagementOperationsPageOnHomepage" finished-at="2023-05-25T12:16:39Z" duration-ms="0" status="SKIP">
+        </test-method> <!-- verifyGovernmentCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyEducationCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyEducationCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyCloudManagementOperationsPageOnHomepage -->
-        <test-method signature="VerifyDataStrategyPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@2b43529a]" started-at="2023-05-25T12:16:39Z" name="VerifyDataStrategyPageOnHomepage" finished-at="2023-05-25T12:16:39Z" duration-ms="0" status="SKIP">
+        </test-method> <!-- verifyEducationCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyAutomotiveMobilityandTransportationCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyAutomotiveMobilityandTransportationCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyDataStrategyPageOnHomepage -->
-        <test-method signature="verifyCloudTransitionServicesPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@2b43529a]" started-at="2023-05-25T12:16:39Z" name="verifyCloudTransitionServicesPageOnHomepage" finished-at="2023-05-25T12:16:39Z" duration-ms="0" status="SKIP">
+        </test-method> <!-- verifyAutomotiveMobilityandTransportationCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyFinancialServicesCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyFinancialServicesCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCloudTransitionServicesPageOnHomepage -->
-        <test-method signature="VerifyViewalltopoffersPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@2b43529a]" started-at="2023-05-25T12:16:39Z" name="VerifyViewalltopoffersPageOnHomepage" finished-at="2023-05-25T12:16:39Z" duration-ms="0" status="SKIP">
+        </test-method> <!-- verifyFinancialServicesCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyCustomerEvidanceSearchFunctionOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyCustomerEvidanceSearchFunctionOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyViewalltopoffersPageOnHomepage -->
-        <test-method signature="VerifyPrivacyPageFromHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@2b43529a]" started-at="2023-05-25T12:16:39Z" name="VerifyPrivacyPageFromHomepage" finished-at="2023-05-25T12:16:39Z" duration-ms="0" status="SKIP">
+        </test-method> <!-- verifyCustomerEvidanceSearchFunctionOnCustomerEvidence -->
+        <test-method signature="verifyDefenseandIntelligenceCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyDefenseandIntelligenceCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyPrivacyPageFromHomepage -->
-        <test-method signature="verifyViewCampaignPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@2b43529a]" started-at="2023-05-25T12:16:39Z" name="verifyViewCampaignPageOnHomepage" finished-at="2023-05-25T12:16:39Z" duration-ms="0" status="SKIP">
+        </test-method> <!-- verifyDefenseandIntelligenceCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyHealthcareCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyHealthcareCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyViewCampaignPageOnHomepage -->
-        <test-method signature="VerifyEurekaPageFromHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@2b43529a]" started-at="2023-05-25T12:16:39Z" name="VerifyEurekaPageFromHomepage" finished-at="2023-05-25T12:16:39Z" duration-ms="9" status="SKIP">
+        </test-method> <!-- verifyHealthcareCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyCrossIndustryCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyCrossIndustryCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyEurekaPageFromHomepage -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC02_HomePage@2b43529a]" started-at="2023-05-25T12:16:39Z" name="teardown" finished-at="2023-05-25T12:16:39Z" duration-ms="0" status="SKIP">
+        </test-method> <!-- verifyCrossIndustryCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyEnergyandResourcesCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyEnergyandResourcesCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEnergyandResourcesCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyInfrastructureCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyInfrastructureCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInfrastructureCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyRetailandConsumerGoodsCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyRetailandConsumerGoodsCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRetailandConsumerGoodsCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifySustainabilityCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifySustainabilityCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySustainabilityCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyDigitalandApplicationInnovationCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyDigitalandApplicationInnovationCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDigitalandApplicationInnovationCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyDataAICustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyDataAICustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDataAICustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyTelecommunicationsandMediaCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyTelecommunicationsandMediaCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTelecommunicationsandMediaCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyIndustrialandManufacturingCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyIndustrialandManufacturingCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIndustrialandManufacturingCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyBusinessAppsCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyBusinessAppsCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBusinessAppsCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyModernWorkCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyModernWorkCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyModernWorkCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifySecurityCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifySecurityCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySecurityCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyWinWiresCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyWinWiresCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWinWiresCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyclickOncustomerEvidenceWinWiresMenuButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyclickOncustomerEvidenceWinWiresMenuButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOncustomerEvidenceWinWiresMenuButtonOnCustomerEvidence -->
+        <test-method signature="verifyDeliveryStoriesCustomerStoriesSearchButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyDeliveryStoriesCustomerStoriesSearchButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeliveryStoriesCustomerStoriesSearchButtonOnCustomerEvidence -->
+        <test-method signature="verifyCustomerEvidenceDeliveryStoriesMenuButtonOnCustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyCustomerEvidenceDeliveryStoriesMenuButtonOnCustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCustomerEvidenceDeliveryStoriesMenuButtonOnCustomerEvidence -->
+        <test-method signature="verifySubmitaStoryMenuButtonOncustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifySubmitaStoryMenuButtonOncustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="1" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubmitaStoryMenuButtonOncustomerEvidence -->
+        <test-method signature="verifyclickOnAboutCustomerEvidenceMenuButtonOncustomerEvidence()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="verifyclickOnAboutCustomerEvidenceMenuButtonOncustomerEvidence" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyclickOnAboutCustomerEvidenceMenuButtonOncustomerEvidence -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC04_CustomerEvidenceTest@44828f6b]" started-at="2023-05-25T13:23:09Z" name="teardown" finished-at="2023-05-25T13:23:09Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- portfolio_test.user.TC02_HomePage -->
+      </class> <!-- portfolio_test.user.TC04_CustomerEvidenceTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -81,6 +81,7 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 		allTabs.remove(mainTab);
 		String newTab = allTabs.iterator().next();
 		driver.switchTo().window(newTab);
+		loginPage.clickOnUserButton();
 		Thread.sleep(10000);
 		System.out.println("New Tab URL - " + driver.getTitle());
 

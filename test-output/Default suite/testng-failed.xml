@@ -3,22 +3,39 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="portfolio_test.user.TC02_HomePage">
+      <class name="portfolio_test.user.TC04_CustomerEvidenceTest">
         <methods>
-          <include name="VerifyViewalltopoffersPageOnHomepage"/>
-          <include name="VerifyPrivacyPageFromHomepage"/>
-          <include name="VerifyCloudManagementOperationsPageOnHomepage"/>
-          <include name="VerifyEurekaPageFromHomepage"/>
-          <include name="verifyCustomerEvidenceSectionOnHomepage"/>
-          <include name="verifyViewCampaignPageOnHomepage"/>
-          <include name="verifyCatalogueNavigatorOnHomepage"/>
-          <include name="VerifyCustomerEvidenceSearchPageFromHomepage"/>
-          <include name="verifyCloudTransitionServicesPageOnHomepage"/>
+          <include name="verifyIndustrialandManufacturingCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyEnergyandResourcesCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifysubmitNewStoryPageOnCustomerEvidence"/>
+          <include name="verifyDefenseandIntelligenceCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyDeliveryStoriesCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyModernWorkCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyInfrastructureCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyRetailandConsumerGoodsCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyFinancialServicesCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifySustainabilityCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyclickOnAboutCustomerEvidenceMenuButtonOncustomerEvidence"/>
+          <include name="verifyBusinessAppsCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyTelecommunicationsandMediaCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyCarouselOnCustomerEvidence"/>
+          <include name="verifyCustomerEvidenceDeliveryStoriesMenuButtonOnCustomerEvidence"/>
+          <include name="verifyDataAICustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyCustomerEvidanceSearchFunctionOnCustomerEvidence"/>
+          <include name="verifyEducationCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyAutomotiveMobilityandTransportationCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyHealthcareCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyWinWiresCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyCrossIndustryCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifySecurityCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyGovernmentCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyDigitalandApplicationInnovationCustomerStoriesSearchButtonOnCustomerEvidence"/>
           <include name="initialize"/>
-          <include name="verifyHomepage"/>
-          <include name="VerifyDataStrategyPageOnHomepage"/>
+          <include name="verifyclickOncustomerEvidenceWinWiresMenuButtonOnCustomerEvidence"/>
+          <include name="verifyCustomerEvidanceHomePageOnCustomerEvidence"/>
+          <include name="verifySubmitaStoryMenuButtonOncustomerEvidence"/>
         </methods>
-      </class> <!-- portfolio_test.user.TC02_HomePage -->
+      </class> <!-- portfolio_test.user.TC04_CustomerEvidenceTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

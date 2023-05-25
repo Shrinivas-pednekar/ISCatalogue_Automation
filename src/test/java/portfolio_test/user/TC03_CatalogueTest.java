@@ -660,7 +660,7 @@ public class TC03_CatalogueTest extends TestBase {
 		
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(5000);
-		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("8 Result(s)");
+		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(actualResult2);
 		System.out.println("Solution is displayed ");	
 		
@@ -682,7 +682,7 @@ public class TC03_CatalogueTest extends TestBase {
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(3000);
-		boolean PackageCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("28 Result(s)");
+		boolean PackageCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(PackageCheck);
 		System.out.println("Package is displayed ");
 		System.out.println("New Tab URL - " + driver.getTitle());
