@@ -23,7 +23,7 @@ import resources.TestBase;
 
 public class TC04_CustomerEvidenceTest extends TestBase {
 	public WebDriver driver;
-	// LoginPage loginPage;
+	LoginPage loginPage;
 	HomePage homePage;
 	// CataloguePage cataloguePage;
 	CustomerEvidencePage customerEvidencePage;
@@ -35,12 +35,15 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 	public void initialize() throws IOException {
 		driver = initializeDriver();
 		log.info("Driver is initialized");
-		driver.get(prop.getProperty("produrl"));
+		
 		util = new Utilities();
-		// loginPage = new LoginPage(driver);
+		loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
 		// cataloguePage = new CataloguePage(driver);
 		customerEvidencePage = new CustomerEvidencePage(driver);
+		driver.get(prop.getProperty("produrl"));
+		loginPage.clickOnUserButton();
+		
 
 	}
 

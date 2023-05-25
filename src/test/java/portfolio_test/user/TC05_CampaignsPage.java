@@ -21,6 +21,7 @@ public class TC05_CampaignsPage extends TestBase {
 	public WebDriver driver;
 	CampaignsPage campaignsPage;
 	HomePage homePage;
+	LoginPage loginPage;
 
 	Utilities util;
 	public static Logger log = LogManager.getLogger(TestBase.class.getName());
@@ -29,10 +30,12 @@ public class TC05_CampaignsPage extends TestBase {
 	public void initialize() throws IOException {
 		driver = initializeDriver();
 		log.info("Driver is initialized");
-		driver.get(prop.getProperty("produrl"));
 		util = new Utilities();
 		campaignsPage = new CampaignsPage(driver);
 		homePage = new HomePage(driver);
+		loginPage = new LoginPage(driver);
+		driver.get(prop.getProperty("produrl"));
+		loginPage.clickOnUserButton();
 
 	}
 

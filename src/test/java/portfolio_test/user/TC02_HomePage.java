@@ -37,8 +37,6 @@ public class TC02_HomePage extends TestBase {
 	public void initialize() throws IOException {
 		driver = initializeDriver();
 		log.info("Driver is initialized");
-		
-		
 		util = new Utilities();
 		loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);

@@ -36,11 +36,13 @@ public class TC03_CatalogueTest extends TestBase {
 	public void initialize() throws IOException {
 		driver = initializeDriver();
 		log.info("Driver is initialized");
-		driver.get(prop.getProperty("produrl"));
 		util = new Utilities();
 		loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
 		cataloguePage = new CataloguePage(driver);
+		driver.get(prop.getProperty("produrl"));
+		loginPage.clickOnUserButton();
+		
 	}
 	//-------------------------------Transformative Deals Page------------------------------------
 	@Test(priority = 1)

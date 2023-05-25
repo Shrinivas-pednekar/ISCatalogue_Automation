@@ -23,6 +23,7 @@ public class TC06_ResourcesPage extends TestBase {
 	CampaignsPage campaignsPage;
 	HomePage homePage;
 	ResourcesPage resourcesPage;
+	LoginPage loginPage;
 
 	Utilities util;
 	public static Logger log = LogManager.getLogger(TestBase.class.getName());
@@ -31,10 +32,12 @@ public class TC06_ResourcesPage extends TestBase {
 	public void initialize() throws IOException {
 		driver = initializeDriver();
 		log.info("Driver is initialized");
-		driver.get(prop.getProperty("produrl"));
 		util = new Utilities();
 		resourcesPage = new ResourcesPage(driver);
 		homePage = new HomePage(driver);
+		loginPage = new LoginPage(driver);
+		driver.get(prop.getProperty("produrl"));
+		loginPage.clickOnUserButton();
 		
 	}
 
@@ -95,6 +98,7 @@ public class TC06_ResourcesPage extends TestBase {
 	@Test(priority = 4)
 	public void verifyISCloudsOverviewPageFromResourcesMenu() throws Throwable {
 		driver.get(prop.getProperty("produrl"));
+		loginPage.clickOnUserButton();
 		resourcesPage.clickOnResourcesMenuButton();
 		resourcesPage.clickOnISCloudsOverviewMenuButton();
 		System.out.println("New Tab URL - " + driver.getTitle());
@@ -192,6 +196,7 @@ public class TC06_ResourcesPage extends TestBase {
 	public void verifyISSolutionsPlaybookPageFromResourcesMenu() throws Throwable {
 		
 		driver.get(prop.getProperty("produrl"));
+		loginPage.clickOnUserButton();
 		resourcesPage.clickOnResourcesMenuButton();
 		resourcesPage.clickOnISSolutionsPlaybookMenuButton();
 		Set<String> allTabs = homePage.getWindowHandles();
