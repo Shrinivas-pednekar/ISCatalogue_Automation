@@ -44,11 +44,15 @@ public class HomePage {
 	@FindBy(xpath="//h4[contains(text(),'Cloud Transition Services')]")
 	private WebElement CloudTransitionServicesLink;
 	
-	@FindBy(xpath="//h4[contains(text(),'Cloud Management Operations')]")
+	@FindBy(xpath="//h4[contains(text(),'Cloud Management and Operations')]")
 	private WebElement CloudManagementOperationsLink;
 	
 	@FindBy(xpath="//h4[contains(text(),'Data Strategy')]")
 	private WebElement DataStrategyLink;
+	
+	@FindBy(xpath="//h4[contains(text(),'Product Innovation Development Services')]")
+	private WebElement ProductInnovationDevelopmentServicesLink;
+	
 	
 	@FindBy(xpath="//a[contains(text(),'View all top offers')]")
 	private WebElement ViewalltopoffersLink;
@@ -130,6 +134,10 @@ public class HomePage {
 	public void clickOnDataStrategyLink()
 	{
 		util.clickOnElementUsingActions(driver, DataStrategyLink);
+	}
+	public void clickOnDProductInnovationDevelopmentServicesLinkLink()
+	{
+		util.clickOnElementUsingActions(driver, ProductInnovationDevelopmentServicesLink);
 	}
 	public void clickOnViewalltopoffersLink()
 	{
