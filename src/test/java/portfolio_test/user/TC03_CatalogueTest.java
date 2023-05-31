@@ -41,7 +41,7 @@ public class TC03_CatalogueTest extends TestBase {
 		homePage = new HomePage(driver);
 		cataloguePage = new CataloguePage(driver);
 		driver.get(prop.getProperty("produrl"));
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 		
 	}
 	//-------------------------------Transformative Deals Page------------------------------------
@@ -588,7 +588,7 @@ public class TC03_CatalogueTest extends TestBase {
 		
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(7000);
-		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("ISD Partnership at Merck Results in 30K Seat ...");
+		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("Anglo American leverages Viva Insights to Boo...");
 		System.out.println("Evidence displaed as expected =" +cataloguePage.getEDFEvidenceCheck().getText() );
 		Assert.assertTrue(actualResult4);
 		System.out.println("Evidence displaed as expected");

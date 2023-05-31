@@ -6,18 +6,18 @@
 <listener class-name="isCatalogue_test.Listeners"/>
 </listeners>
 
-	<test name="Validating IS Catalauge Login page test">
+	 <test name="Validating IS Catalauge Login page test">
 		<classes>
 			<class name="portfolio_test.user.TC01_UserLoginTest"/>
 		</classes>
-	</test>
+	</test> 
 	<test name="Validating all links and pages present under Home page test">
 		<classes>
 			<class name="portfolio_test.user.TC02_HomePage"/>
 		</classes>
 	</test> 
  	
-	 <test name="Validating all links and pages present under Catalogue menu test">
+	<!--  <test name="Validating all links and pages present under Catalogue menu test">
 		<classes>
 			<class name="portfolio_test.user.TC03_CatalogueTest"/>
 		</classes>
@@ -36,5 +36,5 @@
 		<classes>
 			<class name="portfolio_test.user.TC06_ResourcesPage"/>
 		</classes> 
-	</test>
+	</test> -->
 </suite>

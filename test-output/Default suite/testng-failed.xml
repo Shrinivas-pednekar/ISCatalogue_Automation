@@ -3,39 +3,13 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="portfolio_test.user.TC04_CustomerEvidenceTest">
+      <class name="portfolio_test.user.TC03_CatalogueTest">
         <methods>
-          <include name="verifyIndustrialandManufacturingCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyEnergyandResourcesCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifysubmitNewStoryPageOnCustomerEvidence"/>
-          <include name="verifyDefenseandIntelligenceCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyDeliveryStoriesCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyModernWorkCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyInfrastructureCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyRetailandConsumerGoodsCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyFinancialServicesCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifySustainabilityCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyclickOnAboutCustomerEvidenceMenuButtonOncustomerEvidence"/>
-          <include name="verifyBusinessAppsCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyTelecommunicationsandMediaCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyCarouselOnCustomerEvidence"/>
-          <include name="verifyCustomerEvidenceDeliveryStoriesMenuButtonOnCustomerEvidence"/>
-          <include name="verifyDataAICustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyCustomerEvidanceSearchFunctionOnCustomerEvidence"/>
-          <include name="verifyEducationCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyAutomotiveMobilityandTransportationCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyHealthcareCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyWinWiresCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyCrossIndustryCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifySecurityCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyGovernmentCustomerStoriesSearchButtonOnCustomerEvidence"/>
-          <include name="verifyDigitalandApplicationInnovationCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyModernWorkOnCataloguePage"/>
+          <include name="teardown"/>
           <include name="initialize"/>
-          <include name="verifyclickOncustomerEvidenceWinWiresMenuButtonOnCustomerEvidence"/>
-          <include name="verifyCustomerEvidanceHomePageOnCustomerEvidence"/>
-          <include name="verifySubmitaStoryMenuButtonOncustomerEvidence"/>
         </methods>
-      </class> <!-- portfolio_test.user.TC04_CustomerEvidenceTest -->
+      </class> <!-- portfolio_test.user.TC03_CatalogueTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

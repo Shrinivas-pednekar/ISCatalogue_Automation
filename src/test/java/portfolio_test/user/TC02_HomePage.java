@@ -41,7 +41,7 @@ public class TC02_HomePage extends TestBase {
 		loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
 		driver.get(prop.getProperty("produrl"));
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	}
@@ -189,7 +189,7 @@ public class TC02_HomePage extends TestBase {
 		allTabs.remove(mainTab);
 		String newTab = allTabs.iterator().next();
 		driver.switchTo().window(newTab);
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Eureka - Home"));
 		driver.close();

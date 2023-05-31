@@ -35,7 +35,7 @@ public class TC05_CampaignsPage extends TestBase {
 		homePage = new HomePage(driver);
 		loginPage = new LoginPage(driver);
 		driver.get(prop.getProperty("produrl"));
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 
 	}
 

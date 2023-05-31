@@ -42,7 +42,7 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 		// cataloguePage = new CataloguePage(driver);
 		customerEvidencePage = new CustomerEvidencePage(driver);
 		driver.get(prop.getProperty("produrl"));
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 		
 
 	}
@@ -81,7 +81,7 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 		allTabs.remove(mainTab);
 		String newTab = allTabs.iterator().next();
 		driver.switchTo().window(newTab);
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 		Thread.sleep(10000);
 		System.out.println("New Tab URL - " + driver.getTitle());
 
