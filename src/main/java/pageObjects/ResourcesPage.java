@@ -49,10 +49,13 @@ public class ResourcesPage {
 	@FindBy(xpath = "//button[@id='showSearchList']")
 	private WebElement showSearchList;
 	
+	@FindBy(xpath = "//button[@id='showSearchList']")
+	private WebElement HomeshowSearchList;
+	
 	@FindBy(xpath = "//li[contains(text(),'A.P. Møller - Maersk Group - 1008166')]")
 	private WebElement selectAPMøller;
 	
-	@FindBy(xpath = "//p[@id='customerName']")
+	@FindBy(xpath = "//div[contains(text(),'A.P. Møller - Mærsk A/S engages in the transport a')]")
 	private WebElement customerName;
 	
 	@FindBy(xpath = "//p[contains(text(),'Customer Evidence')]")
@@ -124,6 +127,10 @@ public class ResourcesPage {
 	public void clickOnshowSearchListButton()
 	{
 		util.clickOnElementUsingActions(driver, showSearchList);
+	}
+	public void clickOnHomeshowSearchListButton()
+	{
+		util.clickOnElementUsingActions(driver, HomeshowSearchList);
 	}
 	public void clickOnselectAPMøller()
 	{

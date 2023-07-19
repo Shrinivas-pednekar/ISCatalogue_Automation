@@ -41,48 +41,47 @@ public class TC03_CatalogueTest extends TestBase {
 		homePage = new HomePage(driver);
 		cataloguePage = new CataloguePage(driver);
 		driver.get(prop.getProperty("produrl"));
-		//loginPage.clickOnUserButton();
-		
+		// loginPage.clickOnUserButton();
+
 	}
-	//-------------------------------Transformative Deals Page------------------------------------
+
+	// -------------------------------Transformative Deals Page------------------------------------
 	@Test(priority = 1)
 	public void verifyEmergingInnovationEngineeringPageOnCataloguePage() throws Throwable {
 
 		cataloguePage.clickOncataloguePagesMenuButton();
 		cataloguePage.clickOnEmergingInnovationEngineeringPagesMenuButton();
 		Thread.sleep(3000);
-		try
-		{
+		try {
 
-		if (cataloguePage.getSubscribeButton().isDisplayed()) {
-			 Thread.sleep(1000);
-			cataloguePage.clickOnSubscribeButton();
-			 Thread.sleep(3000);
-			cataloguePage.clickOnSubscribeSliderButton();
-			Thread.sleep(3000);
-			cataloguePage.clickOnSubmitButton();
-			Thread.sleep(3000);
-			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
-		} else {
+			if (cataloguePage.getSubscribeButton().isDisplayed()) {
+				Thread.sleep(1000);
+				cataloguePage.clickOnSubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+			} else {
+				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubscribeSliderButton();
+				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(3000);
+				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
+			}
+		} catch (NoSuchElementException e) {
 			cataloguePage.clickOnUnsubscribeButton();
-			 Thread.sleep(3000);
+			Thread.sleep(3000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
 			cataloguePage.clickOnSubmitButton();
 			Thread.sleep(3000);
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 		}
-		}
-		catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
-			 Thread.sleep(3000);
-			cataloguePage.clickOnSubscribeSliderButton();
-			Thread.sleep(3000);
-			cataloguePage.clickOnSubmitButton();
-			Thread.sleep(3000);
-			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
-		}
-		
+
 		Thread.sleep(7000);
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
@@ -97,7 +96,9 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 
 	}
-	//--------------------------------------------Solution Area Innovation-----------------------
+
+	// --------------------------------------------Solution Area
+	// Innovation-----------------------
 	@Test(priority = 2)
 	public void verifyAdoptionChangeandServicesManagementPageOnCataloguePage() throws Throwable {
 
@@ -143,8 +144,9 @@ public class TC03_CatalogueTest extends TestBase {
 		System.out.println("Solution is displayed ");
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
-		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("Michelin-Azure Cloud Foundation");
-		System.out.println("Evidence displaed as expected =" +cataloguePage.getEDFEvidenceCheck().getText() );
+		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
+				.contains("Michelin-Azure Cloud Foundation");
+		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 
@@ -153,7 +155,7 @@ public class TC03_CatalogueTest extends TestBase {
 		cataloguePage.clickACMselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		
+
 		cataloguePage.clickOnDownloadSectionCloseButton();
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
@@ -212,16 +214,17 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Sales stat cound and table is verified ");
-		
+
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(actualResult2);
 		System.out.println("Solution is displayed ");
-		
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
-		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("AIA SODA Power Apps Phase 2 Go-Live");
-		System.out.println("Evidence displaed as expected =" +cataloguePage.getEDFEvidenceCheck().getText() );
+		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
+				.contains("AIA SODA Power Apps Phase 2 Go-Live");
+		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		Thread.sleep(3000);
@@ -282,20 +285,20 @@ public class TC03_CatalogueTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		
+
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("3 Result(s)");
 		Assert.assertTrue(actualResult2);
 		System.out.println("Solution is displayed ");
-		
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(2000);
 		cataloguePage.clickonCSAselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		//cataloguePage.clickOnDownloadSectionCloseButton();
+		// cataloguePage.clickOnDownloadSectionCloseButton();
 		Thread.sleep(2000);
-		
+
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Cross Solution Area and Functional Solutions"));
 		Thread.sleep(3000);
@@ -339,16 +342,16 @@ public class TC03_CatalogueTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		
+
 		Thread.sleep(3000);
 		boolean actualResult3 = cataloguePage.getContractCount().getText().contains("339");
-		System.out.println("ContractCount=" +cataloguePage.getContractCount().getText() );
+		System.out.println("ContractCount=" + cataloguePage.getContractCount().getText());
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Sales stat cound and table is verified ");
-		
+
 		cataloguePage.clickonDAIselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
@@ -356,14 +359,13 @@ public class TC03_CatalogueTest extends TestBase {
 		cataloguePage.clickOnDownloadSectionCloseButton();
 		Thread.sleep(2000);
 		cataloguePage.clickonSolutionsPackagesButton();
-		
+
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(5000);
 		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(actualResult2);
-		System.out.println("Solution is displayed ");	
-		
-		
+		System.out.println("Solution is displayed ");
+
 		Thread.sleep(2000);
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
@@ -371,8 +373,7 @@ public class TC03_CatalogueTest extends TestBase {
 		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(EvidenceCheck);
 		System.out.println("Package is displayed ");
-		
-		
+
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Digital and Application Innovation"));
 		Thread.sleep(3000);
@@ -385,7 +386,7 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(2000);
 		cataloguePage.clickOnDataandAIMenuButton();
 		Thread.sleep(7000);
-		
+
 		try {
 			if (cataloguePage.getDataAISubscribeButton().isDisplayed()) {
 				Thread.sleep(1000);
@@ -417,35 +418,48 @@ public class TC03_CatalogueTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		
+
 		boolean actualResult3 = cataloguePage.getContractCount().getText().contains("435");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Sales stat cound and table is verified ");
-		
-		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
-		Thread.sleep(5000);
-		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
-		Assert.assertTrue(actualResult2);
-		System.out.println("Solution is displayed ");	
-		
-		cataloguePage.clickOnShowDetailsButton();
-		Thread.sleep(7000);
-		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("AI Bot SaaS Platform Solution Powered by Micr...");
-		System.out.println("Evidence displaed as expected =" +cataloguePage.getEDFEvidenceCheck().getText() );
-		Assert.assertTrue(actualResult4);
-		System.out.println("Evidence displaed as expected");
-		
-		cataloguePage.clickOnBOMTABButton();
-		Thread.sleep(2000);
-		cataloguePage.clickonDandIselectAllBomButton();
+
+		Thread.sleep(3000);
+		cataloguePage.clickonDandIselectAllBomMainButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
 		Thread.sleep(3000);
 		cataloguePage.clickOnDownloadSectionCloseButton();
 		Thread.sleep(3000);
+
+		cataloguePage.clickonSolutionsPackagesButton();
+		Thread.sleep(3000);
+		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		Thread.sleep(5000);
+		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		Assert.assertTrue(actualResult2);
+		System.out.println("Solution is displayed ");
+		
+		cataloguePage.clickOnShowDetailsButton();
+		Thread.sleep(7000);
+		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
+				.contains("AI Bot SaaS Platform Solution Powered by Micr...");
+		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+		Assert.assertTrue(actualResult4);
+		System.out.println("Evidence displaed as expected");
+		/*
+		 * Thread.sleep(3000); cataloguePage.clickOnDABOMTABButton();
+		 * System.out.println("clickOnDABOMTABButton"); Thread.sleep(5000);
+		 * 
+		 * cataloguePage.clickonDandIselectAllBomButton();
+		 * Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
+		 * System.out.println("BOB is displayed and able to download ");
+		 * Thread.sleep(3000); cataloguePage.clickOnDownloadSectionCloseButton();
+		 * Thread.sleep(3000);
+		 */
+		
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(3000);
@@ -503,19 +517,20 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Sales stat cound and table is verified ");
-		
+
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(actualResult2);
 		System.out.println("Solution is displayed ");
-		
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(7000);
-		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("Michelin-Azure Cloud Foundation");
-		System.out.println("Evidence displaed as expected =" +cataloguePage.getEDFEvidenceCheck().getText() );
+		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
+				.contains("Michelin-Azure Cloud Foundation");
+		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Evidence displaed as expected");
-		
+
 		cataloguePage.clickOnBOMTABButton();
 		Thread.sleep(2000);
 		cataloguePage.clickonInfraselectAllBomButton();
@@ -572,35 +587,36 @@ public class TC03_CatalogueTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		
+
 		boolean actualResult3 = cataloguePage.getContractCount().getText().contains("409");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Sales stat cound and table is verified ");
-		
+
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(5000);
 		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(actualResult2);
-		System.out.println("Solution is displayed ");	
-		
+		System.out.println("Solution is displayed ");
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(7000);
-		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("Anglo American leverages Viva Insights to Boo...");
-		System.out.println("Evidence displaed as expected =" +cataloguePage.getEDFEvidenceCheck().getText() );
+		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
+				.contains("Anglo American leverages Viva Insights to Boo...");
+		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Evidence displaed as expected");
-		
+
 		cataloguePage.clickOnBOMTABButton();
 		Thread.sleep(2000);
 		cataloguePage.clickonModernWorkselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		
+
 		cataloguePage.clickOnDownloadSectionCloseButton();
-		
+
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(3000);
@@ -650,35 +666,36 @@ public class TC03_CatalogueTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		
+
 		boolean actualResult3 = cataloguePage.getContractCount().getText().contains("474");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Sales stat cound and table is verified ");
-		
+
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(5000);
 		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(actualResult2);
-		System.out.println("Solution is displayed ");	
-		
+		System.out.println("Solution is displayed ");
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(7000);
-		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("Bradesco Leap Program - Win Wire");
-		System.out.println("Evidence displaed as expected =" +cataloguePage.getEDFEvidenceCheck().getText() );
+		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
+				.contains("Bradesco Leap Program - Win Wire");
+		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Evidence displaed as expected");
-		
+
 		cataloguePage.clickOnBOMTABButton();
 		Thread.sleep(2000);
 		cataloguePage.clickonSecurityselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		
+
 		cataloguePage.clickOnDownloadSectionCloseButton();
-		
+
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
 		Thread.sleep(3000);
@@ -689,7 +706,8 @@ public class TC03_CatalogueTest extends TestBase {
 		Assert.assertTrue(driver.getTitle().contains("Security"));
 		Thread.sleep(3000);
 	}
-	//-------------------------------Industry Innovation---------------------------
+
+	// -------------------------------Industry Innovation---------------------------
 	@Test(priority = 10)
 	public void verifyAutomotiveMobilityandTransportationOnCataloguePage() throws Throwable {
 
@@ -734,29 +752,31 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Industry stat cound and table is verified ");
-		
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("Komatsu- AVOps Win Wire");
-		System.out.println("Evidence displaed as expected =" +cataloguePage.getEDFEvidenceCheck().getText() );
+		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Evidence displaed as expected");
-		
+
 		cataloguePage.clickOnBOMTABButton();
-	
+
 		Thread.sleep(2000);
 		cataloguePage.clickOnAMTselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		
-		/*cataloguePage.clickOnDownloadSectionCloseButton();
-		cataloguePage.clickPackageButton();
-		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
-		Thread.sleep(3000);
-		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
-		Assert.assertTrue(EvidenceCheck);
-		System.out.println("Package is displayed ");*/
-		
+
+		/*
+		 * cataloguePage.clickOnDownloadSectionCloseButton();
+		 * cataloguePage.clickPackageButton();
+		 * homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		 * Thread.sleep(3000); boolean EvidenceCheck =
+		 * homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		 * Assert.assertTrue(EvidenceCheck);
+		 * System.out.println("Package is displayed ");
+		 */
+
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Automotive, Mobility and Transportation"));
 		Thread.sleep(3000);
@@ -801,13 +821,13 @@ public class TC03_CatalogueTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
 		cataloguePage.clickOnCIselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		
+
 		cataloguePage.clickOnDownloadSectionCloseButton();
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
@@ -815,7 +835,7 @@ public class TC03_CatalogueTest extends TestBase {
 		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(EvidenceCheck);
 		System.out.println("Package is displayed ");
-		
+
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Cross-Industry"));
 		Thread.sleep(3000);
@@ -859,13 +879,13 @@ public class TC03_CatalogueTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
 		cataloguePage.clickOnDaIselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		
+
 		cataloguePage.clickOnDownloadSectionCloseButton();
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
@@ -922,13 +942,13 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Sales stat cound and table is verified ");
-		
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
 		cataloguePage.clickOnEduselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		
+
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Education"));
 		Thread.sleep(3000);
@@ -978,13 +998,13 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Industry stat cound and table is verified ");
-		
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
 		cataloguePage.clickOnEaRselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		
+
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Energy and Resources"));
 		Thread.sleep(3000);
@@ -1034,21 +1054,23 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Industry stat cound and table is verified ");
-		
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
 		cataloguePage.clickOnFinselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		
+
 		cataloguePage.clickOnDownloadSectionCloseButton();
-		cataloguePage.clickPackageButton();
-		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
-		Thread.sleep(3000);
-		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
-		Assert.assertTrue(EvidenceCheck);
-		System.out.println("Package is displayed ");
-		
+		/*
+		 * cataloguePage.clickPackageButton();
+		 * homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		 * Thread.sleep(3000); boolean EvidenceCheck =
+		 * homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		 * Assert.assertTrue(EvidenceCheck);
+		 * System.out.println("Package is displayed ");
+		 */
+
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Financial Services"));
 		Thread.sleep(3000);
@@ -1098,13 +1120,13 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Industry stat cound and table is verified ");
-		
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
 		cataloguePage.clickOnGovselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		
+
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Government"));
 		Thread.sleep(3000);
@@ -1154,21 +1176,23 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Industry stat cound and table is verified ");
-		
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
 		cataloguePage.clickOnHealthselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		
-		cataloguePage.clickOnDownloadSectionCloseButton();
-		cataloguePage.clickPackageButton();
-		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
-		Thread.sleep(3000);
-		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
-		Assert.assertTrue(EvidenceCheck);
-		System.out.println("Package is displayed ");
-		
+
+		/*
+		 * cataloguePage.clickOnDownloadSectionCloseButton();
+		 * cataloguePage.clickPackageButton();
+		 * homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		 * Thread.sleep(3000); boolean EvidenceCheck =
+		 * homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		 * Assert.assertTrue(EvidenceCheck);
+		 * System.out.println("Package is displayed ");
+		 */
+
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Healthcare"));
 		Thread.sleep(3000);
@@ -1218,13 +1242,13 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Industry stat cound and table is verified ");
-		
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
 		cataloguePage.clickOnIaMselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		
+
 		cataloguePage.clickOnDownloadSectionCloseButton();
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
@@ -1232,7 +1256,7 @@ public class TC03_CatalogueTest extends TestBase {
 		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(EvidenceCheck);
 		System.out.println("Package is displayed ");
-		
+
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Industrials and Manufacturing"));
 		Thread.sleep(3000);
@@ -1282,13 +1306,13 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Industry stat cound and table is verified ");
-		
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
 		cataloguePage.clickOnRaCGselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		
+
 		cataloguePage.clickOnDownloadSectionCloseButton();
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
@@ -1296,7 +1320,7 @@ public class TC03_CatalogueTest extends TestBase {
 		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(EvidenceCheck);
 		System.out.println("Package is displayed ");
-		
+
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Retail and Consumer Goods"));
 		Thread.sleep(3000);
@@ -1340,20 +1364,20 @@ public class TC03_CatalogueTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		
+
 		boolean actualResult3 = cataloguePage.getContractCount().getText().contains("102");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Industry stat cound and table is verified ");
-		
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
 		cataloguePage.clickOnSuSselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		
+
 		cataloguePage.clickOnDownloadSectionCloseButton();
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
@@ -1361,7 +1385,7 @@ public class TC03_CatalogueTest extends TestBase {
 		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(EvidenceCheck);
 		System.out.println("Package is displayed ");
-		
+
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Sustainability"));
 		Thread.sleep(5000);
@@ -1411,21 +1435,22 @@ public class TC03_CatalogueTest extends TestBase {
 		Thread.sleep(3000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Sales stat cound and table is verified ");
-		
+
 		cataloguePage.clickOnShowDetailsButton();
 		Thread.sleep(5000);
-		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText().contains("Robert Bosch GmbH: Azure Neutral Tenant as En...");
-		System.out.println("Evidence displaed as expected =" +cataloguePage.getEDFEvidenceCheck().getText() );
+		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
+				.contains("Robert Bosch GmbH: Azure Neutral Tenant as En...");
+		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Evidence displaed as expected");
-		
+
 		cataloguePage.clickOnBOMTABButton();
-	
+
 		Thread.sleep(2000);
 		cataloguePage.clickOnTelselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOB is displayed and able to download ");
-		
+
 		cataloguePage.clickOnDownloadSectionCloseButton();
 		cataloguePage.clickPackageButton();
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
@@ -1433,10 +1458,11 @@ public class TC03_CatalogueTest extends TestBase {
 		boolean EvidenceCheck = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
 		Assert.assertTrue(EvidenceCheck);
 		System.out.println("Package is displayed ");
-		
+
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Telecommunications and Media"));
 	}
+
 	@Test(priority = 22, enabled = false)
 	public void testBrokenLinks() throws IOException, InterruptedException {
 		cataloguePage.clickOncataloguePagesMenuButton();
@@ -1448,30 +1474,28 @@ public class TC03_CatalogueTest extends TestBase {
 		HttpURLConnection.setFollowRedirects(false); // disable automatic redirects
 		int maxRedirects = 5;
 		for (WebElement link : links) {
-			//Thread.sleep(3000);
+			// Thread.sleep(3000);
 			String url = link.getAttribute("href");
-			//Thread.sleep(3000);
+			// Thread.sleep(3000);
 
-			if (url == null || url.isEmpty()|| url.startsWith("mailto:")) {
+			if (url == null || url.isEmpty() || url.startsWith("mailto:")) {
 				continue;
 			}
 			HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
-			//Thread.sleep(3000);
+			// Thread.sleep(3000);
 			connection.setRequestMethod("GET");
-			//Thread.sleep(3000);
+			// Thread.sleep(3000);
 			int responseCode = connection.getResponseCode();
-			
+
 			if (responseCode >= 400) {
-				/*connection.connect();
-				InputStream errorStream = connection.getErrorStream();
-				BufferedReader reader = new BufferedReader(new InputStreamReader(errorStream));
-				String line;
-				StringBuilder errorMessage = new StringBuilder();
-				while ((line = reader.readLine()) != null) {
-					errorMessage.append(line);
-				}
-				reader.close();
-				System.out.println("Error message: " + errorMessage.toString());*/
+				/*
+				 * connection.connect(); InputStream errorStream = connection.getErrorStream();
+				 * BufferedReader reader = new BufferedReader(new
+				 * InputStreamReader(errorStream)); String line; StringBuilder errorMessage =
+				 * new StringBuilder(); while ((line = reader.readLine()) != null) {
+				 * errorMessage.append(line); } reader.close();
+				 * System.out.println("Error message: " + errorMessage.toString());
+				 */
 
 				System.out.println("Broken Link: |" + url + " | Response Code: |" + responseCode);
 
@@ -1482,6 +1506,7 @@ public class TC03_CatalogueTest extends TestBase {
 			Thread.sleep(2000);
 		}
 	}
+
 	@AfterTest
 	public void teardown() {
 		driver.quit();

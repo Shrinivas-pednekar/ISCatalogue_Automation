@@ -106,6 +106,9 @@ public class CataloguePage {
 	@FindBy(xpath = "//*[@id=\"bom-2431\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement DandIselectAllBom;
 	
+	@FindBy(xpath = "//*[@id=\"OfferIP\"]/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	private WebElement DandIselectAllBomMain;
+	
 	@FindBy(xpath = "//*[@id=\"bom-2306\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement InfraselectAllBom;
 	
@@ -174,11 +177,14 @@ public class CataloguePage {
 
 	@FindBy(xpath = "//*[@id=\"offertabguide\"]/li[2]/a")
 	private WebElement BOMButton;
+	
+	@FindBy(xpath = "//*[@id=\"offertabguide\"]/li[2]/a")
+	private WebElement DataAIBOMButton;
 
 	@FindBy(xpath = "//button[contains(text(),'Package')]")
 	private WebElement PackageButton;
-
-	@FindBy(xpath = "//*[@id=\"dvOfferMetrics\"]/div[1]/div[2]/div[1]/div") //p[contains(text(),'296')]
+	
+	@FindBy(xpath = "//*[@id=\"dvOfferMetrics\"]/div[1]/div[2]/div[1]/div")
 	private WebElement ContractCount;
 
 	@FindBy(xpath = "//button[@id='spanToggleStat']")
@@ -363,6 +369,11 @@ public class CataloguePage {
 		util.scrollDownForElementToBeVisible(driver, BOMButton, 2000);
 		util.clickOnElementUsingActions(driver, BOMButton);
 	}
+	
+	public void clickOnDABOMTABButton() {
+		util.scrollDownForElementToBeVisible(driver, DataAIBOMButton, 2000);
+		util.clickOnElementUsingActions(driver, DataAIBOMButton);
+	}
 
 	public void clickACMselectAllBomButton() {
 		util.scrollDownForElementToBeVisible(driver, ACMselectAllBom, 2000);
@@ -418,6 +429,10 @@ public class CataloguePage {
 	public void clickonDandIselectAllBomButton() {
 		util.scrollDownForElementToBeVisible(driver, DandIselectAllBom, 2000);
 		util.clickOnElementUsingActions(driver, DandIselectAllBom);
+	}
+	public void clickonDandIselectAllBomMainButton() {
+		util.scrollDownForElementToBeVisible(driver, DandIselectAllBomMain, 2000);
+		util.clickOnElementUsingActions(driver, DandIselectAllBomMain);
 	}
 	public void clickonInfraselectAllBomButton() {
 		util.scrollDownForElementToBeVisible(driver, InfraselectAllBom, 2000);

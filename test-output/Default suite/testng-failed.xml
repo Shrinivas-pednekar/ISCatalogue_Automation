@@ -3,13 +3,13 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="portfolio_test.user.TC03_CatalogueTest">
+      <class name="portfolio_test.user.TC02_HomePage">
         <methods>
-          <include name="verifyModernWorkOnCataloguePage"/>
-          <include name="teardown"/>
           <include name="initialize"/>
+          <include name="VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- portfolio_test.user.TC03_CatalogueTest -->
+      </class> <!-- portfolio_test.user.TC02_HomePage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

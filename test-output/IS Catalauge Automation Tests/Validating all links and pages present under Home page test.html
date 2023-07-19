@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Validating all links and pages present under Home page test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>11/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>33/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon May 22 16:23:24 IST 2023</td>
+<td>Started on:</td><td>Wed Jul 19 19:30:31 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>144 seconds (144309 ms)</td>
+<tr><td>Total time:</td><td>431 seconds (431477 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,49 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage()'><b>VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+Title does not contain &apos;Microsoft Security Services for Enterprise&apos;.
+	at portfolio_test.user.TC02_HomePage.VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage(TC02_HomePage.java:244)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2116025968", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2116025968'><pre>java.lang.AssertionError: The following asserts failed:
+Title does not contain &apos;Microsoft Security Services for Enterprise&apos;.
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)
+	at portfolio_test.user.TC02_HomePage.VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage(TC02_HomePage.java:244)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>10</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -78,57 +121,167 @@ function toggleAllBoxes() {
 <td title='portfolio_test.user.TC02_HomePage.VerifyCloudManagementOperationsPageOnHomepage()'><b>VerifyCloudManagementOperationsPageOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
 <td></td>
 <td>10</td>
-<td>portfolio_test.user.TC02_HomePage@58a55449</td></tr>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
 <tr>
-<td title='portfolio_test.user.TC02_HomePage.VerifyCustomerEvidenceSearchPageFromHomepage()'><b>VerifyCustomerEvidenceSearchPageFromHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
-<td></td>
-<td>29</td>
-<td>portfolio_test.user.TC02_HomePage@58a55449</td></tr>
-<tr>
-<td title='portfolio_test.user.TC02_HomePage.VerifyDataStrategyPageOnHomepage()'><b>VerifyDataStrategyPageOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
-<td></td>
-<td>17</td>
-<td>portfolio_test.user.TC02_HomePage@58a55449</td></tr>
-<tr>
-<td title='portfolio_test.user.TC02_HomePage.VerifyEurekaPageFromHomepage()'><b>VerifyEurekaPageFromHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
-<td></td>
-<td>12</td>
-<td>portfolio_test.user.TC02_HomePage@58a55449</td></tr>
-<tr>
-<td title='portfolio_test.user.TC02_HomePage.VerifyPrivacyPageFromHomepage()'><b>VerifyPrivacyPageFromHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
-<td></td>
-<td>2</td>
-<td>portfolio_test.user.TC02_HomePage@58a55449</td></tr>
-<tr>
-<td title='portfolio_test.user.TC02_HomePage.VerifyViewalltopoffersPageOnHomepage()'><b>VerifyViewalltopoffersPageOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
-<td></td>
-<td>13</td>
-<td>portfolio_test.user.TC02_HomePage@58a55449</td></tr>
-<tr>
-<td title='portfolio_test.user.TC02_HomePage.verifyCatalogueNavigatorOnHomepage()'><b>verifyCatalogueNavigatorOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td title='portfolio_test.user.TC02_HomePage.VerifyDigital_Security_and_CompliancePageOnHomepage()'><b>VerifyDigital_Security_and_CompliancePageOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
 <td></td>
 <td>10</td>
-<td>portfolio_test.user.TC02_HomePage@58a55449</td></tr>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.VerifyEnd_to_End_AI_and_Machine_LearningPageOnHomepage()'><b>VerifyEnd_to_End_AI_and_Machine_LearningPageOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>10</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.VerifyIdentity_and_Access_ServicesPageOnHomepage()'><b>VerifyIdentity_and_Access_ServicesPageOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>10</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.VerifyProductInnovationDevelopmentServicesPageOnHomepage()'><b>VerifyProductInnovationDevelopmentServicesPageOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>10</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.VerifySecurity_OperationsPageOnHomepage()'><b>VerifySecurity_OperationsPageOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>10</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.Verify_Data_Strategy_Platform_Analytics_PageOnHomepage()'><b>Verify_Data_Strategy_Platform_Analytics_PageOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>10</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyAutomotiveMobilityandTransportationtPageArchitectViewOnHomepage()'><b>verifyAutomotiveMobilityandTransportationtPageArchitectViewOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>19</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
 <tr>
 <td title='portfolio_test.user.TC02_HomePage.verifyCloudTransitionServicesPageOnHomepage()'><b>verifyCloudTransitionServicesPageOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
 <td></td>
-<td>11</td>
-<td>portfolio_test.user.TC02_HomePage@58a55449</td></tr>
+<td>31</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyCrossIndustryPageArchitectViewOnHomepage()'><b>verifyCrossIndustryPageArchitectViewOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>15</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyCustomerEvidenceSectionForArchitectViewOnHomepage()'><b>verifyCustomerEvidenceSectionForArchitectViewOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>5</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
 <tr>
 <td title='portfolio_test.user.TC02_HomePage.verifyCustomerEvidenceSectionOnHomepage()'><b>verifyCustomerEvidenceSectionOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
 <td></td>
 <td>5</td>
-<td>portfolio_test.user.TC02_HomePage@58a55449</td></tr>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
 <tr>
-<td title='portfolio_test.user.TC02_HomePage.verifyHomepage()'><b>verifyHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td title='portfolio_test.user.TC02_HomePage.verifyCustomerHubPageFromHomePage()'><b>verifyCustomerHubPageFromHomePage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
 <td></td>
-<td>0</td>
-<td>portfolio_test.user.TC02_HomePage@58a55449</td></tr>
+<td>19</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
 <tr>
-<td title='portfolio_test.user.TC02_HomePage.verifyViewCampaignPageOnHomepage()'><b>verifyViewCampaignPageOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td title='portfolio_test.user.TC02_HomePage.verifyDefenseandIntelligencePageArchitectViewOnHomepage()'><b>verifyDefenseandIntelligencePageArchitectViewOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>16</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyEducationPageArchitectViewOnHomepage()'><b>verifyEducationPageArchitectViewOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>10</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyEnergyandResourcesPageArchitectViewOnHomepage()'><b>verifyEnergyandResourcesPageArchitectViewOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>16</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyFinancialServicesPageArchitectViewOnHomepage()'><b>verifyFinancialServicesPageArchitectViewOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
 <td></td>
 <td>14</td>
-<td>portfolio_test.user.TC02_HomePage@58a55449</td></tr>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyGovernmentPageArchitectViewOnHomepage()'><b>verifyGovernmentPageArchitectViewOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>14</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyHealthcarePageArchitectViewOnHomepage()'><b>verifyHealthcarePageArchitectViewOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>14</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyIndustrialsandManufacturingPageArchitectViewOnHomepage()'><b>verifyIndustrialsandManufacturingPageArchitectViewOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>16</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyMeet_the_new_IS_CataloguePageOnHomepage()'><b>verifyMeet_the_new_IS_CataloguePageOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>9</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyMeet_the_new_IS_CataloguePageOnHomepageForISSellerView()'><b>verifyMeet_the_new_IS_CataloguePageOnHomepageForISSellerView</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>9</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyPickupwhereyouleftSectionfOnHomepage()'><b>verifyPickupwhereyouleftSectionfOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>5</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyRetailandConsumerGoodsPageArchitectViewOnHomepage()'><b>verifyRetailandConsumerGoodsPageArchitectViewOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>16</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifySearchFunctionOnHomePageForArchitectRole()'><b>verifySearchFunctionOnHomePageForArchitectRole</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>20</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifySustainabilityPageArchitectViewOnHomepage()'><b>verifySustainabilityPageArchitectViewOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>16</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyTelecommunicationsandMediaPageArchitectViewOnHomepage()'><b>verifyTelecommunicationsandMediaPageArchitectViewOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>15</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyTreadingOfferSectionfOnHomepage()'><b>verifyTreadingOfferSectionfOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>0</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verifyViewAllOffersLinkOnHomepage()'><b>verifyViewAllOffersLinkOnHomepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>10</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verify_Architect_View()'><b>verify_Architect_View</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>10</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verify_Homepage()'><b>verify_Homepage</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>0</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verify_IS_Seller_View()'><b>verify_IS_Seller_View</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>8</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
+<tr>
+<td title='portfolio_test.user.TC02_HomePage.verify_MCAPS_Seller_View()'><b>verify_MCAPS_Seller_View</b><br>Test class: portfolio_test.user.TC02_HomePage</td>
+<td></td>
+<td>5</td>
+<td>portfolio_test.user.TC02_HomePage@3bb9efbc</td></tr>
 </table><p>
 </body>
 </html>
