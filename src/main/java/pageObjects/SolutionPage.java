@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import resources.Utilities;
 
-public class CataloguePage {
+public class SolutionPage {
 
 	public WebDriver driver;
 	Utilities util = new Utilities();
@@ -100,13 +100,13 @@ public class CataloguePage {
 	@FindBy(xpath = "//*[@id=\"bom-2412\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement CSAselectAllBom;
 	
-	@FindBy(xpath = "//*[@id=\"OfferIP\"]/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	@FindBy(xpath = "//*[@id=\"OfferIP\"]/div/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement DAIselectAllBom;
 	
 	@FindBy(xpath = "//*[@id=\"bom-2431\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement DandIselectAllBom;
 	
-	@FindBy(xpath = "//*[@id=\"OfferIP\"]/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	@FindBy(xpath = "//*[@id=\"OfferIP\"]/div/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement DandIselectAllBomMain;
 	
 	@FindBy(xpath = "//*[@id=\"bom-2306\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
@@ -115,7 +115,7 @@ public class CataloguePage {
 	@FindBy(xpath = "//*[@id=\"bom-2463\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement ModernWorkselectAllBom;
 	
-	@FindBy(xpath = "//*[@id=\"bom-2418\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	@FindBy(xpath = "//*[@id=\"OfferIP\"]/div/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement SecurityselectAllBom;
 	
 	@FindBy(xpath = "//*[@id=\"bom-2459\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
@@ -154,7 +154,7 @@ public class CataloguePage {
 	@FindBy(xpath = "//span[contains(text(),'Download Selected')]")
 	private WebElement DownloadSelected;
 
-	@FindBy(xpath = "//a[contains(text(),'Subscribe')]")
+	@FindBy(xpath = "//span[@title='Subscribe']")
 	private WebElement SubscribeButton;
 	
 	@FindBy(xpath = "//*[@id=\"spanSubscribe\"]/a")
@@ -169,25 +169,43 @@ public class CataloguePage {
 	@FindBy(xpath = "//p[contains(text(),'Your subscription preference is successfully updat')]")
 	private WebElement SubscribeSucessMsg;
 
-	@FindBy(xpath = "//a[contains(text(),'Unsubscribe')]")
+	@FindBy(xpath = "//span[@title='Unsubscribe']")
 	private WebElement UnsubscribeButton;
 
-	@FindBy(xpath = "//div[@class='evidence itemCol scene scene--card']//div[@class='itemDetails']")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	@FindBy(xpath = "//*[@id=\"CustomerEvidence\"]/div[2]/div[1]/div[1]/h3/a")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
 	private WebElement EDFEvidenceCheck;
+	
+	@FindBy(xpath = "//*[@id=\"offerContainer\"]/div/div[1]/h3/a")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	private WebElement CatalogueOfferCheck;
+	
+	@FindBy(xpath = "//*[@class='card solution-play'][1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	private WebElement SolutionPlayCheck;
+	
+	@FindBy(xpath = "//*[@id=\"offerContainer\"]/div/div[1]/h3/a")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	private WebElement ArtifactCheck;
+	
+	@FindBy(xpath = "//*[@class='card artefact'][1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	private WebElement ArtifactTabName;
+	
+	@FindBy(xpath = "//*[@class='card catalogue-offer'][1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	private WebElement CatalogueOfferTab;
 
-	@FindBy(xpath = "//*[@id=\"offertabguide\"]/li[2]/a")
+	@FindBy(xpath = "//li[@id='tabBOM']")
 	private WebElement BOMButton;
 	
 	@FindBy(xpath = "//*[@id=\"offertabguide\"]/li[2]/a")
 	private WebElement DataAIBOMButton;
 
-	@FindBy(xpath = "//button[contains(text(),'Package')]")
-	private WebElement PackageButton;
+	@FindBy(xpath = "//li[@id='tabArtefact']")
+	private WebElement ArtefactButton;
 	
-	@FindBy(xpath = "//*[@id=\"dvOfferMetrics\"]/div[1]/div[2]/div[1]/div")
-	private WebElement ContractCount;
+	@FindBy(xpath = "//li[@id='tabCatalogueOffer']")
+	private WebElement CatalogueOfferButton;
+	
+	@FindBy(xpath = "//*[@id=\"dvOfferMetrics\"]/div[1]/div[2]/div[2]")
+	private WebElement SoldCount;
 
-	@FindBy(xpath = "//button[@id='spanToggleStat']")
+	@FindBy(xpath = "//div[@id='arrowdown']")
 	private WebElement ViewMoreSalseStat;
 
 	@FindBy(xpath = "//a[contains(text(),'CompassOne Deals')]")
@@ -199,7 +217,7 @@ public class CataloguePage {
 	@FindBy(xpath = "//a[contains(text(),'Solutions & Packages')]")
 	private WebElement SolutionsPackagesButton;
 
-	public CataloguePage(WebDriver driver) {
+	public SolutionPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -364,6 +382,24 @@ public class CataloguePage {
 		// util.clickOnElementUsingActions(driver,carouselPlayButton);
 		return getEDFEvidenceCheck().isDisplayed();
 	}
+	public WebElement getCatalogueOffer() {
+		return CatalogueOfferTab;
+	}
+	public WebElement getSolutionPlay() {
+		return SolutionPlayCheck;
+	}
+	public WebElement getArtifact() {
+		return ArtifactCheck;
+	}
+	
+	public WebElement getArtifactTabName() {
+		return ArtifactTabName;
+	}
+	public boolean isDisplayedCatalogueOffer() {
+		// util.clickOnElementUsingActions(driver,carouselPlayButton);
+		return getCatalogueOffer().isDisplayed();
+	}
+
 
 	public void clickOnBOMTABButton() {
 		util.scrollDownForElementToBeVisible(driver, BOMButton, 2000);
@@ -381,12 +417,20 @@ public class CataloguePage {
 
 	}
 
-	public void clickPackageButton() {
-		//util.scrollDownForElementToBeVisible(driver, PackageButton, 2000);
-		util.clickOnElementUsingActions(driver, PackageButton);
+	public void clickArtefactButton() {
+		util.scrollDownForElementToBeVisible(driver, ArtefactButton, 2000);
+		util.clickOnElementUsingActions(driver, ArtefactButton);
 	}
-	public WebElement getContractCount() {
-		return ContractCount;
+	public void clickBOMButton() {
+		util.scrollDownForElementToBeVisible(driver, BOMButton, 2000);
+		util.clickOnElementUsingActions(driver, BOMButton);
+	}
+	public void clickCatalogueOfferButton() {
+		util.scrollDownForElementToBeVisible(driver, CatalogueOfferButton, 2000);
+		util.clickOnElementUsingActions(driver, CatalogueOfferButton);
+	}
+	public WebElement getSoldCount() {
+		return SoldCount;
 	}
 	public void clickViewMoreSalseStatButton() {
 		util.scrollDownForElementToBeVisible(driver, ViewMoreSalseStat, 2000);
@@ -406,6 +450,7 @@ public class CataloguePage {
 	public void clickOnDownloadSectionCloseButton() 
 	{
 		util.clickOnElementUsingActions(driver, DownloadSectionCloseButton);
+		
 	}
 	public void clickOnAMTselectAllBomButton() {
 		util.scrollDownForElementToBeVisible(driver, AMTselectAllBom, 2000);
@@ -485,5 +530,9 @@ public class CataloguePage {
 	public void clickOnTelselectAllBomButton() {
 		util.scrollDownForElementToBeVisible(driver, TelCselectAllBom, 2000);
 		util.clickOnElementUsingActions(driver, TelCselectAllBom);
+	}
+	public void ArtifactsTabtwaitForElementToBeVisible()
+	{
+		util.waitForElementToBeVisible(driver, ArtifactTabName,50);
 	}
 }

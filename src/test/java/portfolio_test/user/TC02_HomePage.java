@@ -66,7 +66,7 @@ public class TC02_HomePage extends TestBase {
 		Assert.assertTrue(driver.getCurrentUrl().contains("Home"));
 		log.info("Home page displayed");
 	}
-
+	
 	@Test(priority = 2)
 	public void verify_MCAPS_Seller_View() throws Throwable {
 		Thread.sleep(5000);
@@ -116,7 +116,7 @@ public class TC02_HomePage extends TestBase {
 		driver.navigate().back();
 		driver.navigate().back();
 	}*/
-	@Test(priority = 6)
+		@Test(priority = 6)
 	public void verify_IS_Seller_View() throws Throwable {
 		Thread.sleep(5000);
 		homePage.clickViewChangeDropdown();
@@ -404,7 +404,7 @@ public class TC02_HomePage extends TestBase {
 		driver.switchTo().window(mainTab);
 	}
 	*/
-	@Test(priority = 26)
+		@Test(priority = 26)
 	public void verifyAutomotiveMobilityandTransportationtPageArchitectViewOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickOnAutomotiveMobilityandTransportationtButton();
@@ -591,12 +591,12 @@ public class TC02_HomePage extends TestBase {
 		driver.navigate().back();
 		Thread.sleep(3000);softAssert.assertAll();
 	}
-	/*
+	
 	
 
 	
 
-
+/*
 
 
 
@@ -661,7 +661,8 @@ public class TC02_HomePage extends TestBase {
 
 	}
 	
-	@Test(priority = 13, enabled = false)
+	
+	@Test(priority = 2, enabled = false)
 	public void testBrokenLinks() throws IOException, InterruptedException {
 		List<WebElement> links = driver.findElements(By.xpath("//a[contains(@href,'.')]"));
 		System.out.println("Total links on the page: " + links.size());
@@ -682,18 +683,8 @@ public class TC02_HomePage extends TestBase {
 			int responseCode = connection.getResponseCode();
 			
 			if (responseCode >= 400) {
-				/*connection.connect();
-				InputStream errorStream = connection.getErrorStream();
-				BufferedReader reader = new BufferedReader(new InputStreamReader(errorStream));
-				String line;
-				StringBuilder errorMessage = new StringBuilder();
-				while ((line = reader.readLine()) != null) {
-					errorMessage.append(line);
-				}
-				reader.close();
-				System.out.println("Error message: " + errorMessage.toString());*/
-
-		/*		System.out.println("Broken Link: |" + url + " | Response Code: |" + responseCode);
+				
+			System.out.println("Broken Link: |" + url + " | Response Code: |" + responseCode);
 
 			} else {
 				System.out.println("Working Link: |" + url + " | Response Code: |" + responseCode);

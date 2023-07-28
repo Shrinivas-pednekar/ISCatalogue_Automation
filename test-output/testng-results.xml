@@ -1,97 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="35" passed="34" failed="1" skipped="0">
+<testng-results total="34" passed="0" failed="0" skipped="34">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-19T14:00:04Z" name="IS Catalauge Automation Tests" finished-at="2023-07-19T14:07:43Z" duration-ms="459109">
+  <suite started-at="2023-07-28T12:21:15Z" name="Default suite" finished-at="2023-07-28T12:21:24Z" duration-ms="9487">
     <groups>
     </groups>
-    <test started-at="2023-07-19T14:00:04Z" name="Validating IS Catalauge Login page test" finished-at="2023-07-19T14:00:31Z" duration-ms="26948">
-      <class name="portfolio_test.user.TC01_UserLoginTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC01_UserLoginTest@69c43e48]" started-at="2023-07-19T19:30:04Z" name="initialize" finished-at="2023-07-19T19:30:27Z" duration-ms="23528" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method signature="loginPageTitleTest()[pri:0, instance:portfolio_test.user.TC01_UserLoginTest@69c43e48]" started-at="2023-07-19T19:30:27Z" name="loginPageTitleTest" finished-at="2023-07-19T19:30:30Z" duration-ms="3045" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginPageTitleTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC01_UserLoginTest@69c43e48]" started-at="2023-07-19T19:30:30Z" name="teardown" finished-at="2023-07-19T19:30:31Z" duration-ms="349" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
-    </test> <!-- Validating IS Catalauge Login page test -->
-    <test started-at="2023-07-19T14:00:31Z" name="Validating all links and pages present under Home page test" finished-at="2023-07-19T14:07:43Z" duration-ms="431477">
+    <test started-at="2023-07-28T12:21:15Z" name="Default test" finished-at="2023-07-28T12:21:24Z" duration-ms="9487">
       <class name="portfolio_test.user.TC02_HomePage">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:30:31Z" name="initialize" finished-at="2023-07-19T19:30:48Z" duration-ms="17124" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method signature="verify_Homepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:30:48Z" name="verify_Homepage" finished-at="2023-07-19T19:30:48Z" duration-ms="25" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Homepage -->
-        <test-method signature="verify_MCAPS_Seller_View()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:30:48Z" name="verify_MCAPS_Seller_View" finished-at="2023-07-19T19:30:54Z" duration-ms="5280" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_MCAPS_Seller_View -->
-        <test-method signature="verifyCustomerHubPageFromHomePage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:30:54Z" name="verifyCustomerHubPageFromHomePage" finished-at="2023-07-19T19:31:13Z" duration-ms="19140" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCustomerHubPageFromHomePage -->
-        <test-method signature="verifyMeet_the_new_IS_CataloguePageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:31:13Z" name="verifyMeet_the_new_IS_CataloguePageOnHomepage" finished-at="2023-07-19T19:31:22Z" duration-ms="9640" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyMeet_the_new_IS_CataloguePageOnHomepage -->
-        <test-method signature="verify_IS_Seller_View()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:31:22Z" name="verify_IS_Seller_View" finished-at="2023-07-19T19:31:31Z" duration-ms="8533" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_IS_Seller_View -->
-        <test-method signature="verifyCloudTransitionServicesPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:31:31Z" name="verifyCloudTransitionServicesPageOnHomepage" finished-at="2023-07-19T19:32:02Z" duration-ms="31253" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCloudTransitionServicesPageOnHomepage -->
-        <test-method signature="VerifyProductInnovationDevelopmentServicesPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:32:02Z" name="VerifyProductInnovationDevelopmentServicesPageOnHomepage" finished-at="2023-07-19T19:32:13Z" duration-ms="10458" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyProductInnovationDevelopmentServicesPageOnHomepage -->
-        <test-method signature="Verify_Data_Strategy_Platform_Analytics_PageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:32:13Z" name="Verify_Data_Strategy_Platform_Analytics_PageOnHomepage" finished-at="2023-07-19T19:32:23Z" duration-ms="10525" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Verify_Data_Strategy_Platform_Analytics_PageOnHomepage -->
-        <test-method signature="VerifyCloudManagementOperationsPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:32:23Z" name="VerifyCloudManagementOperationsPageOnHomepage" finished-at="2023-07-19T19:32:34Z" duration-ms="10660" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyCloudManagementOperationsPageOnHomepage -->
-        <test-method signature="VerifyEnd_to_End_AI_and_Machine_LearningPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:32:34Z" name="VerifyEnd_to_End_AI_and_Machine_LearningPageOnHomepage" finished-at="2023-07-19T19:32:44Z" duration-ms="10462" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyEnd_to_End_AI_and_Machine_LearningPageOnHomepage -->
-        <test-method signature="VerifyDigital_Security_and_CompliancePageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:32:44Z" name="VerifyDigital_Security_and_CompliancePageOnHomepage" finished-at="2023-07-19T19:32:55Z" duration-ms="10422" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyDigital_Security_and_CompliancePageOnHomepage -->
-        <test-method signature="VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:32:55Z" name="VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage" finished-at="2023-07-19T19:33:05Z" duration-ms="10377" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:15Z" name="initialize" finished-at="2023-07-28T17:51:15Z" duration-ms="0" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[The following asserts failed:
-Title does not contain 'Microsoft Security Services for Enterprise'.]]>
+              <![CDATA[java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:5732
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'HJNZL000593', ip: '192.168.75.81', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Title does not contain 'Microsoft Security Services for Enterprise'.
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)
-	at portfolio_test.user.TC02_HomePage.VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage(TC02_HomePage.java:244)
+              <![CDATA[org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:5732
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'HJNZL000593', ip: '192.168.75.81', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at portfolio_test.user.TC02_HomePage.initialize(TC02_HomePage.java:55)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:641)
+	at org.testng.TestRunner.run(TestRunner.java:609)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
@@ -104,105 +44,186 @@ Title does not contain 'Microsoft Security Services for Enterprise'.
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:5732
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:247)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+	at okhttp3.RealCall.execute(RealCall.java:77)
+	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	... 23 more
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
+	... 43 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="verify_Homepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verify_Homepage" finished-at="2023-07-28T17:51:24Z" duration-ms="3" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Homepage -->
+        <test-method signature="verify_MCAPS_Seller_View()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verify_MCAPS_Seller_View" finished-at="2023-07-28T17:51:24Z" duration-ms="3" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_MCAPS_Seller_View -->
+        <test-method signature="verifyCustomerHubPageFromHomePage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyCustomerHubPageFromHomePage" finished-at="2023-07-28T17:51:24Z" duration-ms="4" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCustomerHubPageFromHomePage -->
+        <test-method signature="verifyMeet_the_new_IS_CataloguePageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyMeet_the_new_IS_CataloguePageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMeet_the_new_IS_CataloguePageOnHomepage -->
+        <test-method signature="verify_IS_Seller_View()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verify_IS_Seller_View" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_IS_Seller_View -->
+        <test-method signature="verifyCloudTransitionServicesPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyCloudTransitionServicesPageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="5" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCloudTransitionServicesPageOnHomepage -->
+        <test-method signature="VerifyProductInnovationDevelopmentServicesPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="VerifyProductInnovationDevelopmentServicesPageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyProductInnovationDevelopmentServicesPageOnHomepage -->
+        <test-method signature="Verify_Data_Strategy_Platform_Analytics_PageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="Verify_Data_Strategy_Platform_Analytics_PageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Data_Strategy_Platform_Analytics_PageOnHomepage -->
+        <test-method signature="VerifyCloudManagementOperationsPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="VerifyCloudManagementOperationsPageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyCloudManagementOperationsPageOnHomepage -->
+        <test-method signature="VerifyEnd_to_End_AI_and_Machine_LearningPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="VerifyEnd_to_End_AI_and_Machine_LearningPageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyEnd_to_End_AI_and_Machine_LearningPageOnHomepage -->
+        <test-method signature="VerifyDigital_Security_and_CompliancePageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="VerifyDigital_Security_and_CompliancePageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDigital_Security_and_CompliancePageOnHomepage -->
+        <test-method signature="VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage -->
-        <test-method signature="VerifyIdentity_and_Access_ServicesPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:33:06Z" name="VerifyIdentity_and_Access_ServicesPageOnHomepage" finished-at="2023-07-19T19:33:17Z" duration-ms="10432" status="PASS">
+        <test-method signature="VerifyIdentity_and_Access_ServicesPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="VerifyIdentity_and_Access_ServicesPageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyIdentity_and_Access_ServicesPageOnHomepage -->
-        <test-method signature="VerifySecurity_OperationsPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:33:17Z" name="VerifySecurity_OperationsPageOnHomepage" finished-at="2023-07-19T19:33:27Z" duration-ms="10446" status="PASS">
+        <test-method signature="VerifySecurity_OperationsPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="VerifySecurity_OperationsPageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifySecurity_OperationsPageOnHomepage -->
-        <test-method signature="verifyCustomerEvidenceSectionOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:33:27Z" name="verifyCustomerEvidenceSectionOnHomepage" finished-at="2023-07-19T19:33:32Z" duration-ms="5098" status="PASS">
+        <test-method signature="verifyCustomerEvidenceSectionOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyCustomerEvidenceSectionOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCustomerEvidenceSectionOnHomepage -->
-        <test-method signature="verifyMeet_the_new_IS_CataloguePageOnHomepageForISSellerView()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:33:32Z" name="verifyMeet_the_new_IS_CataloguePageOnHomepageForISSellerView" finished-at="2023-07-19T19:33:41Z" duration-ms="9081" status="PASS">
+        <test-method signature="verifyMeet_the_new_IS_CataloguePageOnHomepageForISSellerView()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyMeet_the_new_IS_CataloguePageOnHomepageForISSellerView" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyMeet_the_new_IS_CataloguePageOnHomepageForISSellerView -->
-        <test-method signature="verify_Architect_View()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:33:41Z" name="verify_Architect_View" finished-at="2023-07-19T19:33:52Z" duration-ms="10602" status="PASS">
+        <test-method signature="verify_Architect_View()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verify_Architect_View" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_Architect_View -->
-        <test-method signature="verifySearchFunctionOnHomePageForArchitectRole()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:33:52Z" name="verifySearchFunctionOnHomePageForArchitectRole" finished-at="2023-07-19T19:34:13Z" duration-ms="20939" status="PASS">
+        <test-method signature="verifySearchFunctionOnHomePageForArchitectRole()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifySearchFunctionOnHomePageForArchitectRole" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySearchFunctionOnHomePageForArchitectRole -->
-        <test-method signature="verifyPickupwhereyouleftSectionfOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:34:13Z" name="verifyPickupwhereyouleftSectionfOnHomepage" finished-at="2023-07-19T19:34:18Z" duration-ms="5374" status="PASS">
+        <test-method signature="verifyPickupwhereyouleftSectionfOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyPickupwhereyouleftSectionfOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPickupwhereyouleftSectionfOnHomepage -->
-        <test-method signature="verifyTreadingOfferSectionfOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:34:18Z" name="verifyTreadingOfferSectionfOnHomepage" finished-at="2023-07-19T19:34:18Z" duration-ms="84" status="PASS">
+        <test-method signature="verifyTreadingOfferSectionfOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyTreadingOfferSectionfOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTreadingOfferSectionfOnHomepage -->
-        <test-method signature="verifyViewAllOffersLinkOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:34:18Z" name="verifyViewAllOffersLinkOnHomepage" finished-at="2023-07-19T19:34:29Z" duration-ms="10453" status="PASS">
+        <test-method signature="verifyViewAllOffersLinkOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyViewAllOffersLinkOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyViewAllOffersLinkOnHomepage -->
-        <test-method signature="verifyCustomerEvidenceSectionForArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:34:29Z" name="verifyCustomerEvidenceSectionForArchitectViewOnHomepage" finished-at="2023-07-19T19:34:34Z" duration-ms="5077" status="PASS">
+        <test-method signature="verifyCustomerEvidenceSectionForArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyCustomerEvidenceSectionForArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCustomerEvidenceSectionForArchitectViewOnHomepage -->
-        <test-method signature="verifyAutomotiveMobilityandTransportationtPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:34:34Z" name="verifyAutomotiveMobilityandTransportationtPageArchitectViewOnHomepage" finished-at="2023-07-19T19:34:54Z" duration-ms="19991" status="PASS">
+        <test-method signature="verifyAutomotiveMobilityandTransportationtPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyAutomotiveMobilityandTransportationtPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAutomotiveMobilityandTransportationtPageArchitectViewOnHomepage -->
-        <test-method signature="verifyCrossIndustryPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:34:54Z" name="verifyCrossIndustryPageArchitectViewOnHomepage" finished-at="2023-07-19T19:35:10Z" duration-ms="15859" status="PASS">
+        <test-method signature="verifyCrossIndustryPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyCrossIndustryPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCrossIndustryPageArchitectViewOnHomepage -->
-        <test-method signature="verifyDefenseandIntelligencePageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:35:10Z" name="verifyDefenseandIntelligencePageArchitectViewOnHomepage" finished-at="2023-07-19T19:35:26Z" duration-ms="16461" status="PASS">
+        <test-method signature="verifyDefenseandIntelligencePageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyDefenseandIntelligencePageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDefenseandIntelligencePageArchitectViewOnHomepage -->
-        <test-method signature="verifyEducationPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:35:26Z" name="verifyEducationPageArchitectViewOnHomepage" finished-at="2023-07-19T19:35:37Z" duration-ms="10822" status="PASS">
+        <test-method signature="verifyEducationPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyEducationPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyEducationPageArchitectViewOnHomepage -->
-        <test-method signature="verifyEnergyandResourcesPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:35:37Z" name="verifyEnergyandResourcesPageArchitectViewOnHomepage" finished-at="2023-07-19T19:35:54Z" duration-ms="16416" status="PASS">
+        <test-method signature="verifyEnergyandResourcesPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyEnergyandResourcesPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyEnergyandResourcesPageArchitectViewOnHomepage -->
-        <test-method signature="verifyFinancialServicesPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:35:54Z" name="verifyFinancialServicesPageArchitectViewOnHomepage" finished-at="2023-07-19T19:36:08Z" duration-ms="14182" status="PASS">
+        <test-method signature="verifyFinancialServicesPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyFinancialServicesPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFinancialServicesPageArchitectViewOnHomepage -->
-        <test-method signature="verifyGovernmentPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:36:08Z" name="verifyGovernmentPageArchitectViewOnHomepage" finished-at="2023-07-19T19:36:22Z" duration-ms="14100" status="PASS">
+        <test-method signature="verifyGovernmentPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyGovernmentPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyGovernmentPageArchitectViewOnHomepage -->
-        <test-method signature="verifyHealthcarePageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:36:22Z" name="verifyHealthcarePageArchitectViewOnHomepage" finished-at="2023-07-19T19:36:36Z" duration-ms="14317" status="PASS">
+        <test-method signature="verifyHealthcarePageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyHealthcarePageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHealthcarePageArchitectViewOnHomepage -->
-        <test-method signature="verifyIndustrialsandManufacturingPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:36:36Z" name="verifyIndustrialsandManufacturingPageArchitectViewOnHomepage" finished-at="2023-07-19T19:36:53Z" duration-ms="16732" status="PASS">
+        <test-method signature="verifyIndustrialsandManufacturingPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyIndustrialsandManufacturingPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyIndustrialsandManufacturingPageArchitectViewOnHomepage -->
-        <test-method signature="verifyRetailandConsumerGoodsPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:36:53Z" name="verifyRetailandConsumerGoodsPageArchitectViewOnHomepage" finished-at="2023-07-19T19:37:09Z" duration-ms="16643" status="PASS">
+        <test-method signature="verifyRetailandConsumerGoodsPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyRetailandConsumerGoodsPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="5" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRetailandConsumerGoodsPageArchitectViewOnHomepage -->
-        <test-method signature="verifySustainabilityPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:37:09Z" name="verifySustainabilityPageArchitectViewOnHomepage" finished-at="2023-07-19T19:37:26Z" duration-ms="16581" status="PASS">
+        <test-method signature="verifySustainabilityPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifySustainabilityPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySustainabilityPageArchitectViewOnHomepage -->
-        <test-method signature="verifyTelecommunicationsandMediaPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:37:26Z" name="verifyTelecommunicationsandMediaPageArchitectViewOnHomepage" finished-at="2023-07-19T19:37:42Z" duration-ms="15935" status="PASS">
+        <test-method signature="verifyTelecommunicationsandMediaPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyTelecommunicationsandMediaPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTelecommunicationsandMediaPageArchitectViewOnHomepage -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC02_HomePage@3bb9efbc]" started-at="2023-07-19T19:37:42Z" name="teardown" finished-at="2023-07-19T19:37:43Z" duration-ms="654" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="teardown" finished-at="2023-07-28T17:51:24Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- portfolio_test.user.TC02_HomePage -->
-    </test> <!-- Validating all links and pages present under Home page test -->
-  </suite> <!-- IS Catalauge Automation Tests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

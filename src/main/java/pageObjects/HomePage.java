@@ -81,7 +81,7 @@ public class HomePage {
 	@FindBy(xpath="//h4[contains(text(),'Identity and Access Services')]")
 	private WebElement Identity_and_Access_ServicesLink;
 	
-	@FindBy(xpath="//span[@id='spanexpand']")
+	@FindBy(xpath="//button[@id='spanexpand']")
 	private WebElement spanexpandLink;
 	
 	@FindBy(xpath="//h4[contains(text(),'Data Strategy')]")

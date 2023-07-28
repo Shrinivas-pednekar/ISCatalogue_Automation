@@ -4,21 +4,20 @@
   <listeners>
     <listener class-name="isCatalogue_test.Listeners"/>
   </listeners>
-  <test parallel="none" name="Validating all links and pages present under Home page test(failed)">
+  <test parallel="none" name="Validating all links and pages present under Catalogue menu test(failed)">
     <classes>
-      <class name="portfolio_test.user.TC02_HomePage">
+      <class name="portfolio_test.user.TC03_SolutionaTest">
         <methods>
-          <include name="initialize"/>
-          <include name="VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage"/>
+          <include name="verifyDataandAIOnCataloguePage"/>
           <include name="teardown"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC02_HomePage -->
-      <class name="portfolio_test.user.TC01_UserLoginTest">
-        <methods>
-          <include name="teardown"/>
+          <include name="verifyEnergyandResourcesOnCataloguePage"/>
+          <include name="verifyGovernmentOnCataloguePage"/>
+          <include name="verifyBusinessAppsPageButtonOnCataloguePage"/>
           <include name="initialize"/>
+          <include name="verifyCrossIndustryOnCataloguePage"/>
+          <include name="verifySecurityOnCataloguePage"/>
         </methods>
-      </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
+      </class> <!-- portfolio_test.user.TC03_SolutionaTest -->
     </classes>
-  </test> <!-- Validating all links and pages present under Home page test(failed) -->
+  </test> <!-- Validating all links and pages present under Catalogue menu test(failed) -->
 </suite> <!-- Failed suite [IS Catalauge Automation Tests] -->

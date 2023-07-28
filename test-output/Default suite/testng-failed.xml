@@ -5,9 +5,41 @@
     <classes>
       <class name="portfolio_test.user.TC02_HomePage">
         <methods>
-          <include name="initialize"/>
+          <include name="VerifyCloudManagementOperationsPageOnHomepage"/>
+          <include name="verifyTelecommunicationsandMediaPageArchitectViewOnHomepage"/>
+          <include name="VerifyEnd_to_End_AI_and_Machine_LearningPageOnHomepage"/>
+          <include name="verifySearchFunctionOnHomePageForArchitectRole"/>
+          <include name="verifyRetailandConsumerGoodsPageArchitectViewOnHomepage"/>
+          <include name="verify_Architect_View"/>
+          <include name="VerifySecurity_OperationsPageOnHomepage"/>
+          <include name="verifyFinancialServicesPageArchitectViewOnHomepage"/>
+          <include name="verifyCustomerHubPageFromHomePage"/>
+          <include name="verifyMeet_the_new_IS_CataloguePageOnHomepage"/>
+          <include name="verifyAutomotiveMobilityandTransportationtPageArchitectViewOnHomepage"/>
+          <include name="verifyCustomerEvidenceSectionOnHomepage"/>
+          <include name="verifyGovernmentPageArchitectViewOnHomepage"/>
+          <include name="verify_IS_Seller_View"/>
+          <include name="VerifyIdentity_and_Access_ServicesPageOnHomepage"/>
+          <include name="verifyCustomerEvidenceSectionForArchitectViewOnHomepage"/>
+          <include name="verifyPickupwhereyouleftSectionfOnHomepage"/>
+          <include name="verify_Homepage"/>
+          <include name="verifyViewAllOffersLinkOnHomepage"/>
+          <include name="verifyDefenseandIntelligencePageArchitectViewOnHomepage"/>
+          <include name="verifyTreadingOfferSectionfOnHomepage"/>
+          <include name="verifyEnergyandResourcesPageArchitectViewOnHomepage"/>
+          <include name="verifySustainabilityPageArchitectViewOnHomepage"/>
+          <include name="verify_MCAPS_Seller_View"/>
+          <include name="Verify_Data_Strategy_Platform_Analytics_PageOnHomepage"/>
+          <include name="verifyCloudTransitionServicesPageOnHomepage"/>
+          <include name="verifyIndustrialsandManufacturingPageArchitectViewOnHomepage"/>
           <include name="VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage"/>
-          <include name="teardown"/>
+          <include name="verifyCrossIndustryPageArchitectViewOnHomepage"/>
+          <include name="VerifyDigital_Security_and_CompliancePageOnHomepage"/>
+          <include name="verifyHealthcarePageArchitectViewOnHomepage"/>
+          <include name="verifyMeet_the_new_IS_CataloguePageOnHomepageForISSellerView"/>
+          <include name="initialize"/>
+          <include name="verifyEducationPageArchitectViewOnHomepage"/>
+          <include name="VerifyProductInnovationDevelopmentServicesPageOnHomepage"/>
         </methods>
       </class> <!-- portfolio_test.user.TC02_HomePage -->
     </classes>
