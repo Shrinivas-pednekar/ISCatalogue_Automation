@@ -18,7 +18,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import pageObjects.CampaignsPage;
+import pageObjects.InitiativesPage;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import resources.TestBase;

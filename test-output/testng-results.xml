@@ -1,29 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="34" passed="0" failed="0" skipped="34">
+<testng-results total="2" passed="0" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-28T12:21:15Z" name="Default suite" finished-at="2023-07-28T12:21:24Z" duration-ms="9487">
+  <suite started-at="2023-08-04T08:27:18Z" name="Default suite" finished-at="2023-08-04T08:27:39Z" duration-ms="20837">
     <groups>
     </groups>
-    <test started-at="2023-07-28T12:21:15Z" name="Default test" finished-at="2023-07-28T12:21:24Z" duration-ms="9487">
-      <class name="portfolio_test.user.TC02_HomePage">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:15Z" name="initialize" finished-at="2023-07-28T17:51:15Z" duration-ms="0" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
+    <test started-at="2023-08-04T08:27:18Z" name="Default test" finished-at="2023-08-04T08:27:39Z" duration-ms="20837">
+      <class name="portfolio_test.user.TC06_ResourcesPage">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@71b3bc45]" started-at="2023-08-04T13:57:18Z" name="initialize" finished-at="2023-08-04T13:57:18Z" duration-ms="0" status="FAIL">
+          <exception class="org.openqa.selenium.json.JsonException">
             <message>
-              <![CDATA[java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:5732
+              <![CDATA[java.lang.reflect.InvocationTargetException
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'HJNZL000593', ip: '192.168.75.81', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+System info: host: 'HJNZL000593', ip: '192.168.182.81', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
 Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:5732
+              <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'HJNZL000593', ip: '192.168.75.81', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+System info: host: 'HJNZL000593', ip: '192.168.182.81', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
 Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:332)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:168)
+	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:647)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:168)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at portfolio_test.user.TC02_HomePage.initialize(TC02_HomePage.java:55)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
+	at resources.Utilities.clickOnElementUsingActions(Utilities.java:111)
+	at pageObjects.LoginPage.clickOnUserButton(LoginPage.java:50)
+	at portfolio_test.user.TC06_ResourcesPage.initialize(TC06_ResourcesPage.java:40)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
@@ -44,186 +64,68 @@ Driver info: driver.version: RemoteWebDriver
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:5732
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:247)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	... 23 more
-Caused by: java.net.ConnectException: Connection refused: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
+	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'HJNZL000593', ip: '192.168.182.81', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: driver.version: RemoteWebDriver
+		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:279)
+		at org.openqa.selenium.json.Json.toJson(Json.java:44)
+		... 31 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:119)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:328)
 	... 43 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(text(),'Sapna Kshirsagar (Persistent Systems Inc)')]"}
+  (Session info: MicrosoftEdge=115.0.1901.188)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'HJNZL000593', ip: '192.168.182.81', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 115.0.1901.188, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:61735}, msedge: {msedgedriverVersion: 115.0.1901.188 (b51b39339c4..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: aba5a98db15ecfe84917c25f6416607c
+*** Element info: {Using=xpath, value=//div[contains(text(),'Sapna Kshirsagar (Persistent Systems Inc)')]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:204)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:155)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	... 45 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- org.openqa.selenium.json.JsonException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="verify_Homepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verify_Homepage" finished-at="2023-07-28T17:51:24Z" duration-ms="3" status="SKIP">
+        <test-method signature="verifyAboutISCataloguePageFromResourcesMenu()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@71b3bc45]" started-at="2023-08-04T13:57:39Z" name="verifyAboutISCataloguePageFromResourcesMenu" finished-at="2023-08-04T13:57:39Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_Homepage -->
-        <test-method signature="verify_MCAPS_Seller_View()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verify_MCAPS_Seller_View" finished-at="2023-07-28T17:51:24Z" duration-ms="3" status="SKIP">
+        </test-method> <!-- verifyAboutISCataloguePageFromResourcesMenu -->
+        <test-method signature="verifyFundingPageFromResourcesMenu()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@71b3bc45]" started-at="2023-08-04T13:57:39Z" name="verifyFundingPageFromResourcesMenu" finished-at="2023-08-04T13:57:39Z" duration-ms="2" status="SKIP">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_MCAPS_Seller_View -->
-        <test-method signature="verifyCustomerHubPageFromHomePage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyCustomerHubPageFromHomePage" finished-at="2023-07-28T17:51:24Z" duration-ms="4" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCustomerHubPageFromHomePage -->
-        <test-method signature="verifyMeet_the_new_IS_CataloguePageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyMeet_the_new_IS_CataloguePageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyMeet_the_new_IS_CataloguePageOnHomepage -->
-        <test-method signature="verify_IS_Seller_View()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verify_IS_Seller_View" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_IS_Seller_View -->
-        <test-method signature="verifyCloudTransitionServicesPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyCloudTransitionServicesPageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="5" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCloudTransitionServicesPageOnHomepage -->
-        <test-method signature="VerifyProductInnovationDevelopmentServicesPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="VerifyProductInnovationDevelopmentServicesPageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyProductInnovationDevelopmentServicesPageOnHomepage -->
-        <test-method signature="Verify_Data_Strategy_Platform_Analytics_PageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="Verify_Data_Strategy_Platform_Analytics_PageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Verify_Data_Strategy_Platform_Analytics_PageOnHomepage -->
-        <test-method signature="VerifyCloudManagementOperationsPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="VerifyCloudManagementOperationsPageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyCloudManagementOperationsPageOnHomepage -->
-        <test-method signature="VerifyEnd_to_End_AI_and_Machine_LearningPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="VerifyEnd_to_End_AI_and_Machine_LearningPageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyEnd_to_End_AI_and_Machine_LearningPageOnHomepage -->
-        <test-method signature="VerifyDigital_Security_and_CompliancePageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="VerifyDigital_Security_and_CompliancePageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyDigital_Security_and_CompliancePageOnHomepage -->
-        <test-method signature="VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyMicrosoft_Security_Services_for_EnterprisePageOnHomepage -->
-        <test-method signature="VerifyIdentity_and_Access_ServicesPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="VerifyIdentity_and_Access_ServicesPageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyIdentity_and_Access_ServicesPageOnHomepage -->
-        <test-method signature="VerifySecurity_OperationsPageOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="VerifySecurity_OperationsPageOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifySecurity_OperationsPageOnHomepage -->
-        <test-method signature="verifyCustomerEvidenceSectionOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyCustomerEvidenceSectionOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCustomerEvidenceSectionOnHomepage -->
-        <test-method signature="verifyMeet_the_new_IS_CataloguePageOnHomepageForISSellerView()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyMeet_the_new_IS_CataloguePageOnHomepageForISSellerView" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyMeet_the_new_IS_CataloguePageOnHomepageForISSellerView -->
-        <test-method signature="verify_Architect_View()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verify_Architect_View" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_Architect_View -->
-        <test-method signature="verifySearchFunctionOnHomePageForArchitectRole()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifySearchFunctionOnHomePageForArchitectRole" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySearchFunctionOnHomePageForArchitectRole -->
-        <test-method signature="verifyPickupwhereyouleftSectionfOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyPickupwhereyouleftSectionfOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyPickupwhereyouleftSectionfOnHomepage -->
-        <test-method signature="verifyTreadingOfferSectionfOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyTreadingOfferSectionfOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTreadingOfferSectionfOnHomepage -->
-        <test-method signature="verifyViewAllOffersLinkOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyViewAllOffersLinkOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyViewAllOffersLinkOnHomepage -->
-        <test-method signature="verifyCustomerEvidenceSectionForArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyCustomerEvidenceSectionForArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCustomerEvidenceSectionForArchitectViewOnHomepage -->
-        <test-method signature="verifyAutomotiveMobilityandTransportationtPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyAutomotiveMobilityandTransportationtPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="2" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAutomotiveMobilityandTransportationtPageArchitectViewOnHomepage -->
-        <test-method signature="verifyCrossIndustryPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyCrossIndustryPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCrossIndustryPageArchitectViewOnHomepage -->
-        <test-method signature="verifyDefenseandIntelligencePageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyDefenseandIntelligencePageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDefenseandIntelligencePageArchitectViewOnHomepage -->
-        <test-method signature="verifyEducationPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyEducationPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyEducationPageArchitectViewOnHomepage -->
-        <test-method signature="verifyEnergyandResourcesPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyEnergyandResourcesPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyEnergyandResourcesPageArchitectViewOnHomepage -->
-        <test-method signature="verifyFinancialServicesPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyFinancialServicesPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyFinancialServicesPageArchitectViewOnHomepage -->
-        <test-method signature="verifyGovernmentPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyGovernmentPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGovernmentPageArchitectViewOnHomepage -->
-        <test-method signature="verifyHealthcarePageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyHealthcarePageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyHealthcarePageArchitectViewOnHomepage -->
-        <test-method signature="verifyIndustrialsandManufacturingPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyIndustrialsandManufacturingPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyIndustrialsandManufacturingPageArchitectViewOnHomepage -->
-        <test-method signature="verifyRetailandConsumerGoodsPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyRetailandConsumerGoodsPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="5" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyRetailandConsumerGoodsPageArchitectViewOnHomepage -->
-        <test-method signature="verifySustainabilityPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifySustainabilityPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySustainabilityPageArchitectViewOnHomepage -->
-        <test-method signature="verifyTelecommunicationsandMediaPageArchitectViewOnHomepage()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="verifyTelecommunicationsandMediaPageArchitectViewOnHomepage" finished-at="2023-07-28T17:51:24Z" duration-ms="1" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTelecommunicationsandMediaPageArchitectViewOnHomepage -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC02_HomePage@553f1d75]" started-at="2023-07-28T17:51:24Z" name="teardown" finished-at="2023-07-28T17:51:24Z" duration-ms="0" status="SKIP">
+        </test-method> <!-- verifyFundingPageFromResourcesMenu -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC06_ResourcesPage@71b3bc45]" started-at="2023-08-04T13:57:39Z" name="teardown" finished-at="2023-08-04T13:57:39Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- portfolio_test.user.TC02_HomePage -->
+      </class> <!-- portfolio_test.user.TC06_ResourcesPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

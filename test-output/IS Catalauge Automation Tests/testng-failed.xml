@@ -4,20 +4,36 @@
   <listeners>
     <listener class-name="isCatalogue_test.Listeners"/>
   </listeners>
-  <test parallel="none" name="Validating all links and pages present under Catalogue menu test(failed)">
+  <test parallel="none" name="Validating all links and pages present under Campaigns menu test(failed)">
     <classes>
-      <class name="portfolio_test.user.TC03_SolutionaTest">
+      <class name="portfolio_test.user.TC06_ResourcesPage">
         <methods>
-          <include name="verifyDataandAIOnCataloguePage"/>
-          <include name="teardown"/>
-          <include name="verifyEnergyandResourcesOnCataloguePage"/>
-          <include name="verifyGovernmentOnCataloguePage"/>
-          <include name="verifyBusinessAppsPageButtonOnCataloguePage"/>
           <include name="initialize"/>
-          <include name="verifyCrossIndustryOnCataloguePage"/>
-          <include name="verifySecurityOnCataloguePage"/>
         </methods>
-      </class> <!-- portfolio_test.user.TC03_SolutionaTest -->
+      </class> <!-- portfolio_test.user.TC06_ResourcesPage -->
+      <class name="portfolio_test.user.TC05_InitiativesPage">
+        <methods>
+          <include name="verifyDoMoreWithLessPageFromCampaignsMenu"/>
+          <include name="verifyTopACRandDVGeneratorsPageFromCampaignsMenu"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC05_InitiativesPage -->
     </classes>
-  </test> <!-- Validating all links and pages present under Catalogue menu test(failed) -->
+  </test> <!-- Validating all links and pages present under Campaigns menu test(failed) -->
+  <test parallel="none" name="Validating all links and pages present under Resources menu test(failed)">
+    <classes>
+      <class name="portfolio_test.user.TC06_ResourcesPage">
+        <methods>
+          <include name="verifyAboutISCataloguePageFromResourcesMenu"/>
+          <include name="initialize"/>
+          <include name="verifyFundingPageFromResourcesMenu"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC06_ResourcesPage -->
+      <class name="portfolio_test.user.TC05_InitiativesPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC05_InitiativesPage -->
+    </classes>
+  </test> <!-- Validating all links and pages present under Resources menu test(failed) -->
 </suite> <!-- Failed suite [IS Catalauge Automation Tests] -->

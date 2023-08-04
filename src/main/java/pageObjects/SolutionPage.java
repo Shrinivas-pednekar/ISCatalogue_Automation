@@ -46,7 +46,7 @@ public class SolutionPage {
 	@FindBy(xpath = "//a[contains(text(),'Security')]")
 	private WebElement SecurityMenu;
 
-	@FindBy(xpath = "//a[contains(text(),'Automotive, Mobility and Transportation')]")
+	@FindBy(xpath = "//a[contains(text(),'Mobility')]")
 	private WebElement AutomotiveMobilityandTransportationMenu;
 
 	@FindBy(xpath = "//a[contains(text(),'Cross-Industry')]")
@@ -58,7 +58,7 @@ public class SolutionPage {
 	@FindBy(xpath = "//a[contains(text(),'Education')]")
 	private WebElement EducationMenu;
 
-	@FindBy(xpath = "//a[contains(text(),'Energy and Resources')]")
+	@FindBy(xpath = "//a[contains(text(),'Energy')]")
 	private WebElement EnergyandResourcesMenu;
 
 	@FindBy(xpath = "//a[contains(text(),'Financial Services')]")
@@ -172,7 +172,7 @@ public class SolutionPage {
 	@FindBy(xpath = "//span[@title='Unsubscribe']")
 	private WebElement UnsubscribeButton;
 
-	@FindBy(xpath = "//*[@id=\"CustomerEvidence\"]/div[2]/div[1]/div[1]/h3/a")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	@FindBy(xpath = "//*[@id=\"CustomerEvidence\"]/div[2]/div[1]/div[1]/div[2]/span[1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
 	private WebElement EDFEvidenceCheck;
 	
 	@FindBy(xpath = "//*[@id=\"offerContainer\"]/div/div[1]/h3/a")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]

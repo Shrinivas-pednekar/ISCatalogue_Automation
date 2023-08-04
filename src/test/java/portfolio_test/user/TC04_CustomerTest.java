@@ -19,14 +19,16 @@ import org.testng.annotations.Test;
 import pageObjects.CustomerEvidencePage;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
+import pageObjects.ResourcesPage;
 import resources.TestBase;
 
-public class TC04_CustomerEvidenceTest extends TestBase {
+public class TC04_CustomerTest extends TestBase {
 	public WebDriver driver;
 	LoginPage loginPage;
 	HomePage homePage;
 	// CataloguePage cataloguePage;
 	CustomerEvidencePage customerEvidencePage;
+	ResourcesPage resourcesPage;
 
 	Utilities util;
 	public static Logger log = LogManager.getLogger(TestBase.class.getName());
@@ -40,9 +42,10 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 		loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
 		// cataloguePage = new CataloguePage(driver);
+		resourcesPage = new ResourcesPage(driver);
 		customerEvidencePage = new CustomerEvidencePage(driver);
 		driver.get(prop.getProperty("produrl"));
-		//loginPage.clickOnUserButton();
+		loginPage.clickOnUserButton();
 		
 
 	}
@@ -50,7 +53,7 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 	@Test(priority = 1)
 	public void verifyCustomerEvidanceHomePageOnCustomerEvidence() throws Throwable {
 
-		customerEvidencePage.clickOncustomerEvidenceMenuButton();
+		customerEvidencePage.clickOncustomerMenuButton();
 		customerEvidencePage.clickOncustomerEvidenceHomeMenuButton();
 		// Thread.sleep(3000);
 		Set<String> allTabs = homePage.getWindowHandles();
@@ -65,13 +68,6 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 		// Thread.sleep(3000);
 	}
 
-	@Test(priority = 2)
-	public void verifyCarouselOnCustomerEvidence() throws Throwable {
-
-		Assert.assertTrue(customerEvidencePage.getcarouselLearnMoreButtonOnEvidence().isDisplayed());
-		;
-	}
-
 	@Test(priority = 3)
 	public void verifysubmitNewStoryPageOnCustomerEvidence() throws Throwable {
 
@@ -81,7 +77,7 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 		allTabs.remove(mainTab);
 		String newTab = allTabs.iterator().next();
 		driver.switchTo().window(newTab);
-		//loginPage.clickOnUserButton();
+		loginPage.clickOnUserButton();
 		Thread.sleep(10000);
 		System.out.println("New Tab URL - " + driver.getTitle());
 
@@ -107,14 +103,14 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 //--------------------------Industies Stories-------------------------------------
 	
 	@Test(priority = 5)
-	public void verifyAutomotiveMobilityandTransportationCustomerStoriesSearchButtonOnCustomerEvidence()
+	public void verifyMobilityCustomerStoriesSearchButtonOnCustomerEvidence()
 			throws Throwable {
 		driver.navigate().back();
 		driver.navigate().back();
 		customerEvidencePage.clickOnAutomotiveMobilityandTransportationCustomerStoriesSearchButton();
 		Thread.sleep(3000);
 		boolean actualResult = customerEvidencePage.getAutomotiveMobilityandTransportationCustomerStoriesTitle()
-				.getText().contains("Automotive, Mobility and Transportation Customer Stories");
+				.getText().contains("Mobility Customer Stories");
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(actualResult);
 		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
@@ -139,7 +135,7 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 		Assert.assertTrue(actualResult2);
 		
 	}
-
+	
 	@Test(priority = 7)
 	public void verifyDefenseandIntelligenceCustomerStoriesSearchButtonOnCustomerEvidence() throws Throwable {
 		driver.navigate().back();
@@ -175,13 +171,13 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 	}
 
 	@Test(priority = 9)
-	public void verifyEnergyandResourcesCustomerStoriesSearchButtonOnCustomerEvidence() throws Throwable {
+	public void verifyEnergyCustomerStoriesSearchButtonOnCustomerEvidence() throws Throwable {
 		driver.navigate().back();
 		driver.navigate().back();
 		customerEvidencePage.clickOnEnergyandResourcesCustomerStoriesSearchButton();
 		Thread.sleep(3000);
 		boolean actualResult = customerEvidencePage.getEnergyandResourcesCustomerStoriesTitle().getText()
-				.contains("Energy and Resources Customer Stories");
+				.contains("Energy Customer Stories");
 		System.out.println("Actual Result - " + actualResult);
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(actualResult);
@@ -241,10 +237,10 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 		Assert.assertTrue(actualResult3);
 		
 	}
-
+	
 	@Test(priority = 13)
 	public void verifyIndustrialandManufacturingCustomerStoriesSearchButtonOnCustomerEvidence() throws Throwable {
-		driver.navigate().back();
+			driver.navigate().back();
 		driver.navigate().back();
 		customerEvidencePage.clickOnIndustrialandManufacturingCustomerStoriesSearchButton();
 		Thread.sleep(3000);
@@ -458,7 +454,7 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 	public void verifyclickOncustomerEvidenceWinWiresMenuButtonOnCustomerEvidence() throws Throwable {
 		driver.navigate().back();
 		driver.navigate().back();
-		customerEvidencePage.clickOncustomerEvidenceMenuButton();
+		customerEvidencePage.clickOncustomerMenuButton();
 		customerEvidencePage.clickOncustomerEvidenceWinWiresMenuButton();
 		// Thread.sleep(5000);
 		System.out.println("New Tab URL - " + driver.getTitle());
@@ -478,7 +474,7 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 	public void verifyCustomerEvidenceDeliveryStoriesMenuButtonOnCustomerEvidence() throws Throwable {
 		driver.navigate().back();
 		driver.navigate().back();
-		customerEvidencePage.clickOncustomerEvidenceMenuButton();
+		customerEvidencePage.clickOncustomerMenuButton();
 		customerEvidencePage.clickOncustomerEvidenceDeliveryStoriesMenuButton();
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Customer Evidence Search"));
@@ -493,34 +489,25 @@ public class TC04_CustomerEvidenceTest extends TestBase {
 	}
 
 	@Test(priority = 27)
-	public void verifySubmitaStoryMenuButtonOncustomerEvidence() throws Throwable {
+	public void verifyCustomerHubOncustomerEvidence() throws Throwable {
 		driver.navigate().back();
 		driver.navigate().back();
-		customerEvidencePage.clickOncustomerEvidenceMenuButton();
-		customerEvidencePage.clickOncustomerEvidenceSubmitaStoryMenuButton();
-		Set<String> allTabs = homePage.getWindowHandles();
-		String mainTab = driver.getWindowHandle();
-		allTabs.remove(mainTab);
-		String newTab = allTabs.iterator().next();
-		driver.switchTo().window(newTab);
-		driver.close();
-		driver.switchTo().window(mainTab);
-		Thread.sleep(10000);
+		customerEvidencePage.clickOncustomerMenuButton();
+		customerEvidencePage.clickOncustomerHubMenuButton();
+		resourcesPage.clickOnHomeshowSearchListButton();
+		Thread.sleep(5000);
+		resourcesPage.clickOnselectAPMøller();
+		Thread.sleep(5000);
+		boolean actualResult = resourcesPage.getcustomerNameValue().getText().contains("A.P. Møller - Mærsk A/S");
+		System.out.println("Actual Result - " + actualResult);
+		Assert.assertTrue(actualResult);
+		Thread.sleep(1000);
+		//Assert.assertTrue(resourcesPage.isDisplayedCustomerEvidenceInCustomerHub()); 
+		//System.out.println("DisplayedCustomerEvidenceInCustomerHub");
 		System.out.println("New Tab URL - " + driver.getTitle());
-
-		Assert.assertTrue(driver.getTitle().contains("IS Customer Evidence Tool - PowerApps"));
+		Assert.assertTrue(driver.getTitle().contains("Customer Hub"));
 		Thread.sleep(3000);
 		
-	}
-
-	@Test(priority = 28)
-	public void verifyclickOnAboutCustomerEvidenceMenuButtonOncustomerEvidence() throws Throwable {
-		driver.navigate().back();
-		driver.navigate().back();
-		customerEvidencePage.clickOncustomerEvidenceMenuButton();
-		customerEvidencePage.clickOnAboutCustomerEvidenceMenuButton();
-		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Customer Evidence"));
 	}
 
 	@AfterTest

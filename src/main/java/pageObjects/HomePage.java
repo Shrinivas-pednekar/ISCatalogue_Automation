@@ -126,7 +126,7 @@ public class HomePage {
 	@FindBy(xpath = "//input[@id='IdSearchbox']")
 	private WebElement catalogueSearchTextBox;
 	
-	@FindBy(xpath = "//div[contains(text(),'Automotive, Mobility and Transportation')]")
+	@FindBy(xpath = "//div[contains(text(),'Mobility')]")
 	private WebElement AutomotiveMobilityandTransportationtButton;
 	
 	@FindBy(xpath = "//div[contains(text(),'Cross-Industry')]")
@@ -138,7 +138,7 @@ public class HomePage {
 	@FindBy(xpath = "//div[contains(text(),'Education')]")
 	private WebElement EducationButton;
 	
-	@FindBy(xpath = "//a[@aria-label='Energy and Resources']//div[2]")
+	@FindBy(xpath = "//div[contains(text(),'Energy')]")
 	private WebElement EnergyandResourcesButton;
 	
 	@FindBy(xpath = "//div[contains(text(),'Financial Services')]")

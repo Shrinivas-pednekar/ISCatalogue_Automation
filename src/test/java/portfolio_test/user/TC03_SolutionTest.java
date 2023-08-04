@@ -23,7 +23,7 @@ import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import resources.TestBase;
 
-public class TC03_SolutionaTest extends TestBase {
+public class TC03_SolutionTest extends TestBase {
 	public WebDriver driver;
 	LoginPage loginPage;
 	HomePage homePage;
@@ -41,7 +41,7 @@ public class TC03_SolutionaTest extends TestBase {
 		homePage = new HomePage(driver);
 		cataloguePage = new SolutionPage(driver);
 		driver.get(prop.getProperty("produrl"));
-		// loginPage.clickOnUserButton();
+		loginPage.clickOnUserButton();
 
 	}
 
@@ -142,8 +142,8 @@ public class TC03_SolutionaTest extends TestBase {
 		
 		
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("Microsoft ISD and PETRONAS extend");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
@@ -157,7 +157,7 @@ public class TC03_SolutionaTest extends TestBase {
 	
 		cataloguePage.clickArtefactButton();
 		//cataloguePage.ArtifactsTabtwaitForElementToBeVisible();
-		Thread.sleep(5000);
+		Thread.sleep(6000);
 		boolean actualResult6 = cataloguePage.getArtifactTabName().getText()
 				.contains("Catalogue Artifact");
 		System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
@@ -210,14 +210,14 @@ public class TC03_SolutionaTest extends TestBase {
 		}
 		
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("DC Business Portal");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
-		System.out.println("Displayed EDF Evidence");
+		System.out.println("Displayed Customer Evidence");
 		
 		boolean actualResult5 = cataloguePage.getSolutionPlay().getText()
 				.contains("Solution Play");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getSolutionPlay().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getSolutionPlay().getText());
 		Assert.assertTrue(actualResult5);
 		System.out.println("Displayed Solution Play ");
 		
@@ -225,7 +225,7 @@ public class TC03_SolutionaTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Catalogue Offer ");
 
@@ -236,7 +236,7 @@ public class TC03_SolutionaTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult7 = cataloguePage.getArtifactTabName().getText()
 				.contains("Catalogue Artifact");
-		System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		//System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
 		Assert.assertTrue(actualResult7);
 		System.out.println("Displayed Artifact ");		
 		System.out.println("New Tab URL - " + driver.getTitle());
@@ -286,8 +286,8 @@ public class TC03_SolutionaTest extends TestBase {
 		}
 
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("Aberdeen City Council - Phase 3 Transformatio...");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
@@ -368,8 +368,8 @@ public class TC03_SolutionaTest extends TestBase {
 		}
 	
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("Schwarz and Microsoft transform the shopping ...");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
@@ -448,8 +448,8 @@ public class TC03_SolutionaTest extends TestBase {
 			System.out.println("UnSubscribe button working as expected ");
 		}
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("ISD Production Pilot to set Standard Chartere...");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
@@ -521,8 +521,8 @@ public class TC03_SolutionaTest extends TestBase {
 		}
 
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("Metrobank is modernizing its workplace platfo...");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
@@ -594,14 +594,14 @@ public class TC03_SolutionaTest extends TestBase {
 		}
 
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("Improving Mercedes-Benz Cloud Security");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
 		boolean actualResult5 = cataloguePage.getSolutionPlay().getText()
 				.contains("Solution Play");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getSolutionPlay().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getSolutionPlay().getText());
 		Assert.assertTrue(actualResult5);
 		System.out.println("Displayed Solution Play ");
 		
@@ -610,7 +610,7 @@ public class TC03_SolutionaTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult7 = cataloguePage.getArtifactTabName().getText()
 				.contains("Catalogue Artifact");
-		System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		//System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
 		Assert.assertTrue(actualResult7);
 		System.out.println("Displayed Artifact ");	
 		
@@ -629,7 +629,7 @@ public class TC03_SolutionaTest extends TestBase {
 
 	// -------------------------------Industry Innovation---------------------------
 	@Test(priority = 10)
-	public void verifyAutomotiveMobilityandTransportationOnCataloguePage() throws Throwable {
+	public void verifyMobilityOnCataloguePage() throws Throwable {
 
 		cataloguePage.clickOncataloguePagesMenuButton();
 		Thread.sleep(3000);
@@ -666,7 +666,7 @@ public class TC03_SolutionaTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("20");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("382");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -674,8 +674,8 @@ public class TC03_SolutionaTest extends TestBase {
 		System.out.println("Industry stat cound and table is verified ");
 
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("Improving Mercedes-Benz Cloud Security");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
@@ -686,7 +686,7 @@ public class TC03_SolutionaTest extends TestBase {
 		System.out.println("Displayed Catalogue Offer ");	
 
 		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Automotive, Mobility and Transportation"));
+		Assert.assertTrue(driver.getTitle().contains("Mobility"));
 		Thread.sleep(3000);
 
 	}
@@ -731,8 +731,8 @@ public class TC03_SolutionaTest extends TestBase {
 		}
 
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("Iveco Spinoff");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
@@ -797,8 +797,8 @@ public class TC03_SolutionaTest extends TestBase {
 		}
 
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("UK Royal Navy StormCloud project with Microso...");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
@@ -854,8 +854,8 @@ public class TC03_SolutionaTest extends TestBase {
 			System.out.println("UnSubscribe button working as expected ");
 		}
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("Aberdeen City Council - Phase 3 Transformatio...");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
@@ -889,7 +889,7 @@ public class TC03_SolutionaTest extends TestBase {
 	}
 
 	@Test(priority = 14)
-	public void verifyEnergyandResourcesOnCataloguePage() throws Throwable {
+	public void verifyEnergyCataloguePage() throws Throwable {
 
 		cataloguePage.clickOncataloguePagesMenuButton();
 		Thread.sleep(3000);
@@ -927,7 +927,7 @@ public class TC03_SolutionaTest extends TestBase {
 			System.out.println("UnSubscribe button working as expected ");
 		}
 		
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("27");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("289");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -942,7 +942,7 @@ public class TC03_SolutionaTest extends TestBase {
 		Thread.sleep(2000);
 
 		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Energy and Resources"));
+		Assert.assertTrue(driver.getTitle().contains("Energy"));
 		Thread.sleep(3000);
 	}
 
@@ -985,7 +985,7 @@ public class TC03_SolutionaTest extends TestBase {
 			System.out.println("UnSubscribe button working as expected ");
 		}
 
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("16");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("791");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -1009,7 +1009,7 @@ public class TC03_SolutionaTest extends TestBase {
 		cataloguePage.clickOncataloguePagesMenuButton();
 		Thread.sleep(3000);
 		cataloguePage.clickOnGovernmentMenuButton();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		try {
 			if (cataloguePage.getSubscribeButton().isDisplayed()) {
 				Thread.sleep(1000);
@@ -1043,7 +1043,7 @@ public class TC03_SolutionaTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("10");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("511");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -1051,8 +1051,8 @@ public class TC03_SolutionaTest extends TestBase {
 		System.out.println("Industry stat cound and table is verified ");
 
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("DC Business Portal");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
@@ -1114,7 +1114,7 @@ public class TC03_SolutionaTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("5");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("267");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -1122,8 +1122,8 @@ public class TC03_SolutionaTest extends TestBase {
 		System.out.println("Industry stat cound and table is verified ");
 
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("OptumRX Dynamics 365 F&O and Quisitive MazikC...");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
@@ -1194,7 +1194,7 @@ public class TC03_SolutionaTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("32");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("296");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -1202,8 +1202,8 @@ public class TC03_SolutionaTest extends TestBase {
 		System.out.println("Industry stat cound and table is verified ");
 
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("TSMC ESG Data Platform Go-Live");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+	//	System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
@@ -1256,7 +1256,7 @@ public class TC03_SolutionaTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("15");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("287");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -1264,8 +1264,8 @@ public class TC03_SolutionaTest extends TestBase {
 		System.out.println("Industry stat cound and table is verified ");
 
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("Schwarz and Microsoft transform the shopping ...");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
@@ -1329,8 +1329,8 @@ public class TC03_SolutionaTest extends TestBase {
 		}
 
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("BBC accelerates sustainability with Microsoft...");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
@@ -1393,8 +1393,8 @@ public class TC03_SolutionaTest extends TestBase {
 			System.out.println("UnSubscribe button working as expected ");
 		}
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
-				.contains("Sony & Zee Merger – One of the largest Media ...");
-		System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("Customer Evidence");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		

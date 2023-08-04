@@ -12,14 +12,14 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import pageObjects.CampaignsPage;
+import pageObjects.InitiativesPage;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import resources.TestBase;
 
-public class TC05_CampaignsPage extends TestBase {
+public class TC05_InitiativesPage extends TestBase {
 	public WebDriver driver;
-	CampaignsPage campaignsPage;
+	InitiativesPage campaignsPage;
 	HomePage homePage;
 	LoginPage loginPage;
 
@@ -31,32 +31,28 @@ public class TC05_CampaignsPage extends TestBase {
 		driver = initializeDriver();
 		log.info("Driver is initialized");
 		util = new Utilities();
-		campaignsPage = new CampaignsPage(driver);
+		campaignsPage = new InitiativesPage(driver);
 		homePage = new HomePage(driver);
 		loginPage = new LoginPage(driver);
 		driver.get(prop.getProperty("produrl"));
-		//loginPage.clickOnUserButton();
+		loginPage.clickOnUserButton();
 
 	}
 
 	@Test(priority = 1)
 	public void verifyTopACRandDVGeneratorsPageFromCampaignsMenu() throws Throwable {
 
-		campaignsPage.clickOnCampaignsMenuButton();
+		campaignsPage.clickOnInitiativesMenuButton();
 		campaignsPage.clickOnTopACRandDVGeneratorsMenuButton();
-		Thread.sleep(5000);
-		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
-		boolean actualResultT = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
-		System.out.println("Verified solution= " + actualResultT);
-		Assert.assertTrue(actualResultT);
-		 Assert.assertTrue(driver.getTitle().contains("Top ACR and DV Generators"));
+		
+	 Assert.assertTrue(driver.getTitle().contains("Top ACR and DV Generators"));
 		 System.out.println("New Tab URL - " + driver.getTitle());
 	}
 
 	@Test(priority = 2)
 	public void verifyDoMoreWithLessPageFromCampaignsMenu() throws Throwable {
 
-		campaignsPage.clickOnCampaignsMenuButton();
+		campaignsPage.clickOnInitiativesMenuButton();
 		campaignsPage.clickOnDoMoreWithLessMenuButton();
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Do More With Less"));

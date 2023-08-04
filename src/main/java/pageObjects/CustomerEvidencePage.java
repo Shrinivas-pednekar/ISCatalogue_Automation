@@ -19,7 +19,7 @@ public class CustomerEvidencePage {
 	@FindBy(xpath = "//*[@id=\"menubar1\"]/li[3]/a")
 	private WebElement customerEvidenceMenu;
 	
-	@FindBy(xpath = "//a[contains(text(),'Home')]")
+	@FindBy(xpath = "//a[contains(text(),'Evidence Home')]")
 	private WebElement customerEvidenceHomeMenu;
 	
 	@FindBy(xpath = "//input[@placeholder=('Search customer win wires and delivery stories')]")
@@ -34,10 +34,10 @@ public class CustomerEvidencePage {
 	@FindBy (xpath="//span[contains(text(),'Submit a New Story')]") 
 	private WebElement submitNewStory;
 	
-	@FindBy (xpath="//span[contains(text(),'Automotive, Mobility and Transportation')]") 
+	@FindBy (xpath="//span[contains(text(),'Mobility')]") 
 	private WebElement AutomotiveMobilityandTransportationCustomerStoriesSearchButton;
 	
-	@FindBy (xpath="//h1[contains(text(),'Automotive, Mobility and Transportation Customer S')]") 
+	@FindBy (xpath="//h1[contains(text(),'Mobility Customer Stories')]") 
 	private WebElement AutomotiveMobilityandTransportationCustomerStoriesTitle;
 	
 	@FindBy (xpath="//span[contains(text(),'Cross Industry')]") 
@@ -58,10 +58,10 @@ public class CustomerEvidencePage {
 	@FindBy (xpath="//h1[contains(text(),'Education Customer Stories')]") 
 	private WebElement EducationCustomerStoriesTitle;
 	
-	@FindBy (xpath="//span[contains(text(),'Energy and Resources')]") 
+	@FindBy (xpath="//span[contains(text(),'Energy')]") 
 	private WebElement EnergyandResourcesCustomerStoriesSearchButton;
 	
-	@FindBy (xpath="//h1[contains(text(),'Energy and Resources Customer Stories')]") 
+	@FindBy (xpath="//h1[contains(text(),'Energy Customer Stories')]") 
 	private WebElement EnergyandResourcesCustomerStoriesTitle;
 	
 	@FindBy (xpath="//span[contains(text(),'Financial Services')]") 
@@ -166,8 +166,8 @@ public class CustomerEvidencePage {
 	@FindBy(xpath = "//a[contains(text(),'Delivery Stories')]")
 	private WebElement customerEvidenceDeliveryStoriesMenu;
 	
-	@FindBy(xpath = "//a[contains(text(),'Submit a Story')]")
-	private WebElement customerEvidenceSubmitaStoryMenu;
+	@FindBy(xpath = "//a[contains(text(),'Customer Hub')]")
+	private WebElement customerHubMenu;
 	
 	@FindBy(xpath = "//a[contains(text(),'About Customer Evidence')]")
 	private WebElement AboutCustomerEvidenceMenu;
@@ -190,7 +190,7 @@ public class CustomerEvidencePage {
 	public WebElement getcarouselLearnMoreButtonOnEvidence() {
 		return carouselLearnMoreOnEvidance;
 	}
-	public void clickOncustomerEvidenceMenuButton()
+	public void clickOncustomerMenuButton()
 	{
 		util.clickOnElementUsingActions(driver, customerEvidenceMenu);
 	}
@@ -372,9 +372,9 @@ public class CustomerEvidencePage {
 	{
 		util.clickOnElementUsingActions(driver, customerEvidenceDeliveryStoriesMenu);
 	}
-	public void clickOncustomerEvidenceSubmitaStoryMenuButton()
+	public void clickOncustomerHubMenuButton()
 	{
-		util.clickOnElementUsingActions(driver, customerEvidenceSubmitaStoryMenu);
+		util.clickOnElementUsingActions(driver, customerHubMenu);
 	}
 	public void clickOnAboutCustomerEvidenceMenuButton()
 	{

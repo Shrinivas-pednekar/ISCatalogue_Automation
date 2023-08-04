@@ -11,21 +11,21 @@ import org.openqa.selenium.support.PageFactory;
 import resources.Utilities;
 
 
-public class CampaignsPage {
+public class InitiativesPage {
 	
 	public WebDriver driver;
 	Utilities util = new Utilities();
 	
 	@FindBy(xpath = "//*[@id=\"menubar1\"]/li[4]/a")
-	private WebElement CampaignsMenu;
+	private WebElement  InitiativesMenu;
 	
-	@FindBy(xpath = "//a[contains(text(),'Top ACR and DV Generators')]")
+	@FindBy(xpath = "//a[contains(text(),'Top ACR and CV Generators')]")
 	private WebElement TopACRandDVGeneratorsMenu;
 
 	@FindBy(xpath = "//a[contains(text(),'Do More With Less')]")
 	private WebElement DoMoreWithLessMenu;
 	
-	public CampaignsPage(WebDriver driver){
+	public InitiativesPage(WebDriver driver){
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -33,9 +33,9 @@ public class CampaignsPage {
 		return driver.getTitle();
 	}
 
-	public void clickOnCampaignsMenuButton()
+	public void clickOnInitiativesMenuButton()
 	{
-		util.clickOnElementUsingActions(driver, CampaignsMenu);
+		util.clickOnElementUsingActions(driver,  InitiativesMenu );
 	}
 	public void clickOnTopACRandDVGeneratorsMenuButton()
 	{
