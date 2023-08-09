@@ -45,7 +45,7 @@ public class TC04_CustomerTest extends TestBase {
 		resourcesPage = new ResourcesPage(driver);
 		customerEvidencePage = new CustomerEvidencePage(driver);
 		driver.get(prop.getProperty("produrl"));
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 		
 
 	}
@@ -55,6 +55,7 @@ public class TC04_CustomerTest extends TestBase {
 
 		customerEvidencePage.clickOncustomerMenuButton();
 		customerEvidencePage.clickOncustomerEvidenceHomeMenuButton();
+		//loginPage.clickOnUserButton();
 		// Thread.sleep(3000);
 		Set<String> allTabs = homePage.getWindowHandles();
 		String mainTab = driver.getWindowHandle();
@@ -77,7 +78,7 @@ public class TC04_CustomerTest extends TestBase {
 		allTabs.remove(mainTab);
 		String newTab = allTabs.iterator().next();
 		driver.switchTo().window(newTab);
-		loginPage.clickOnUserButton();
+	//	loginPage.clickOnUserButton();
 		Thread.sleep(10000);
 		System.out.println("New Tab URL - " + driver.getTitle());
 

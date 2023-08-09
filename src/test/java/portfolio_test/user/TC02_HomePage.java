@@ -54,7 +54,7 @@ public class TC02_HomePage extends TestBase {
 	
 		driver.get(prop.getProperty("produrl"));
 		
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	}
@@ -102,7 +102,7 @@ public class TC02_HomePage extends TestBase {
 		homePage.clickOnLearnMoreButton();
 		Thread.sleep(5000);
 		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Welcome to the new IS Catalogue"));
+		Assert.assertTrue(driver.getTitle().contains("Welcome to the new IS Catalog"));
 		driver.navigate().back();
 	}
 /*	
@@ -317,7 +317,7 @@ public class TC02_HomePage extends TestBase {
 		homePage.clickOnLearnMoreButton();
 		Thread.sleep(5000);
 		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Welcome to the new IS Catalogue"));
+		Assert.assertTrue(driver.getTitle().contains("Welcome to the new IS Catalog"));
 		driver.navigate().back();
 	}
 	
@@ -392,7 +392,7 @@ public class TC02_HomePage extends TestBase {
 		Thread.sleep(5000);
 		Assert.assertTrue(homePage.isDisplayedCustomerEvidenceSearchButton());
 	}
-/*	@Test(priority = 25)
+/*	@Test(priority = 25)// keep in comment
 	public void VerifyCustomerEvidenceSearchPageFromArchitectViewHomepage() throws Throwable {
 		homePage.clickOnCustomerEvidenceSearchButton();
 		Thread.sleep(5000);

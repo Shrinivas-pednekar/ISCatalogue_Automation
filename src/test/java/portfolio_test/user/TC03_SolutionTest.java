@@ -41,64 +41,12 @@ public class TC03_SolutionTest extends TestBase {
 		homePage = new HomePage(driver);
 		cataloguePage = new SolutionPage(driver);
 		driver.get(prop.getProperty("produrl"));
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 
 	}
 
-	// -------------------------------Transformative Deals Page------------------------------------
-/*	@Test(priority = 1)
-	public void verifyEmergingInnovationEngineeringPageOnCataloguePage() throws Throwable {
 
-		cataloguePage.clickOncataloguePagesMenuButton();
-		cataloguePage.clickOnEmergingInnovationEngineeringPagesMenuButton();
-		Thread.sleep(3000);
-		try {
-
-			if (cataloguePage.getSubscribeButton().isDisplayed()) {
-				Thread.sleep(1000);
-				cataloguePage.clickOnSubscribeButton();
-				Thread.sleep(3000);
-				cataloguePage.clickOnSubscribeSliderButton();
-				Thread.sleep(3000);
-				cataloguePage.clickOnSubmitButton();
-				Thread.sleep(3000);
-				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
-			} else {
-				cataloguePage.clickOnUnsubscribeButton();
-				Thread.sleep(3000);
-				cataloguePage.clickOnSubscribeSliderButton();
-				Thread.sleep(3000);
-				cataloguePage.clickOnSubmitButton();
-				Thread.sleep(3000);
-				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
-			}
-		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
-			Thread.sleep(3000);
-			cataloguePage.clickOnSubscribeSliderButton();
-			Thread.sleep(3000);
-			cataloguePage.clickOnSubmitButton();
-			Thread.sleep(3000);
-			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
-		}
-
-		Thread.sleep(7000);
-		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
-		boolean actualResult2 = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
-		Assert.assertTrue(actualResult2);
-		cataloguePage.clickOnShowDetailsButton();
-		Thread.sleep(2000);
-		cataloguePage.clickselectAllBomButton();
-		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
-		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Emerging Innovation & Engineering"));
-
-		Thread.sleep(3000);
-
-	}*/
-
-	// --------------------------------------------Solution Area
-	// Innovation-----------------------
+	// --------------------------------------------Solution Area Innovation-----------------------
 	@Test(priority = 2)
 	public void verifyAdoptionChangeandServicesManagementPageOnCataloguePage() throws Throwable {
 
@@ -109,7 +57,7 @@ public class TC03_SolutionTest extends TestBase {
 		// boolean isTrue ;
 		try {
 			if (cataloguePage.getSubscribeButton().isDisplayed()) {
-				Thread.sleep(1000);
+				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeButton();
 				Thread.sleep(2000);
 				cataloguePage.clickOnSubscribeSliderButton();
@@ -119,7 +67,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -129,7 +77,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(3000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -149,7 +97,7 @@ public class TC03_SolutionTest extends TestBase {
 		
 		boolean actualResult5 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Center of Excellence for Power Platform");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
 		Assert.assertTrue(actualResult5);
 		System.out.println("Displayed Catalogue Offer ");
 
@@ -160,7 +108,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(6000);
 		boolean actualResult6 = cataloguePage.getArtifactTabName().getText()
 				.contains("Catalogue Artifact");
-		System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		//System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Artifact ");
 	
@@ -189,7 +137,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -199,7 +147,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -265,7 +213,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -275,7 +223,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -301,7 +249,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Catalogue Offer ");
 	
@@ -310,7 +258,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult7 = cataloguePage.getArtifactTabName().getText()
 				.contains("Catalogue Artifact");
-		System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		//System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
 		Assert.assertTrue(actualResult7);
 		System.out.println("Displayed Artifact ");	
 		
@@ -347,7 +295,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -357,7 +305,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -383,7 +331,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Catalogue Offer ");
 	
@@ -392,7 +340,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult7 = cataloguePage.getArtifactTabName().getText()
 				.contains("Catalogue Artifact");
-		System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		//System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
 		Assert.assertTrue(actualResult7);
 		System.out.println("Displayed Artifact ");	
 		
@@ -428,7 +376,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -438,7 +386,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -463,7 +411,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Catalogue Offer ");
 	
@@ -472,7 +420,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult7 = cataloguePage.getArtifactTabName().getText()
 				.contains("Catalogue Artifact");
-		System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		//System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
 		Assert.assertTrue(actualResult7);
 		System.out.println("Displayed Artifact ");	
 		
@@ -500,7 +448,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -510,7 +458,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -536,7 +484,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Catalogue Offer ");
 	
@@ -545,7 +493,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult7 = cataloguePage.getArtifactTabName().getText()
 				.contains("Catalogue Artifact");
-		System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		//System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
 		Assert.assertTrue(actualResult7);
 		System.out.println("Displayed Artifact ");	
 		
@@ -573,7 +521,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -583,7 +531,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -647,7 +595,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -657,7 +605,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -666,7 +614,7 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("382");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("414");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -681,7 +629,7 @@ public class TC03_SolutionTest extends TestBase {
 		
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Catalogue Offer ");	
 
@@ -710,7 +658,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -720,7 +668,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -738,7 +686,7 @@ public class TC03_SolutionTest extends TestBase {
 		
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Catalogue Offer ");
 		
@@ -747,7 +695,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult7 = cataloguePage.getArtifactTabName().getText()
 				.contains("Catalogue Artifact");
-		System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		//System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
 		Assert.assertTrue(actualResult7);
 		System.out.println("Displayed Artifact ");	
 		
@@ -776,7 +724,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -786,7 +734,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -804,7 +752,7 @@ public class TC03_SolutionTest extends TestBase {
 		
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Catalogue Offer ");
 		
@@ -870,7 +818,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Catalogue Offer ");
 		
@@ -879,7 +827,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult7 = cataloguePage.getArtifactTabName().getText()
 				.contains("Catalogue Artifact");
-		System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		//System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
 		Assert.assertTrue(actualResult7);
 		System.out.println("Displayed Artifact ");	
 		
@@ -907,7 +855,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -917,7 +865,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -927,7 +875,7 @@ public class TC03_SolutionTest extends TestBase {
 			System.out.println("UnSubscribe button working as expected ");
 		}
 		
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("289");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("300");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -965,7 +913,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -975,7 +923,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -985,7 +933,7 @@ public class TC03_SolutionTest extends TestBase {
 			System.out.println("UnSubscribe button working as expected ");
 		}
 
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("791");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("798");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -994,7 +942,7 @@ public class TC03_SolutionTest extends TestBase {
 
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Catalogue Offer ");
 		
@@ -1043,7 +991,7 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("511");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("590");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -1067,7 +1015,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Catalogue Offer ");
 		
@@ -1095,7 +1043,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -1105,7 +1053,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -1114,7 +1062,7 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("267");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("240");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -1138,7 +1086,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Catalogue Offer ");
 		
@@ -1147,7 +1095,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult7 = cataloguePage.getArtifactTabName().getText()
 				.contains("Catalogue Artifact");
-		System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		//System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
 		Assert.assertTrue(actualResult7);
 		System.out.println("Displayed Artifact ");
 		
@@ -1175,7 +1123,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -1185,7 +1133,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -1194,7 +1142,7 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("296");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("291");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -1209,7 +1157,7 @@ public class TC03_SolutionTest extends TestBase {
 		
 		boolean actualResult7 = cataloguePage.getArtifactTabName().getText()
 				.contains("Catalogue Artifact");
-		System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		//System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
 		Assert.assertTrue(actualResult7);
 		System.out.println("Displayed Artifact ");
 		
@@ -1237,7 +1185,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -1247,7 +1195,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -1256,7 +1204,7 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("287");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("296");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -1271,7 +1219,7 @@ public class TC03_SolutionTest extends TestBase {
 		
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Catalogue Offer ");
 		
@@ -1280,7 +1228,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult7 = cataloguePage.getArtifactTabName().getText()
 				.contains("Catalogue Artifact");
-		System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		//System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
 		Assert.assertTrue(actualResult7);
 		System.out.println("Displayed Artifact ");
 
@@ -1308,7 +1256,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -1318,7 +1266,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -1336,7 +1284,7 @@ public class TC03_SolutionTest extends TestBase {
 		
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
-		System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Catalogue Offer ");
 		
@@ -1345,7 +1293,7 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult7 = cataloguePage.getArtifactTabName().getText()
 				.contains("Catalogue Artifact");
-		System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		//System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
 		Assert.assertTrue(actualResult7);
 		System.out.println("Displayed Artifact ");
 		
@@ -1373,7 +1321,7 @@ public class TC03_SolutionTest extends TestBase {
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
@@ -1383,7 +1331,7 @@ public class TC03_SolutionTest extends TestBase {
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(2000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
@@ -1403,13 +1351,44 @@ public class TC03_SolutionTest extends TestBase {
 		Thread.sleep(5000);
 		boolean actualResult7 = cataloguePage.getArtifactTabName().getText()
 				.contains("Catalogue Artifact");
-		System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		//System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
 		Assert.assertTrue(actualResult7);
 		System.out.println("Displayed Artifact ");
 
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Telecommunications and Media"));
 	}
+	
+	// -------------------------------Transformative Deals Page------------------------------------
+	@Test(priority = 22)
+	public void verifyDigitalEnablementandOperationsOnSolutionPage() throws Throwable {
+		
+		cataloguePage.clickOncataloguePagesMenuButton();
+		Thread.sleep(3000);
+		cataloguePage.clickOnDigitalEnablementandOperationsMenuButton();
+		Thread.sleep(3000);
+		// boolean isTrue ;
+		boolean actualResult5 = cataloguePage.getCatalogueOffer().getText()
+				.contains("Catalogue Offer");
+		///System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		Assert.assertTrue(actualResult5);
+		System.out.println("Displayed Catalogue Offer ");
+	
+		cataloguePage.clickArtefactButton();
+		//cataloguePage.ArtifactsTabtwaitForElementToBeVisible();
+		Thread.sleep(6000);
+		boolean actualResult6 = cataloguePage.getArtifactTabName().getText()
+				.contains("Catalogue Artifact");
+	//	System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		Assert.assertTrue(actualResult6);
+		System.out.println("Displayed Artifact ");
+	
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Digital Enablement and Operations"));
+		System.out.println("Digital Enablement and Operations is loaded sucessfully ");
+	
+	}
+
 /*
 	@Test(priority = 22, enabled = false)
 	public void testBrokenLinks() throws IOException, InterruptedException {

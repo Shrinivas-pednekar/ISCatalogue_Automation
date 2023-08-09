@@ -22,6 +22,10 @@ public class SolutionPage {
 	@FindBy(xpath = "//a[contains(text(),'Emerging Innovation & Engineering')]")
 	private WebElement EmergingInnovationEngineeringPagesMenu;
 
+	@FindBy(xpath = "//a[contains(text(),'Digital Enablement and Operations')]")
+	private WebElement DigitalEnablementandOperationsMenu;
+	
+
 	@FindBy(xpath = "//a[contains(text(),'Adoption, Change, and Services Management')]")
 	private WebElement AdoptionChangeandServicesManagementMenu;
 
@@ -238,8 +242,8 @@ public class SolutionPage {
 		util.clickOnElementUsingActions(driver, EmergingInnovationEngineeringPagesMenu);
 	}
 
-	public void clickOnAdoptionChangeandServicesManagementMenuButton() {
-		util.clickOnElementUsingActions(driver, AdoptionChangeandServicesManagementMenu);
+	public void clickOnDigitalEnablementandOperationsMenuButton() {
+		util.clickOnElementUsingActions(driver, DigitalEnablementandOperationsMenu);
 	}
 
 	public void clickOnBusinessAppsMenuButton() {
@@ -305,6 +309,9 @@ public class SolutionPage {
 
 	public void clickOnIndustrialsandManufacturingMenuButton() {
 		util.clickOnElementUsingActions(driver, IndustrialsandManufacturingMenu);
+	}
+	public void clickOnAdoptionChangeandServicesManagementMenuButton() {
+		util.clickOnElementUsingActions(driver, AdoptionChangeandServicesManagementMenu);
 	}
 
 	public void clickOnRetailandConsumerGoodsMenuButton() {
