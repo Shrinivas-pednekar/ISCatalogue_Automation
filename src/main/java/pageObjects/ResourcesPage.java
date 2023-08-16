@@ -52,11 +52,11 @@ public class ResourcesPage {
 	@FindBy(xpath = "//button[@id='showSearchList']")
 	private WebElement HomeshowSearchList;
 	
-	@FindBy(xpath = "//li[contains(text(),'A.P. Møller - Maersk Group - 1008166')]")
-	private WebElement selectAPMøller;
+	@FindBy(xpath = "//li[contains(text(),'ABERDEEN CITY COUNCIL - 2539902')]")
+	private WebElement selectABERDEENCITYCOUNCIL;
 	
-	@FindBy(xpath = "//div[contains(text(),'A.P. Møller - Mærsk A/S engages in the transport a')]")
-	private WebElement customerName;
+	@FindBy(xpath = "//div[contains(text(),'2539902')]")
+	private WebElement customerTPID;
 	
 	@FindBy(xpath = "//p[contains(text(),'Customer Evidence')]")
 	private WebElement CustomerEvidenceInCustomerHub;
@@ -132,12 +132,12 @@ public class ResourcesPage {
 	{
 		util.clickOnElementUsingActions(driver, HomeshowSearchList);
 	}
-	public void clickOnselectAPMøller()
+	public void clickOnselectABERDEENCITYCOUNCIL()
 	{
-		util.clickOnElementUsingActions(driver, selectAPMøller);
+		util.clickOnElementUsingActions(driver, selectABERDEENCITYCOUNCIL);
 	}
-	public WebElement getcustomerNameValue() {
-		return customerName;
+	public WebElement getcustomerTPIDValue() {
+		return customerTPID;
 	}
 	public WebElement getCustomerEvidenceInCustomerHub() 
 	{

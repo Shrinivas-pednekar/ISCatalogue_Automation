@@ -122,6 +122,36 @@ public class SolutionPage {
 	@FindBy(xpath = "//*[@id=\"OfferIP\"]/div/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement SecurityselectAllBom;
 	
+	@FindBy(xpath = "//*[@id=\"OfferIP\"]/div/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	private WebElement CloudselectAllBom;
+	
+	@FindBy(xpath = "//*[@id=\"OfferIP\"]/div/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	private WebElement EndselectAllBom;
+	
+	@FindBy(xpath = "//h3[contains(text(),'Complex Architecture and Design Services')]")
+	private WebElement DECatlogOfferButton;
+	
+	@FindBy(xpath = "//h3[contains(text(),'Machine Learning Operationalization & Monitoring')]")
+	private WebElement MLOMButton;
+	
+	@FindBy(xpath = "//a[contains(text(),'Customer Success Unit')]")
+	private WebElement CSUButton;
+	
+	@FindBy(xpath = "//a[contains(text(),'Find Out More')]")
+	private WebElement VBDFindOutMoreButton;
+	
+	@FindBy(xpath = "//a[contains(text(),'Find out more')]")
+	private WebElement PSSFindOutMoreButton;
+	
+	@FindBy(xpath = "//*[@id=\"Enhancements\"]/div/div[2]/div/ul/li[3]/a")
+	private WebElement ResourcesButton;
+	
+	@FindBy(xpath = "//a[contains(text(),'Microsoft Solutions Playbook')]")
+	private WebElement MSPlayBookButton;
+	
+	@FindBy(xpath = "//a[contains(text(),'Learn More')]")
+	private WebElement LearnMoreButton;
+	
 	@FindBy(xpath = "//*[@id=\"bom-2459\"]/section/div/section/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement CIselectAllBom;
 	
@@ -179,6 +209,19 @@ public class SolutionPage {
 	@FindBy(xpath = "//*[@id=\"CustomerEvidence\"]/div[2]/div[1]/div[1]/div[2]/span[1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
 	private WebElement EDFEvidenceCheck;
 	
+	@FindBy(xpath = "//*[@id=\"CustomerEvidence\"]/div[2]/div[1]/div[2]/span")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	private WebElement EvidenceCheck;
+	
+	@FindBy(xpath = "//span[contains(text(),'Mainstream')]")
+	private WebElement MaturityCheck;
+	
+	@FindBy(xpath = "//span[contains(text(),'Proven')]")
+	private WebElement ProvenMaturityCheck;
+	
+	
+	@FindBy(xpath = "//*[@id=\"CoreIPGrid\"]/div/div[1]")//("//div[contains(text(),'CTS - Customer Presentation - BDM')]")
+	private WebElement KeyMaterialsCheck;
+	
 	@FindBy(xpath = "//*[@id=\"offerContainer\"]/div/div[1]/h3/a")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
 	private WebElement CatalogueOfferCheck;
 	
@@ -188,7 +231,7 @@ public class SolutionPage {
 	@FindBy(xpath = "//*[@id=\"offerContainer\"]/div/div[1]/h3/a")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
 	private WebElement ArtifactCheck;
 	
-	@FindBy(xpath = "//*[@class='card artefact'][1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	@FindBy(xpath = "//*[@class='card artefact'][1]")
 	private WebElement ArtifactTabName;
 	
 	@FindBy(xpath = "//*[@class='card catalogue-offer'][1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
@@ -206,8 +249,14 @@ public class SolutionPage {
 	@FindBy(xpath = "//li[@id='tabCatalogueOffer']")
 	private WebElement CatalogueOfferButton;
 	
+	@FindBy(xpath = "//li[@id='tabSolutionPlay']")
+	private WebElement tabSolutionPlayButton;
+	
 	@FindBy(xpath = "//*[@id=\"dvOfferMetrics\"]/div[1]/div[2]/div[2]")
 	private WebElement SoldCount;
+	
+	@FindBy(xpath = "//*[@id=\"dvOfferMetrics\"]/div/div[2]/div[2]")
+	private WebElement ArtifactSoldCount;
 
 	@FindBy(xpath = "//div[@id='arrowdown']")
 	private WebElement ViewMoreSalseStat;
@@ -384,7 +433,18 @@ public class SolutionPage {
 	public WebElement getEDFEvidenceCheck() {
 		return EDFEvidenceCheck;
 	}
-
+	public WebElement getEvidenceCheck() {
+		return EvidenceCheck;
+	}
+	public WebElement getMaturityCheck() {
+		return MaturityCheck;
+	}
+	public WebElement getProvenMaturityCheck() {
+		return ProvenMaturityCheck;
+	}
+	public WebElement getKeyMaterialsCheck() {
+		return KeyMaterialsCheck;
+	}
 	public boolean isDisplayedgetEDFEvidence() {
 		// util.clickOnElementUsingActions(driver,carouselPlayButton);
 		return getEDFEvidenceCheck().isDisplayed();
@@ -436,8 +496,15 @@ public class SolutionPage {
 		util.scrollDownForElementToBeVisible(driver, CatalogueOfferButton, 2000);
 		util.clickOnElementUsingActions(driver, CatalogueOfferButton);
 	}
+	public void clicktabSolutionPlayButtonButton() {
+		util.scrollDownForElementToBeVisible(driver, tabSolutionPlayButton, 2000);
+		util.clickOnElementUsingActions(driver, tabSolutionPlayButton);
+	}
 	public WebElement getSoldCount() {
 		return SoldCount;
+	}
+	public WebElement getArtifactSoldCount() {
+		return ArtifactSoldCount;
 	}
 	public void clickViewMoreSalseStatButton() {
 		util.scrollDownForElementToBeVisible(driver, ViewMoreSalseStat, 2000);
@@ -497,6 +564,46 @@ public class SolutionPage {
 	public void clickonSecurityselectAllBomButton() {
 		util.scrollDownForElementToBeVisible(driver, SecurityselectAllBom, 2000);
 		util.clickOnElementUsingActions(driver, SecurityselectAllBom);
+	}
+	public void clickonCloudTSselectAllBomButton() {
+		util.scrollDownForElementToBeVisible(driver, CloudselectAllBom, 2000);
+		util.clickOnElementUsingActions(driver, CloudselectAllBom);
+	}
+	public void clickonEndselectAllBomButton() {
+		util.scrollDownForElementToBeVisible(driver, EndselectAllBom, 2000);
+		util.clickOnElementUsingActions(driver, EndselectAllBom);
+	}
+	public void clickonDECatlogOfferButton() {
+		util.scrollDownForElementToBeVisible(driver, DECatlogOfferButton, 2000);
+		util.clickOnElementUsingActions(driver, DECatlogOfferButton);
+	}
+	public void clickonMLOMButton() {
+		util.scrollDownForElementToBeVisible(driver, MLOMButton, 2000);
+		util.clickOnElementUsingActions(driver, MLOMButton);
+	}
+	public void clickonCSUButton() {
+		util.scrollDownForElementToBeVisible(driver, CSUButton, 2000);
+		util.clickOnElementUsingActions(driver, CSUButton);
+	}
+	public void clickonVBDFindOutMoreButton() {
+		util.scrollDownForElementToBeVisible(driver, VBDFindOutMoreButton, 2000);
+		util.clickOnElementUsingActions(driver, VBDFindOutMoreButton);
+	}
+	public void clickonPSSFindOutMoreButton() {
+		util.scrollDownForElementToBeVisible(driver, PSSFindOutMoreButton, 2000);
+		util.clickOnElementUsingActions(driver, PSSFindOutMoreButton);
+	}
+	public void clickonResourcesButton() {
+		util.scrollDownForElementToBeVisible(driver, ResourcesButton, 2000);
+		util.clickOnElementUsingActions(driver, ResourcesButton);
+	}
+	public void clickonMSPlayBookButton() {
+		util.scrollDownForElementToBeVisible(driver, MSPlayBookButton, 2000);
+		util.clickOnElementUsingActions(driver, MSPlayBookButton);
+	}
+	public void clickonLearnMoreButton() {
+		util.scrollDownForElementToBeVisible(driver, LearnMoreButton, 2000);
+		util.clickOnElementUsingActions(driver, LearnMoreButton);
 	}
 	public void clickOnDaIselectAllBomButton() {
 		util.scrollDownForElementToBeVisible(driver, DaIselectAllBom, 2000);

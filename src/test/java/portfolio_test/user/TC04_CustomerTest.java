@@ -45,7 +45,7 @@ public class TC04_CustomerTest extends TestBase {
 		resourcesPage = new ResourcesPage(driver);
 		customerEvidencePage = new CustomerEvidencePage(driver);
 		driver.get(prop.getProperty("produrl"));
-		//loginPage.clickOnUserButton();
+		loginPage.clickOnUserButton();
 		
 
 	}
@@ -55,7 +55,7 @@ public class TC04_CustomerTest extends TestBase {
 
 		customerEvidencePage.clickOncustomerMenuButton();
 		customerEvidencePage.clickOncustomerEvidenceHomeMenuButton();
-		//loginPage.clickOnUserButton();
+		loginPage.clickOnUserButton();
 		// Thread.sleep(3000);
 		Set<String> allTabs = homePage.getWindowHandles();
 		String mainTab = driver.getWindowHandle();
@@ -78,7 +78,7 @@ public class TC04_CustomerTest extends TestBase {
 		allTabs.remove(mainTab);
 		String newTab = allTabs.iterator().next();
 		driver.switchTo().window(newTab);
-	//	loginPage.clickOnUserButton();
+	loginPage.clickOnUserButton();
 		Thread.sleep(10000);
 		System.out.println("New Tab URL - " + driver.getTitle());
 
@@ -497,9 +497,9 @@ public class TC04_CustomerTest extends TestBase {
 		customerEvidencePage.clickOncustomerHubMenuButton();
 		resourcesPage.clickOnHomeshowSearchListButton();
 		Thread.sleep(5000);
-		resourcesPage.clickOnselectAPMøller();
+		resourcesPage.clickOnselectABERDEENCITYCOUNCIL();
 		Thread.sleep(5000);
-		boolean actualResult = resourcesPage.getcustomerNameValue().getText().contains("A.P. Møller - Mærsk A/S");
+		boolean actualResult = resourcesPage.getcustomerTPIDValue().getText().contains("2539902");
 		System.out.println("Actual Result - " + actualResult);
 		Assert.assertTrue(actualResult);
 		Thread.sleep(1000);

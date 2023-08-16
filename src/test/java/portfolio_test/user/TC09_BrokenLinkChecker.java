@@ -23,7 +23,7 @@ import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import resources.TestBase;
 
-public class TC07_BrokenLinkChecker extends TestBase {
+public class TC09_BrokenLinkChecker extends TestBase {
 	LoginPage loginPage;
 	Utilities util;
 	public static Logger log = LogManager.getLogger(TestBase.class.getName());

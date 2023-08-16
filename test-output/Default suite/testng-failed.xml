@@ -3,13 +3,13 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="portfolio_test.user.TC03_SolutionTest">
+      <class name="portfolio_test.user.TC06_ArtifactPage">
         <methods>
-          <include name="initialize"/>
+          <include name="VerifyArtifactSection"/>
           <include name="teardown"/>
-          <include name="verifyDigitalEnablementandOperationsOnSolutionPage"/>
+          <include name="initialize"/>
         </methods>
-      </class> <!-- portfolio_test.user.TC03_SolutionTest -->
+      </class> <!-- portfolio_test.user.TC06_ArtifactPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

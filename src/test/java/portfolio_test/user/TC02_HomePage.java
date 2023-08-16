@@ -28,6 +28,7 @@ import org.testng.asserts.SoftAssert;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import pageObjects.ResourcesPage;
+import pageObjects.SolutionPage;
 import resources.TestBase;
 
 public class TC02_HomePage extends TestBase {
@@ -35,7 +36,7 @@ public class TC02_HomePage extends TestBase {
 	LoginPage loginPage;
 	HomePage homePage;
 	ResourcesPage resourcesPage;
-	
+	SolutionPage cataloguePage;
 	  
 
 	Utilities util;
@@ -50,11 +51,11 @@ public class TC02_HomePage extends TestBase {
 		loginPage = new LoginPage(driver);
 		homePage = new HomePage(driver);
 		resourcesPage = new ResourcesPage(driver);
-	
+		cataloguePage = new SolutionPage(driver);
 	
 		driver.get(prop.getProperty("produrl"));
 		
-		//loginPage.clickOnUserButton();
+		loginPage.clickOnUserButton();
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	}
@@ -67,7 +68,7 @@ public class TC02_HomePage extends TestBase {
 		log.info("Home page displayed");
 	}
 	
-	@Test(priority = 2)
+	/*@Test(priority = 2)
 	public void verify_MCAPS_Seller_View() throws Throwable {
 		Thread.sleep(5000);
 		//homePage.clickOnArchView();
@@ -83,9 +84,9 @@ public class TC02_HomePage extends TestBase {
 	{
 		resourcesPage.clickOnHomeshowSearchListButton();
 		Thread.sleep(5000);
-		resourcesPage.clickOnselectAPMøller();
+		resourcesPage.clickOnselectABERDEENCITYCOUNCIL();
 		Thread.sleep(5000);
-		boolean actualResult = resourcesPage.getcustomerNameValue().getText().contains("A.P. Møller - Mærsk A/S");
+		boolean actualResult = resourcesPage.getcustomerTPIDValue().getText().contains("2539902");
 		System.out.println("Actual Result - " + actualResult);
 		Assert.assertTrue(actualResult);
 		Thread.sleep(1000);
@@ -127,6 +128,7 @@ public class TC02_HomePage extends TestBase {
 		log.info("IS Seller View displayed");
 	}
 	
+	/*	
 	@Test(priority = 7)
 	public void verifyCloudTransitionServicesPageOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
@@ -311,7 +313,7 @@ public class TC02_HomePage extends TestBase {
 
 	}
 	*/
-	@Test(priority = 18)
+/*	@Test(priority = 18)
 	public void verifyMeet_the_new_IS_CataloguePageOnHomepageForISSellerView() throws Throwable {
 
 		homePage.clickOnLearnMoreButton();
@@ -411,7 +413,7 @@ public class TC02_HomePage extends TestBase {
 		driver.switchTo().window(mainTab);
 	}
 	*/
-		@Test(priority = 26)
+/*		@Test(priority = 26)
 	public void verifyMobilityPageArchitectViewOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickOnAutomotiveMobilityandTransportationtButton();

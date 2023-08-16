@@ -18,7 +18,7 @@ import pageObjects.LoginPage;
 import resources.TestBase;
 import resources.Utilities;
 
-public class TC08_CheckLoadTimeAllPages extends TestBase {
+public class TC10_CheckLoadTimeAllPages extends TestBase {
 
 	public WebDriver driver;
 	LoginPage loginPage;

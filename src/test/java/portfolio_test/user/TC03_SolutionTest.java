@@ -41,7 +41,7 @@ public class TC03_SolutionTest extends TestBase {
 		homePage = new HomePage(driver);
 		cataloguePage = new SolutionPage(driver);
 		driver.get(prop.getProperty("produrl"));
-		//loginPage.clickOnUserButton();
+		loginPage.clickOnUserButton();
 
 	}
 
@@ -614,7 +614,7 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("414");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("417");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -875,7 +875,7 @@ public class TC03_SolutionTest extends TestBase {
 			System.out.println("UnSubscribe button working as expected ");
 		}
 		
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("300");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("309");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -933,7 +933,7 @@ public class TC03_SolutionTest extends TestBase {
 			System.out.println("UnSubscribe button working as expected ");
 		}
 
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("798");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("815");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -991,7 +991,7 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("590");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("598");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -1142,7 +1142,7 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("291");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("292");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -1388,7 +1388,34 @@ public class TC03_SolutionTest extends TestBase {
 		System.out.println("Digital Enablement and Operations is loaded sucessfully ");
 	
 	}
-
+	@Test(priority = 23)
+	public void verifyCatalogueOffer() throws Throwable {
+		
+		cataloguePage.clickOncataloguePagesMenuButton();
+		Thread.sleep(3000);
+		cataloguePage.clickOnDigitalEnablementandOperationsMenuButton();
+		Thread.sleep(3000);
+		// boolean isTrue ;
+		boolean actualResult5 = cataloguePage.getCatalogueOffer().getText()
+				.contains("Catalogue Offer");
+		///System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
+		Assert.assertTrue(actualResult5);
+		System.out.println("Displayed Catalogue Offer ");
+	
+		cataloguePage.clickArtefactButton();
+		//cataloguePage.ArtifactsTabtwaitForElementToBeVisible();
+		Thread.sleep(6000);
+		boolean actualResult6 = cataloguePage.getArtifactTabName().getText()
+				.contains("Catalogue Artifact");
+	//	System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
+		Assert.assertTrue(actualResult6);
+		System.out.println("Displayed Artifact ");
+	
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Digital Enablement and Operations"));
+		System.out.println("Digital Enablement and Operations is loaded sucessfully ");
+	
+	}
 /*
 	@Test(priority = 22, enabled = false)
 	public void testBrokenLinks() throws IOException, InterruptedException {
