@@ -52,6 +52,9 @@ public class ResourcesPage {
 	@FindBy(xpath = "//button[@id='showSearchList']")
 	private WebElement HomeshowSearchList;
 	
+	@FindBy(xpath = "//span[@id='showSearchList']")
+	private WebElement SPshowSearchList;
+	
 	@FindBy(xpath = "//li[contains(text(),'ABERDEEN CITY COUNCIL - 2539902')]")
 	private WebElement selectABERDEENCITYCOUNCIL;
 	
@@ -131,6 +134,10 @@ public class ResourcesPage {
 	public void clickOnHomeshowSearchListButton()
 	{
 		util.clickOnElementUsingActions(driver, HomeshowSearchList);
+	}
+	public void clickOnSPshowSearchListButton()
+	{
+		util.clickOnElementUsingActions(driver, SPshowSearchList);
 	}
 	public void clickOnselectABERDEENCITYCOUNCIL()
 	{

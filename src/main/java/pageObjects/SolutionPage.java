@@ -126,6 +126,9 @@ public class SolutionPage {
 	private WebElement CloudselectAllBom;
 	
 	@FindBy(xpath = "//*[@id=\"OfferIP\"]/div/div/div[1]/div/div[2]/div/div/div[1]/p/label")
+	private WebElement BaMAIAppsselectAllBom;
+	
+	@FindBy(xpath = "//*[@id=\"OfferIP\"]/div/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement EndselectAllBom;
 	
 	@FindBy(xpath = "//h3[contains(text(),'Complex Architecture and Design Services')]")
@@ -212,6 +215,9 @@ public class SolutionPage {
 	@FindBy(xpath = "//*[@id=\"CustomerEvidence\"]/div[2]/div[1]/div[2]/span")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
 	private WebElement EvidenceCheck;
 	
+	@FindBy(xpath = "//*[@id=\"customerEvidenceContent\"]/div/div[1]/div[1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	private WebElement SPEvidenceCheck;
+	
 	@FindBy(xpath = "//span[contains(text(),'Mainstream')]")
 	private WebElement MaturityCheck;
 	
@@ -239,6 +245,9 @@ public class SolutionPage {
 
 	@FindBy(xpath = "//li[@id='tabBOM']")
 	private WebElement BOMButton;
+	
+	@FindBy(xpath = "//li[@id='tabBOMTile']")
+	private WebElement SPBOMButton;
 	
 	@FindBy(xpath = "//*[@id=\"offertabguide\"]/li[2]/a")
 	private WebElement DataAIBOMButton;
@@ -436,6 +445,9 @@ public class SolutionPage {
 	public WebElement getEvidenceCheck() {
 		return EvidenceCheck;
 	}
+	public WebElement getSPEvidenceCheck() {
+		return SPEvidenceCheck;
+	}
 	public WebElement getMaturityCheck() {
 		return MaturityCheck;
 	}
@@ -471,6 +483,11 @@ public class SolutionPage {
 	public void clickOnBOMTABButton() {
 		util.scrollDownForElementToBeVisible(driver, BOMButton, 2000);
 		util.clickOnElementUsingActions(driver, BOMButton);
+	}
+	
+	public void clickOnSPBOMTABButton() {
+		util.scrollDownForElementToBeVisible(driver, SPBOMButton, 2000);
+		util.clickOnElementUsingActions(driver, SPBOMButton);
 	}
 	
 	public void clickOnDABOMTABButton() {
@@ -568,6 +585,10 @@ public class SolutionPage {
 	public void clickonCloudTSselectAllBomButton() {
 		util.scrollDownForElementToBeVisible(driver, CloudselectAllBom, 2000);
 		util.clickOnElementUsingActions(driver, CloudselectAllBom);
+	}
+	public void clickonBaMAIAppsSselectAllBomButton() {
+		util.scrollDownForElementToBeVisible(driver, BaMAIAppsselectAllBom, 2000);
+		util.clickOnElementUsingActions(driver, BaMAIAppsselectAllBom);
 	}
 	public void clickonEndselectAllBomButton() {
 		util.scrollDownForElementToBeVisible(driver, EndselectAllBom, 2000);

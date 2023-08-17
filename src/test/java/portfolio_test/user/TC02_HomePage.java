@@ -68,7 +68,7 @@ public class TC02_HomePage extends TestBase {
 		log.info("Home page displayed");
 	}
 	
-	/*@Test(priority = 2)
+	@Test(priority = 2)
 	public void verify_MCAPS_Seller_View() throws Throwable {
 		Thread.sleep(5000);
 		//homePage.clickOnArchView();
@@ -128,7 +128,7 @@ public class TC02_HomePage extends TestBase {
 		log.info("IS Seller View displayed");
 	}
 	
-	/*	
+		
 	@Test(priority = 7)
 	public void verifyCloudTransitionServicesPageOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
@@ -313,7 +313,7 @@ public class TC02_HomePage extends TestBase {
 
 	}
 	*/
-/*	@Test(priority = 18)
+	@Test(priority = 18)
 	public void verifyMeet_the_new_IS_CataloguePageOnHomepageForISSellerView() throws Throwable {
 
 		homePage.clickOnLearnMoreButton();
@@ -413,7 +413,7 @@ public class TC02_HomePage extends TestBase {
 		driver.switchTo().window(mainTab);
 	}
 	*/
-/*		@Test(priority = 26)
+		@Test(priority = 26)
 	public void verifyMobilityPageArchitectViewOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickOnAutomotiveMobilityandTransportationtButton();

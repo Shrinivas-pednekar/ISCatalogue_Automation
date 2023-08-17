@@ -145,12 +145,14 @@ public class TC05_CatalogueOfferPage extends TestBase {
 				System.out.println("Displayed Deal Enchancement");
 	
 	driver.navigate().back();
+	driver.navigate().back();
 	cataloguePage.clickonCSUButton();
 	cataloguePage.clickonVBDFindOutMoreButton();
 	loginPage.clickOnUserButton();
 	softAssert.assertTrue(driver.getTitle().contains("Value Based Deliverables"),
             "Title does not contain 'Value Based Deliverables'.");
 	System.out.println("Displayed Value Based Deliverables Page");
+	driver.navigate().back();
 	driver.navigate().back();
 	//Thread.sleep(2000);
 	
@@ -161,6 +163,7 @@ public class TC05_CatalogueOfferPage extends TestBase {
             "Title does not contain 'Proactive Services'.");
 	System.out.println("Displayed Proactive Services Page");
 	driver.navigate().back();
+	driver.navigate().back();
 	//Thread.sleep(2000);
 	
 	cataloguePage.clickonResourcesButton();
@@ -169,6 +172,7 @@ public class TC05_CatalogueOfferPage extends TestBase {
 	softAssert.assertTrue(driver.getTitle().contains("Microsoft Solutions Playbook"),
             "Title does not contain 'Microsoft Solutions Playbook'.");
 	System.out.println("Displayed Microsoft Solutions Playbook Page");
+	driver.navigate().back();
 	driver.navigate().back();
 	
 	//Thread.sleep(2000);

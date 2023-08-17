@@ -142,6 +142,7 @@ public class TC06_ArtifactPage extends TestBase {
 				"Title does not contain 'Value Based Deliverables'.");
 		System.out.println("Displayed Value Based Deliverables Page");
 		driver.navigate().back();
+		driver.navigate().back();
 		// Thread.sleep(2000);
 
 		cataloguePage.clickonCSUButton();
@@ -150,6 +151,7 @@ public class TC06_ArtifactPage extends TestBase {
 		softAssert.assertTrue(driver.getTitle().contains("Proactive Services"),
 				"Title does not contain 'Proactive Services'.");
 		System.out.println("Displayed Proactive Services Page");
+		driver.navigate().back();
 		driver.navigate().back();
 		// Thread.sleep(2000);
 

@@ -6,22 +6,48 @@
   </listeners>
   <test parallel="none" name="Validating IS Catalauge Login page test(failed)">
     <classes>
-      <class name="portfolio_test.user.TC01_UserLoginTest">
-        <methods>
-          <include name="loginPageTitleTest"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
       <class name="portfolio_test.user.TC02_HomePage">
         <methods>
           <include name="initialize"/>
         </methods>
       </class> <!-- portfolio_test.user.TC02_HomePage -->
+      <class name="portfolio_test.user.TC01_UserLoginTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="loginPageTitleTest"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
+      <class name="portfolio_test.user.TC08_ResourcesPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC08_ResourcesPage -->
       <class name="portfolio_test.user.TC03_SolutionTest">
         <methods>
           <include name="initialize"/>
         </methods>
       </class> <!-- portfolio_test.user.TC03_SolutionTest -->
+      <class name="portfolio_test.user.TC07_InitiativesPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC07_InitiativesPage -->
+      <class name="portfolio_test.user.TC04_CustomerTest">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC04_CustomerTest -->
+      <class name="portfolio_test.user.TC05_CatalogueOfferPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC05_CatalogueOfferPage -->
+      <class name="portfolio_test.user.TC06_ArtifactPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC06_ArtifactPage -->
     </classes>
   </test> <!-- Validating IS Catalauge Login page test(failed) -->
   <test parallel="none" name="Validating all links and pages present under Home page test(failed)">
@@ -66,14 +92,40 @@
       </class> <!-- portfolio_test.user.TC02_HomePage -->
       <class name="portfolio_test.user.TC01_UserLoginTest">
         <methods>
+          <include name="teardown"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
+      <class name="portfolio_test.user.TC08_ResourcesPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC08_ResourcesPage -->
+      <class name="portfolio_test.user.TC07_InitiativesPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC07_InitiativesPage -->
       <class name="portfolio_test.user.TC03_SolutionTest">
         <methods>
           <include name="initialize"/>
         </methods>
       </class> <!-- portfolio_test.user.TC03_SolutionTest -->
+      <class name="portfolio_test.user.TC04_CustomerTest">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC04_CustomerTest -->
+      <class name="portfolio_test.user.TC06_ArtifactPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC06_ArtifactPage -->
+      <class name="portfolio_test.user.TC05_CatalogueOfferPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC05_CatalogueOfferPage -->
     </classes>
   </test> <!-- Validating all links and pages present under Home page test(failed) -->
   <test parallel="none" name="Validating all links and pages present under Catalogue menu test(failed)">
@@ -85,9 +137,15 @@
       </class> <!-- portfolio_test.user.TC02_HomePage -->
       <class name="portfolio_test.user.TC01_UserLoginTest">
         <methods>
+          <include name="teardown"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
+      <class name="portfolio_test.user.TC08_ResourcesPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC08_ResourcesPage -->
       <class name="portfolio_test.user.TC03_SolutionTest">
         <methods>
           <include name="verifyDefenseandIntelligenceOnCataloguePage"/>
@@ -96,6 +154,7 @@
           <include name="verifyDataandAIOnCataloguePage"/>
           <include name="verifyFinancialServicesOnCataloguePage"/>
           <include name="verifyTelecommunicationsandMediaOnCataloguePage"/>
+          <include name="verifyCatalogueOffer"/>
           <include name="verifyDigitalandApplicationInnovationOnCataloguePage"/>
           <include name="verifyIndustrialsandManufacturingOnCataloguePage"/>
           <include name="verifyEnergyCataloguePage"/>
@@ -113,6 +172,299 @@
           <include name="verifyEducationOnCataloguePage"/>
         </methods>
       </class> <!-- portfolio_test.user.TC03_SolutionTest -->
+      <class name="portfolio_test.user.TC07_InitiativesPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC07_InitiativesPage -->
+      <class name="portfolio_test.user.TC04_CustomerTest">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC04_CustomerTest -->
+      <class name="portfolio_test.user.TC06_ArtifactPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC06_ArtifactPage -->
+      <class name="portfolio_test.user.TC05_CatalogueOfferPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC05_CatalogueOfferPage -->
     </classes>
   </test> <!-- Validating all links and pages present under Catalogue menu test(failed) -->
+  <test parallel="none" name="Validating all links and pages present under Customer Evidence menu test(failed)">
+    <classes>
+      <class name="portfolio_test.user.TC02_HomePage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC02_HomePage -->
+      <class name="portfolio_test.user.TC01_UserLoginTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
+      <class name="portfolio_test.user.TC08_ResourcesPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC08_ResourcesPage -->
+      <class name="portfolio_test.user.TC07_InitiativesPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC07_InitiativesPage -->
+      <class name="portfolio_test.user.TC03_SolutionTest">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC03_SolutionTest -->
+      <class name="portfolio_test.user.TC04_CustomerTest">
+        <methods>
+          <include name="verifyHealthcareCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyEducationCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyCustomerEvidanceSearchFunctionOnCustomerEvidence"/>
+          <include name="verifyBusinessAppsCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyCustomerEvidenceDeliveryStoriesMenuButtonOnCustomerEvidence"/>
+          <include name="verifyEnergyCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyclickOncustomerEvidenceWinWiresMenuButtonOnCustomerEvidence"/>
+          <include name="verifyTelecommunicationsandMediaCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyDataAICustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyCustomerEvidanceHomePageOnCustomerEvidence"/>
+          <include name="verifyGovernmentCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyIndustrialandManufacturingCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyWinWiresCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyDigitalandApplicationInnovationCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyCrossIndustryCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyCustomerHubOncustomerEvidence"/>
+          <include name="initialize"/>
+          <include name="verifyInfrastructureCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifySecurityCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifysubmitNewStoryPageOnCustomerEvidence"/>
+          <include name="verifyRetailandConsumerGoodsCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyDeliveryStoriesCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyDefenseandIntelligenceCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyMobilityCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyModernWorkCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifyFinancialServicesCustomerStoriesSearchButtonOnCustomerEvidence"/>
+          <include name="verifySustainabilityCustomerStoriesSearchButtonOnCustomerEvidence"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC04_CustomerTest -->
+      <class name="portfolio_test.user.TC06_ArtifactPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC06_ArtifactPage -->
+      <class name="portfolio_test.user.TC05_CatalogueOfferPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC05_CatalogueOfferPage -->
+    </classes>
+  </test> <!-- Validating all links and pages present under Customer Evidence menu test(failed) -->
+  <test parallel="none" name="Validating all links and pages present under Catalogue Offer Page(failed)">
+    <classes>
+      <class name="portfolio_test.user.TC02_HomePage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC02_HomePage -->
+      <class name="portfolio_test.user.TC01_UserLoginTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
+      <class name="portfolio_test.user.TC08_ResourcesPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC08_ResourcesPage -->
+      <class name="portfolio_test.user.TC03_SolutionTest">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC03_SolutionTest -->
+      <class name="portfolio_test.user.TC07_InitiativesPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC07_InitiativesPage -->
+      <class name="portfolio_test.user.TC04_CustomerTest">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC04_CustomerTest -->
+      <class name="portfolio_test.user.TC05_CatalogueOfferPage">
+        <methods>
+          <include name="VerifyBoMSection"/>
+          <include name="VerifyENHANCEMENTSSection"/>
+          <include name="VerifySolutionPlaySection"/>
+          <include name="initialize"/>
+          <include name="VerifyEvidenceSection"/>
+          <include name="VerifyKeyMaterialsSection"/>
+          <include name="VerifySubscribeUnsubscribe"/>
+          <include name="VerifySSTATSAndIMPACT"/>
+          <include name="VerifyMaturitySection"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC05_CatalogueOfferPage -->
+      <class name="portfolio_test.user.TC06_ArtifactPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC06_ArtifactPage -->
+    </classes>
+  </test> <!-- Validating all links and pages present under Catalogue Offer Page(failed) -->
+  <test parallel="none" name="Validating all links and pages present under Artifact Page(failed)">
+    <classes>
+      <class name="portfolio_test.user.TC02_HomePage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC02_HomePage -->
+      <class name="portfolio_test.user.TC01_UserLoginTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
+      <class name="portfolio_test.user.TC08_ResourcesPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC08_ResourcesPage -->
+      <class name="portfolio_test.user.TC03_SolutionTest">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC03_SolutionTest -->
+      <class name="portfolio_test.user.TC07_InitiativesPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC07_InitiativesPage -->
+      <class name="portfolio_test.user.TC04_CustomerTest">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC04_CustomerTest -->
+      <class name="portfolio_test.user.TC06_ArtifactPage">
+        <methods>
+          <include name="VerifyArtifactSection"/>
+          <include name="VerifySolutionPlaySection"/>
+          <include name="VerifyEvidenceSection"/>
+          <include name="VerifyCatalogueOfferSection"/>
+          <include name="VerifyKeyMaterialsSection"/>
+          <include name="VerifyMaturitySection"/>
+          <include name="VerifySubscribeUnsubscribe"/>
+          <include name="VerifySSTATSAndIMPACT"/>
+          <include name="initialize"/>
+          <include name="VerifyBoMSection"/>
+          <include name="VerifyENHANCEMENTSSection"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC06_ArtifactPage -->
+      <class name="portfolio_test.user.TC05_CatalogueOfferPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC05_CatalogueOfferPage -->
+    </classes>
+  </test> <!-- Validating all links and pages present under Artifact Page(failed) -->
+  <test parallel="none" name="Validating all links and pages present under Campaigns menu test(failed)">
+    <classes>
+      <class name="portfolio_test.user.TC02_HomePage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC02_HomePage -->
+      <class name="portfolio_test.user.TC01_UserLoginTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
+      <class name="portfolio_test.user.TC08_ResourcesPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC08_ResourcesPage -->
+      <class name="portfolio_test.user.TC07_InitiativesPage">
+        <methods>
+          <include name="verifyTopACRandDVGeneratorsPageFromCampaignsMenu"/>
+          <include name="initialize"/>
+          <include name="verifyDoMoreWithLessPageFromCampaignsMenu"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC07_InitiativesPage -->
+      <class name="portfolio_test.user.TC03_SolutionTest">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC03_SolutionTest -->
+      <class name="portfolio_test.user.TC04_CustomerTest">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC04_CustomerTest -->
+      <class name="portfolio_test.user.TC05_CatalogueOfferPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC05_CatalogueOfferPage -->
+      <class name="portfolio_test.user.TC06_ArtifactPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC06_ArtifactPage -->
+    </classes>
+  </test> <!-- Validating all links and pages present under Campaigns menu test(failed) -->
+  <test parallel="none" name="Validating all links and pages present under Resources menu test(failed)">
+    <classes>
+      <class name="portfolio_test.user.TC02_HomePage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC02_HomePage -->
+      <class name="portfolio_test.user.TC01_UserLoginTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC01_UserLoginTest -->
+      <class name="portfolio_test.user.TC08_ResourcesPage">
+        <methods>
+          <include name="verifyAboutISCataloguePageFromResourcesMenu"/>
+          <include name="initialize"/>
+          <include name="verifyFundingPageFromResourcesMenu"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC08_ResourcesPage -->
+      <class name="portfolio_test.user.TC03_SolutionTest">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC03_SolutionTest -->
+      <class name="portfolio_test.user.TC07_InitiativesPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC07_InitiativesPage -->
+      <class name="portfolio_test.user.TC04_CustomerTest">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC04_CustomerTest -->
+      <class name="portfolio_test.user.TC05_CatalogueOfferPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC05_CatalogueOfferPage -->
+      <class name="portfolio_test.user.TC06_ArtifactPage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- portfolio_test.user.TC06_ArtifactPage -->
+    </classes>
+  </test> <!-- Validating all links and pages present under Resources menu test(failed) -->
 </suite> <!-- Failed suite [IS Catalauge Automation Tests] -->

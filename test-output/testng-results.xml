@@ -1,61 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="10" passed="10" failed="0" skipped="0">
+<testng-results total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-16T13:19:10Z" name="Default suite" finished-at="2023-08-16T13:20:25Z" duration-ms="74839">
+  <suite started-at="2023-08-17T08:58:13Z" name="Default suite" finished-at="2023-08-17T08:59:09Z" duration-ms="55723">
     <groups>
     </groups>
-    <test started-at="2023-08-16T13:19:10Z" name="Default test" finished-at="2023-08-16T13:20:25Z" duration-ms="74839">
-      <class name="portfolio_test.user.TC06_ArtifactPage">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@2b43529a]" started-at="2023-08-16T18:49:10Z" name="initialize" finished-at="2023-08-16T18:49:36Z" duration-ms="26237" status="PASS">
+    <test started-at="2023-08-17T08:58:13Z" name="Default test" finished-at="2023-08-17T08:59:09Z" duration-ms="55723">
+      <class name="portfolio_test.user.TC07_SolutionPlayPage">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC07_SolutionPlayPage@7a8fa663]" started-at="2023-08-17T14:28:13Z" name="initialize" finished-at="2023-08-17T14:28:33Z" duration-ms="19962" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="VerifySubscribeUnsubscribe()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@2b43529a]" started-at="2023-08-16T18:49:36Z" name="VerifySubscribeUnsubscribe" finished-at="2023-08-16T18:49:54Z" duration-ms="17767" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifySubscribeUnsubscribe -->
-        <test-method signature="VerifySSTATSAndIMPACT()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@2b43529a]" started-at="2023-08-16T18:49:54Z" name="VerifySSTATSAndIMPACT" finished-at="2023-08-16T18:49:54Z" duration-ms="27" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifySSTATSAndIMPACT -->
-        <test-method signature="VerifyMaturitySection()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@2b43529a]" started-at="2023-08-16T18:49:54Z" name="VerifyMaturitySection" finished-at="2023-08-16T18:49:54Z" duration-ms="18" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyMaturitySection -->
-        <test-method signature="VerifyKeyMaterialsSection()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@2b43529a]" started-at="2023-08-16T18:49:54Z" name="VerifyKeyMaterialsSection" finished-at="2023-08-16T18:49:54Z" duration-ms="23" status="PASS">
+        <test-method signature="VerifyKeyMaterialsSection()[pri:0, instance:portfolio_test.user.TC07_SolutionPlayPage@7a8fa663]" started-at="2023-08-17T14:28:33Z" name="VerifyKeyMaterialsSection" finished-at="2023-08-17T14:28:33Z" duration-ms="36" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyKeyMaterialsSection -->
-        <test-method signature="VerifyEvidenceSection()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@2b43529a]" started-at="2023-08-16T18:49:54Z" name="VerifyEvidenceSection" finished-at="2023-08-16T18:49:54Z" duration-ms="17" status="PASS">
+        <test-method signature="VerifyEvidenceSection()[pri:0, instance:portfolio_test.user.TC07_SolutionPlayPage@7a8fa663]" started-at="2023-08-17T14:28:33Z" name="VerifyEvidenceSection" finished-at="2023-08-17T14:28:33Z" duration-ms="31" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyEvidenceSection -->
-        <test-method signature="VerifyENHANCEMENTSSection()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@2b43529a]" started-at="2023-08-16T18:49:54Z" name="VerifyENHANCEMENTSSection" finished-at="2023-08-16T18:50:07Z" duration-ms="12998" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyENHANCEMENTSSection -->
-        <test-method signature="VerifyBoMSection()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@2b43529a]" started-at="2023-08-16T18:50:07Z" name="VerifyBoMSection" finished-at="2023-08-16T18:50:12Z" duration-ms="4516" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyBoMSection -->
-        <test-method signature="VerifySolutionPlaySection()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@2b43529a]" started-at="2023-08-16T18:50:12Z" name="VerifySolutionPlaySection" finished-at="2023-08-16T18:50:14Z" duration-ms="2345" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifySolutionPlaySection -->
-        <test-method signature="VerifyArtifactSection()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@2b43529a]" started-at="2023-08-16T18:50:14Z" name="VerifyArtifactSection" finished-at="2023-08-16T18:50:19Z" duration-ms="5346" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyArtifactSection -->
-        <test-method signature="VerifyCatalogueOfferSection()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@2b43529a]" started-at="2023-08-16T18:50:19Z" name="VerifyCatalogueOfferSection" finished-at="2023-08-16T18:50:25Z" duration-ms="5261" status="PASS">
+        <test-method signature="VerifyCatalogueOfferSection()[pri:0, instance:portfolio_test.user.TC07_SolutionPlayPage@7a8fa663]" started-at="2023-08-17T14:28:33Z" name="VerifyCatalogueOfferSection" finished-at="2023-08-17T14:28:35Z" duration-ms="2091" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyCatalogueOfferSection -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@2b43529a]" started-at="2023-08-16T18:50:25Z" name="teardown" finished-at="2023-08-16T18:50:25Z" duration-ms="266" status="PASS">
+        <test-method signature="VerifyBoMSection()[pri:0, instance:portfolio_test.user.TC07_SolutionPlayPage@7a8fa663]" started-at="2023-08-17T14:28:35Z" name="VerifyBoMSection" finished-at="2023-08-17T14:28:40Z" duration-ms="4760" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyBoMSection -->
+        <test-method signature="VerifyArtifactSection()[pri:0, instance:portfolio_test.user.TC07_SolutionPlayPage@7a8fa663]" started-at="2023-08-17T14:28:40Z" name="VerifyArtifactSection" finished-at="2023-08-17T14:28:45Z" duration-ms="5330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyArtifactSection -->
+        <test-method signature="verify_SolutionPlay()[pri:0, instance:portfolio_test.user.TC07_SolutionPlayPage@7a8fa663]" started-at="2023-08-17T14:28:45Z" name="verify_SolutionPlay" finished-at="2023-08-17T14:28:45Z" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_SolutionPlay -->
+        <test-method signature="verifyCustomerHubPageFromHomePage()[pri:0, instance:portfolio_test.user.TC07_SolutionPlayPage@7a8fa663]" started-at="2023-08-17T14:28:45Z" name="verifyCustomerHubPageFromHomePage" finished-at="2023-08-17T14:29:09Z" duration-ms="23237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCustomerHubPageFromHomePage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC07_SolutionPlayPage@7a8fa663]" started-at="2023-08-17T14:29:09Z" name="teardown" finished-at="2023-08-17T14:29:09Z" duration-ms="249" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- portfolio_test.user.TC06_ArtifactPage -->
+      </class> <!-- portfolio_test.user.TC07_SolutionPlayPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

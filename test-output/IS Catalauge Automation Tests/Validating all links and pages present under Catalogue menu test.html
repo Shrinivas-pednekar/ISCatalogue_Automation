@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Validating all links and pages present under Catalogue menu test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/20</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/21</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Aug 10 18:03:15 IST 2023</td>
+<td>Started on:</td><td>Thu Aug 17 10:52:59 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>5 seconds (5083 ms)</td>
+<tr><td>Total time:</td><td>14 seconds (14873 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,56 +76,99 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.initialize()'><b>initialize</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:50345
+<td><div><pre>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.183.81&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at portfolio_test.user.TC03_SolutionTest.initialize(TC03_SolutionTest.java:43)
-Caused by: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:50345
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:247)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:332)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:168)
+	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:647)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:168)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	... 23 more
-Caused by: java.net.ConnectException: Connection refused: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
-	... 43 more
-... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace766089249", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace766089249'><pre>org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:50345
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
+	at resources.Utilities.clickOnElementUsingActions(Utilities.java:111)
+	at pageObjects.LoginPage.clickOnUserButton(LoginPage.java:50)
+	at portfolio_test.user.TC03_SolutionTest.initialize(TC03_SolutionTest.java:44)
+	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.183.81&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
 Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
+		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:279)
+		at org.openqa.selenium.json.Json.toJson(Json.java:44)
+		... 31 more
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:328)
+	... 43 more
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=115.0.1901.203)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.183.81&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 115.0.1901.203, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:50081}, msedge: {msedgedriverVersion: 115.0.1901.203 (a5a2b1779bc..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 31a41d9e15e2a7c9049a50d65e18bb00
+*** Element info: {Using=xpath, value=//div[contains(text(),&apos;Sapna Kshirsagar (Persistent Systems Inc)&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at portfolio_test.user.TC03_SolutionTest.initialize(TC03_SolutionTest.java:43)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:204)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:155)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
+	... 45 more
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1019714562", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1019714562'><pre>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.183.81&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:332)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:155)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$21(JsonOutput.java:168)
+	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:647)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:168)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.lambda$null$23(JsonOutput.java:177)
+	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:65)
+	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:176)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:264)
+	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:255)
+	at org.openqa.selenium.json.Json.toJson(Json.java:42)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:227)
+	at org.openqa.selenium.remote.http.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:117)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:152)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
+	at resources.Utilities.clickOnElementUsingActions(Utilities.java:111)
+	at pageObjects.LoginPage.clickOnUserButton(LoginPage.java:50)
+	at portfolio_test.user.TC03_SolutionTest.initialize(TC03_SolutionTest.java:44)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
@@ -146,39 +189,49 @@ Driver info: driver.version: RemoteWebDriver
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:50345
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:247)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
-	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
-	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
-	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-	at okhttp3.RealCall.execute(RealCall.java:77)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	... 23 more
-Caused by: java.net.ConnectException: Connection refused: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
+	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.183.81&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: driver.version: RemoteWebDriver
+		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:279)
+		at org.openqa.selenium.json.Json.toJson(Json.java:44)
+		... 31 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:119)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:328)
 	... 43 more
+Caused by: org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=115.0.1901.203)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;HJNZL000593&apos;, ip: &apos;192.168.183.81&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;18.0.2.1&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 115.0.1901.203, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:50081}, msedge: {msedgedriverVersion: 115.0.1901.203 (a5a2b1779bc..., userDataDir: C:\Users\V-SPED~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 31a41d9e15e2a7c9049a50d65e18bb00
+*** Element info: {Using=xpath, value=//div[contains(text(),&apos;Sapna Kshirsagar (Persistent Systems Inc)&apos;)]}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:204)
+	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:155)
+	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:75)
+	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:84)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	... 45 more
 </pre></div></td>
 <td>0</td>
 <td>null</td></tr>
@@ -207,102 +260,107 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 <td title='portfolio_test.user.TC03_SolutionTest.verifyAdoptionChangeandServicesManagementPageOnCataloguePage()'><b>verifyAdoptionChangeandServicesManagementPageOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyBusinessAppsPageButtonOnCataloguePage()'><b>verifyBusinessAppsPageButtonOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
+<tr>
+<td title='portfolio_test.user.TC03_SolutionTest.verifyCatalogueOffer()'><b>verifyCatalogueOffer</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
+<td></td>
+<td>0</td>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyCrossIndustryOnCataloguePage()'><b>verifyCrossIndustryOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyDataandAIOnCataloguePage()'><b>verifyDataandAIOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyDefenseandIntelligenceOnCataloguePage()'><b>verifyDefenseandIntelligenceOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyDigitalEnablementandOperationsOnSolutionPage()'><b>verifyDigitalEnablementandOperationsOnSolutionPage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyDigitalandApplicationInnovationOnCataloguePage()'><b>verifyDigitalandApplicationInnovationOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyEducationOnCataloguePage()'><b>verifyEducationOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyEnergyCataloguePage()'><b>verifyEnergyCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyFinancialServicesOnCataloguePage()'><b>verifyFinancialServicesOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyGovernmentOnCataloguePage()'><b>verifyGovernmentOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyHealthcareOnCataloguePage()'><b>verifyHealthcareOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyIndustrialsandManufacturingOnCataloguePage()'><b>verifyIndustrialsandManufacturingOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyInfrastructureOnCataloguePage()'><b>verifyInfrastructureOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyMobilityOnCataloguePage()'><b>verifyMobilityOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyModernWorkOnCataloguePage()'><b>verifyModernWorkOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyRetailandConsumerGoodsOnCataloguePage()'><b>verifyRetailandConsumerGoodsOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifySecurityOnCataloguePage()'><b>verifySecurityOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifySustainabilityOnCataloguePage()'><b>verifySustainabilityOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 <tr>
 <td title='portfolio_test.user.TC03_SolutionTest.verifyTelecommunicationsandMediaOnCataloguePage()'><b>verifyTelecommunicationsandMediaOnCataloguePage</b><br>Test class: portfolio_test.user.TC03_SolutionTest</td>
 <td></td>
 <td>0</td>
-<td>portfolio_test.user.TC03_SolutionTest@7dd712e8</td></tr>
+<td>portfolio_test.user.TC03_SolutionTest@10ad20cb</td></tr>
 </table><p>
 </body>
 </html>
