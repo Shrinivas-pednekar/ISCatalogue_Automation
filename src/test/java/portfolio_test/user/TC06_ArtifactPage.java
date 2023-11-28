@@ -52,13 +52,24 @@ public class TC06_ArtifactPage extends TestBase {
 
 		driver.get(prop.getProperty("Artifact"));
 
-		 loginPage.clickOnUserButton();
+		 //loginPage.clickOnUserButton();
 		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		// driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	}
+	@Test(priority = 2)
+	public void VerifyLoadtime() throws InterruptedException {
+		 long startTime = System.currentTimeMillis();
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("End-to-End Machine Learning"));
+		   long endTime = System.currentTimeMillis();
+	        long loadTime = endTime - startTime;
 
-	@Test(priority = 1)
-	public void VerifySubscribeUnsubscribe() throws InterruptedException {
+	        System.out.println("Page loaded in " + loadTime + " milliseconds");
+		System.out.println("Load time ");
+	}
+	
+	@Test(priority = 1, enabled = false)
+	public void VerifySubscribeUnsubscribeOfArtifact() throws InterruptedException {
 
 		try {
 			if (cataloguePage.getSubscribeButton().isDisplayed()) {
@@ -96,14 +107,15 @@ public class TC06_ArtifactPage extends TestBase {
 	}
 
 	@Test(priority = 2)
-	public void VerifySSTATSAndIMPACT() throws InterruptedException {
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("2");
+	public void VerifySSTATSAndIMPACTOfArtifact() throws InterruptedException {
+		cataloguePage.SoldCountwaitForElementToBeVisible();
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("3");
 		Assert.assertTrue(actualResult3);
 		System.out.println("Stat count verified ");
 	}
 
 	@Test(priority = 3)
-	public void VerifyMaturitySection() throws InterruptedException {
+	public void VerifyMaturitySectionOfArtifact() throws InterruptedException {
 		boolean actualResult1 = cataloguePage.getProvenMaturityCheck().getText().contains("Proven");
 		// System.out.println("Evidence displaed as expected =" +
 		// cataloguePage.getEDFEvidenceCheck().getText());
@@ -112,19 +124,18 @@ public class TC06_ArtifactPage extends TestBase {
 	}
 
 	@Test(priority = 4)
-	public void VerifyKeyMaterialsSection() throws InterruptedException {
+	public void VerifyKeyMaterialsSectionOfArtifact() throws InterruptedException {
 		boolean actualResult1 = cataloguePage.getKeyMaterialsCheck().getText()
-				.contains("2. E2E AI and Machine Learning - Customer Presentation");
-		// System.out.println("Evidence displaed as expected =" +
-		// cataloguePage.getEDFEvidenceCheck().getText());
+				.contains("2. Business Outcomes with AI - Customer Presentation");
+		 System.out.println("Evidence displaed as expected =" + cataloguePage.getKeyMaterialsCheck().getText());
 		Assert.assertTrue(actualResult1);
 		System.out.println("Displayed Key Materials");
 
 	}
 
 	@Test(priority = 5)
-	public void VerifyEvidenceSection() throws InterruptedException {
-		boolean actualResult4 = cataloguePage.getEvidenceCheck().getText().contains("Customer Evidence");
+	public void VerifyEvidenceSectionOfArtifact() throws InterruptedException {
+		boolean actualResult4 = cataloguePage.getofferEvidenceCheck().getText().contains("Customer Evidence");
 		// System.out.println("Evidence displaed as expected =" +
 		// cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
@@ -132,35 +143,42 @@ public class TC06_ArtifactPage extends TestBase {
 	}
 
 	@Test(priority = 6)
-	public void VerifyENHANCEMENTSSection() throws InterruptedException {
+	public void VerifyENHANCEMENTSSectionOfArtifact() throws InterruptedException {
 		SoftAssert softAssert = new SoftAssert();
 
 		cataloguePage.clickonCSUButton();
 		cataloguePage.clickonVBDFindOutMoreButton();
-		 loginPage.clickOnUserButton();
+		 //loginPage.clickOnUserButton();
 		softAssert.assertTrue(driver.getTitle().contains("Value Based Deliverables"),
 				"Title does not contain 'Value Based Deliverables'.");
 		System.out.println("Displayed Value Based Deliverables Page");
-		driver.navigate().back();
-		driver.navigate().back();
-		// Thread.sleep(2000);
-
-		cataloguePage.clickonCSUButton();
-		cataloguePage.clickonPSSFindOutMoreButton();
-		loginPage.clickOnUserButton();
-		softAssert.assertTrue(driver.getTitle().contains("Proactive Services"),
-				"Title does not contain 'Proactive Services'.");
-		System.out.println("Displayed Proactive Services Page");
-		driver.navigate().back();
-		driver.navigate().back();
-		// Thread.sleep(2000);
+		Thread.sleep(2000);
+	driver.navigate().back();
+	Thread.sleep(2000);
+	driver.navigate().back();
+	System.out.println("2 Displayed Value Based Deliverables Page");
+	Thread.sleep(3000);
+	
+	cataloguePage.clickonCSUButton();
+	System.out.println("3Displayed Value Based Deliverables Page");
+	Thread.sleep(3000);
+	cataloguePage.clickonPSSFindOutMoreButton();
+	System.out.println("4Displayed Value Based Deliverables Page");
+	Thread.sleep(3000);
+//	Thread.sleep(2000);
+	softAssert.assertTrue(driver.getTitle().contains("Proactive Services"),
+            "Title does not contain 'Proactive Services'.");
+	System.out.println("Displayed Proactive Services Page");
+	Thread.sleep(3000);
+	driver.navigate().back();
+	Thread.sleep(3000);
 
 		softAssert.assertAll();
 
 	}
 
 	@Test(priority = 7)
-	public void VerifyBoMSection() throws InterruptedException {
+	public void VerifyBoMSectionOfArtifact() throws InterruptedException {
 		cataloguePage.clickonEndselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOM is displayed and able to download ");
@@ -170,9 +188,9 @@ public class TC06_ArtifactPage extends TestBase {
 	}
 
 	@Test(priority = 8)
-	public void VerifySolutionPlaySection() throws InterruptedException {
+	public void VerifySolutionPlaySectionOfArtifact() throws InterruptedException {
 		cataloguePage.clicktabSolutionPlayButtonButton();
-		Thread.sleep(2000);
+		cataloguePage.getSolutionPlaywaitForElementToBeVisible();
 		boolean actualResult5 = cataloguePage.getSolutionPlay().getText().contains("Solution Play");
 		// System.out.println("Catalogue Offer displaed as expected =" +
 		// cataloguePage.getSolutionPlay().getText());
@@ -181,7 +199,7 @@ public class TC06_ArtifactPage extends TestBase {
 	}
 
 	@Test(priority = 10)
-	public void VerifyCatalogueOfferSection() throws InterruptedException {
+	public void VerifyCatalogueOfferSectionOfArtifact() throws InterruptedException {
 		cataloguePage.clickCatalogueOfferButton();
 		Thread.sleep(5000);
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText().contains("Catalogue Offer");
@@ -192,7 +210,7 @@ public class TC06_ArtifactPage extends TestBase {
 	}
 
 	@Test(priority = 9)
-	public void VerifyArtifactSection() throws InterruptedException {
+	public void VerifyArtifactSectionOfArtifact() throws InterruptedException {
 		cataloguePage.clickArtefactButton();
 		// cataloguePage.ArtifactsTabtwaitForElementToBeVisible();
 		Thread.sleep(5000);
@@ -200,6 +218,27 @@ public class TC06_ArtifactPage extends TestBase {
 		 System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
 		Assert.assertTrue(actualResult8);
 		System.out.println("Displayed Artifact ");
+	}
+	@Test(priority = 10)
+	public void VerifySeeAllCustomerEvidenceSearchPageFromArtifactPage() throws Throwable {
+		homePage.clickOnCustomerEvidenceSearchButton();
+		Thread.sleep(5000);
+		Set<String> allTabs = homePage.getWindowHandles();
+		String mainTab = driver.getWindowHandle();
+		allTabs.remove(mainTab);
+		String newTab = allTabs.iterator().next();
+		driver.switchTo().window(newTab);
+		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		boolean actualResult = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		System.out.println("Actual Result - " + actualResult);
+		Assert.assertTrue(actualResult);
+		System.out.println("New Tab URL - " + driver.getCurrentUrl());
+		boolean actualResult2 = driver.getCurrentUrl().contains("1794");
+		Assert.assertTrue(actualResult2);
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("1794"));
+		driver.close();
+		driver.switchTo().window(mainTab);
 	}
 
 	@AfterTest

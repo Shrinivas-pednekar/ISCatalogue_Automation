@@ -37,7 +37,7 @@ public class TC09_ResourcesPage extends TestBase {
 		homePage = new HomePage(driver);
 		loginPage = new LoginPage(driver);
 		driver.get(prop.getProperty("produrl"));
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 		
 	}
 
@@ -47,7 +47,7 @@ public class TC09_ResourcesPage extends TestBase {
 		resourcesPage.clickOnResourcesMenuButton();
 		resourcesPage.clickOnAboutISCatalogueMenuButton();
 		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Welcome to the new IS Catalogue"));
+		Assert.assertTrue(driver.getTitle().contains("Welcome to the new IS Catalog"));
 	}
 	@Test(priority = 2)
 
@@ -57,7 +57,30 @@ public class TC09_ResourcesPage extends TestBase {
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Funding Deck"));
 	}
+	@Test(priority = 3)
+
+	public void verifyMicrosoftSolutionsPlaybookPageFromResourcesMenu() throws Throwable {
+		resourcesPage.clickOnResourcesMenuButton();
+		resourcesPage.clickOnMSPlaybookMenuMenuButton();
+		Set<String> allTabs = homePage.getWindowHandles();
+		String mainTab = driver.getWindowHandle();
+		allTabs.remove(mainTab);
+		String newTab = allTabs.iterator().next();
+		driver.switchTo().window(newTab);
+		
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Overview - Microsoft Solutions Playbook (internal)"));
+		driver.close();
+		driver.switchTo().window(mainTab);
+	}
 	
+	@Test(priority = 1)
+	public void verifypageloadtimeofArtifactpage() throws Throwable {
+		resourcesPage.clickOnResourcesMenuButton();
+		resourcesPage.clickOnAboutISCatalogueMenuButton();
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Welcome to the new IS Catalog"));
+	}
 	@AfterTest
 	public void teardown() {
 		driver.quit();

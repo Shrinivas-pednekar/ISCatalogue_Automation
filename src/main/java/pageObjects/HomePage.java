@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
 import resources.Utilities;
@@ -48,11 +49,20 @@ public class HomePage {
 	@FindBy(xpath="//a[contains(text(),'See all customer evidence')]")
 	private WebElement CustomerEvidenceSearch;
 	
+	@FindBy(xpath="//li[@id='AISummary']")
+	private WebElement AISummaryButton;
+	
 	@FindBy(xpath="//a[contains(text(),'View Campaign Page')]")
 	private WebElement ViewCampaignPage;
 	
 	@FindBy(xpath="//a[contains(text(),'Learn more')]")
 	private WebElement HLearnmore;
+	
+	@FindBy(xpath="//a[contains(text(),'Visit the AI Hub')]")
+	private WebElement VisittheAIHub;
+	
+	@FindBy(xpath="//a[@id='nextLink']//div[@id='campgn_frame']")
+	private WebElement NextButton;
 	
 	@FindBy(xpath="//a[contains(text(),'Visit the IS Request form')]")
 	private WebElement VisitISRequestform;
@@ -63,8 +73,8 @@ public class HomePage {
 	@FindBy(xpath="//h4[contains(text(),'Cloud Management and Operations')]")
 	private WebElement CloudManagementOperationsLink;
 	
-	@FindBy(xpath="//h4[contains(text(),'End-to-End AI and Machine Learning')]")
-	private WebElement End_to_End_AI_and_Machine_LearningLink;
+	@FindBy(xpath="//h4[contains(text(),'Business Outcomes with AI')]")
+	private WebElement Business_Outcomes_with_AILink;
 
 	@FindBy(xpath="//h4[contains(text(),'Digital Security and Compliance')]")
 	private WebElement Digital_Security_and_ComplianceLink;
@@ -72,8 +82,8 @@ public class HomePage {
 	@FindBy(xpath="//h4[contains(text(),'Microsoft Security Services for Enterprise')]")
 	private WebElement Microsoft_Security_Services_for_EnterpriseLink;
 	
-	@FindBy(xpath="//h4[contains(text(),'Security operations')]")
-	private WebElement Security_operationsLink;
+	@FindBy(xpath="//h4[contains(text(),'Organizational and Operational Enablement')]")
+	private WebElement Org_operationsLink;
 	
 	@FindBy(xpath="//a[contains(text(),'View all offers')]")
 	private WebElement VerifyAllOffersLink;
@@ -84,11 +94,14 @@ public class HomePage {
 	@FindBy(xpath="//button[@id='spanexpand']")
 	private WebElement spanexpandLink;
 	
-	@FindBy(xpath="//h4[contains(text(),'Data Strategy')]")
+	@FindBy(xpath="//a[contains(text(),'Data Strategy')]")
 	private WebElement DataStrategyLink;
 	
 	@FindBy(xpath="//h4[contains(text(),'Product Innovation Development Services')]")
 	private WebElement ProductInnovationDevelopmentServicesLink;
+	
+	@FindBy(xpath="//a[contains(text(),'End-to-End Machine Learning')]")
+	private WebElement EndtoEndMachineLearningLink;
 	
 	@FindBy(xpath="//h4[contains(text(),'Data Strategy Platform & Analytics')]")
 	private WebElement DataStrategyPlatformAnalyticsServicesLink;
@@ -162,6 +175,9 @@ public class HomePage {
 	@FindBy(xpath = "//a[@aria-label='Telecommunications and Media']//div[2]")
 	private WebElement TelecommunicationsandMediaButton;
 	
+	@FindBy(xpath = "//div[@id='Carousel']")
+	private WebElement CarouselOnISSellerView;
+	
 	public void enterSearchDetails(String SearchDetails) {
 		catalogueSearchTextBox.sendKeys(SearchDetails);
 	}
@@ -178,6 +194,18 @@ public class HomePage {
 	}
 	public WebElement getcarouselLearnMoreButton() {
 		return carouselPlayButton;
+	}
+	public WebElement getCarouselOnISSellerView() {
+	    return CarouselOnISSellerView;
+	}
+
+	public WebElement getVisittheAIHubLink() {
+	    WebElement carousel = getCarouselOnISSellerView();
+	    return carousel.findElement(By.xpath("//a[contains(text(),'Visit the AI Hub')]"));
+	}
+	public WebElement getLearnMoreLink() {
+	    WebElement carousel2 = getCarouselOnISSellerView();
+	    return carousel2.findElement(By.xpath("//a[contains(text(),'Learn more')]"));
 	}
 	public boolean isDisplayedLearnMore()
 	{
@@ -253,7 +281,18 @@ public class HomePage {
 	}
 	public void clickOnLearnMoreButton()
 	{
+		//util.scrollDownForElementToBeVisible(driver, HLearnmore, 2000);
 		util.clickOnElementUsingActions(driver, HLearnmore);
+	
+	}
+	public void clickOnVisittheAIHubButton()
+	{
+		util.clickOnElementUsingActions(driver, getVisittheAIHubLink());
+	}
+	public void clickOnNextButton()
+	{
+		util.scrollDownForElementToBeVisible(driver, NextButton, 2000);
+		util.clickOnElementUsingActions(driver, NextButton);
 	}
 	public void clickOnISRequestFormButton()
 	{
@@ -271,9 +310,9 @@ public class HomePage {
 	{
 		util.clickOnElementUsingActions(driver, CloudManagementOperationsLink);
 	}
-	public void clickOnEnd_to_End_AI_and_Machine_LearningLink()
+	public void clickOnBusiness_Outcomes_with_AILink()
 	{
-		util.clickOnElementUsingActions(driver, End_to_End_AI_and_Machine_LearningLink);
+		util.clickOnElementUsingActions(driver, Business_Outcomes_with_AILink);
 	}
 	public void clickOnDigital_Security_and_ComplianceLink()
 	{
@@ -287,9 +326,9 @@ public class HomePage {
 	{
 		util.clickOnElementUsingActions(driver, Identity_and_Access_ServicesLink);
 	}
-	public void clickOnSecurity_OperationsLink()
+	public void clickOnOrganizational_and_Operational_EnablementLink()
 	{
-		util.clickOnElementUsingActions(driver, Security_operationsLink);
+		util.clickOnElementUsingActions(driver, Org_operationsLink);
 	}
 	public void clickOnVerifyAllOffersLink()
 	{
@@ -307,6 +346,10 @@ public class HomePage {
 	{
 		util.clickOnElementUsingActions(driver, ProductInnovationDevelopmentServicesLink);
 	}
+	public void clickOnEndtoEndMachineLearningLinkLink()
+	{
+		util.clickOnElementUsingActions(driver, EndtoEndMachineLearningLink);
+	}
 	public void clickOnData_Strategy_Platform_Analytics_PageOnHomepageLinkLink()
 	{
 		util.clickOnElementUsingActions(driver, DataStrategyPlatformAnalyticsServicesLink);
@@ -318,6 +361,11 @@ public class HomePage {
 	public void clickOnCustomerEvidenceSearchButton()
 	{
 		util.clickOnElementUsingActions(driver, CustomerEvidenceSearch);
+	}
+	public void clickOnAISummaryButton()
+	{
+		util.clickOnElementUsingActions(driver, AISummaryButton);
+		util.scrollDownForElementToBeVisible(driver, AISummaryButton, 2000);
 	}
 	public void CustomerEvidenceSearchResultwaitForElementToBeVisible()
 	{

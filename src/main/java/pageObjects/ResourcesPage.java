@@ -16,7 +16,7 @@ public class ResourcesPage {
 	public WebDriver driver;
 	Utilities util = new Utilities();
 	
-	@FindBy(xpath = "//*[@id=\"menubar1\"]/li[5]/a")
+	@FindBy(xpath = "//*[@id='menubar1']/li[6]/a")
 	private WebElement ResourcesMenu;
 	
 	@FindBy(xpath = "//a[@href=\"http://microsoft.com/mcs\"]")
@@ -45,6 +45,9 @@ public class ResourcesPage {
 	
 	@FindBy(xpath = "//a[contains(text(),'Funding')]")
 	private WebElement FundingMenu;
+	
+	@FindBy(xpath = "//a[contains(text(),'Microsoft Solutions Playbook')]")
+	private WebElement MSPlaybookMenu;
 	
 	@FindBy(xpath = "//button[@id='showSearchList']")
 	private WebElement showSearchList;
@@ -126,6 +129,10 @@ public class ResourcesPage {
 	public void clickOnFundingMenuButton()
 	{
 		util.clickOnElementUsingActions(driver, FundingMenu);
+	}
+	public void clickOnMSPlaybookMenuMenuButton()
+	{
+		util.clickOnElementUsingActions(driver, MSPlaybookMenu);
 	}
 	public void clickOnshowSearchListButton()
 	{

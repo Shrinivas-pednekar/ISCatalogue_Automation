@@ -55,7 +55,7 @@ public class TC02_HomePage extends TestBase {
 	
 		driver.get(prop.getProperty("produrl"));
 		
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	}
@@ -117,6 +117,8 @@ public class TC02_HomePage extends TestBase {
 		driver.navigate().back();
 		driver.navigate().back();
 	}*/
+	
+	//-----------------------------IS Seller view --------------------------
 		@Test(priority = 6)
 	public void verify_IS_Seller_View() throws Throwable {
 		Thread.sleep(5000);
@@ -128,10 +130,11 @@ public class TC02_HomePage extends TestBase {
 		log.info("IS Seller View displayed");
 	}
 	
-		
+	/*	
 	@Test(priority = 7)
 	public void verifyCloudTransitionServicesPageOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
+		Thread.sleep(3000);
 		homePage.clickOnCloudTransitionServicesLink();
 		Thread.sleep(5000);
 		Set<String> allTabs = homePage.getWindowHandles();
@@ -247,9 +250,9 @@ public class TC02_HomePage extends TestBase {
 		softAssert.assertAll();
 	}
 	 @Test(priority = 13)
-	 public void VerifySecurity_OperationsPageOnHomepage() throws Throwable {
+	 public void VerifyOrganizational_and_Operational_EnablementPageOnHomepage() throws Throwable {
 		 SoftAssert softAssert = new SoftAssert();
-		 homePage.clickOnSecurity_OperationsLink();
+		 homePage.clickOnOrganizational_and_Operational_EnablementLink();
 			Thread.sleep(5000);
 			Set<String> allTabs = homePage.getWindowHandles();
 			String mainTab = driver.getWindowHandle();
@@ -258,17 +261,17 @@ public class TC02_HomePage extends TestBase {
 			driver.switchTo().window(newTab);
 			System.out.println("New Tab URL - " + driver.getTitle());
 			//Assert.assertTrue(driver.getTitle().contains("Security Operations"));
-			softAssert.assertTrue(driver.getTitle().contains("Security Operations"),
-	                "Title does not contain 'Security Operations'.");
+			softAssert.assertTrue(driver.getTitle().contains("Organizational and Operational Enablement"),
+	                "Title does not contain 'Organizational and Operational Enablement'.");
 			driver.close();
 			driver.switchTo().window(mainTab);
 			Thread.sleep(5000);
 			softAssert.assertAll();
 	    }
 	@Test(priority = 14)
-	public void VerifyEnd_to_End_AI_and_Machine_LearningPageOnHomepage() throws Throwable {
+	public void Verify_Business_Outcomes_with_AIPageOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
-		homePage.clickOnEnd_to_End_AI_and_Machine_LearningLink();
+		homePage.clickOnBusiness_Outcomes_with_AILink();
 		Thread.sleep(5000);
 		Set<String> allTabs = homePage.getWindowHandles();
 		String mainTab = driver.getWindowHandle();
@@ -276,9 +279,9 @@ public class TC02_HomePage extends TestBase {
 		String newTab = allTabs.iterator().next();
 		driver.switchTo().window(newTab);
 		System.out.println("New Tab URL - " + driver.getTitle());
-		//Assert.assertTrue(driver.getTitle().contains("End-to-End AI and Machine Learning"));
-		softAssert.assertTrue(driver.getTitle().contains("End-to-End AI and Machine Learning"),
-                "Title does not contain 'End-to-End AI and Machine Learning'.");
+		//Assert.assertTrue(driver.getTitle().contains("Business Outcomes with AI"));
+		softAssert.assertTrue(driver.getTitle().contains("Business Outcomes with AI"),
+                "Title does not contain 'Business Outcomes with AI'.");
 		driver.close();
 		driver.switchTo().window(mainTab);
 		Thread.sleep(5000);
@@ -293,7 +296,7 @@ public class TC02_HomePage extends TestBase {
 		Assert.assertTrue(homePage.isDisplayedCustomerEvidenceSearchButton());
 	}
 	
-	/*@Test(priority = 17)
+	@Test(priority = 17)
 	public void VerifySeeallcustomerevidenceSearchPageFromISSellerViewHomepage() throws Throwable {
 		homePage.clickOnCustomerEvidenceSearchButton();
 		Thread.sleep(5000);
@@ -312,18 +315,34 @@ public class TC02_HomePage extends TestBase {
 		driver.switchTo().window(mainTab);
 
 	}
+	
 	*/
 	@Test(priority = 18)
-	public void verifyMeet_the_new_IS_CataloguePageOnHomepageForISSellerView() throws Throwable {
-
-		homePage.clickOnLearnMoreButton();
-		Thread.sleep(5000);
+	public void verifyBusiness_Outcomes_with_AIOnHomepageForISSellerView() throws Throwable {
+	driver.get("https://catalog.ms/ModernRAP?Title=Azure%20AI%20Hub%20-%20Innovation%20to%20scale");
+	//	homePage.clickOnVisittheAIHubButton();
+		Thread.sleep(3000);
 		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Welcome to the new IS Catalog"));
+		Assert.assertTrue(driver.getTitle().contains("Azure AI Hub - Innovation to scale"));
 		driver.navigate().back();
 	}
 	
-	@Test(priority = 19)
+	@Test(priority = 19, enabled=true)
+	public void verify_PDOC_PageOnHomepageForISSellerView() throws Throwable {
+		driver.get("https://catalog.ms/ProgramInBox/Program/Index?Title=partner%20delivery%20orchestration%20center");
+		Thread.sleep(2000);
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Partner Delivery Orchestration Center"));
+		boolean actualResult5 = cataloguePage.getSolutionPlay().getText()
+				.contains("Solution Play");
+		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getSolutionPlay().getText());
+		Assert.assertTrue(actualResult5);
+		System.out.println("Displayed Solution Play On PDOC Page");
+		driver.navigate().back();
+	}
+
+	//--------------------------------------Architect_View-----------------------------------------------
+	@Test(priority = 20)
 	public void verify_Architect_View() throws Throwable {
 		Thread.sleep(5000);
 		homePage.clickViewChangeDropdown();
@@ -335,8 +354,8 @@ public class TC02_HomePage extends TestBase {
 		log.info("Architect View displayed");
 		
 	}
-	
-	@Test(priority = 20)
+	/*
+	@Test(priority = 21)
 	public void verifySearchFunctionOnHomePageForArchitectRole() throws Throwable {
 
 		homePage.enterSearchDetails("Azure");
@@ -352,7 +371,7 @@ public class TC02_HomePage extends TestBase {
 		
 	}
 	
-	@Test(priority = 21)
+	@Test(priority = 22)
 	public void verifyPickupwhereyouleftSectionfOnHomepage() throws Throwable {
 		Thread.sleep(4000);
 		boolean actualResult = homePage.get_pick_uo_where_you_left_Title().getText().contains("Pick up where you left off");
@@ -362,7 +381,7 @@ public class TC02_HomePage extends TestBase {
 		
 	}
 	
-	@Test(priority = 22)
+	@Test(priority = 23)
 	public void verifyTreadingOfferSectionfOnHomepage() throws Throwable {
 
 		boolean actualResult = homePage.get_TreadingOffer_Title().getText().contains("Trending offers");
@@ -372,7 +391,7 @@ public class TC02_HomePage extends TestBase {
 		
 	}
 	
-	@Test(priority = 23)
+	@Test(priority = 24)
 	public void verifyViewAllOffersLinkOnHomepage() throws Throwable {
 		homePage.clickOnVerifyAllOffersLink();
 		Thread.sleep(5000);
@@ -388,14 +407,14 @@ public class TC02_HomePage extends TestBase {
 		Thread.sleep(5000);
 	}
 	
-	@Test(priority = 24)
+	@Test(priority = 25)
 	public void verifyCustomerEvidenceSectionForArchitectViewOnHomepage() throws Throwable {
 
 		Thread.sleep(5000);
 		Assert.assertTrue(homePage.isDisplayedCustomerEvidenceSearchButton());
 	}
-/*	@Test(priority = 25)// keep in comment
-	public void VerifyCustomerEvidenceSearchPageFromArchitectViewHomepage() throws Throwable {
+	@Test(priority = 26)
+	public void VerifySeeallcustomerevidenceSearchPageFromArchitectViewHomepage() throws Throwable {
 		homePage.clickOnCustomerEvidenceSearchButton();
 		Thread.sleep(5000);
 		Set<String> allTabs = homePage.getWindowHandles();
@@ -412,8 +431,8 @@ public class TC02_HomePage extends TestBase {
 		driver.close();
 		driver.switchTo().window(mainTab);
 	}
-	*/
-		@Test(priority = 26)
+	
+		@Test(priority = 27)
 	public void verifyMobilityPageArchitectViewOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickOnAutomotiveMobilityandTransportationtButton();
@@ -427,7 +446,7 @@ public class TC02_HomePage extends TestBase {
 	        softAssert.assertAll();
 	}
 
-	@Test(priority = 27)
+	@Test(priority = 28)
 	public void verifyCrossIndustryPageArchitectViewOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickViewChangeDropdown();
@@ -445,7 +464,7 @@ public class TC02_HomePage extends TestBase {
 	        
 	}
 
-	@Test(priority = 28)
+	@Test(priority = 29)
 	public void verifyDefenseandIntelligencePageArchitectViewOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickViewChangeDropdown();
@@ -463,7 +482,7 @@ public class TC02_HomePage extends TestBase {
 		
 	}
 
-	@Test(priority = 29)
+	@Test(priority = 30)
 	public void verifyEducationPageArchitectViewOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		 homePage.clickViewChangeDropdown();
@@ -483,7 +502,7 @@ public class TC02_HomePage extends TestBase {
 	        softAssert.assertAll();
 	}
 
-	@Test(priority = 30)
+	@Test(priority = 31)
 	public void verifyEnergyPageArchitectViewOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickViewChangeDropdown();
@@ -500,7 +519,7 @@ public class TC02_HomePage extends TestBase {
 	        softAssert.assertAll();
 	}
 
-	@Test(priority = 31)
+	@Test(priority = 32)
 	public void verifyFinancialServicesPageArchitectViewOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickViewChangeDropdown();
@@ -515,7 +534,7 @@ public class TC02_HomePage extends TestBase {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 32)
+	@Test(priority = 33)
 	public void verifyGovernmentPageArchitectViewOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickViewChangeDropdown();
@@ -530,7 +549,7 @@ public class TC02_HomePage extends TestBase {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 33)
+	@Test(priority = 34)
 	public void verifyHealthcarePageArchitectViewOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickViewChangeDropdown();
@@ -545,7 +564,7 @@ public class TC02_HomePage extends TestBase {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 34)
+	@Test(priority = 35)
 	public void verifyIndustrialsandManufacturingPageArchitectViewOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickViewChangeDropdown();
@@ -559,7 +578,7 @@ public class TC02_HomePage extends TestBase {
 		Thread.sleep(3000);softAssert.assertAll();
 	}
 
-	@Test(priority = 35)
+	@Test(priority = 36)
 	public void verifyRetailandConsumerGoodsPageArchitectViewOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickViewChangeDropdown();
@@ -573,7 +592,7 @@ public class TC02_HomePage extends TestBase {
 		Thread.sleep(3000);softAssert.assertAll();
 	}
 
-	@Test(priority = 36)
+	@Test(priority = 37)
 	public void verifySustainabilityPageArchitectViewOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickViewChangeDropdown();
@@ -587,7 +606,7 @@ public class TC02_HomePage extends TestBase {
 		Thread.sleep(3000);softAssert.assertAll();
 	}
 
-	@Test(priority = 37)
+	@Test(priority = 38)
 	public void verifyTelecommunicationsandMediaPageArchitectViewOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickViewChangeDropdown();

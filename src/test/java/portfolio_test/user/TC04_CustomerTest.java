@@ -45,29 +45,37 @@ public class TC04_CustomerTest extends TestBase {
 		resourcesPage = new ResourcesPage(driver);
 		customerEvidencePage = new CustomerEvidencePage(driver);
 		driver.get(prop.getProperty("produrl"));
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButtonJit();
 		
 
 	}
 
 	@Test(priority = 1)
-	public void verifyCustomerEvidanceHomePageOnCustomerEvidence() throws Throwable {
+	public void verifyCustomerEvidenceHomePageOnCustomerEvidence() throws Throwable {
+	    // Click on customer menu button to open a new tab
+	    customerEvidencePage.clickOncustomerMenuButton();
+	    customerEvidencePage.clickOncustomerEvidenceHomeMenuButton();
 
-		customerEvidencePage.clickOncustomerMenuButton();
-		customerEvidencePage.clickOncustomerEvidenceHomeMenuButton();
-		loginPage.clickOnUserButton();
-		// Thread.sleep(3000);
-		Set<String> allTabs = homePage.getWindowHandles();
-		String mainTab = driver.getWindowHandle();
-		allTabs.remove(mainTab);
-		String newTab = allTabs.iterator().next();
-		driver.switchTo().window(newTab);
-		driver.close();
-		driver.switchTo().window(mainTab);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Customer Evidence Home"));
-		// Thread.sleep(3000);
+	    // Get the handles of all open tabs/windows
+	    Set<String> allTabs = driver.getWindowHandles();
+
+	    // Identify the main tab (the one that was originally active)
+	    String mainTab = driver.getWindowHandle();
+
+	    // Close the main tab
+	    allTabs.remove(mainTab); // Remove it from the list
+	    driver.close();
+
+	    // Switch to the new tab
+	    String newTab = allTabs.iterator().next();
+	    driver.switchTo().window(newTab);
+
+	    // Now perform your verifications on the new tab
+	    System.out.println("New Tab URL - " + driver.getCurrentUrl());
+	    Assert.assertTrue(driver.getTitle().contains("Customer Evidence Home"));
 	}
+
+
 
 	@Test(priority = 3)
 	public void verifysubmitNewStoryPageOnCustomerEvidence() throws Throwable {
@@ -78,7 +86,7 @@ public class TC04_CustomerTest extends TestBase {
 		allTabs.remove(mainTab);
 		String newTab = allTabs.iterator().next();
 		driver.switchTo().window(newTab);
-	loginPage.clickOnUserButton();
+	//loginPage.clickOnUserButtonJit();
 		Thread.sleep(10000);
 		System.out.println("New Tab URL - " + driver.getTitle());
 
@@ -507,6 +515,19 @@ public class TC04_CustomerTest extends TestBase {
 		//System.out.println("DisplayedCustomerEvidenceInCustomerHub");
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Customer Hub"));
+		
+		Thread.sleep(3000);
+		
+	}
+	
+	@Test(priority = 28)
+	public void verifyEvidenceadminview() throws Throwable {
+		driver.get("https://catalog.ms/Evidenceadminview");
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Industry Solutions Go Live and Win Wire Tool Submissions"));
+		boolean actualResult = customerEvidencePage.getexportAllToFileButton().isDisplayed();
+		System.out.println("Actual Result - " + actualResult);
+		Assert.assertTrue(actualResult);
 		Thread.sleep(3000);
 		
 	}

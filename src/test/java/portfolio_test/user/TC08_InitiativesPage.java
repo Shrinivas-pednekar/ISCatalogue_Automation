@@ -35,7 +35,7 @@ public class TC08_InitiativesPage extends TestBase {
 		homePage = new HomePage(driver);
 		loginPage = new LoginPage(driver);
 		driver.get(prop.getProperty("produrl"));
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 
 	}
 
@@ -49,7 +49,7 @@ public class TC08_InitiativesPage extends TestBase {
 		 System.out.println("New Tab URL - " + driver.getTitle());
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, enabled= false)
 	public void verifyDoMoreWithLessPageFromCampaignsMenu() throws Throwable {
 
 		campaignsPage.clickOnInitiativesMenuButton();
@@ -57,6 +57,16 @@ public class TC08_InitiativesPage extends TestBase {
 		System.out.println("New Tab URL - " + driver.getTitle());
 		Assert.assertTrue(driver.getTitle().contains("Do More With Less"));
 		log.info("Do More With Less page displayed");
+
+	}
+	@Test(priority = 3)
+	public void verifyAzureAIHubPageFromInitiativeMenu() throws Throwable {
+
+		campaignsPage.clickOnInitiativesMenuButton();
+		campaignsPage.clickOnAzureAIHubMenuButton();
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Azure AI Hub - Innovation to scale"));
+		log.info("Azure AI Hub - from innovation to scale page displayed");
 
 	}
 

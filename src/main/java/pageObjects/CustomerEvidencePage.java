@@ -16,7 +16,7 @@ public class CustomerEvidencePage {
 	public WebDriver driver;
 	Utilities util = new Utilities();
 	
-	@FindBy(xpath = "//*[@id=\"menubar1\"]/li[3]/a")
+	@FindBy(xpath = "//*[@id='menubar1']/li[4]/a")
 	private WebElement customerEvidenceMenu;
 	
 	@FindBy(xpath = "//a[contains(text(),'Evidence Home')]")
@@ -159,6 +159,9 @@ public class CustomerEvidencePage {
 	
 	@FindBy (xpath="//input[@id='Delivery Stories']") 
 	private WebElement DeliveryStoriesCheckbox;
+	
+	@FindBy (xpath="//button[@id='exportAllToFile']") 
+	private WebElement exportAllToFileButton;
 	
 	@FindBy(xpath = "//a[contains(text(),'Win Wires')]")
 	private WebElement customerEvidenceWinWiresMenu;
@@ -363,6 +366,10 @@ public class CustomerEvidencePage {
 	public WebElement getDeliveryStoriesCheckbox() 
 	{
 		return DeliveryStoriesCheckbox;
+	}
+	public WebElement getexportAllToFileButton() 
+	{
+		return exportAllToFileButton;
 	}
 	public void clickOncustomerEvidenceWinWiresMenuButton()
 	{

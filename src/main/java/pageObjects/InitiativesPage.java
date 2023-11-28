@@ -16,7 +16,7 @@ public class InitiativesPage {
 	public WebDriver driver;
 	Utilities util = new Utilities();
 	
-	@FindBy(xpath = "//*[@id=\"menubar1\"]/li[4]/a")
+	@FindBy(xpath = "//*[@id=\'menubar1\']/li[5]/a")
 	private WebElement  InitiativesMenu;
 	
 	@FindBy(xpath = "//a[contains(text(),'Top ACR and CV Generators')]")
@@ -24,6 +24,9 @@ public class InitiativesPage {
 
 	@FindBy(xpath = "//a[contains(text(),'Do More With Less')]")
 	private WebElement DoMoreWithLessMenu;
+	
+	@FindBy(xpath = "//a[contains(text(),'AI Hub')]")
+	private WebElement AzureAIHubMenu;
 	
 	public InitiativesPage(WebDriver driver){
 		this.driver=driver;
@@ -44,5 +47,9 @@ public class InitiativesPage {
 	public void clickOnDoMoreWithLessMenuButton()
 	{
 		util.clickOnElementUsingActions(driver, DoMoreWithLessMenu);
+	}
+	public void clickOnAzureAIHubMenuButton()
+	{
+		util.clickOnElementUsingActions(driver, AzureAIHubMenu);
 	}
 }

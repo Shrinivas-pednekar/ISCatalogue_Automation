@@ -18,11 +18,14 @@ public class LoginPage {
 	@FindBy(xpath = "//*[@id='tilesHolder']/div //small[contains(.,'microsoft')]")
 	private WebElement loginAccount;
 	
-	@FindBy(xpath = "//small[contains(text(),'v-spednekar@microsoft.com')]")
+	@FindBy(xpath = "//div[contains(text(),'Shrinivas Pednekar (Persistent Systems Inc)')]")
 	private WebElement ShriUSername;
 	
 	@FindBy(xpath = "//div[contains(text(),'Sapna Kshirsagar (Persistent Systems Inc)')]")
 	private WebElement SapnaUSername;
+	
+	@FindBy(xpath = "//div[contains(text(),'Jitendra Sadafale (Persistent Systems Inc)')]")
+	private WebElement JitUSername;
 	
 	@FindBy(xpath = "//*[@id=\"i0116\"]")
 	private WebElement LoginID;
@@ -48,6 +51,10 @@ public class LoginPage {
 	public void clickOnUserButton()
 	{
 		util.clickOnElementUsingActions(driver, SapnaUSername);
+	}
+	public void clickOnUserButtonJit()
+	{
+		util.clickOnElementUsingActions(driver, JitUSername);
 	}
 	public void enterLoginID(String StoryDetails) {
 		LoginID.sendKeys(StoryDetails);

@@ -16,7 +16,7 @@ public class SolutionPage {
 	public WebDriver driver;
 	Utilities util = new Utilities();
 
-	@FindBy(xpath = "//*[@id=\"menubar1\"]/li[2]/a")
+	@FindBy(xpath = "//*[@id=\"menubar1\"]/li[3]/a")
 	private WebElement cataloguePagesMenu;
 
 	@FindBy(xpath = "//a[contains(text(),'Emerging Innovation & Engineering')]")
@@ -134,6 +134,9 @@ public class SolutionPage {
 	@FindBy(xpath = "//h3[contains(text(),'Complex Architecture and Design Services')]")
 	private WebElement DECatlogOfferButton;
 	
+	@FindBy(xpath = "//a[contains(text(),'Evidence Tiles')]")
+	private WebElement EvidenceTab;
+	
 	@FindBy(xpath = "//h3[contains(text(),'Machine Learning Operationalization & Monitoring')]")
 	private WebElement MLOMButton;
 	
@@ -149,7 +152,7 @@ public class SolutionPage {
 	@FindBy(xpath = "//*[@id=\"Enhancements\"]/div/div[2]/div/ul/li[3]/a")
 	private WebElement ResourcesButton;
 	
-	@FindBy(xpath = "//a[contains(text(),'Microsoft Solutions Playbook')]")
+	@FindBy(xpath = "//*[@id=\"CustomerSuccessUnit\"]/div/div/div/div/h3/a")
 	private WebElement MSPlayBookButton;
 	
 	@FindBy(xpath = "//a[contains(text(),'Learn More')]")
@@ -212,6 +215,9 @@ public class SolutionPage {
 	@FindBy(xpath = "//*[@id=\"CustomerEvidence\"]/div[2]/div[1]/div[1]/div[2]/span[1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
 	private WebElement EDFEvidenceCheck;
 	
+	@FindBy(xpath = "//*[@id=\"tab_evidence_1\"]/div[2]/div[1]/div[1]/div[2]/span[1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	private WebElement OfferEvidenceCheck;
+	
 	@FindBy(xpath = "//*[@id=\"CustomerEvidence\"]/div[2]/div[1]/div[2]/span")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
 	private WebElement EvidenceCheck;
 	
@@ -225,7 +231,7 @@ public class SolutionPage {
 	private WebElement ProvenMaturityCheck;
 	
 	
-	@FindBy(xpath = "//*[@id=\"CoreIPGrid\"]/div/div[1]")//("//div[contains(text(),'CTS - Customer Presentation - BDM')]")
+	@FindBy(xpath = "//*[@id=\"CoreIPGrid\"]/div/div[1]/h3/div[1]")//("//div[contains(text(),'CTS - Customer Presentation - BDM')]")
 	private WebElement KeyMaterialsCheck;
 	
 	@FindBy(xpath = "//*[@id=\"offerContainer\"]/div/div[1]/h3/a")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
@@ -263,6 +269,9 @@ public class SolutionPage {
 	
 	@FindBy(xpath = "//*[@id=\"dvOfferMetrics\"]/div[1]/div[2]/div[2]")
 	private WebElement SoldCount;
+	
+	@FindBy(xpath = "//button[@id='exportsummery']")
+	private WebElement exportsummery;
 	
 	@FindBy(xpath = "//*[@id=\"dvOfferMetrics\"]/div/div[2]/div[2]")
 	private WebElement ArtifactSoldCount;
@@ -445,6 +454,9 @@ public class SolutionPage {
 	public WebElement getEvidenceCheck() {
 		return EvidenceCheck;
 	}
+	public WebElement getofferEvidenceCheck() {
+		return OfferEvidenceCheck;
+	}
 	public WebElement getSPEvidenceCheck() {
 		return SPEvidenceCheck;
 	}
@@ -520,6 +532,13 @@ public class SolutionPage {
 	public WebElement getSoldCount() {
 		return SoldCount;
 	}
+	public WebElement getexportsummery() {
+		return exportsummery;
+	}
+	public void SoldCountwaitForElementToBeVisible()
+	{
+		util.waitForElementToBeVisible(driver, SoldCount,50);
+	}
 	public WebElement getArtifactSoldCount() {
 		return ArtifactSoldCount;
 	}
@@ -533,6 +552,10 @@ public class SolutionPage {
 	public boolean isDisplayedCompassOneDealsLabel() {
 		// util.clickOnElementUsingActions(driver,carouselPlayButton);
 		return getCompassOneDealsLabel().isDisplayed();
+	}
+	public void CompassOneDealsLabelwaitForElementToBeVisible()
+	{
+		util.waitForElementToBeVisible(driver, CompassOneDealsLabel,50);
 	}
 	public void clickABAselectAllBomButton() {
 		util.scrollDownForElementToBeVisible(driver, BAselectAllBom, 2000);
@@ -597,6 +620,10 @@ public class SolutionPage {
 	public void clickonDECatlogOfferButton() {
 		util.scrollDownForElementToBeVisible(driver, DECatlogOfferButton, 2000);
 		util.clickOnElementUsingActions(driver, DECatlogOfferButton);
+	}
+	public void clickonEvidenceTabButton() {
+		util.scrollDownForElementToBeVisible(driver, EvidenceTab, 2000);
+		util.clickOnElementUsingActions(driver, EvidenceTab);
 	}
 	public void clickonMLOMButton() {
 		util.scrollDownForElementToBeVisible(driver, MLOMButton, 2000);
@@ -669,5 +696,13 @@ public class SolutionPage {
 	public void ArtifactsTabtwaitForElementToBeVisible()
 	{
 		util.waitForElementToBeVisible(driver, ArtifactTabName,50);
+	}
+	public void ExportButtonwaitForElementToBeVisible()
+	{
+		util.waitForElementToBeVisible(driver, exportsummery,50);
+	}
+	public void getSolutionPlaywaitForElementToBeVisible()
+	{
+		util.waitForElementToBeVisible(driver, SolutionPlayCheck,50);
 	}
 }

@@ -37,7 +37,7 @@ public class TC01_UserLoginTest extends TestBase {
 	public void loginPageTitleTest() throws MessagingException, InterruptedException {
 		
 		//loginPage.enterLoginID("v-spednekar@microsoft.com");
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 		Thread.sleep(3000);
 		Assert.assertEquals(loginPage.getLoginPageTitle(), "IS Catalogue");
 		

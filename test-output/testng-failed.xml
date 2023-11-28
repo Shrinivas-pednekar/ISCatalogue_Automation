@@ -7,7 +7,7 @@
         <methods>
           <include name="initialize"/>
           <include name="teardown"/>
-          <include name="verifyCustomerHubPageFromHomePage"/>
+          <include name="VerifyKeyMaterialsSectionOfSolutionPlay"/>
         </methods>
       </class> <!-- portfolio_test.user.TC07_SolutionPlayPage -->
     </classes>

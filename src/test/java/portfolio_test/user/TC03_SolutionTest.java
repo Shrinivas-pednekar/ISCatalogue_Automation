@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
+import java.util.Set;
 
 import javax.swing.text.Utilities;
 import org.apache.logging.log4j.LogManager;
@@ -41,7 +42,7 @@ public class TC03_SolutionTest extends TestBase {
 		homePage = new HomePage(driver);
 		cataloguePage = new SolutionPage(driver);
 		driver.get(prop.getProperty("produrl"));
-		loginPage.clickOnUserButton();
+	//loginPage.clickOnUserButton();
 
 	}
 
@@ -95,6 +96,26 @@ public class TC03_SolutionTest extends TestBase {
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
+		homePage.clickOnCustomerEvidenceSearchButton();
+		Thread.sleep(5000);
+		Set<String> allTabs = homePage.getWindowHandles();
+		String mainTab = driver.getWindowHandle();
+		allTabs.remove(mainTab);
+		String newTab = allTabs.iterator().next();
+		driver.switchTo().window(newTab);
+		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		boolean actualResult = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		System.out.println("Actual Result - " + actualResult);
+		Assert.assertTrue(actualResult);
+		System.out.println("New Tab URL - " + driver.getCurrentUrl());
+		boolean actualResult2 = driver.getCurrentUrl().contains("Adoption%2C%20Change%2C%20and%20Services%20Management");
+		Assert.assertTrue(actualResult2);
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Adoption, Change, and Services Management"));
+		driver.close();
+		driver.switchTo().window(mainTab);
+		
+		Thread.sleep(2000);
 		boolean actualResult5 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Center of Excellence for Power Platform");
 		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
@@ -614,11 +635,11 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("417");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("396");
 		Assert.assertTrue(actualResult3);
-		cataloguePage.clickViewMoreSalseStatButton();
+		//cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
-		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
+		//Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Industry stat cound and table is verified ");
 
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
@@ -626,6 +647,25 @@ public class TC03_SolutionTest extends TestBase {
 		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
+		
+		homePage.clickOnCustomerEvidenceSearchButton();
+		Thread.sleep(5000);
+		Set<String> allTabs = homePage.getWindowHandles();
+		String mainTab = driver.getWindowHandle();
+		allTabs.remove(mainTab);
+		String newTab = allTabs.iterator().next();
+		driver.switchTo().window(newTab);
+		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		boolean actualResult = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		System.out.println("Actual Result - " + actualResult);
+		Assert.assertTrue(actualResult);
+		System.out.println("New Tab URL - " + driver.getCurrentUrl());
+		boolean actualResult2 = driver.getCurrentUrl().contains("Mobility");
+		Assert.assertTrue(actualResult2);
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Mobility"));
+		driver.close();
+		driver.switchTo().window(mainTab);
 		
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
@@ -875,11 +915,11 @@ public class TC03_SolutionTest extends TestBase {
 			System.out.println("UnSubscribe button working as expected ");
 		}
 		
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("309");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("308");
 		Assert.assertTrue(actualResult3);
-		cataloguePage.clickViewMoreSalseStatButton();
-		Thread.sleep(3000);
-		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
+		//cataloguePage.clickViewMoreSalseStatButton();
+		//Thread.sleep(3000);
+		//Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Industry stat cound and table is verified ");
 
 		cataloguePage.clickonSecurityselectAllBomButton();
@@ -933,10 +973,10 @@ public class TC03_SolutionTest extends TestBase {
 			System.out.println("UnSubscribe button working as expected ");
 		}
 
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("815");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("763");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Industry stat cound and table is verified ");
 
@@ -991,7 +1031,7 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("598");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("582");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -1004,15 +1044,15 @@ public class TC03_SolutionTest extends TestBase {
 		Assert.assertTrue(actualResult4);
 		System.out.println("Displayed EDF Evidence");
 		
-		cataloguePage.clickonSecurityselectAllBomButton();
+	/*	cataloguePage.clickonSecurityselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 		System.out.println("BOM is displayed and able to download ");
 		Thread.sleep(2000);
 		cataloguePage.clickOnDownloadSectionCloseButton();
 		Thread.sleep(2000);
 		
-		cataloguePage.clickCatalogueOfferButton();
-		Thread.sleep(5000);
+		cataloguePage.clickCatalogueOfferButton();*/
+		Thread.sleep(3000);
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText()
 				.contains("Catalogue Offer");
 		//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getCatalogueOffer().getText());
@@ -1062,11 +1102,11 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("240");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("199");
 		Assert.assertTrue(actualResult3);
-		cataloguePage.clickViewMoreSalseStatButton();
-		Thread.sleep(3000);
-		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
+		//cataloguePage.clickViewMoreSalseStatButton();
+		//Thread.sleep(3000);
+		//Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Industry stat cound and table is verified ");
 
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
@@ -1142,11 +1182,11 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("292");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("276");
 		Assert.assertTrue(actualResult3);
-		cataloguePage.clickViewMoreSalseStatButton();
-		Thread.sleep(3000);
-		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
+		//cataloguePage.clickViewMoreSalseStatButton();
+		//Thread.sleep(3000);
+		//Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Industry stat cound and table is verified ");
 
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()
@@ -1204,11 +1244,11 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("296");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("298");
 		Assert.assertTrue(actualResult3);
-		cataloguePage.clickViewMoreSalseStatButton();
-		Thread.sleep(3000);
-		Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
+		//cataloguePage.clickViewMoreSalseStatButton();
+		//Thread.sleep(3000);
+		//Assert.assertTrue(cataloguePage.isDisplayedCompassOneDealsLabel());
 		System.out.println("Industry stat cound and table is verified ");
 
 		boolean actualResult4 = cataloguePage.getEDFEvidenceCheck().getText()

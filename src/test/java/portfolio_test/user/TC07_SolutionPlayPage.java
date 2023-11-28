@@ -55,7 +55,7 @@ public class TC07_SolutionPlayPage extends TestBase {
 	
 		driver.get(prop.getProperty("SolutionPlay"));
 		
-		loginPage.clickOnUserButton();
+		//loginPage.clickOnUserButton();
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	}
@@ -63,7 +63,7 @@ public class TC07_SolutionPlayPage extends TestBase {
 	
 	
 	@Test(priority = 1)
-	public void VerifyKeyMaterialsSection() throws InterruptedException {
+	public void VerifyKeyMaterialsSectionOfSolutionPlay() throws InterruptedException {
 	boolean actualResult1 = cataloguePage.getKeyMaterialsCheck().getText()
 			.contains("Digital Security & Compliance Solution - Customer Presentation v1.2");
 	//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
@@ -73,7 +73,7 @@ public class TC07_SolutionPlayPage extends TestBase {
 	}
 	
 	@Test(priority = 2)
-	public void VerifyEvidenceSection() throws InterruptedException {
+	public void VerifyEvidenceSectionOfSolutionPlay() throws InterruptedException {
 	boolean actualResult4 = cataloguePage.getSPEvidenceCheck().getText()
 			.contains("Customer Evidence");
 	//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
@@ -81,10 +81,32 @@ public class TC07_SolutionPlayPage extends TestBase {
 	System.out.println("Displayed Evidence in Customer Evidence");
 	}
 	
-
-	
 	@Test(priority = 3)
-	public void VerifyCatalogueOfferSection() throws InterruptedException {
+	public void VerifySeeAllCustomerEvidenceSearchPageFromSolutionPlayPage() throws Throwable {
+		homePage.clickOnCustomerEvidenceSearchButton();
+		Thread.sleep(5000);
+		Set<String> allTabs = homePage.getWindowHandles();
+		String mainTab = driver.getWindowHandle();
+		allTabs.remove(mainTab);
+		String newTab = allTabs.iterator().next();
+		driver.switchTo().window(newTab);
+		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		boolean actualResult = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
+		System.out.println("Actual Result - " + actualResult);
+		Assert.assertTrue(actualResult);
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Customer Evidence Search"));
+		System.out.println("New Tab URL - " + driver.getCurrentUrl());
+		boolean actualResult2 = driver.getCurrentUrl().contains("Build%20and%20Modernize%20AI%20Apps");
+		Assert.assertTrue(actualResult2);
+		System.out.println("New Tab URL - " + driver.getCurrentUrl());
+		driver.close();
+		driver.switchTo().window(mainTab);
+	}
+	
+	
+	@Test(priority = 4)
+	public void VerifyCatalogueOfferSectionOfSolutionPlay() throws InterruptedException {
 		Thread.sleep(2000);
 		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText().contains("Catalogue Offer");
 		// System.out.println("Catalogue Offer displaed as expected =" +
@@ -92,8 +114,8 @@ public class TC07_SolutionPlayPage extends TestBase {
 		Assert.assertTrue(actualResult6);
 		System.out.println("Displayed Catalogue Offer ");
 	}
-	@Test(priority = 4)
-	public void VerifyBoMSection() throws InterruptedException {
+	@Test(priority = 5)
+	public void VerifyBoMSectionOfSolutionPlay() throws InterruptedException {
 		cataloguePage.clickOnSPBOMTABButton();
 		cataloguePage.clickonBaMAIAppsSselectAllBomButton();
 	Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
@@ -102,8 +124,8 @@ public class TC07_SolutionPlayPage extends TestBase {
 	cataloguePage.clickOnDownloadSectionCloseButton();
 	Thread.sleep(2000);
 	}
-	@Test(priority = 5)
-	public void VerifyArtifactSection() throws InterruptedException {
+	@Test(priority = 6)
+	public void VerifyArtifactSectionOfSolutionPlay() throws InterruptedException {
 		cataloguePage.clickArtefactButton();
 		// cataloguePage.ArtifactsTabtwaitForElementToBeVisible();
 		Thread.sleep(5000);
@@ -113,15 +135,15 @@ public class TC07_SolutionPlayPage extends TestBase {
 		System.out.println("Displayed Artifact ");
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 7)
 	public void verify_SolutionPlay() {
 
 		Assert.assertTrue(driver.getCurrentUrl().contains("solutionplay"));
 		log.info("Solution Play displayed");
 	}
 	
-	@Test(priority = 7)
-	public void verifyCustomerHubPageFromHomePage() throws Throwable 
+	@Test(priority = 8)
+	public void verifyCustomerHubPageFromSolutionPlay() throws Throwable 
 	{
 		resourcesPage.clickOnSPshowSearchListButton();
 		Thread.sleep(5000);
