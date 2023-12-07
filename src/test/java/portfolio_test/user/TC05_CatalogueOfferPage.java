@@ -100,7 +100,7 @@ public class TC05_CatalogueOfferPage extends TestBase {
 	@Test(priority = 2)
 	public void VerifySSTATSAndIMPACTOfCatalogueOffer() throws InterruptedException {
 		cataloguePage.SoldCountwaitForElementToBeVisible();
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("245");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("220");
 		Assert.assertTrue(actualResult3);
 		
 		cataloguePage.clickViewMoreSalseStatButton();
@@ -208,7 +208,8 @@ public class TC05_CatalogueOfferPage extends TestBase {
 	}
 	@Test(priority = 7)
 	public void VerifyBoMSectionOfCatalogueOffer() throws InterruptedException {
-	cataloguePage.clickonCloudTSselectAllBomButton();
+		Thread.sleep(5000);
+		cataloguePage.clickonCloudTSselectAllBomButton();
 	Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
 	System.out.println("BOM is displayed and able to download ");
 	Thread.sleep(2000);

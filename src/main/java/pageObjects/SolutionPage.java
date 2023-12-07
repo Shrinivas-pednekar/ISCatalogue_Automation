@@ -282,7 +282,7 @@ public class SolutionPage {
 	@FindBy(xpath = "//a[contains(text(),'CompassOne Deals')]")
 	private WebElement CompassOneDealsLabel;
 	
-	@FindBy(xpath = "//button[contains(text(),'X')]")
+	@FindBy(xpath = "//body/section[1]/button[1]")
 	private WebElement DownloadSectionCloseButton;
 	
 	@FindBy(xpath = "//a[contains(text(),'Solutions & Packages')]")

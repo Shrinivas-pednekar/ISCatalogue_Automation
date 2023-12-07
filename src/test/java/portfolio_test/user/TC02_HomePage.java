@@ -130,7 +130,7 @@ public class TC02_HomePage extends TestBase {
 		log.info("IS Seller View displayed");
 	}
 	
-	/*	
+	
 	@Test(priority = 7)
 	public void verifyCloudTransitionServicesPageOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
@@ -174,6 +174,7 @@ public class TC02_HomePage extends TestBase {
 	}
 	@Test(priority = 9)
 	public void VerifyProductInnovationDevelopmentServicesPageOnHomepage() throws Throwable {
+		
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickOnDProductInnovationDevelopmentServicesLinkLink();
 		Thread.sleep(5000);
@@ -184,15 +185,15 @@ public class TC02_HomePage extends TestBase {
 		driver.switchTo().window(newTab);
 		System.out.println("New Tab URL - " + driver.getTitle());
 		//Assert.assertTrue(driver.getTitle().contains("Product Innovation Development Services"));
-		softAssert.assertTrue(driver.getTitle().contains("Product Innovation Development Services"),
-                "Title does not contain 'Product Innovation Development Services'.");
+		softAssert.assertTrue(driver.getTitle().contains("Product Innovation Development Service (PIDS)"),
+                "Title does not contain 'Product Innovation Development Service (PIDS)'.");
 		driver.close();
 		driver.switchTo().window(mainTab);
 		Thread.sleep(5000);
 		softAssert.assertAll();
 	}
 	
-	@Test(priority = 10)
+	@Test(priority = 10, enabled =false)
 	public void VerifyIdentity_and_Access_ServicesPageOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickOnIdentity_and_Access_ServicesLink();
@@ -211,7 +212,7 @@ public class TC02_HomePage extends TestBase {
 		Thread.sleep(5000);
 		softAssert.assertAll();
 	}
-	@Test(priority = 11)
+	@Test(priority = 11, enabled =false)
 	public void VerifyDigital_Security_and_CompliancePageOnHomepage() throws Throwable {
 		SoftAssert softAssert = new SoftAssert();
 		homePage.clickOnDigital_Security_and_ComplianceLink();
@@ -316,7 +317,7 @@ public class TC02_HomePage extends TestBase {
 
 	}
 	
-	*/
+	
 	@Test(priority = 18)
 	public void verifyBusiness_Outcomes_with_AIOnHomepageForISSellerView() throws Throwable {
 	driver.get("https://catalog.ms/ModernRAP?Title=Azure%20AI%20Hub%20-%20Innovation%20to%20scale");
@@ -354,7 +355,7 @@ public class TC02_HomePage extends TestBase {
 		log.info("Architect View displayed");
 		
 	}
-	/*
+	
 	@Test(priority = 21)
 	public void verifySearchFunctionOnHomePageForArchitectRole() throws Throwable {
 

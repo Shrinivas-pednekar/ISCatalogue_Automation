@@ -1,25 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="1" passed="1" failed="0" skipped="0">
+<testng-results total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-27T09:29:06Z" name="Default suite" finished-at="2023-11-27T09:31:13Z" duration-ms="126865">
+  <suite started-at="2023-12-07T08:56:09Z" name="Default suite" finished-at="2023-12-07T08:57:47Z" duration-ms="98086">
     <groups>
     </groups>
-    <test started-at="2023-11-27T09:29:06Z" name="Default test" finished-at="2023-11-27T09:31:13Z" duration-ms="126865">
-      <class name="portfolio_test.user.TC03_SolutionTest">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC03_SolutionTest@30990c1b]" started-at="2023-11-27T14:59:06Z" name="initialize" finished-at="2023-11-27T14:59:33Z" duration-ms="27072" status="PASS">
+    <test started-at="2023-12-07T08:56:09Z" name="Default test" finished-at="2023-12-07T08:57:47Z" duration-ms="98086">
+      <class name="portfolio_test.user.TC06_ArtifactPage">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@25748410]" started-at="2023-12-07T14:26:09Z" name="initialize" finished-at="2023-12-07T14:26:44Z" duration-ms="35654" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="verifyAdoptionChangeandServicesManagementPageOnCataloguePage()[pri:0, instance:portfolio_test.user.TC03_SolutionTest@30990c1b]" started-at="2023-11-27T14:59:33Z" name="verifyAdoptionChangeandServicesManagementPageOnCataloguePage" finished-at="2023-11-27T15:01:12Z" duration-ms="99516" status="PASS">
+        <test-method signature="VerifyLoadtime()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@25748410]" started-at="2023-12-07T14:26:44Z" name="VerifyLoadtime" finished-at="2023-12-07T14:26:44Z" duration-ms="22" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAdoptionChangeandServicesManagementPageOnCataloguePage -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC03_SolutionTest@30990c1b]" started-at="2023-11-27T15:01:12Z" name="teardown" finished-at="2023-11-27T15:01:13Z" duration-ms="266" status="PASS">
+        </test-method> <!-- VerifyLoadtime -->
+        <test-method signature="VerifySSTATSAndIMPACTOfArtifact()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@25748410]" started-at="2023-12-07T14:26:44Z" name="VerifySSTATSAndIMPACTOfArtifact" finished-at="2023-12-07T14:26:44Z" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifySSTATSAndIMPACTOfArtifact -->
+        <test-method signature="VerifyMaturitySectionOfArtifact()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@25748410]" started-at="2023-12-07T14:26:44Z" name="VerifyMaturitySectionOfArtifact" finished-at="2023-12-07T14:26:44Z" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyMaturitySectionOfArtifact -->
+        <test-method signature="VerifyKeyMaterialsSectionOfArtifact()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@25748410]" started-at="2023-12-07T14:26:44Z" name="VerifyKeyMaterialsSectionOfArtifact" finished-at="2023-12-07T14:26:45Z" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyKeyMaterialsSectionOfArtifact -->
+        <test-method signature="VerifyEvidenceSectionOfArtifact()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@25748410]" started-at="2023-12-07T14:26:45Z" name="VerifyEvidenceSectionOfArtifact" finished-at="2023-12-07T14:26:45Z" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyEvidenceSectionOfArtifact -->
+        <test-method signature="VerifyENHANCEMENTSSectionOfArtifact()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@25748410]" started-at="2023-12-07T14:26:45Z" name="VerifyENHANCEMENTSSectionOfArtifact" finished-at="2023-12-07T14:27:24Z" duration-ms="39763" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyENHANCEMENTSSectionOfArtifact -->
+        <test-method signature="VerifyBoMSectionOfArtifact()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@25748410]" started-at="2023-12-07T14:27:24Z" name="VerifyBoMSectionOfArtifact" finished-at="2023-12-07T14:27:29Z" duration-ms="4438" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyBoMSectionOfArtifact -->
+        <test-method signature="VerifySolutionPlaySectionOfArtifact()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@25748410]" started-at="2023-12-07T14:27:29Z" name="VerifySolutionPlaySectionOfArtifact" finished-at="2023-12-07T14:27:30Z" duration-ms="871" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifySolutionPlaySectionOfArtifact -->
+        <test-method signature="VerifyArtifactSectionOfArtifact()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@25748410]" started-at="2023-12-07T14:27:30Z" name="VerifyArtifactSectionOfArtifact" finished-at="2023-12-07T14:27:35Z" duration-ms="5299" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyArtifactSectionOfArtifact -->
+        <test-method signature="VerifyCatalogueOfferSectionOfArtifact()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@25748410]" started-at="2023-12-07T14:27:35Z" name="VerifyCatalogueOfferSectionOfArtifact" finished-at="2023-12-07T14:27:41Z" duration-ms="5743" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyCatalogueOfferSectionOfArtifact -->
+        <test-method signature="VerifySeeAllCustomerEvidenceSearchPageFromArtifactPage()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@25748410]" started-at="2023-12-07T14:27:41Z" name="VerifySeeAllCustomerEvidenceSearchPageFromArtifactPage" finished-at="2023-12-07T14:27:46Z" duration-ms="5459" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifySeeAllCustomerEvidenceSearchPageFromArtifactPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:portfolio_test.user.TC06_ArtifactPage@25748410]" started-at="2023-12-07T14:27:46Z" name="teardown" finished-at="2023-12-07T14:27:47Z" duration-ms="632" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- portfolio_test.user.TC03_SolutionTest -->
+      </class> <!-- portfolio_test.user.TC06_ArtifactPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
