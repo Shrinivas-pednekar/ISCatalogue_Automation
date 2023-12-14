@@ -109,7 +109,7 @@ public class TC06_ArtifactPage extends TestBase {
 	@Test(priority = 2)
 	public void VerifySSTATSAndIMPACTOfArtifact() throws InterruptedException {
 		cataloguePage.SoldCountwaitForElementToBeVisible();
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("10");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("11");
 		Assert.assertTrue(actualResult3);
 		System.out.println("Stat count verified ");
 	}

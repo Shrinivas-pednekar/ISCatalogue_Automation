@@ -5,7 +5,7 @@
 <listeners>
 <listener class-name="isCatalogue_test.Listeners"/>
 </listeners>
-<!--
+
 		<test name="Validating IS Catalauge Login page test">
 		<classes>
 			<class name="portfolio_test.user.TC01_UserLoginTest"/>
@@ -16,14 +16,14 @@
 			<class name="portfolio_test.user.TC02_HomePage"/>
 		</classes>
 	</test> 
- 	-->
+ 	
 	 <test name="Validating all links and pages present under Solution menu test">
 		<classes>
 			<class name="portfolio_test.user.TC03_SolutionTest">
                 </class>
 		</classes>
 	</test> 
-		<!--<test name="Validating all links and pages present under Customer Evidence menu test">
+		<test name="Validating all links and pages present under Customer Evidence menu test">
 		<classes>
 			<class name="portfolio_test.user.TC04_CustomerTest"/>
 		</classes>
@@ -52,5 +52,5 @@
 		<classes>
 			<class name="portfolio_test.user.TC09_ResourcesPage"/>
 		</classes>
-	</test> -->
+	</test> 
 </suite>
