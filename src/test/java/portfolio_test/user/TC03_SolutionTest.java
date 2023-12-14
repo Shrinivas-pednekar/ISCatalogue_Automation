@@ -635,7 +635,7 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("396");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("339");
 		Assert.assertTrue(actualResult3);
 		//cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -915,7 +915,7 @@ public class TC03_SolutionTest extends TestBase {
 			System.out.println("UnSubscribe button working as expected ");
 		}
 		
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("308");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("286");
 		Assert.assertTrue(actualResult3);
 		//cataloguePage.clickViewMoreSalseStatButton();
 		//Thread.sleep(3000);
@@ -973,7 +973,7 @@ public class TC03_SolutionTest extends TestBase {
 			System.out.println("UnSubscribe button working as expected ");
 		}
 
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("763");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("636");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(5000);
@@ -1031,7 +1031,7 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("582");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("492");
 		Assert.assertTrue(actualResult3);
 		cataloguePage.clickViewMoreSalseStatButton();
 		Thread.sleep(3000);
@@ -1102,7 +1102,7 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("199");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("157");
 		Assert.assertTrue(actualResult3);
 		//cataloguePage.clickViewMoreSalseStatButton();
 		//Thread.sleep(3000);
@@ -1182,7 +1182,7 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("276");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("247");
 		Assert.assertTrue(actualResult3);
 		//cataloguePage.clickViewMoreSalseStatButton();
 		//Thread.sleep(3000);
@@ -1244,7 +1244,7 @@ public class TC03_SolutionTest extends TestBase {
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("298");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("253");
 		Assert.assertTrue(actualResult3);
 		//cataloguePage.clickViewMoreSalseStatButton();
 		//Thread.sleep(3000);

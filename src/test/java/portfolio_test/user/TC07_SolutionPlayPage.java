@@ -65,7 +65,7 @@ public class TC07_SolutionPlayPage extends TestBase {
 	@Test(priority = 1)
 	public void VerifyKeyMaterialsSectionOfSolutionPlay() throws InterruptedException {
 	boolean actualResult1 = cataloguePage.getKeyMaterialsCheck().getText()
-			.contains("Digital Security & Compliance Solution - Customer Presentation v1.2");
+			.contains("Data Security & Compliance (formerly Digital Security & Compliance) - Customer Presentation v1.2");
 	//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
 	Assert.assertTrue(actualResult1);
 	System.out.println("Displayed Key Materials");

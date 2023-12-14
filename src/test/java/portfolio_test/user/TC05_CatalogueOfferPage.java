@@ -100,7 +100,7 @@ public class TC05_CatalogueOfferPage extends TestBase {
 	@Test(priority = 2)
 	public void VerifySSTATSAndIMPACTOfCatalogueOffer() throws InterruptedException {
 		cataloguePage.SoldCountwaitForElementToBeVisible();
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("220");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("227");
 		Assert.assertTrue(actualResult3);
 		
 		cataloguePage.clickViewMoreSalseStatButton();
