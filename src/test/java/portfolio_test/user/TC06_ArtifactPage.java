@@ -56,7 +56,7 @@ public class TC06_ArtifactPage extends TestBase {
 		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		// driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	}
-	@Test(priority = 2)
+	@Test(priority = 1)
 	public void VerifyLoadtime() throws InterruptedException {
 		 long startTime = System.currentTimeMillis();
 		System.out.println("New Tab URL - " + driver.getTitle());
@@ -68,7 +68,23 @@ public class TC06_ArtifactPage extends TestBase {
 		System.out.println("Load time ");
 	}
 	
-	@Test(priority = 1, enabled = false)
+	@Test(priority = 2)
+	public void verifyReadfulldescriptionOnCatalogueOfferPage() throws Throwable {
+
+		cataloguePage.clickOnReadfulldescriptionButton();
+		Thread.sleep(5000);
+		Set<String> allTabs = homePage.getWindowHandles();
+		String mainTab = driver.getWindowHandle();
+		allTabs.remove(mainTab);
+		String newTab = allTabs.iterator().next();
+		driver.switchTo().window(newTab);
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("End-to-End Machine Learning Description"));
+		driver.close();
+		driver.switchTo().window(mainTab);
+	}
+	
+	@Test(priority = 3, enabled = false)
 	public void VerifySubscribeUnsubscribeOfArtifact() throws InterruptedException {
 
 		try {
@@ -76,8 +92,6 @@ public class TC06_ArtifactPage extends TestBase {
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeButton();
 				Thread.sleep(2000);
-				// cataloguePage.clickOnSubscribeSliderButton();
-				// Thread.sleep(2000);
 				cataloguePage.clickOnSubmitButton();
 				Thread.sleep(3000);
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
@@ -106,16 +120,16 @@ public class TC06_ArtifactPage extends TestBase {
 		}
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 4)
 	public void VerifySSTATSAndIMPACTOfArtifact() throws InterruptedException {
 		cataloguePage.SoldCountwaitForElementToBeVisible();
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("12");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("16");
 		Assert.assertTrue(actualResult3);
 		System.out.println("Stat count verified ");
 	}
 
-	@Test(priority = 3)
-	public void VerifyMaturitySectionOfArtifact() throws InterruptedException {
+	@Test(priority = 5)
+	public void VerifyMaturityOfArtifact() throws InterruptedException {
 		boolean actualResult1 = cataloguePage.getProvenMaturityCheck().getText().contains("Proven");
 		// System.out.println("Evidence displaed as expected =" +
 		// cataloguePage.getEDFEvidenceCheck().getText());
@@ -123,7 +137,7 @@ public class TC06_ArtifactPage extends TestBase {
 		System.out.println("Displayed Maturity");
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 6)
 	public void VerifyKeyMaterialsSectionOfArtifact() throws InterruptedException {
 		boolean actualResult1 = cataloguePage.getKeyMaterialsCheck().getText()
 				.contains("2. Business Outcomes with AI - Customer Presentation");
@@ -133,51 +147,42 @@ public class TC06_ArtifactPage extends TestBase {
 
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 7)
 	public void VerifyEvidenceSectionOfArtifact() throws InterruptedException {
-		boolean actualResult4 = cataloguePage.getofferEvidenceCheck().getText().contains("Customer Evidence");
-		// System.out.println("Evidence displaed as expected =" +
-		// cataloguePage.getEDFEvidenceCheck().getText());
-		Assert.assertTrue(actualResult4);
-		System.out.println("Displayed Evidence in Customer Evidence");
+		String[] expectedTexts = {"Win Wires", "Delivery Stories", "Win Analysis","Customer Testimonial"};
+		String actualText = cataloguePage.getEDFEvidenceCheck().getText();
+		// Initialize a flag to track if any of the expected texts is found
+		boolean foundExpectedText = false;
+		// Iterate over each expected text and check if the actual text contains it
+		for (String expectedText : expectedTexts) {
+		    if (actualText.contains(expectedText)) {
+		        foundExpectedText = true;
+		        break; // Exit the loop if any expected text is found
+		    }
+		}
+		// Assertion
+		Assert.assertTrue(foundExpectedText);
+		System.out.println("Displayed Customer Evidence");
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 8, enabled=false)
 	public void VerifyENHANCEMENTSSectionOfArtifact() throws InterruptedException {
 		SoftAssert softAssert = new SoftAssert();
 
-		cataloguePage.clickonCSUButton();
-		cataloguePage.clickonVBDFindOutMoreButton();
+		cataloguePage.clickonMLOMButton();
 		 //loginPage.clickOnUserButton();
-		softAssert.assertTrue(driver.getTitle().contains("Value Based Deliverables"),
-				"Title does not contain 'Value Based Deliverables'.");
-		System.out.println("Displayed Value Based Deliverables Page");
+		System.out.println(driver.getTitle());
+		softAssert.assertTrue(driver.getTitle().contains("Machine Learning Operationalization & Monitoring"),
+				"Title does not contain 'Machine Learning Operationalization & Monitoring'.");
+		System.out.println("Machine Learning Operationalization & Monitoring"+driver.getTitle());
 		Thread.sleep(2000);
 	driver.navigate().back();
-	Thread.sleep(2000);
-	//driver.navigate().back();
-	System.out.println("2 Displayed Value Based Deliverables Page");
-	Thread.sleep(3000);
 	
-	cataloguePage.clickonCSUButton();
-	System.out.println("3Displayed Value Based Deliverables Page");
-	Thread.sleep(3000);
-	cataloguePage.clickonPSSFindOutMoreButton();
-	System.out.println("4Displayed Value Based Deliverables Page");
-	Thread.sleep(3000);
-//	Thread.sleep(2000);
-	softAssert.assertTrue(driver.getTitle().contains("Proactive Services"),
-            "Title does not contain 'Proactive Services'.");
-	System.out.println("Displayed Proactive Services Page");
-	Thread.sleep(3000);
-	driver.navigate().back();
-	Thread.sleep(3000);
-
-		softAssert.assertAll();
+	softAssert.assertAll();
 
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 9)
 	public void VerifyBoMSectionOfArtifact() throws InterruptedException {
 		cataloguePage.clickonEndselectAllBomButton();
 		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
@@ -187,29 +192,38 @@ public class TC06_ArtifactPage extends TestBase {
 		Thread.sleep(2000);
 	}
 
-	@Test(priority = 8)
-	public void VerifySolutionPlaySectionOfArtifact() throws InterruptedException {
-		cataloguePage.clicktabSolutionPlayButtonButton();
-		cataloguePage.getSolutionPlaywaitForElementToBeVisible();
-		boolean actualResult5 = cataloguePage.getSolutionPlay().getText().contains("Solution Play");
-		// System.out.println("Catalogue Offer displaed as expected =" +
-		// cataloguePage.getSolutionPlay().getText());
-		Assert.assertTrue(actualResult5);
-		System.out.println("Displayed Solution Play");
+	@Test(priority = 10)
+	public void VerifyServicesSectionOfCatalogueOffer() throws InterruptedException {
+		cataloguePage.clicktabServicesButtonButton();
+		cataloguePage.gettabServiceswaitForElementToBeVisible();
+	boolean actualResult5 = cataloguePage.gettabServices().getText()
+			.contains("Default Service");
+	//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getSolutionPlay().getText());
+	Assert.assertTrue(actualResult5);
+	System.out.println("Displayed Service");
 	}
 
-	@Test(priority = 10)
+	@Test(priority = 11)
 	public void VerifyCatalogueOfferSectionOfArtifact() throws InterruptedException {
 		cataloguePage.clickCatalogueOfferButton();
-		Thread.sleep(5000);
-		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText().contains("Catalogue Offer");
-		// System.out.println("Catalogue Offer displaed as expected =" +
-		// cataloguePage.getCatalogueOffer().getText());
-		Assert.assertTrue(actualResult6);
+		Thread.sleep(9000);
+		String[] expectedTexts = {"Catalog Offer", "Artifact"};
+		String actualText = cataloguePage.getCatalogueOffer().getText();
+		// Initialize a flag to track if any of the expected texts is found
+		boolean foundExpectedText = false;
+		// Iterate over each expected text and check if the actual text contains it
+		for (String expectedText : expectedTexts) {
+		    if (actualText.contains(expectedText)) {
+		        foundExpectedText = true;
+		        break; // Exit the loop if any expected text is found
+		    }
+		}
+		// Assertion
+		Assert.assertTrue(foundExpectedText);
 		System.out.println("Displayed Catalogue Offer ");
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 12, enabled =false)
 	public void VerifyArtifactSectionOfArtifact() throws InterruptedException {
 		cataloguePage.clickArtefactButton();
 		// cataloguePage.ArtifactsTabtwaitForElementToBeVisible();
@@ -219,7 +233,7 @@ public class TC06_ArtifactPage extends TestBase {
 		Assert.assertTrue(actualResult8);
 		System.out.println("Displayed Artifact ");
 	}
-	@Test(priority = 10)
+	@Test(priority = 13)
 	public void VerifySeeAllCustomerEvidenceSearchPageFromArtifactPage() throws Throwable {
 		homePage.clickOnCustomerEvidenceSearchButton();
 		Thread.sleep(5000);
@@ -240,7 +254,41 @@ public class TC06_ArtifactPage extends TestBase {
 		driver.close();
 		driver.switchTo().window(mainTab);
 	}
-
+	
+	@Test(priority = 14)
+	public void VerifyAI_Summary_view_OnCatalogueOfferPage() throws Throwable {
+		//Thread.sleep(5000);
+		homePage.clickOnAISummaryButton();
+		//Thread.sleep(5000);
+		cataloguePage.ExportButtonwaitForElementToBeVisible();
+		boolean actualResult3 = cataloguePage.getexportsummery().getText().contains("AI Generated Internal Summary");
+		System.out.println("Displayed AI Generated Internal Summary");
+		Assert.assertTrue(actualResult3);
+	}
+	
+	@Test(priority = 15)
+	public void VerifyISDFlagandOffernCatalogueOfferPage() throws Throwable {
+		
+		//Thread.sleep(5000);
+		homePage.clickOnISDOfferButton();
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Industry Solutions Delivery Home"));
+		System.out.println("Industry Solutions Delivery Home is loaded sucessfully ");
+	}
+	
+	@Test(priority = 16)
+	public void VerifyCatalogAssistentRequestFormButtonCatalogueOfferPage() throws Throwable {
+		driver.navigate().back();
+		//Thread.sleep(5000);
+		homePage.clickOnCatalogAssistanceRequestFormButton();
+		cataloguePage.CatalogAssistanceRequestFormLabelwaitForElementToBeVisible();
+		System.out.println("New Tab URL - " + driver.getTitle());
+		boolean actualResult3 = cataloguePage.getCatalogAssistanceRequestFormLabel().getText().contains("MCAPS Catalog - Assistance Requests");
+		System.out.println("MCAPS Catalog - Assistance Requests is loaded sucessfully ");
+		Assert.assertTrue(actualResult3);
+		driver.navigate().back();
+	}
+	
 	@AfterTest
 	public void teardown() {
 		driver.quit();

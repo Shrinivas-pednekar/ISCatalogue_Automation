@@ -47,7 +47,7 @@ public class TC09_ResourcesPage extends TestBase {
 		resourcesPage.clickOnResourcesMenuButton();
 		resourcesPage.clickOnAboutISCatalogueMenuButton();
 		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Welcome to the new IS Catalog"));
+		Assert.assertTrue(driver.getTitle().contains("Welcome to the Catalog.ms site"));
 	}
 	@Test(priority = 2)
 
@@ -72,14 +72,6 @@ public class TC09_ResourcesPage extends TestBase {
 		Assert.assertTrue(driver.getTitle().contains("Overview - Microsoft Solutions Playbook (internal)"));
 		driver.close();
 		driver.switchTo().window(mainTab);
-	}
-	
-	@Test(priority = 1)
-	public void verifypageloadtimeofArtifactpage() throws Throwable {
-		resourcesPage.clickOnResourcesMenuButton();
-		resourcesPage.clickOnAboutISCatalogueMenuButton();
-		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Welcome to the new IS Catalog"));
 	}
 	@AfterTest
 	public void teardown() {

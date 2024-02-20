@@ -46,11 +46,20 @@ public class HomePage {
 	@FindBy(xpath="//button[@id='ISView']")
 	private WebElement ISView;
 	
-	@FindBy(xpath="//a[contains(text(),'See all customer evidence')]")
+	@FindBy(xpath="//a[contains(text(),'View all similar stories')]")
 	private WebElement CustomerEvidenceSearch;
+	
+	@FindBy(xpath="//a[contains(text(),'Explore customer evidence')]")
+	private WebElement ExploreCustomerEvidenceSearch;
 	
 	@FindBy(xpath="//li[@id='AISummary']")
 	private WebElement AISummaryButton;
+	
+	@FindBy(xpath="//a[contains(text(),'How to sell ISD offers')]")
+	private WebElement ISDOfferButton;
+	
+	@FindBy(xpath="//span[contains(text(),'Catalog Assistance Request Form')]")
+	private WebElement CatalogAssistanceRequestFormButton;
 	
 	@FindBy(xpath="//a[contains(text(),'View Campaign Page')]")
 	private WebElement ViewCampaignPage;
@@ -67,13 +76,13 @@ public class HomePage {
 	@FindBy(xpath="//a[contains(text(),'Visit the IS Request form')]")
 	private WebElement VisitISRequestform;
 	
-	@FindBy(xpath="//h4[contains(text(),'Cloud Transition Services')]")
+	@FindBy(xpath="//span[contains(text(),'Cloud Transition Services')]")
 	private WebElement CloudTransitionServicesLink;
 	
-	@FindBy(xpath="//h4[contains(text(),'Cloud Management and Operations')]")
+	@FindBy(xpath="//span[contains(text(),'Cloud Management and Operations')]")
 	private WebElement CloudManagementOperationsLink;
 	
-	@FindBy(xpath="//h4[contains(text(),'Business Outcomes with AI')]")
+	@FindBy(xpath="//span[contains(text(),'Business Outcomes with AI')]")
 	private WebElement Business_Outcomes_with_AILink;
 
 	@FindBy(xpath="//h4[contains(text(),'Digital Security and Compliance')]")
@@ -112,8 +121,8 @@ public class HomePage {
 	@FindBy(xpath="//h2[@id='lblCounter']")
 	private WebElement CustomerEvidenceSearchResult;
 	
-	@FindBy(xpath="//div[contains(text(),'Explore IS Mainstream Solutions, Evidence and Conn')]")
-	private WebElement MCAPS_Seller_View;
+	@FindBy(xpath="//span[@id='currentRole']")
+	private WebElement CurrentRole_View;
 	
 	@FindBy(xpath="//div[contains(text(),'Everything you need to convert customer solutions ')]")
 	private WebElement IS_Seller_View;
@@ -136,7 +145,7 @@ public class HomePage {
 	@FindBy(xpath="(//a[contains(text(),'Privacy')])[1]")
 	private WebElement Privacy;
 	
-	@FindBy(xpath = "//input[@id='IdSearchbox']")
+	@FindBy(xpath = "//input[@aria-label='Search Portfolio']")
 	private WebElement catalogueSearchTextBox;
 	
 	@FindBy(xpath = "//div[contains(text(),'Mobility')]")
@@ -178,6 +187,36 @@ public class HomePage {
 	@FindBy(xpath = "//div[@id='Carousel']")
 	private WebElement CarouselOnISSellerView;
 	
+	@FindBy(xpath = "//*[@id=\"DeliveryTeam\"]/div[2]/div[1]/div/div/div[2]/a")
+	private WebElement IndustrySolutionsDeliveryHomePage;
+	
+	public void clickOnIndustrySolutionsDeliveryHomePageButton() {
+		util.clickOnElementUsingActions(driver, IndustrySolutionsDeliveryHomePage);
+	}
+	
+	@FindBy(xpath = "//*[@id=\"DeliveryTeam\"]/div[2]/div[2]/div/div/div[2]/a")
+	private WebElement UnifiedHomepage;
+	
+	public void clickOnUnifiedHomepageButton() {
+		util.clickOnElementUsingActions(driver, UnifiedHomepage);
+	}
+	
+	@FindBy(xpath = "//*[@id=\"DeliveryTeam\"]/div[2]/div[3]/div/div/div[2]/a")
+	private WebElement PartnerHomepage;
+	
+	public void clickOnPartnerHomepageButton() {
+		util.clickOnElementUsingActions(driver, PartnerHomepage);
+	}
+	@FindBy(xpath = "//*[@id=\"customerEvidence\"]/div/a[1]/div/div")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	private WebElement EvidenceCheckOnHomePage;
+	
+	public WebElement getEvidenceCheckonHomePage() {
+		return EvidenceCheckOnHomePage;
+	}
+	public void clickEvidenceCardOnHomePage()
+	{
+		util.clickOnElementUsingActions(driver, EvidenceCheckOnHomePage);
+	}
 	public void enterSearchDetails(String SearchDetails) {
 		catalogueSearchTextBox.sendKeys(SearchDetails);
 	}
@@ -217,16 +256,16 @@ public class HomePage {
 	}
 	public WebElement getCustomerEvidenceSearchButton() {
 		
-		return CustomerEvidenceSearch;
+		return ExploreCustomerEvidenceSearch;
 	}
 	
 	public WebElement getCustomerEvidenceSearchResults() {
 		
 		return CustomerEvidenceSearchResult;
 	}
-	public WebElement getMCAPS_Seller_View_Title() {
+	public WebElement getCurrentRole_View() {
 		
-		return MCAPS_Seller_View;
+		return CurrentRole_View;
 	}
 	public WebElement getIS_Seller_View_Title() {
 		
@@ -360,12 +399,28 @@ public class HomePage {
 	}
 	public void clickOnCustomerEvidenceSearchButton()
 	{
+		util.scrollDownForElementToBeVisible(driver, CustomerEvidenceSearch, 2000);
 		util.clickOnElementUsingActions(driver, CustomerEvidenceSearch);
+	}
+	public void clickOnExploreCustomerEvidenceSearchButton()
+	{
+		util.scrollDownForElementToBeVisible(driver, ExploreCustomerEvidenceSearch, 2000);
+		util.clickOnElementUsingActions(driver, ExploreCustomerEvidenceSearch);
 	}
 	public void clickOnAISummaryButton()
 	{
 		util.clickOnElementUsingActions(driver, AISummaryButton);
 		util.scrollDownForElementToBeVisible(driver, AISummaryButton, 2000);
+	}
+	public void clickOnISDOfferButton()
+	{
+		util.clickOnElementUsingActions(driver, ISDOfferButton);
+		util.scrollDownForElementToBeVisible(driver, ISDOfferButton, 2000);
+	}
+	public void clickOnCatalogAssistanceRequestFormButton()
+	{
+		util.clickOnElementUsingActions(driver, CatalogAssistanceRequestFormButton);
+		util.scrollDownForElementToBeVisible(driver, CatalogAssistanceRequestFormButton, 2000);
 	}
 	public void CustomerEvidenceSearchResultwaitForElementToBeVisible()
 	{

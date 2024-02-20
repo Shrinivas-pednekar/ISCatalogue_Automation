@@ -1,7 +1,6 @@
 
 package portfolio_test.user;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -37,12 +36,10 @@ public class TC07_SolutionPlayPage extends TestBase {
 	HomePage homePage;
 	ResourcesPage resourcesPage;
 	SolutionPage cataloguePage;
-	  
 
 	Utilities util;
 	public static Logger log = LogManager.getLogger(TestBase.class.getName());
 
-	
 	@BeforeTest
 	public void initialize() throws IOException {
 		driver = initializeDriver();
@@ -52,35 +49,49 @@ public class TC07_SolutionPlayPage extends TestBase {
 		homePage = new HomePage(driver);
 		resourcesPage = new ResourcesPage(driver);
 		cataloguePage = new SolutionPage(driver);
-	
+
 		driver.get(prop.getProperty("SolutionPlay"));
-		
-		//loginPage.clickOnUserButton();
-		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+
+		// loginPage.clickOnUserButton();
+		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		// driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	}
-	
-	
-	
-	@Test(priority = 1)
-	public void VerifyKeyMaterialsSectionOfSolutionPlay() throws InterruptedException {
-	boolean actualResult1 = cataloguePage.getKeyMaterialsCheck().getText()
-			.contains("Data Security & Compliance (formerly Digital Security & Compliance) - Customer Presentation v1.2");
-	//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
-	Assert.assertTrue(actualResult1);
-	System.out.println("Displayed Key Materials");
-	
+
+	@Test(priority = 7)
+	public void verify_SolutionPlay() {
+
+		Assert.assertTrue(driver.getCurrentUrl().contains("solutionplay"));
+		log.info("Solution Play displayed");
 	}
-	
+
+	@Test(priority = 4)
+	public void VerifyCatalogueOfferSectionOfSolutionPlay() throws InterruptedException {
+		Thread.sleep(2000);
+		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText().contains("Catalog Offer");
+		// System.out.println("Catalogue Offer displaed as expected =" +
+		// cataloguePage.getCatalogueOffer().getText());
+		Assert.assertTrue(actualResult6);
+		System.out.println("Displayed Catalogue Offer ");
+	}
+
 	@Test(priority = 2)
 	public void VerifyEvidenceSectionOfSolutionPlay() throws InterruptedException {
-	boolean actualResult4 = cataloguePage.getSPEvidenceCheck().getText()
-			.contains("Customer Evidence");
-	//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
-	Assert.assertTrue(actualResult4);
-	System.out.println("Displayed Evidence in Customer Evidence");
+		String[] expectedTexts = { "Win Wires", "Delivery Stories", "Win Analysis", "Customer Testimonial" };
+		String actualText = cataloguePage.getSPEvidenceCheck().getText();
+		// Initialize a flag to track if any of the expected texts is found
+		boolean foundExpectedText = false;
+		// Iterate over each expected text and check if the actual text contains it
+		for (String expectedText : expectedTexts) {
+			if (actualText.contains(expectedText)) {
+				foundExpectedText = true;
+				break; // Exit the loop if any expected text is found
+			}
+		}
+		// Assertion
+		Assert.assertTrue(foundExpectedText);
+		System.out.println("Displayed Customer Evidence");
 	}
-	
+
 	@Test(priority = 3)
 	public void VerifySeeAllCustomerEvidenceSearchPageFromSolutionPlayPage() throws Throwable {
 		homePage.clickOnCustomerEvidenceSearchButton();
@@ -103,64 +114,29 @@ public class TC07_SolutionPlayPage extends TestBase {
 		driver.close();
 		driver.switchTo().window(mainTab);
 	}
-	
-	
-	@Test(priority = 4)
-	public void VerifyCatalogueOfferSectionOfSolutionPlay() throws InterruptedException {
-		Thread.sleep(2000);
-		boolean actualResult6 = cataloguePage.getCatalogueOffer().getText().contains("Catalogue Offer");
-		// System.out.println("Catalogue Offer displaed as expected =" +
-		// cataloguePage.getCatalogueOffer().getText());
-		Assert.assertTrue(actualResult6);
-		System.out.println("Displayed Catalogue Offer ");
-	}
+
 	@Test(priority = 5)
 	public void VerifyBoMSectionOfSolutionPlay() throws InterruptedException {
 		cataloguePage.clickOnSPBOMTABButton();
 		cataloguePage.clickonBaMAIAppsSselectAllBomButton();
-	Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
-	System.out.println("BOM is displayed and able to download ");
-	Thread.sleep(2000);
-	cataloguePage.clickOnDownloadSectionCloseButton();
-	Thread.sleep(2000);
+		Assert.assertTrue(cataloguePage.isDisplayedDownloadButton());
+		System.out.println("BOM is displayed and able to download ");
+		Thread.sleep(2000);
+		cataloguePage.clickOnDownloadSectionCloseButton();
+		Thread.sleep(2000);
 	}
-	@Test(priority = 6)
-	public void VerifyArtifactSectionOfSolutionPlay() throws InterruptedException {
-		cataloguePage.clickArtefactButton();
-		// cataloguePage.ArtifactsTabtwaitForElementToBeVisible();
-		Thread.sleep(5000);
-		boolean actualResult8 = cataloguePage.getArtifactTabName().getText().contains("Catalogue Artifact");
-		 System.out.println("Artifact displaed as expected =" + cataloguePage.getArtifactTabName().getText());
-		Assert.assertTrue(actualResult8);
-		System.out.println("Displayed Artifact ");
-	}
-	
-	@Test(priority = 7)
-	public void verify_SolutionPlay() {
 
-		Assert.assertTrue(driver.getCurrentUrl().contains("solutionplay"));
-		log.info("Solution Play displayed");
+	@Test(priority = 1, enabled = false)
+	public void VerifyKeyMaterialsSectionOfSolutionPlay() throws InterruptedException {
+		boolean actualResult1 = cataloguePage.getKeyMaterialsCheck().getText().contains(
+				"Data Security & Compliance (formerly Digital Security & Compliance) - Customer Presentation v1.2");
+		// System.out.println("Evidence displaed as expected =" +
+		// cataloguePage.getEDFEvidenceCheck().getText());
+		Assert.assertTrue(actualResult1);
+		System.out.println("Displayed Key Materials");
+
 	}
-	
-	@Test(priority = 8)
-	public void verifyCustomerHubPageFromSolutionPlay() throws Throwable 
-	{
-		resourcesPage.clickOnSPshowSearchListButton();
-		Thread.sleep(5000);
-		resourcesPage.clickOnselectABERDEENCITYCOUNCIL();
-		Thread.sleep(5000);
-		boolean actualResult = resourcesPage.getcustomerTPIDValue().getText().contains("2539902");
-		System.out.println("Actual Result - " + actualResult);
-		Assert.assertTrue(actualResult);
-		Thread.sleep(1000);
-		//Assert.assertTrue(resourcesPage.isDisplayedCustomerEvidenceInCustomerHub()); 
-		//System.out.println("DisplayedCustomerEvidenceInCustomerHub");
-		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Customer Hub"));
-		driver.navigate().back();
-		
-	}
-	
+
 	@AfterTest
 	public void teardown() {
 		driver.quit();

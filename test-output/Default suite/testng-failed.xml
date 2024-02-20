@@ -3,13 +3,13 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="portfolio_test.user.TC06_ArtifactPage">
+      <class name="portfolio_test.user.TC05_CatalogueOfferPage">
         <methods>
-          <include name="VerifySSTATSAndIMPACTOfArtifact"/>
           <include name="teardown"/>
           <include name="initialize"/>
+          <include name="VerifySubscribeUnsubscribeOfCatalogueOffer"/>
         </methods>
-      </class> <!-- portfolio_test.user.TC06_ArtifactPage -->
+      </class> <!-- portfolio_test.user.TC05_CatalogueOfferPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

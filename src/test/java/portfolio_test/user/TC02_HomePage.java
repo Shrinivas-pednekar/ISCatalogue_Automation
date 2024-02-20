@@ -69,17 +69,99 @@ public class TC02_HomePage extends TestBase {
 	}
 	
 	@Test(priority = 2)
-	public void verify_MCAPS_Seller_View() throws Throwable {
+	public void verify_User_View_mapping() throws Throwable {
 		Thread.sleep(5000);
 		//homePage.clickOnArchView();
-		boolean actualResult = homePage.getMCAPS_Seller_View_Title().getText().contains("Connections to IS Sellers");
+		boolean actualResult = homePage.getCurrentRole_View().getText().contains("Sales, ATU");
 		System.out.println("Actual Result - " + actualResult);
 		Assert.assertTrue(actualResult);
-		log.info("MCAPS Seller View displayed");
+		log.info("User View mapping_verified");
+	}
+	
+	@Test(priority = 3)
+	public void Verify_Business_Outcomes_with_AIPageOnHomepage() throws Throwable {
+		SoftAssert softAssert = new SoftAssert();
+		homePage.clickOnBusiness_Outcomes_with_AILink();
+		System.out.println("New Tab URL - " + driver.getTitle());
+		//Assert.assertTrue(driver.getTitle().contains("Business Outcomes with AI"));
+		softAssert.assertTrue(driver.getTitle().contains("Business Outcomes with AI"),
+                "Title does not contain 'Business Outcomes with AI'.");
+		softAssert.assertAll();
+		driver.navigate().back();
+	}
+	
+	@Test(priority = 4)
+	public void VerifyCloudManagementOperationsPageOnHomepage() throws Throwable {
+		SoftAssert softAssert = new SoftAssert();
+		
+		//homePage.clickOnExpandtoviewallLink();
+		homePage.clickOnCloudManagementOperationsLink();
+		System.out.println("New Tab URL - " + driver.getTitle());
+		 softAssert.assertTrue(driver.getTitle().contains("Cloud Management and Operations"),
+	                "Title does not contain 'Cloud Management and Operations'.");
+		//Assert.assertTrue(driver.getTitle().contains("Cloud Management and Operations"));
+		softAssert.assertAll();
+		driver.navigate().back();
+	}
+	
+	@Test(priority = 5)
+	public void verifyCloudTransitionServicesPageOnHomepage() throws Throwable {
+		SoftAssert softAssert = new SoftAssert();
+		Thread.sleep(3000);
+		homePage.clickOnCloudTransitionServicesLink();
+		
+		System.out.println("New Tab URL - " + driver.getTitle());
+		//Assert.assertTrue(driver.getTitle().contains("Cloud Transition Services"));
+		softAssert.assertTrue(driver.getTitle().contains("Cloud Transition Services"),
+                "Title does not contain 'Cloud Transition Services'.");
+				Thread.sleep(5000);
+		softAssert.assertAll();
+		driver.navigate().back();
+	}
+	
+	@Test(priority = 6)
+	public void verifyCustomerEvidenceExploreOnHomepage() throws Throwable {
+
+		//homePage.clickOnISView();
+		//Thread.sleep(5000);
+		Assert.assertTrue(homePage.isDisplayedCustomerEvidenceSearchButton());
+		
+	}
+	
+	@Test(priority = 7)
+	public void VerifyCustomerEvidenceExplorebuttonFunctionOnHomepage() throws Throwable {
+		homePage.clickOnExploreCustomerEvidenceSearchButton();
+		Thread.sleep(5000);
+		Set<String> allTabs = homePage.getWindowHandles();
+		String mainTab = driver.getWindowHandle();
+		allTabs.remove(mainTab);
+		String newTab = allTabs.iterator().next();
+		driver.switchTo().window(newTab);
+		//homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Customer Evidence Home"));
+		System.out.println("New Tab URL - " + driver.getCurrentUrl());
+		boolean actualResult2 = driver.getCurrentUrl().contains("customerevidence/home");
+		Assert.assertTrue(actualResult2);
+		driver.close();
+		driver.switchTo().window(mainTab);
+
+	}
+	
+	@Test(priority = 8)
+	public void verify_EvidenceCardOnHomepage() throws Throwable {
+		boolean actualResult4 = homePage.getEvidenceCheckonHomePage().getText()
+				.contains("Win Wires");
+		//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
+		Assert.assertTrue(actualResult4);
+		System.out.println("Displayed Evidence Card");
+		homePage.clickEvidenceCardOnHomePage();
+		Assert.assertTrue(driver.getCurrentUrl().contains("customerevidence/customerstorypage/"));
+		driver.navigate().back();
 	}
 
 
-	@Test(priority = 3)
+	@Test(priority = 9)
 	public void verifyCustomerHubPageFromHomePage() throws Throwable 
 	{
 		resourcesPage.clickOnHomeshowSearchListButton();
@@ -97,7 +179,74 @@ public class TC02_HomePage extends TestBase {
 		driver.navigate().back();
 		
 	}
-	@Test(priority = 4)
+
+	@Test(priority = 10)
+	public void verifyIndustrySolutionsDeliveryHomeOnSolutionPage() throws Throwable {
+		
+		homePage.clickOnIndustrySolutionsDeliveryHomePageButton();
+		Thread.sleep(3000);
+		// boolean isTrue ;
+		Set<String> allTabs = homePage.getWindowHandles();
+		String mainTab = driver.getWindowHandle();
+		allTabs.remove(mainTab);
+		String newTab = allTabs.iterator().next();
+		driver.switchTo().window(newTab);
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Industry Solutions Delivery Home"));
+		System.out.println("Industry Solutions Delivery Home is loaded sucessfully ");
+		driver.close();
+		driver.switchTo().window(mainTab);
+	}
+	
+	@Test(priority = 11)
+	public void verifyMicrosoftUnifiedHomeOnHomePage() throws Throwable {
+		
+		homePage.clickOnUnifiedHomepageButton();
+		Thread.sleep(3000);
+		// boolean isTrue ;
+		Set<String> allTabs = homePage.getWindowHandles();
+		String mainTab = driver.getWindowHandle();
+		allTabs.remove(mainTab);
+		String newTab = allTabs.iterator().next();
+		driver.switchTo().window(newTab);
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Microsoft Unified Home"));
+		System.out.println("Microsoft Unified Home is loaded sucessfully ");
+		driver.close();
+		driver.switchTo().window(mainTab);
+	}
+
+	@Test(priority = 12)
+	public void verifyPartnerHomeOnHomePage() throws Throwable {
+		
+		homePage.clickOnPartnerHomepageButton();
+		Thread.sleep(3000);
+		// boolean isTrue ;
+		Set<String> allTabs = homePage.getWindowHandles();
+		String mainTab = driver.getWindowHandle();
+		allTabs.remove(mainTab);
+		String newTab = allTabs.iterator().next();
+		driver.switchTo().window(newTab);
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Partner Home"));
+		System.out.println("Microsoft Unified Home is loaded sucessfully ");
+		driver.close();
+		driver.switchTo().window(mainTab);
+	}
+	
+	@Test(priority = 13)
+	public void verifySearchFunctionOnHomePageForArchitectRole() throws Throwable {
+
+		homePage.enterSearchDetails("Azure");
+		Thread.sleep(3000);
+		homePage.pressEnterbuttonForSearch();
+		Assert.assertTrue(driver.getTitle().contains("Search"));
+		Thread.sleep(5000);
+		System.out.println("New Tab URL - " + driver.getTitle());
+		//driver.navigate().back();		
+	}
+	
+	/*@Test(priority = 4)
 	public void verifyMeet_the_new_IS_CataloguePageOnHomepage() throws Throwable {
 
 		homePage.clickOnLearnMoreButton();
@@ -106,227 +255,12 @@ public class TC02_HomePage extends TestBase {
 		Assert.assertTrue(driver.getTitle().contains("Welcome to the new IS Catalog"));
 		driver.navigate().back();
 	}
-/*	
-	@Test(priority = 5)
-	public void verifyVisitISRequestformOnHomePage() throws Throwable {
-		Thread.sleep(2000);
-		homePage.clickOnISRequestFormButton();
-		System.out.println("New Tab URL - " + driver.getTitle());
-		Thread.sleep(2000);
-		Assert.assertTrue(driver.getTitle().contains("Power Apps"));
-		driver.navigate().back();
-		driver.navigate().back();
-	}*/
-	
-	//-----------------------------IS Seller view --------------------------
-		@Test(priority = 6)
-	public void verify_IS_Seller_View() throws Throwable {
-		Thread.sleep(5000);
-		homePage.clickViewChangeDropdown();
-		homePage.clickISSellerViewButton();
-		boolean actualResult = homePage.getIS_Seller_View_Title().getText().contains("Everything you need to convert customer solutions into cloud revenue");
-		System.out.println("Actual Result - " + actualResult);
-		Assert.assertTrue(actualResult);
-		log.info("IS Seller View displayed");
-	}
-	
-	
-	@Test(priority = 7)
-	public void verifyCloudTransitionServicesPageOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		Thread.sleep(3000);
-		homePage.clickOnCloudTransitionServicesLink();
-		Thread.sleep(5000);
-		Set<String> allTabs = homePage.getWindowHandles();
-		String mainTab = driver.getWindowHandle();
-		allTabs.remove(mainTab);
-		String newTab = allTabs.iterator().next();
-		driver.switchTo().window(newTab);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		//Assert.assertTrue(driver.getTitle().contains("Cloud Transition Services"));
-		softAssert.assertTrue(driver.getTitle().contains("Cloud Transition Services"),
-                "Title does not contain 'Cloud Transition Services'.");
-		driver.close();
-		driver.switchTo().window(mainTab);
-		Thread.sleep(5000);
-		softAssert.assertAll();
-	}
-	@Test(priority = 8)
-	public void VerifyCloudManagementOperationsPageOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		
-		homePage.clickOnExpandtoviewallLink();
-		homePage.clickOnCloudManagementOperationsLink();
-		Thread.sleep(5000);
-		Set<String> allTabs = homePage.getWindowHandles();
-		String mainTab = driver.getWindowHandle();
-		allTabs.remove(mainTab);
-		String newTab = allTabs.iterator().next();
-		driver.switchTo().window(newTab);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		 softAssert.assertTrue(driver.getTitle().contains("Cloud Management and Operations"),
-	                "Title does not contain 'Cloud Management and Operations'.");
-		//Assert.assertTrue(driver.getTitle().contains("Cloud Management and Operations"));
-		driver.close();
-		driver.switchTo().window(mainTab);
-		Thread.sleep(5000);
-		softAssert.assertAll();
-	}
-	@Test(priority = 9)
-	public void VerifyProductInnovationDevelopmentServicesPageOnHomepage() throws Throwable {
-		
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickOnDProductInnovationDevelopmentServicesLinkLink();
-		Thread.sleep(5000);
-		Set<String> allTabs = homePage.getWindowHandles();
-		String mainTab = driver.getWindowHandle();
-		allTabs.remove(mainTab);
-		String newTab = allTabs.iterator().next();
-		driver.switchTo().window(newTab);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		//Assert.assertTrue(driver.getTitle().contains("Product Innovation Development Services"));
-		softAssert.assertTrue(driver.getTitle().contains("Product Innovation Development Service (PIDS)"),
-                "Title does not contain 'Product Innovation Development Service (PIDS)'.");
-		driver.close();
-		driver.switchTo().window(mainTab);
-		Thread.sleep(5000);
-		softAssert.assertAll();
-	}
-	
-	@Test(priority = 10, enabled =false)
-	public void VerifyIdentity_and_Access_ServicesPageOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickOnIdentity_and_Access_ServicesLink();
-		Thread.sleep(5000);
-		Set<String> allTabs = homePage.getWindowHandles();
-		String mainTab = driver.getWindowHandle();
-		allTabs.remove(mainTab);
-		String newTab = allTabs.iterator().next();
-		driver.switchTo().window(newTab);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		//Assert.assertTrue(driver.getTitle().contains("Identity and Access Services"));
-		softAssert.assertTrue(driver.getTitle().contains("Identity and Access Services"),
-                "Title does not contain 'Identity and Access Services'.");
-		driver.close();
-		driver.switchTo().window(mainTab);
-		Thread.sleep(5000);
-		softAssert.assertAll();
-	}
-	@Test(priority = 11, enabled =false)
-	public void VerifyDigital_Security_and_CompliancePageOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickOnDigital_Security_and_ComplianceLink();
-		Thread.sleep(5000);
-		Set<String> allTabs = homePage.getWindowHandles();
-		String mainTab = driver.getWindowHandle();
-		allTabs.remove(mainTab);
-		String newTab = allTabs.iterator().next();
-		driver.switchTo().window(newTab);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Digital Security and Compliance"));
-		softAssert.assertTrue(driver.getTitle().contains("Digital Security and Compliance"),
-                "Title does not contain 'Digital Security and Compliance'.");
-		driver.close();
-		driver.switchTo().window(mainTab);
-		Thread.sleep(5000);
-		softAssert.assertAll();
-	}
-	@Test(priority = 12)
-	public void Verify_Data_Strategy_Platform_Analytics_PageOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickOnData_Strategy_Platform_Analytics_PageOnHomepageLinkLink();
-		Thread.sleep(5000);
-		Set<String> allTabs = homePage.getWindowHandles();
-		String mainTab = driver.getWindowHandle();
-		allTabs.remove(mainTab);
-		String newTab = allTabs.iterator().next();
-		driver.switchTo().window(newTab);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		//Assert.assertTrue(driver.getTitle().contains("Data Strategy Platform & Analytics"));
-		 softAssert.assertTrue(driver.getTitle().contains("Data Strategy Platform & Analytics"),
-	                "Title does not contain 'Data Strategy Platform & Analytics'.");
-		driver.close();
-		driver.switchTo().window(mainTab);
-		Thread.sleep(5000);
-		softAssert.assertAll();
-	}
-	 @Test(priority = 13)
-	 public void VerifyOrganizational_and_Operational_EnablementPageOnHomepage() throws Throwable {
-		 SoftAssert softAssert = new SoftAssert();
-		 homePage.clickOnOrganizational_and_Operational_EnablementLink();
-			Thread.sleep(5000);
-			Set<String> allTabs = homePage.getWindowHandles();
-			String mainTab = driver.getWindowHandle();
-			allTabs.remove(mainTab);
-			String newTab = allTabs.iterator().next();
-			driver.switchTo().window(newTab);
-			System.out.println("New Tab URL - " + driver.getTitle());
-			//Assert.assertTrue(driver.getTitle().contains("Security Operations"));
-			softAssert.assertTrue(driver.getTitle().contains("Organizational and Operational Enablement"),
-	                "Title does not contain 'Organizational and Operational Enablement'.");
-			driver.close();
-			driver.switchTo().window(mainTab);
-			Thread.sleep(5000);
-			softAssert.assertAll();
-	    }
-	@Test(priority = 14)
-	public void Verify_Business_Outcomes_with_AIPageOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickOnBusiness_Outcomes_with_AILink();
-		Thread.sleep(5000);
-		Set<String> allTabs = homePage.getWindowHandles();
-		String mainTab = driver.getWindowHandle();
-		allTabs.remove(mainTab);
-		String newTab = allTabs.iterator().next();
-		driver.switchTo().window(newTab);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		//Assert.assertTrue(driver.getTitle().contains("Business Outcomes with AI"));
-		softAssert.assertTrue(driver.getTitle().contains("Business Outcomes with AI"),
-                "Title does not contain 'Business Outcomes with AI'.");
-		driver.close();
-		driver.switchTo().window(mainTab);
-		Thread.sleep(5000);
-		softAssert.assertAll();
-	}
-	
-	@Test(priority = 16)
-	public void verifyCustomerEvidenceSectionOnHomepage() throws Throwable {
 
-		//homePage.clickOnISView();
-		Thread.sleep(5000);
-		Assert.assertTrue(homePage.isDisplayedCustomerEvidenceSearchButton());
-	}
-	
-	@Test(priority = 17)
-	public void VerifySeeallcustomerevidenceSearchPageFromISSellerViewHomepage() throws Throwable {
-		homePage.clickOnCustomerEvidenceSearchButton();
-		Thread.sleep(5000);
-		Set<String> allTabs = homePage.getWindowHandles();
-		String mainTab = driver.getWindowHandle();
-		allTabs.remove(mainTab);
-		String newTab = allTabs.iterator().next();
-		driver.switchTo().window(newTab);
-		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
-		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Customer Evidence Search"));
-		boolean actualResult = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
-		System.out.println("Actual Result - " + actualResult);
-		Assert.assertTrue(actualResult);
-		driver.close();
-		driver.switchTo().window(mainTab);
 
-	}
 	
 	
-	@Test(priority = 18)
-	public void verifyBusiness_Outcomes_with_AIOnHomepageForISSellerView() throws Throwable {
-	driver.get("https://catalog.ms/ModernRAP?Title=Azure%20AI%20Hub%20-%20Innovation%20to%20scale");
-	//	homePage.clickOnVisittheAIHubButton();
-		Thread.sleep(3000);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Azure AI Hub - Innovation to scale"));
-		driver.navigate().back();
-	}
+	
+	
 	
 	@Test(priority = 19, enabled=true)
 	public void verify_PDOC_PageOnHomepageForISSellerView() throws Throwable {
@@ -341,294 +275,7 @@ public class TC02_HomePage extends TestBase {
 		System.out.println("Displayed Solution Play On PDOC Page");
 		driver.navigate().back();
 	}
-
-	//--------------------------------------Architect_View-----------------------------------------------
-	@Test(priority = 20)
-	public void verify_Architect_View() throws Throwable {
-		Thread.sleep(5000);
-		homePage.clickViewChangeDropdown();
-		homePage.clickArchitectViewButton();
-		Thread.sleep(5000);
-		boolean actualResult = homePage.get_Architect_View_Title().getText().contains("Search for anything in the catalogue");
-		System.out.println("Actual Result - " + actualResult);
-		Assert.assertTrue(actualResult);
-		log.info("Architect View displayed");
-		
-	}
 	
-	@Test(priority = 21)
-	public void verifySearchFunctionOnHomePageForArchitectRole() throws Throwable {
-
-		homePage.enterSearchDetails("Azure");
-		Thread.sleep(3000);
-		homePage.pressEnterbuttonForSearch();
-		Assert.assertTrue(driver.getTitle().contains("Search"));
-		Thread.sleep(5000);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		driver.navigate().back();
-		homePage.clickViewChangeDropdown();
-		homePage.clickArchitectViewButton();
-		
-		
-	}
-	
-	@Test(priority = 22)
-	public void verifyPickupwhereyouleftSectionfOnHomepage() throws Throwable {
-		Thread.sleep(4000);
-		boolean actualResult = homePage.get_pick_uo_where_you_left_Title().getText().contains("Pick up where you left off");
-		System.out.println("Actual Result - " + actualResult);
-		Assert.assertTrue(actualResult);
-		log.info("Pick up where you left off section displayed");
-		
-	}
-	
-	@Test(priority = 23)
-	public void verifyTreadingOfferSectionfOnHomepage() throws Throwable {
-
-		boolean actualResult = homePage.get_TreadingOffer_Title().getText().contains("Trending offers");
-		System.out.println("Actual Result - " + actualResult);
-		Assert.assertTrue(actualResult);
-		log.info("Trending offers section displayed");
-		
-	}
-	
-	@Test(priority = 24)
-	public void verifyViewAllOffersLinkOnHomepage() throws Throwable {
-		homePage.clickOnVerifyAllOffersLink();
-		Thread.sleep(5000);
-		Set<String> allTabs = homePage.getWindowHandles();
-		String mainTab = driver.getWindowHandle();
-		allTabs.remove(mainTab);
-		String newTab = allTabs.iterator().next();
-		driver.switchTo().window(newTab);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getCurrentUrl().contains("Catalogue"));
-		driver.close();
-		driver.switchTo().window(mainTab);
-		Thread.sleep(5000);
-	}
-	
-	@Test(priority = 25)
-	public void verifyCustomerEvidenceSectionForArchitectViewOnHomepage() throws Throwable {
-
-		Thread.sleep(5000);
-		Assert.assertTrue(homePage.isDisplayedCustomerEvidenceSearchButton());
-	}
-	@Test(priority = 26)
-	public void VerifySeeallcustomerevidenceSearchPageFromArchitectViewHomepage() throws Throwable {
-		homePage.clickOnCustomerEvidenceSearchButton();
-		Thread.sleep(5000);
-		Set<String> allTabs = homePage.getWindowHandles();
-		String mainTab = driver.getWindowHandle();
-		allTabs.remove(mainTab);
-		String newTab = allTabs.iterator().next();
-		driver.switchTo().window(newTab);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Customer Evidence Search"));
-		homePage.CustomerEvidenceSearchResultwaitForElementToBeVisible();
-		boolean actualResult = homePage.getCustomerEvidenceSearchResults().getText().contains("Result(s)");
-		System.out.println("Actual Result - " + actualResult);
-		Assert.assertTrue(actualResult);
-		driver.close();
-		driver.switchTo().window(mainTab);
-	}
-	
-		@Test(priority = 27)
-	public void verifyMobilityPageArchitectViewOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickOnAutomotiveMobilityandTransportationtButton();
-		System.out.println("New Tab URL - " + driver.getTitle());
-		System.out.println("Mobility is loaded sucessfully ");
-		  softAssert.assertTrue(driver.getTitle().contains("Mobility"),
-	                "Title does not contain 'Mobility'.");
-	        
-	        driver.navigate().back();
-	        Thread.sleep(3000);
-	        softAssert.assertAll();
-	}
-
-	@Test(priority = 28)
-	public void verifyCrossIndustryPageArchitectViewOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickViewChangeDropdown();
-		homePage.clickArchitectViewButton();
-		Thread.sleep(3000);
-		homePage.clickOnCrossIndustryButton();
-		Thread.sleep(3000);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		  softAssert.assertTrue(driver.getTitle().contains("Cross-Industry"),
-	                "Title does not contain 'Cross-Industry'.");
-	        
-	        driver.navigate().back();
-	        Thread.sleep(3000);
-	        softAssert.assertAll();
-	        
-	}
-
-	@Test(priority = 29)
-	public void verifyDefenseandIntelligencePageArchitectViewOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickViewChangeDropdown();
-		homePage.clickArchitectViewButton();
-		Thread.sleep(3000);
-		homePage.clickOnDefenseandIntelligenceButton();
-		System.out.println("New Tab URL - " + driver.getTitle());
-		 softAssert.assertTrue(driver.getTitle().contains("Defense and Intelligence"),
-	                "Title does not contain 'Defense and Intelligence'.");
-	        
-	        driver.navigate().back();
-	        Thread.sleep(3000);
-	        softAssert.assertAll();
-		
-		
-	}
-
-	@Test(priority = 30)
-	public void verifyEducationPageArchitectViewOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		 homePage.clickViewChangeDropdown();
-	        homePage.clickArchitectViewButton();
-	        Thread.sleep(3000);
-	        homePage.clickOnEducationButton();
-	        
-	        System.out.println("New Tab URL - " + driver.getTitle());
-	        
-	        // Soft Assert: Verify the title contains "Education"
-	        softAssert.assertTrue(driver.getTitle().contains("Education"),
-	                "Title does not contain 'Education'.");
-	        
-	        driver.navigate().back();
-	        Thread.sleep(3000);
-	        
-	        softAssert.assertAll();
-	}
-
-	@Test(priority = 31)
-	public void verifyEnergyPageArchitectViewOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickViewChangeDropdown();
-		homePage.clickArchitectViewButton();
-		Thread.sleep(3000);
-		homePage.clickOnEnergyandResourcesButton();
-		Thread.sleep(3000);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		 softAssert.assertTrue(driver.getTitle().contains("Energy"),
-	                "Title does not contain 'Energy'.");
-	        
-	        driver.navigate().back();
-	        Thread.sleep(3000);
-	        softAssert.assertAll();
-	}
-
-	@Test(priority = 32)
-	public void verifyFinancialServicesPageArchitectViewOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickViewChangeDropdown();
-		homePage.clickArchitectViewButton();
-		Thread.sleep(3000);
-		homePage.clickOnFinancialServicesButton();
-		Thread.sleep(3000);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		softAssert.assertTrue(driver.getTitle().contains("Financial Services"),"Title does not contain 'Financial Services'.");
-		driver.navigate().back();
-		Thread.sleep(3000);
-		softAssert.assertAll();
-	}
-
-	@Test(priority = 33)
-	public void verifyGovernmentPageArchitectViewOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickViewChangeDropdown();
-		homePage.clickArchitectViewButton();
-		Thread.sleep(3000);
-		homePage.clickOnGovernmentButton();
-		Thread.sleep(3000);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		softAssert.assertTrue(driver.getTitle().contains("Government"),"Title does not contain 'Government'.");
-		driver.navigate().back();
-		Thread.sleep(3000);
-		softAssert.assertAll();
-	}
-
-	@Test(priority = 34)
-	public void verifyHealthcarePageArchitectViewOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickViewChangeDropdown();
-		homePage.clickArchitectViewButton();
-		Thread.sleep(3000);
-		homePage.clickOnHealthcareButton();
-		Thread.sleep(3000);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		softAssert.assertTrue(driver.getTitle().contains("Healthcare"),"Title does not contain 'Healthcare'.");
-		driver.navigate().back();
-		Thread.sleep(3000);
-		softAssert.assertAll();
-	}
-
-	@Test(priority = 35)
-	public void verifyIndustrialsandManufacturingPageArchitectViewOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickViewChangeDropdown();
-		homePage.clickArchitectViewButton();
-		Thread.sleep(3000);
-		homePage.clickOnIndustrialsandManufacturingButton();
-		Thread.sleep(3000);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		softAssert.assertTrue(driver.getTitle().contains("Industrials and Manufacturing"),"Title does not contain 'Industrials and Manufacturing'.");
-		driver.navigate().back();
-		Thread.sleep(3000);softAssert.assertAll();
-	}
-
-	@Test(priority = 36)
-	public void verifyRetailandConsumerGoodsPageArchitectViewOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickViewChangeDropdown();
-		homePage.clickArchitectViewButton();
-		Thread.sleep(3000);
-		homePage.clickOnRetailandConsumerGoodsButton();
-		Thread.sleep(3000);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		softAssert.assertTrue(driver.getTitle().contains("Retail and Consumer Goods"),"Title does not contain 'Retail and Consumer Goods'.");
-		driver.navigate().back();
-		Thread.sleep(3000);softAssert.assertAll();
-	}
-
-	@Test(priority = 37)
-	public void verifySustainabilityPageArchitectViewOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickViewChangeDropdown();
-		homePage.clickArchitectViewButton();
-		Thread.sleep(3000);
-		homePage.clickOnSustainabilityButton();
-		Thread.sleep(3000);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		softAssert.assertTrue(driver.getTitle().contains("Sustainability"),"Title does not contain 'Sustainability'.");
-		driver.navigate().back();
-		Thread.sleep(3000);softAssert.assertAll();
-	}
-
-	@Test(priority = 38)
-	public void verifyTelecommunicationsandMediaPageArchitectViewOnHomepage() throws Throwable {
-		SoftAssert softAssert = new SoftAssert();
-		homePage.clickViewChangeDropdown();
-		homePage.clickArchitectViewButton();
-		Thread.sleep(3000);
-		homePage.clickOnTelecommunicationsandMediaButton();
-		Thread.sleep(3000);
-		System.out.println("New Tab URL - " + driver.getTitle());
-		softAssert.assertTrue(driver.getTitle().contains("Telecommunications and Media"),"Title does not contain 'Telecommunications and Media'.");
-		driver.navigate().back();
-		Thread.sleep(3000);softAssert.assertAll();
-	}
-	
-	
-
-	
-
-/*
-
-
-
 	@Test(priority = 8)
 	public void VerifyViewalltopoffersPageOnHomepage() throws Throwable {
 		homePage.clickOnViewalltopoffersLink();

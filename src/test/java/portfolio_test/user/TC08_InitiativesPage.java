@@ -35,31 +35,42 @@ public class TC08_InitiativesPage extends TestBase {
 		homePage = new HomePage(driver);
 		loginPage = new LoginPage(driver);
 		driver.get(prop.getProperty("produrl"));
-		//loginPage.clickOnUserButton();
+		// loginPage.clickOnUserButton();
 
 	}
 
 	@Test(priority = 1)
+	public void verifyPipeGenerationFocusPlaysPageFromCampaignsMenu() throws Throwable {
+
+		campaignsPage.clickOnInitiativesMenuButton();
+		campaignsPage.clickOnPipeGenerationFocusPlaysMenuButton();
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Pipe Generation Focus Plays​"));
+		log.info("Pipe Generation Focus Plays​ page displayed");
+	}
+
+	@Test(priority = 2)
 	public void verifyTopACRandDVGeneratorsPageFromCampaignsMenu() throws Throwable {
 
 		campaignsPage.clickOnInitiativesMenuButton();
 		campaignsPage.clickOnTopACRandDVGeneratorsMenuButton();
-		
-	 Assert.assertTrue(driver.getTitle().contains("Top ACR and DV Generators"));
-		 System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Top ACR and DV Generators"));
+		System.out.println("New Tab URL - " + driver.getTitle());
+
 	}
 
-	@Test(priority = 2, enabled= false)
-	public void verifyDoMoreWithLessPageFromCampaignsMenu() throws Throwable {
+	@Test(priority = 3)
+	public void verifyPDOCPageFromInitiativeMenu() throws Throwable {
 
 		campaignsPage.clickOnInitiativesMenuButton();
-		campaignsPage.clickOnDoMoreWithLessMenuButton();
+		campaignsPage.clickOnPDOCMenuButton();
 		System.out.println("New Tab URL - " + driver.getTitle());
-		Assert.assertTrue(driver.getTitle().contains("Do More With Less"));
-		log.info("Do More With Less page displayed");
+		Assert.assertTrue(driver.getTitle().contains("Partner Delivery Orchestration Center"));
+		log.info("Partner Delivery Orchestration Center page displayed");
 
 	}
-	@Test(priority = 3)
+
+	@Test(priority = 4)
 	public void verifyAzureAIHubPageFromInitiativeMenu() throws Throwable {
 
 		campaignsPage.clickOnInitiativesMenuButton();
@@ -69,6 +80,28 @@ public class TC08_InitiativesPage extends TestBase {
 		log.info("Azure AI Hub - from innovation to scale page displayed");
 
 	}
+	
+	@Test(priority = 5)
+	public void verifyModernAnalyticsandGovernancewithFabricPageFromInitiativeMenu() throws Throwable {
+
+		campaignsPage.clickOnInitiativesMenuButton();
+		campaignsPage.clickOnModernAnalyticsandGovernancewithFabricMenuButton();
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Modern Analytics and Governance with Fabric"));
+		log.info("Modern Analytics and Governance with Fabric page displayed");
+
+	}
+	
+	@Test(priority = 6)
+	public void verifyGoFastwithCopilotforM365PageFromInitiativeMenu() throws Throwable {
+
+		campaignsPage.clickOnInitiativesMenuButton();
+		campaignsPage.clickOnGoFastwithCopilotforM365MenuButton();
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Go Fast with Copilot for M365"));
+		log.info("Go Fast with Copilot for M365 page displayed");
+
+	}	
 
 	@AfterTest
 	public void teardown() {

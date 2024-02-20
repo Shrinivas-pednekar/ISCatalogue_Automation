@@ -22,11 +22,20 @@ public class InitiativesPage {
 	@FindBy(xpath = "//a[contains(text(),'Top ACR and CV Generators')]")
 	private WebElement TopACRandDVGeneratorsMenu;
 
-	@FindBy(xpath = "//a[contains(text(),'Do More With Less')]")
-	private WebElement DoMoreWithLessMenu;
+	@FindBy(xpath = "//a[contains(text(),'Pipeline Growth Plays​')]")
+	private WebElement PipeGenerationFocusPlaysMenu;
 	
 	@FindBy(xpath = "//a[contains(text(),'AI Hub')]")
 	private WebElement AzureAIHubMenu;
+	
+	@FindBy(xpath = "//a[contains(text(),'Modern Analytics and Governance with Fabric')]")
+	private WebElement ModernAnalyticsandGovernancewithFabricMenu;
+	
+	@FindBy(xpath = "//a[contains(text(),'PDOC')]")
+	private WebElement PDOCMenu;
+	
+	@FindBy(xpath = "//a[contains(text(),'Go Fast with Copilot for M365')]")
+	private WebElement GoFastwithCopilotforM365Menu;
 	
 	public InitiativesPage(WebDriver driver){
 		this.driver=driver;
@@ -44,12 +53,24 @@ public class InitiativesPage {
 	{
 		util.clickOnElementUsingActions(driver, TopACRandDVGeneratorsMenu);
 	}
-	public void clickOnDoMoreWithLessMenuButton()
+	public void clickOnPipeGenerationFocusPlaysMenuButton()
 	{
-		util.clickOnElementUsingActions(driver, DoMoreWithLessMenu);
+		util.clickOnElementUsingActions(driver, PipeGenerationFocusPlaysMenu);
 	}
 	public void clickOnAzureAIHubMenuButton()
 	{
 		util.clickOnElementUsingActions(driver, AzureAIHubMenu);
+	}
+	public void clickOnModernAnalyticsandGovernancewithFabricMenuButton()
+	{
+		util.clickOnElementUsingActions(driver, ModernAnalyticsandGovernancewithFabricMenu);
+	}
+	public void clickOnPDOCMenuButton()
+	{
+		util.clickOnElementUsingActions(driver, PDOCMenu);
+	}
+	public void clickOnGoFastwithCopilotforM365MenuButton()
+	{
+		util.clickOnElementUsingActions(driver, GoFastwithCopilotforM365Menu);
 	}
 }

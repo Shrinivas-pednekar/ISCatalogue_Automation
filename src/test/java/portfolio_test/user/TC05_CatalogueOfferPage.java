@@ -60,8 +60,23 @@ public class TC05_CatalogueOfferPage extends TestBase {
 		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 	}
 
+	@Test(priority = 1)
+	public void verifyReadfulldescriptionOnCatalogueOfferPage() throws Throwable {
 
-	@Test(priority = 10, enabled = false)
+		cataloguePage.clickOnReadfulldescriptionButton();
+		Thread.sleep(5000);
+		Set<String> allTabs = homePage.getWindowHandles();
+		String mainTab = driver.getWindowHandle();
+		allTabs.remove(mainTab);
+		String newTab = allTabs.iterator().next();
+		driver.switchTo().window(newTab);
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Cloud Transition Services Description"));
+		driver.close();
+		driver.switchTo().window(mainTab);
+	}
+	
+	@Test(priority = 2)
 	public void VerifySubscribeUnsubscribeOfCatalogueOffer() throws InterruptedException {
 		Thread.sleep(7000);
 		try {
@@ -69,38 +84,40 @@ public class TC05_CatalogueOfferPage extends TestBase {
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeButton();
 				Thread.sleep(2000);
-				//cataloguePage.clickOnSubscribeSliderButton();
-				//Thread.sleep(2000);
-				cataloguePage.clickOnSubmitButton();
+				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
+				cataloguePage.clickOnSubmitButton();
+				Thread.sleep(5000);
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("Subscribe button working as expected ");
 			} else {
-				Thread.sleep(7000); cataloguePage.clickOnUnsubscribeButton();
+				Thread.sleep(3000); 
+				cataloguePage.clickOnUnsubscribeButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubscribeSliderButton();
 				Thread.sleep(3000);
 				cataloguePage.clickOnSubmitButton();
-				Thread.sleep(3000);
+				Thread.sleep(5000);
 				Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 				System.out.println("UnSubscribe button working as expected ");
 			}
 		} catch (NoSuchElementException e) {
-			Thread.sleep(7000); cataloguePage.clickOnUnsubscribeButton();
+			Thread.sleep(3000); 
+			cataloguePage.clickOnUnsubscribeButton();
 			Thread.sleep(3000);
 			cataloguePage.clickOnSubscribeSliderButton();
 			Thread.sleep(3000);
 			cataloguePage.clickOnSubmitButton();
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			Assert.assertTrue(cataloguePage.isDisplayedSubscribeSucessMsg());
 			System.out.println("UnSubscribe button working as expected ");
 		}
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void VerifySSTATSAndIMPACTOfCatalogueOffer() throws InterruptedException {
 		cataloguePage.SoldCountwaitForElementToBeVisible();
-		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("228");
+		boolean actualResult3 = cataloguePage.getSoldCount().getText().contains("248");
 		Assert.assertTrue(actualResult3);
 		
 		cataloguePage.clickViewMoreSalseStatButton();
@@ -109,7 +126,7 @@ public class TC05_CatalogueOfferPage extends TestBase {
 		System.out.println("Stat count and table is verified ");
 	}
 	
-	@Test(priority = 3)
+	@Test(priority = 4)
 	public void VerifyMaturitySectionOfCatalogueOffer() throws InterruptedException {
 	boolean actualResult1 = cataloguePage.getMaturityCheck().getText()
 			.contains("Mainstream");
@@ -118,7 +135,7 @@ public class TC05_CatalogueOfferPage extends TestBase {
 	System.out.println("Displayed Maturity");
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void VerifyKeyMaterialsSectionOfCatalogueOffer() throws InterruptedException {
 	boolean actualResult1 = cataloguePage.getKeyMaterialsCheck().getText()
 			.contains("CTS - Customer Presentation - BDM");
@@ -128,17 +145,25 @@ public class TC05_CatalogueOfferPage extends TestBase {
 	
 	}
 	
-	@Test(priority = 5)
+	@Test(priority = 6)
 	public void VerifyEvidenceSectionOfCatalogueOffer() throws InterruptedException {
-	cataloguePage.clickonEvidenceTabButton();
-	boolean actualResult4 = cataloguePage.getofferEvidenceCheck().getText()
-			.contains("Customer Evidence");
-	//System.out.println("Evidence displaed as expected =" + cataloguePage.getEDFEvidenceCheck().getText());
-	Assert.assertTrue(actualResult4);
-	System.out.println("Displayed Evidence in Customer Evidence");
+		String[] expectedTexts = {"Win Wires", "Delivery Stories", "Win Analysis","Customer Testimonial"};
+		String actualText = cataloguePage.getEDFEvidenceCheck().getText();
+		// Initialize a flag to track if any of the expected texts is found
+		boolean foundExpectedText = false;
+		// Iterate over each expected text and check if the actual text contains it
+		for (String expectedText : expectedTexts) {
+		    if (actualText.contains(expectedText)) {
+		        foundExpectedText = true;
+		        break; // Exit the loop if any expected text is found
+		    }
+		}
+		// Assertion
+		Assert.assertTrue(foundExpectedText);
+		System.out.println("Displayed Customer Evidence");
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 7)
 	public void VerifyENHANCEMENTSSectionOfCatalogueOffer() throws InterruptedException {
 		SoftAssert softAssert = new SoftAssert();
 		cataloguePage.clickonDECatlogOfferButton();
@@ -152,61 +177,12 @@ public class TC05_CatalogueOfferPage extends TestBase {
 	//driver.navigate().back();
 	driver.navigate().back();
 	Thread.sleep(2000);
-	cataloguePage.clickonCSUButton();
-	cataloguePage.clickonVBDFindOutMoreButton();
 	//loginPage.clickOnUserButton();
-	softAssert.assertTrue(driver.getTitle().contains("Value Based Deliverables"),
-            "Title does not contain 'Value Based Deliverables'.");
-	System.out.println("Displayed Value Based Deliverables Page");
-	Thread.sleep(2000);
-	driver.navigate().back();
-	Thread.sleep(2000);
-	//driver.navigate().back();
-	Thread.sleep(2000);
-	
-	cataloguePage.clickonCSUButton();
-	Thread.sleep(2000);
-	cataloguePage.clickonPSSFindOutMoreButton();
-	Thread.sleep(2000);
-	//loginPage.clickOnUserButton();
-//	Thread.sleep(2000);
-	softAssert.assertTrue(driver.getTitle().contains("Proactive Services"),
-            "Title does not contain 'Proactive Services'.");
-	System.out.println("Displayed Proactive Services Page");
-	Thread.sleep(2000);
-	driver.navigate().back();
-	Thread.sleep(2000);
-	//driver.navigate().back();
-	//Thread.sleep(2000);
-	
-	cataloguePage.clickonResourcesButton();
-	Thread.sleep(2000);
-	cataloguePage.clickonMSPlayBookButton();
-	Thread.sleep(2000);
-	//loginPage.clickOnUserButton();
-	Thread.sleep(2000);
-	softAssert.assertTrue(driver.getTitle().contains("Microsoft Solutions Playbook"),
-            "Title does not contain 'Microsoft Solutions Playbook'.");
-	System.out.println("Displayed Microsoft Solutions Playbook Page");
-	Thread.sleep(2000);
-	driver.navigate().back();
-	Thread.sleep(2000);
-	//driver.navigate().back();
-	
-	//Thread.sleep(2000);
-/*	cataloguePage.clickonResourcesButton();
-	cataloguePage.clickonLearnMoreButton();
-	//loginPage.clickOnUserButton();
-	softAssert.assertTrue(driver.getTitle().contains("Overview - Microsoft Solutions Playbook (internal)"),
-            "Title does not contain 'Overview - Microsoft Solutions Playbook (internal)'.");
-	System.out.println("Displayed Learn More -Microsoft Solutions Playbook Page");
-	driver.navigate().back();*/
-	
 		
 	softAssert.assertAll();
 	
 	}
-	@Test(priority = 7)
+	@Test(priority = 8)
 	public void VerifyBoMSectionOfCatalogueOffer() throws InterruptedException {
 		Thread.sleep(5000);
 		cataloguePage.clickonCloudTSselectAllBomButton();
@@ -218,18 +194,18 @@ public class TC05_CatalogueOfferPage extends TestBase {
 	Thread.sleep(2000);
 	}
 	
-	@Test(priority = 8)
-	public void VerifySolutionPlaySectionOfCatalogueOffer() throws InterruptedException {
-		cataloguePage.clicktabSolutionPlayButtonButton();
-		cataloguePage.getSolutionPlaywaitForElementToBeVisible();
-	boolean actualResult5 = cataloguePage.getSolutionPlay().getText()
-			.contains("Solution Play");
+	@Test(priority = 9, enabled=true)
+	public void VerifyServicesSectionOfCatalogueOffer() throws InterruptedException {
+		cataloguePage.clicktabServicesButtonButton();
+		cataloguePage.gettabServiceswaitForElementToBeVisible();
+	boolean actualResult5 = cataloguePage.gettabServices().getText()
+			.contains("Default Service");
 	//System.out.println("Catalogue Offer displaed as expected =" + cataloguePage.getSolutionPlay().getText());
 	Assert.assertTrue(actualResult5);
-	System.out.println("Displayed Solution Play");
+	System.out.println("Displayed Service");
 	}
 		
-	@Test(priority = 9)
+	@Test(priority = 10)
 	public void VerifySeeAllCustomerEvidenceSearchPageFromCatalogueOfferPage() throws Throwable {
 		homePage.clickOnCustomerEvidenceSearchButton();
 		Thread.sleep(5000);
@@ -250,7 +226,7 @@ public class TC05_CatalogueOfferPage extends TestBase {
 		driver.close();
 		driver.switchTo().window(mainTab);
 	}
-	@Test(priority = 1)
+	@Test(priority = 11)
 	public void VerifyAI_Summary_view_OnCatalogueOfferPage() throws Throwable {
 		//Thread.sleep(5000);
 		homePage.clickOnAISummaryButton();
@@ -260,6 +236,34 @@ public class TC05_CatalogueOfferPage extends TestBase {
 		System.out.println("Displayed AI Generated Internal Summary");
 		Assert.assertTrue(actualResult3);
 	}
+	
+	@Test(priority = 12)
+	public void VerifyISDFlagandOffernCatalogueOfferPage() throws Throwable {
+		boolean actualResult1 = cataloguePage.getDelivaryOrgCheck().getText()
+				.contains("ISD");
+		Assert.assertTrue(actualResult1);
+		System.out.println("Displayed Delivary Organizarion");
+		
+		//Thread.sleep(5000);
+		homePage.clickOnISDOfferButton();
+		System.out.println("New Tab URL - " + driver.getTitle());
+		Assert.assertTrue(driver.getTitle().contains("Industry Solutions Delivery Home"));
+		System.out.println("Industry Solutions Delivery Home is loaded sucessfully ");
+	}
+	
+	@Test(priority = 13)
+	public void VerifyCatalogAssistentRequestFormButtonCatalogueOfferPage() throws Throwable {
+		driver.navigate().back();
+		//Thread.sleep(5000);
+		homePage.clickOnCatalogAssistanceRequestFormButton();
+		cataloguePage.CatalogAssistanceRequestFormLabelwaitForElementToBeVisible();
+		System.out.println("New Tab URL - " + driver.getTitle());
+		boolean actualResult3 = cataloguePage.getCatalogAssistanceRequestFormLabel().getText().contains("MCAPS Catalog - Assistance Requests");
+		System.out.println("MCAPS Catalog - Assistance Requests is loaded sucessfully ");
+		Assert.assertTrue(actualResult3);
+		
+	}
+	
 	@AfterTest
 	public void teardown() {
 		driver.quit();

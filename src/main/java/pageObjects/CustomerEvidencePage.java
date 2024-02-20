@@ -22,7 +22,7 @@ public class CustomerEvidencePage {
 	@FindBy(xpath = "//a[contains(text(),'Evidence Home')]")
 	private WebElement customerEvidenceHomeMenu;
 	
-	@FindBy(xpath = "//input[@placeholder=('Search customer win wires and delivery stories')]")
+	@FindBy(xpath = "//input[@placeholder='Try searching for Win Wires or Solutions...']")
 	private WebElement customerEvidenceSearchTextBox;
 	
 	@FindBy(xpath = "//img[@alt=\"Search Icon\"]")
@@ -31,8 +31,14 @@ public class CustomerEvidencePage {
 	@FindBy (xpath="//*[@id=\"ms-carousel-pause-button\"]/img") 
 	private WebElement carouselLearnMoreOnEvidance;
 	
-	@FindBy (xpath="//span[contains(text(),'Submit a New Story')]") 
+	@FindBy (xpath="//span[contains(text(),'Submit an Industry Solutions Delivery story')]") 
 	private WebElement submitNewStory;
+	
+	@FindBy (xpath="//span[contains(text(),'Submit a Unified Customer Testimonial')]") 
+	private WebElement submitNewUCTStory;
+	
+	@FindBy (xpath="//span[contains(text(),'Submit a Unified Win')]") 
+	private WebElement submitNewUnifiedWinStory;
 	
 	@FindBy (xpath="//span[contains(text(),'Mobility')]") 
 	private WebElement AutomotiveMobilityandTransportationCustomerStoriesSearchButton;
@@ -82,7 +88,7 @@ public class CustomerEvidencePage {
 	@FindBy (xpath="//h1[contains(text(),'Healthcare Customer Stories')]") 
 	private WebElement HealthcareCustomerStoriesTitle;
 	
-	@FindBy (xpath="//span[contains(text(),'Industrials and Manufacturing')]") 
+	@FindBy (xpath="//span[contains(text(),'Industrial and Manufacturing')]") 
 	private WebElement IndustrialandManufacturingCustomerStoriesSearchButton;
 	
 	@FindBy (xpath="//h1[contains(text(),'Industrials and Manufacturing Customer Stories')]") 
@@ -106,8 +112,14 @@ public class CustomerEvidencePage {
 	@FindBy (xpath="//h1[contains(text(),'Telecommunications and Media Customer Stories')]") 
 	private WebElement TelecommunicationsandMediaCustomerStoriesTitle;
 	
-	@FindBy (xpath="//a[contains(text(),'Solution Area Stories')]") 
+	@FindBy (xpath="//a[contains(text(),'Solution Area & Unified')]") 
 	private WebElement SolutionAreaStoriesButton;
+	
+	@FindBy (xpath="//a[normalize-space()='Geography']") 
+	private WebElement GeographyStoriesButton;
+	
+	@FindBy (xpath="//a[@id='signedcontract']") 
+	private WebElement IndustryStoriesButton;
 	
 	@FindBy (xpath="//span[contains(text(),'Business Apps')]") 
 	private WebElement BusinessAppsCustomerStoriesSearchButton;
@@ -142,10 +154,22 @@ public class CustomerEvidencePage {
 	@FindBy (xpath="//*[@id=\"yourActivityTab\"]/div/section/div/div/div/ul/li[6]/div/a/span") 
 	private WebElement SecurityCustomerStoriesSearchButton;
 	
+	@FindBy (xpath="//span[normalize-space()='Unified']") 
+	private WebElement UnifiedCustomerStoriesSearchButton;
+	
+	@FindBy (xpath="//span[contains(text(),'Americas')]") 
+	private WebElement AmericasCustomerStoriesSearchButton;
+	
+	@FindBy (xpath="//span[contains(text(),'APJ')]") 
+	private WebElement APJCustomerStoriesSearchButton;
+	
+	@FindBy (xpath="//span[contains(text(),'EMEA')]") 
+	private WebElement EMEACustomerStoriesSearchButton;
+	
 	@FindBy (xpath="//*[@id=\"spmaincontentplaceholder\"]/div[1]/div[1]/div/h1") 
 	private WebElement SecurityCustomerStoriesTitle;
 	
-	@FindBy (xpath="//span[contains(text(),'Win Wires')]") 
+	@FindBy (xpath="//a[contains(text(),'Browse all Win Wires')]") 
 	private WebElement WinWiresCustomerStoriesSearchButton;
 	
 	@FindBy (xpath="//span[@id='lifecycleStage']") 
@@ -154,7 +178,7 @@ public class CustomerEvidencePage {
 	@FindBy (xpath="//*[@id=\"Win Wires\"]") 
 	private WebElement WinWiresCheckbox;
 	
-	@FindBy (xpath="//span[contains(text(),'Delivery Stories')]") 
+	@FindBy (xpath="//a[contains(text(),'Browse all Delivery Stories')]") 
 	private WebElement DeliveryStoriesCustomerStoriesSearchButton;
 	
 	@FindBy (xpath="//input[@id='Delivery Stories']") 
@@ -174,6 +198,12 @@ public class CustomerEvidencePage {
 	
 	@FindBy(xpath = "//a[contains(text(),'About Customer Evidence')]")
 	private WebElement AboutCustomerEvidenceMenu;
+	
+	@FindBy(xpath = "//span[contains(text(),'Unified Customer Stories')]")
+	private WebElement UnifiedCustomerStoriesLabel;
+	
+	@FindBy(xpath = "//span[contains(text(),'Microsoft Unified Customer Win Submission Form')]")
+	private WebElement UnifiedWinLabel;
 	
 	public CustomerEvidencePage(WebDriver driver){
 		this.driver=driver;
@@ -212,6 +242,14 @@ public class CustomerEvidencePage {
 	public void clickOnsubmitNewStoryButton()
 	{
 		util.clickOnElementUsingActions(driver, submitNewStory);
+	}
+	public void clickOnsubmitNewUCTStoryButton()
+	{
+		util.clickOnElementUsingActions(driver, submitNewUCTStory);
+	}
+	public void clickOnsubmitNewUnifiedWinStoryButton()
+	{
+		util.clickOnElementUsingActions(driver, submitNewUnifiedWinStory);
 	}
 	public void clickOnAutomotiveMobilityandTransportationCustomerStoriesSearchButton()
 	{
@@ -299,6 +337,14 @@ public class CustomerEvidencePage {
 	{
 		util.clickOnElementUsingActions(driver, SolutionAreaStoriesButton);
 	}
+	public void clickOnGeographyStoriesButton()
+	{
+		util.clickOnElementUsingActions(driver, GeographyStoriesButton);
+	}
+	public void clickOnIndustriesStoriesButton()
+	{
+		util.clickOnElementUsingActions(driver, IndustryStoriesButton);
+	}
 	public void clickOnBusinessAppsCustomerStoriesSearchButton()
 	{
 		util.clickOnElementUsingActions(driver, BusinessAppsCustomerStoriesSearchButton);
@@ -343,6 +389,22 @@ public class CustomerEvidencePage {
 	{
 		util.clickOnElementUsingActions(driver, SecurityCustomerStoriesSearchButton);
 	}
+	public void clickUnifiedCustomerStoriesSearchButton()
+	{
+		util.clickOnElementUsingActions(driver, UnifiedCustomerStoriesSearchButton);
+	}
+	public void clickAmericasCustomerStoriesSearchButton()
+	{
+		util.clickOnElementUsingActions(driver, AmericasCustomerStoriesSearchButton);
+	}
+	public void clickAPJCustomerStoriesSearchButton()
+	{
+		util.clickOnElementUsingActions(driver, APJCustomerStoriesSearchButton);
+	}
+	public void clickEMEACustomerStoriesSearchButton()
+	{
+		util.clickOnElementUsingActions(driver, EMEACustomerStoriesSearchButton);
+	}
 	public WebElement getSecurityCustomerStoriesTitle() 
 	{
 		return SecurityCustomerStoriesTitle;
@@ -386,5 +448,13 @@ public class CustomerEvidencePage {
 	public void clickOnAboutCustomerEvidenceMenuButton()
 	{
 		util.clickOnElementUsingActions(driver, AboutCustomerEvidenceMenu);
+	}
+	public void UnifiedCustomerStoriesLabelwaitForElementToBeVisible()
+	{
+		util.waitForElementToBeVisible(driver, UnifiedCustomerStoriesLabel,50);
+	}
+	public void UnifiedWinLabelwaitForElementToBeVisible()
+	{
+		util.waitForElementToBeVisible(driver, UnifiedWinLabel,50);
 	}
 	}

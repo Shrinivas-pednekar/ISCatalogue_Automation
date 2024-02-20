@@ -67,7 +67,7 @@ public class ResourcesPage {
 	@FindBy(xpath = "//p[contains(text(),'Customer Evidence')]")
 	private WebElement CustomerEvidenceInCustomerHub;
 	
-	@FindBy(xpath = "//a[contains(text(),'About IS Catalogue')]")
+	@FindBy(xpath = "//a[contains(text(),'About ISD Catalog')]")
 	private WebElement AboutISCatalogueMenuButton;
 	
 	@FindBy(xpath = "//a[contains(text(),'Emerging Solutions')]")

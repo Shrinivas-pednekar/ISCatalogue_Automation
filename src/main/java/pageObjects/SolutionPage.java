@@ -25,7 +25,12 @@ public class SolutionPage {
 	@FindBy(xpath = "//a[contains(text(),'Digital Enablement and Operations')]")
 	private WebElement DigitalEnablementandOperationsMenu;
 	
-
+	@FindBy(xpath = "//a[contains(text(),'Industry Solutions Delivery')]")
+	private WebElement IndustrySolutionsDeliveryHomeMenu;
+	
+	@FindBy(xpath = "//*[@id=\"menubar1\"]/li[3]/ul/li[1]/ul/li[2]/a")
+	private WebElement UnifiedMenu;
+	
 	@FindBy(xpath = "//a[contains(text(),'Adoption, Change, and Services Management')]")
 	private WebElement AdoptionChangeandServicesManagementMenu;
 
@@ -50,40 +55,43 @@ public class SolutionPage {
 	@FindBy(xpath = "//a[contains(text(),'Security')]")
 	private WebElement SecurityMenu;
 
-	@FindBy(xpath = "//a[contains(text(),'Mobility')]")
+	@FindBy(xpath = "//span[contains(text(),'Mobility')]")
 	private WebElement AutomotiveMobilityandTransportationMenu;
 
+	@FindBy(xpath = "//a[contains(text(),'Industries')]")
+	private WebElement IndustryMenu;
+	
 	@FindBy(xpath = "//a[contains(text(),'Cross-Industry')]")
 	private WebElement CrossIndustryMenu;
 
-	@FindBy(xpath = "//a[contains(text(),'Defense and Intelligence')]")
+	@FindBy(xpath = "//span[contains(text(),'Defense and Intelligence')]")
 	private WebElement DefenseandIntelligenceMenu;
 
-	@FindBy(xpath = "//a[contains(text(),'Education')]")
+	@FindBy(xpath = "//span[contains(text(),'Education')]")
 	private WebElement EducationMenu;
 
 	@FindBy(xpath = "//a[contains(text(),'Energy')]")
 	private WebElement EnergyandResourcesMenu;
 
-	@FindBy(xpath = "//a[contains(text(),'Financial Services')]")
+	@FindBy(xpath = "//span[contains(text(),'Financial Services')]")
 	private WebElement FinancialServicesMenu;
 
-	@FindBy(xpath = "//a[contains(text(),'Government')]")
+	@FindBy(xpath = "//span[contains(text(),'Government')]")
 	private WebElement GovernmentMenu;
 
-	@FindBy(xpath = "//a[contains(text(),'Healthcare')]")
+	@FindBy(xpath = "//span[contains(text(),'Healthcare')]")
 	private WebElement HealthcareMenu;
 
-	@FindBy(xpath = "//a[contains(text(),'Industrials and Manufacturing')]")
+	@FindBy(xpath = "//span[contains(text(),'Industrials and Manufacturing')]")
 	private WebElement IndustrialsandManufacturingMenu;
 
-	@FindBy(xpath = "//a[contains(text(),'Retail and Consumer Goods')]")
+	@FindBy(xpath = "//span[contains(text(),'Retail and Consumer Goods')]")
 	private WebElement RetailandConsumerGoodsMenu;
 
-	@FindBy(xpath = "//a[contains(text(),'Sustainability')]")
+	@FindBy(xpath = "//span[contains(text(),'Sustainability')]")
 	private WebElement SustainabilityMenu;
 
-	@FindBy(xpath = "//a[contains(text(),'Telecommunications and Media')]")
+	@FindBy(xpath = "//span[contains(text(),'Telecommunications and Media')]")
 	private WebElement TelecommunicationsandMediaMenu;
 
 	@FindBy(xpath = "(//*[@aria-label =\"Show Details\"])[1]")
@@ -131,13 +139,13 @@ public class SolutionPage {
 	@FindBy(xpath = "//*[@id=\"OfferIP\"]/div/div/div[1]/div/div[2]/div/div/div[1]/p/label")
 	private WebElement EndselectAllBom;
 	
-	@FindBy(xpath = "//h3[contains(text(),'Complex Architecture and Design Services')]")
+	@FindBy(xpath = "//span[contains(text(),'Complex Architecture and Design Services')]")
 	private WebElement DECatlogOfferButton;
 	
 	@FindBy(xpath = "//a[contains(text(),'Evidence Tiles')]")
 	private WebElement EvidenceTab;
 	
-	@FindBy(xpath = "//h3[contains(text(),'Machine Learning Operationalization & Monitoring')]")
+	@FindBy(xpath = "//span[contains(text(),'Machine Learning Operationalization & Monitoring')]")
 	private WebElement MLOMButton;
 	
 	@FindBy(xpath = "//a[contains(text(),'Customer Success Unit')]")
@@ -197,6 +205,9 @@ public class SolutionPage {
 	@FindBy(xpath = "//span[@title='Subscribe']")
 	private WebElement SubscribeButton;
 	
+	@FindBy(xpath = "//label[contains(text(),'Read full description')]")
+	private WebElement ReadfulldescriptionButton;
+	
 	@FindBy(xpath = "//*[@id=\"spanSubscribe\"]/a")
 	private WebElement DataAISubscribeButton;
 
@@ -212,26 +223,32 @@ public class SolutionPage {
 	@FindBy(xpath = "//span[@title='Unsubscribe']")
 	private WebElement UnsubscribeButton;
 
-	@FindBy(xpath = "//*[@id=\"CustomerEvidence\"]/div[2]/div[1]/div[1]/div[2]/span[1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	@FindBy(xpath = "//*[@id=\"tab_evidence_1\"]/div[2]/div[2]/a[1]/div/div")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
 	private WebElement EDFEvidenceCheck;
 	
-	@FindBy(xpath = "//*[@id=\"tab_evidence_1\"]/div[2]/div[1]/div[1]/div[2]/span[1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	@FindBy(xpath = "//*[@id=\"tab_evidence_1\"]/div[2]/div[2]/a[1]/div/div")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
 	private WebElement OfferEvidenceCheck;
 	
 	@FindBy(xpath = "//*[@id=\"CustomerEvidence\"]/div[2]/div[1]/div[2]/span")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
 	private WebElement EvidenceCheck;
 	
-	@FindBy(xpath = "//*[@id=\"customerEvidenceContent\"]/div/div[1]/div[1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	@FindBy(xpath = "//*[@id=\"customerEvidenceContent\"]/div/div[2]/a[1]/div/div")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
 	private WebElement SPEvidenceCheck;
 	
-	@FindBy(xpath = "//span[contains(text(),'Mainstream')]")
+	@FindBy(xpath = "//*[@id=\"evidenceCards\"]/div[2]/a[1]/div/div")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	private WebElement IndustryEvidenceCheck;
+	
+	@FindBy(xpath = "//div[contains(text(),'Mainstream')]")
 	private WebElement MaturityCheck;
 	
-	@FindBy(xpath = "//span[contains(text(),'Proven')]")
+	@FindBy(xpath = "//*[@id=\"Introduction\"]/div[2]/div[3]/div/div[2]")
+	private WebElement DelivaryOrgCheck;
+	
+	@FindBy(xpath = "//*[@id=\"Introduction\"]/div[2]/div[3]/div[2]/div/div/div")
 	private WebElement ProvenMaturityCheck;
 	
 	
-	@FindBy(xpath = "//*[@id=\"CoreIPGrid\"]/div/div[1]/h3/div[1]")//("//div[contains(text(),'CTS - Customer Presentation - BDM')]")
+	@FindBy(xpath = "//*[@id=\"CoreIPGrid\"]/div/div[1]/div[2]/div")//("//*[@id="CoreIPGrid"]/div/div[1]/div[2]/div")
 	private WebElement KeyMaterialsCheck;
 	
 	@FindBy(xpath = "//*[@id=\"offerContainer\"]/div/div[1]/h3/a")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
@@ -240,14 +257,23 @@ public class SolutionPage {
 	@FindBy(xpath = "//*[@class='card solution-play'][1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
 	private WebElement SolutionPlayCheck;
 	
+	@FindBy(xpath = "//div[@class='row noCardHeader']//a[1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	private WebElement ServicesCheck;
+	
 	@FindBy(xpath = "//*[@id=\"offerContainer\"]/div/div[1]/h3/a")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
 	private WebElement ArtifactCheck;
 	
-	@FindBy(xpath = "//*[@class='card artefact'][1]")
+	@FindBy(xpath = "//*[@id=\"offerContainer\"]/div/a[1]")
 	private WebElement ArtifactTabName;
 	
-	@FindBy(xpath = "//*[@class='card catalogue-offer'][1]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	@FindBy(xpath = "//*[@id=\"offercards\"]/div/div[2]/div/a[1]/div/div/div[2]")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	private WebElement CatalogueOfferCards;
+	
+	@FindBy(xpath = "//*[@id=\"offerContainer\"]/div/a[1]/div/div")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
 	private WebElement CatalogueOfferTab;
+	
+	@FindBy(xpath = "//*[@id=\"offerContainer\"]/div/a[1]/div/div")////a[contains(text(),'EDF - PowerPlatform Center of Excellence')]
+	private WebElement CatalogueOfferTabEO;
 
 	@FindBy(xpath = "//li[@id='tabBOM']")
 	private WebElement BOMButton;
@@ -267,11 +293,20 @@ public class SolutionPage {
 	@FindBy(xpath = "//li[@id='tabSolutionPlay']")
 	private WebElement tabSolutionPlayButton;
 	
-	@FindBy(xpath = "//*[@id=\"dvOfferMetrics\"]/div[1]/div[2]/div[2]")
+	@FindBy(xpath = "//li[@id='tabServices']")
+	private WebElement tabServicesButton;
+	
+	@FindBy(xpath = "//*[@id=\"dvOfferMetrics\"]/div/div/div[3]/div[2]/div[2]")
 	private WebElement SoldCount;
 	
 	@FindBy(xpath = "//button[@id='exportsummery']")
 	private WebElement exportsummery;
+	
+	@FindBy(xpath = "//span[contains(text(),'MCAPS Catalog - Assistance Requests')]")
+	private WebElement CatalogAssistanceRequestFormLabel;
+	
+	@FindBy(xpath = "//b[contains(text(),'Catalog AI in training:')]")
+	private WebElement CatalogAIintraining;
 	
 	@FindBy(xpath = "//*[@id=\"dvOfferMetrics\"]/div/div[2]/div[2]")
 	private WebElement ArtifactSoldCount;
@@ -279,7 +314,7 @@ public class SolutionPage {
 	@FindBy(xpath = "//div[@id='arrowdown']")
 	private WebElement ViewMoreSalseStat;
 
-	@FindBy(xpath = "//a[contains(text(),'CompassOne Deals')]")
+	@FindBy(xpath = "//th[contains(text(),'Customer name')]")
 	private WebElement CompassOneDealsLabel;
 	
 	@FindBy(xpath = "//body/section[1]/button[1]")
@@ -313,6 +348,14 @@ public class SolutionPage {
 		util.clickOnElementUsingActions(driver, DigitalEnablementandOperationsMenu);
 	}
 
+	public void clickOnIndustrySolutionsDeliveryHomeMenuButton() {
+		util.clickOnElementUsingActions(driver, IndustrySolutionsDeliveryHomeMenu);
+	}
+	
+	public void clickOnUnifiedMenuButton() {
+		util.clickOnElementUsingActions(driver, UnifiedMenu);
+	}
+	
 	public void clickOnBusinessAppsMenuButton() {
 		util.clickOnElementUsingActions(driver, BusinessAppsMenu);
 	}
@@ -348,6 +391,10 @@ public class SolutionPage {
 
 	public void clickOnCrossIndustryMenuButton() {
 		util.clickOnElementUsingActions(driver, CrossIndustryMenu);
+	}
+	
+	public void clickIndustryMenuButton() {
+		util.clickOnElementUsingActions(driver, IndustryMenu);
 	}
 
 	public void clickOnDefenseandIntelligenceMenuButton() {
@@ -416,7 +463,11 @@ public class SolutionPage {
 	public void clickOnSubscribeButton() {
 		util.clickOnElementUsingActions(driver, SubscribeButton);
 	}
-
+	
+	public void clickOnReadfulldescriptionButton() {
+		util.clickOnElementUsingActions(driver, ReadfulldescriptionButton);
+	}
+	
 	public void clickOnSubscribeSliderButton() {
 		util.clickOnElementUsingActions(driver, SubscribeSliderButton);
 	}
@@ -451,6 +502,9 @@ public class SolutionPage {
 	public WebElement getEDFEvidenceCheck() {
 		return EDFEvidenceCheck;
 	}
+	public WebElement getIndustriEvidenceCheck() {
+		return IndustryEvidenceCheck;
+	}
 	public WebElement getEvidenceCheck() {
 		return EvidenceCheck;
 	}
@@ -463,6 +517,9 @@ public class SolutionPage {
 	public WebElement getMaturityCheck() {
 		return MaturityCheck;
 	}
+	public WebElement getDelivaryOrgCheck() {
+		return DelivaryOrgCheck;
+	}
 	public WebElement getProvenMaturityCheck() {
 		return ProvenMaturityCheck;
 	}
@@ -473,11 +530,20 @@ public class SolutionPage {
 		// util.clickOnElementUsingActions(driver,carouselPlayButton);
 		return getEDFEvidenceCheck().isDisplayed();
 	}
+	public WebElement getCatalogueOfferCards() {
+		return CatalogueOfferCards;
+	}
 	public WebElement getCatalogueOffer() {
 		return CatalogueOfferTab;
 	}
+	public WebElement getCatalogueOfferDEO() {
+		return CatalogueOfferTabEO;
+	}
 	public WebElement getSolutionPlay() {
 		return SolutionPlayCheck;
+	}
+	public WebElement gettabServices() {
+		return ServicesCheck;
 	}
 	public WebElement getArtifact() {
 		return ArtifactCheck;
@@ -529,11 +595,21 @@ public class SolutionPage {
 		util.scrollDownForElementToBeVisible(driver, tabSolutionPlayButton, 2000);
 		util.clickOnElementUsingActions(driver, tabSolutionPlayButton);
 	}
+	public void clicktabServicesButtonButton() {
+		util.scrollDownForElementToBeVisible(driver, tabServicesButton, 2000);
+		util.clickOnElementUsingActions(driver, tabServicesButton);
+	}
 	public WebElement getSoldCount() {
 		return SoldCount;
 	}
 	public WebElement getexportsummery() {
 		return exportsummery;
+	}
+	public WebElement getCatalogAssistanceRequestFormLabel() {
+		return CatalogAssistanceRequestFormLabel;
+	}
+	public WebElement getCatalogAIintraininglabel() {
+		return CatalogAIintraining;
 	}
 	public void SoldCountwaitForElementToBeVisible()
 	{
@@ -701,8 +777,20 @@ public class SolutionPage {
 	{
 		util.waitForElementToBeVisible(driver, exportsummery,50);
 	}
+	public void CatalogAssistanceRequestFormLabelwaitForElementToBeVisible()
+	{
+		util.waitForElementToBeVisible(driver, CatalogAssistanceRequestFormLabel,50);
+	}
+	public void AISumLabelwaitForElementToBeVisible()
+	{
+		util.waitForElementToBeVisible(driver, CatalogAIintraining,50);
+	}
 	public void getSolutionPlaywaitForElementToBeVisible()
 	{
 		util.waitForElementToBeVisible(driver, SolutionPlayCheck,50);
+	}
+	public void gettabServiceswaitForElementToBeVisible()
+	{
+		util.waitForElementToBeVisible(driver, ServicesCheck,50);
 	}
 }
